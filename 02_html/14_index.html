@@ -1,0 +1,68 @@
+<!-- HTML 문서 선언 -->
+<!doctype html>
+<!-- 한글 문서 시작 -->
+<html lang="ko">
+  <!-- 화면에 안보이는칸 -->
+  <head>
+    <!-- 한글 안깨지게 -->
+    <meta charset="UTF-8" />
+    <!-- 브라우저 탭이름 -->
+    <title>시간표</title>
+  </head>
+  <!-- 화면에 보이는칸 -->
+  <body>
+    <table border="1">
+      <!-- caption : 표의 제목이나 설명 ##항상 table 다음 첫번째로 와야함## -->
+      <caption>
+        일정표
+      </caption>
+      <!-- tr : 가로한줄, th : 제목 칸 -->
+      <tr>
+        <th>요일</th>
+        <th>날짜</th>
+        <th>시간</th>
+      </tr>
+      <!-- td : 보통 내용 칸 -->
+      <!-- colspan 옆으로 병합, rowspan 아래로 병합 -->
+      <tr>
+        <td colspan="2">월</td>
+        <th rowspan="3">13</th>
+        <th>10H</th>
+      </tr>
+      <tr>
+        <td>화</td>
+        <th>14</th>
+        <th>5H</th>
+      </tr>
+    </table>
+
+    <!-- <colgroup> 및 <col>: 표 전체의 특정 열(세로줄) 스타일이나 너비를 한 번에 지정할 때 사용합니다. -->
+    <table border="1">
+      <colgroup>
+        <col style="width: 50px" />
+        <col style="width: 100px" />
+        <col style="width: 250px" />
+      </colgroup>
+
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>이름</th>
+          <th>이메일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>홍길동</td>
+          <td>gildong@example.com</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>이순신</td>
+          <td>sunshin@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

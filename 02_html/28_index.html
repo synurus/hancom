@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>시맨틱 구조</title>
+</head>
+<body>
+    <header>
+        <h1>시맨틱 구조</h1>
+        <nav>홈 | 소개 | 연락처</nav>
+    </header>
+
+    <main>
+        <section>
+            <!-- 완결된 글 하나 -->
+            <article>
+                첫 번째 글 내용
+            </article>
+        </section>
+    </main>
+    
+    <!-- 본문 옆 보조 내용 -->
+    <aside>
+        사이드 바 내용
+    </aside>
+
+    <footer>
+        2026 내 사이트
+    </footer>
+</body>
+</html>
+
+<!--
+ 
+div는 뜻 없는 빈 상자
+시맨틱 태그는 이름만 봐도 무슨 구역인지 드러남
+핵심 : header, nav, main, section, article, aside, footer 순서대로 시맨틱 구조가 아루어짐
+
+<header>   페이지나 섹션의 머리말 (로고, 제목, 메뉴 등)
+<nav>      내비게이션(메뉴) 링크 모음
+<main>     문서의 핵심 콘텐츠 (페이지당 하나만)
+<article>  독립적으로 의미를 갖는 콘텐츠 (블로그 글, 뉴스 기사 등)
+<section>  주제별로 묶인 콘텐츠 영역
+<aside>    본문과 간접적으로 관련된 부가 콘텐츠 (사이드바, 광고 등)
+<footer>   페이지나 섹션의 꼬리말 (저작권, 연락처 등)
+
+-->

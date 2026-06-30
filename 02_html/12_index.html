@@ -1,0 +1,64 @@
+<!-- HTML 문서 선언 -->
+<!doctype html>
+<!-- 한글 문서 시작 -->
+<html lang="ko">
+  <!-- 화면에 안보이는 준비칸 -->
+  <head>
+    <!-- 한글 안깨지게 -->
+    <meta charset="UTF-8" />
+    <!-- 브라우저 탭이름 -->
+    <title>번호 목록</title>
+  </head>
+  <body>
+    <ol>
+      <li>111</li>
+      <li>222</li>
+      <li>333</li>
+      <li>
+        <ol type="a">
+          <li>111</li>
+          <li>222</li>
+          <li>333</li>
+        </ol>
+      </li>
+      <li>
+        <ol type="A">
+          <li>111</li>
+          <li>222</li>
+          <li>333</li>
+        </ol>
+      </li>
+      <li>
+        <ol type="i">
+          <li>111</li>
+          <li>222</li>
+          <li>333</li>
+        </ol>
+      </li>
+      <li>
+        <ol type="I">
+          <li>111</li>
+          <li>222</li>
+          <li>333</li>
+        </ol>
+      </li>
+    </ol>
+
+    <!-- HTML은 그대로 두고, CSS에서 list-style-type 속성에 korean-hangul-formal(가나다) 또는 korean-consonant(ㄱㄴㄷ)를 지정하면 됩니다. -->
+    <ol style="list-style-type: korean-hangul-formal">
+      <li>첫 번째 항목 (가)</li>
+      <li>두 번째 항목 (나)</li>
+      <li>세 번째 항목 (다)</li>
+    </ol>
+    <ol style="list-style-type: hangul-consonant;">
+      <li>첫 번째 항목 (ㄱ)</li>
+      <li>두 번째 항목 (ㄴ)</li>
+      <li>세 번째 항목 (ㄷ)</li>
+    </ol>
+
+
+  </body>
+</html>
+
+ol type="a" 'a'는 소문자 알파벳, 'A'는 대문자 알파벳, 'i'는 소문자 로마 숫자,
+'I'는 대문자 로마 숫자, '1' 는 숫자(기본값)을 나타냅니다.
