@@ -1,0 +1,72 @@
+/* (18) CSS 리셋 — 기본 여백 제거 + box-sizing */
+* {
+  margin: 0;              /* 기본 바깥 여백 제거 */
+  padding: 0;             /* 기본 안쪽 여백 제거 */
+  box-sizing: border-box; /* padding 포함해 크기 계산 */
+}
+
+/* (15) CSS 변수 — 테마 색·간격을 한 곳에서 관리 */
+:root {
+  --main: #ec4899;   /* 메인 색 */
+  --ink: #1f2430;    /* 글자 색 */
+  --gap: 12px;       /* 간격 */
+}
+
+/* (01) 요소 선택자 + 기본 꾸미기 */
+body { 
+  background: #f6f0ff; 
+  color: var(--ink); 
+  font-family: sans-serif; 
+
+  height: 1600px;
+
+  /* 임시로 넣어준값 */
+  z-index: 100;
+}
+
+/* (12) position: sticky — 스크롤해도 상단 고정 */
+.bar {
+  position: sticky; top: 0;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 16px;
+  background: var(--main); color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+
+/* (05) flex 가로 메뉴 + (07) :hover 링크 */
+.menu { display: flex; gap: var(--gap); list-style: none; margin: 0; padding: 0; }
+.menu a { color: #fff; text-decoration: none; }
+.menu a:hover { text-decoration: underline; }
+
+/* (12) relative 부모 + absolute 배지 · (17) ::before 별 · (01) 클래스 */
+.hero { position: relative; padding: 28px 16px; text-align: center; }
+.badge {
+  position: absolute; top: 10px; right: 12px;
+  background: gold; color: #3a2400;
+  padding: 2px 8px; border-radius: 999px; font-weight: 700;
+}
+.hero h1::before { content: "★ "; color: var(--main); }
+.special { color: var(--main); font-weight: 700; }
+
+/* (13) grid 카드 갤러리 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap); margin: 16px;
+}
+
+/* (11) gradient + (16) 효과 4종 + (09) transform hover */
+.card {
+  background: linear-gradient(135deg, var(--main), #8b5cf6);
+  color: #fff; text-align: center; font-weight: 700;
+  padding: 26px 0;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+  transition: transform .25s ease;
+}
+.card:hover { transform: translateY(-6px) scale(1.04); }
+
+/* (14) @media 반응형 — 좁은 화면은 1칸 */
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+}

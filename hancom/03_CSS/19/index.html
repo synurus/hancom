@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
-    <title></title>
+    <title>미니 프로젝트</title>
 </head>
 <body>
+     <!-- position: sticky 헤더 (스크롤해도 상단 고정) + flex 메뉴 -->
+    <header class="bar">
+      <span class="logo">MY PAGE</span>
+      <ul class="menu">
+        <li><a href="#">홈</a></li>
+        <li><a href="./assets/index.html">사이트분석</a></li>
+        <li><a href="#">수업내용정리</a></li>
+        <li><a href="#">퀴즈</a></li>
+      </ul>
+    </header>
 
+    <!-- position: relative 부모 + absolute 배지 -->
+    <section class="hero">
+      <span class="badge">NEW</span>
+      <h1>이현우</h1>
+      <p class="special">웹 개발 뉴비</p>
+    </section>
+
+    <!-- grid 카드 갤러리 — 좁아지면 @media로 1칸 -->
+    <div class="grid">
+      <div class="card">HTML</div>
+      <div class="card">CSS</div>
+      <div class="card">JavaScript</div>
+    </div>
 </body>
 </html>
