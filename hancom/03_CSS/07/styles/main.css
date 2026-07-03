@@ -1,0 +1,24 @@
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: aquamarine;
+}
+
+a:hover {
+    color: blue;
+}
+
+a:active {
+    color: blueviolet;
+}
+/* 
+링크 4가지 상태는 반드시 이 순서로 써야 함 — 순서 틀리면 뒤 규칙에 덮여서 색이 안 바뀜
+• :link → :visited → :hover → :active
+• 앞글자 따서 L-V-H-A, "러브하(LoVe-HAte)"로 외움
+
+왜 순서가 중요한가
+• CSS는 같은 조건이면 나중(아래) 규칙이 이김 (02번 우선순위)
+• :hover를 :visited보다 위에 쓰면 → 방문한 링크는 :visited가 :hover를 덮어 마우스 올려도 색이 안 변함
+• 그래서 :hover·:active를 항상 뒤에 둬야 마우스·클릭 효과가 보임

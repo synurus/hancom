@@ -1,0 +1,23 @@
+.card {
+    width: 10rem;    height: 6rem;
+    display: flex; align-items: center; justify-content: center;
+    color: white;
+    font-weight: bold;
+    background: blue;
+    border-radius: 1rem;
+
+    /* 투명도 70% */
+    opacity: 0.7;
+
+    /* 그림자(x, y, 번짐, 색) */
+    box-shadow: 0 0.5rem 1rem cyan;
+
+    /* 변형 시간 0.3초 */
+    transition:  all 0.3s ease;
+}
+
+.card:hover {
+    opacity: 1;
+    transform: translateY(-1rem);
+    box-shadow: 0 1rem 2rem yellow;
+}

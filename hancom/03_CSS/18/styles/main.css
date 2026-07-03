@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* 크기 계산 방식 변경 */
+    box-sizing: border-box;
+}
+
+h1 {
+    color: green;
+}
+
+p {
+    color: peru;
+}

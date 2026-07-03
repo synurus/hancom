@@ -1,0 +1,15 @@
+@keyframes move {
+    /* 시작(0%)과 끝(100%) : 제자리 */
+    0%, 100% {transform: translateY(0);}
+    /* 중간(50%) : 위로 30px 올라감 (translateY 는 음수가 위) */
+    50% {transform: translateY(-30px);}
+}
+
+.ball {
+    border: 1px solid red;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: gray;
+    animation: move 1.5s ease infinite;
+}
