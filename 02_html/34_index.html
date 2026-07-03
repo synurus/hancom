@@ -1,0 +1,184 @@
+<!-- 
+1. 32_README.md 파일 형식 정리 
+2. 33_README.md 파일 클로드 코드 설치 정리
+1. 34_index.html 미니 프로젝트 : 지금 배운 태그 활용하여 웹 사이트 구축 후 깃허브 업데이트
+-->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자기 소개</title>
+
+    <style>
+      body {
+        background-color: #ffe4e1;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="top">
+      <img
+        src="./image_top.jpg"
+        alt="상단 이미지"
+        style="width: 100%; height: 100px; object-fit: cover; display: block"
+      />
+
+      <audio controls autoplay>
+        <source src="./audio.mp3" type="audio/mpeg" />
+        해당 브라우저는 audio 를 지원하지 않습니다.
+      </audio>
+
+      <nav style="margin: 20px 0; text-align: center">
+        <a
+          href="#preference"
+          style="
+            margin: 0 15px;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #ffb6d9;
+            border-radius: 5px;
+            color: black;
+          "
+          >취향</a
+        >
+
+        <a
+          href="#blog"
+          style="
+            margin: 0 15px;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #ffb6d9;
+            border-radius: 5px;
+            color: black;
+          "
+          >블로그</a
+        >
+
+        <a
+          href="#github"
+          style="
+            margin: 0 15px;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #ffb6d9;
+            border-radius: 5px;
+            color: black;
+          "
+          >깃허브</a
+        >
+
+        <a
+          href="#location"
+          style="
+            margin: 0 15px;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #ffb6d9;
+            border-radius: 5px;
+            color: black;
+          "
+          >위치</a
+        >
+      </nav>
+
+      <h1>이 현 우</h1>
+    </header>
+
+    <main>
+
+      <section id="preference">
+        <h2>PREFERENCE</h2>
+
+        <style>
+          table {
+            border-collapse: collapse;
+            width: 100%;
+          }
+          th,
+          td {
+            text-align: center; /* 가로 가운데 정렬 */
+            vertical-align: middle; /* 세로 가운데 정렬 */
+            border: 1px solid #ccc;
+            padding: 8px;
+          }
+        </style>
+
+        <table border="1" style="width: 100%">
+          <tr>
+            <th></th>
+            <th>게임</th>
+            <th>만화</th>
+            <th>음악</th>
+            <th>영화</th>
+          </tr>
+
+          <tr>
+            <td>장르</td>
+            <td>FPS</td>
+            <td>판타지</td>
+            <td>하우스</td>
+            <td>SF</td>
+          </tr>
+
+          <tr>
+            <td>작품</td>
+            <td>포트나이트</td>
+            <td>던전밥</td>
+            <td>Tones And I - Dance Monkey</td>
+            <td>인셉션</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="blog">
+        <h2>블로그</h2>
+        <a href="https://blog.naver.com/hwlee363">블로그 바로가기</a>
+      </section>
+
+      <section id="github">
+        <h2>깃허브</h2>
+        <a href="https://github.com/synurus/hancom">깃허브 바로가기</a>
+      </section>
+
+      <section id="location">
+        <h2>위치</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x357b5809d2beceb3%3A0x78bcb4b614ae7c74!2zU0ftg4Dsm4w!5e0!3m2!1sko!2skr!4v1782882123572!5m2!1sko!2skr"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+        ></iframe>
+      </section>
+
+      <br /><br />
+
+      <a href="#top">맨위로</a>
+      
+    </main>
+
+    <footer>
+        
+      <br /><br />
+
+      <video
+        controls
+        style="
+          width: 100%;
+          height: 300px;
+          object-fit: cover;
+          object-position: center;
+          display: block;
+        "
+        autoplay
+      >
+        <source src="./video_bottom.mp4" type="video/mp4" />
+        해당 브라우저는 video를 지원하지 않습니다.
+      </video>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+.box {
+    border: 1px solid;
+    width: 200px;
+    height: 200px;
+    background-color: hotpink;
+    color: white;
+
+    /* 텍스트 가운데 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius:  16px;
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: rotate(10deg) scale(1.2);
+}

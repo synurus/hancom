@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Planes — CSS Only (No JavaScript)</title>
+  <link rel="stylesheet" href="main_no_js.css">
+</head>
+<body>
+
+  <!-- 모양 선택 상태를 저장하는 숨김 라디오 버튼 (JS 없이 상태 전환) -->
+  <input type="radio" name="shape" id="ring" class="shape-radio" checked>
+  <input type="radio" name="shape" id="flower" class="shape-radio">
+  <input type="radio" name="shape" id="sphere" class="shape-radio">
+  <input type="radio" name="shape" id="cylinder" class="shape-radio">
+
+  <div class="hint">Scroll to align &nbsp;·&nbsp; Click a shape to switch</div>
+
+  <div class="scroll-space">
+    <div class="stage">
+      <div class="scene">
+      <div class="plane"></div>
+      <div class="plane"></div>
+      <div class="plane"></div>
+      <div class="plane"></div>
+      <div class="plane"></div>
+      <div class="plane"></div>
+      <div class="plane"></div>
+      <div class="plane"></div>
+      <div class="plane"></div>
+      <div class="plane"></div>
+      <div class="plane"></div>
+      <div class="plane"></div>
+      <div class="plane"></div>
+      <div class="plane"></div>
+      <div class="plane"></div>
+      <div class="plane"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="switcher">
+    <label for="ring">Ring</label><span class="comma">,</span>
+    <label for="flower">Flower</label><span class="comma">,</span>
+    <label for="sphere">Sphere</label><span class="comma">,</span>
+    <label for="cylinder">Cylinder</label>
+  </div>
+
+</body>
+</html>
