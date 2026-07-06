@@ -6,9 +6,8 @@
 
 /* ---------- 배운 내용: CSS 변수 (:root에 선언, var()로 재사용) ---------- */
 :root {
-  --paper: #ffffff;        /* 종이(카드) 색 */
-  --bg: #f4f7fc;           /* 페이지 배경: 연한 하늘빛 회색 */
-  --grid-line: #e8f0fa;    /* 옅은 구분선 색 */
+  --paper: #ffffff;        /* 종이 색 */
+  --grid-line: #e8f0fa;    /* 모눈 선 색 */
   --ink: #22335c;          /* 잉크(글자) 색 */
   --ink-light: #5a6a8f;    /* 옅은 잉크 */
   --pen-blue: #2b6cb0;     /* 파란 펜 */
@@ -37,7 +36,11 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   color: var(--ink);
   line-height: 1.7;
-  background-color: var(--bg); /* 연한 단색 배경 */
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 26px 26px;
 }
 
 /* 공책의 빨간 세로 여백선 — ::before 가상요소 활용 (content 필수!) */
@@ -272,65 +275,6 @@ pre code {
   font-size: 0.95rem;
 }
 
-/* 분석 표 안의 목록 */
-.table-list {
-  padding-left: 18px;
-  margin: 0;
-}
-
-.table-list li {
-  margin-bottom: 6px;
-}
-
-.table-list li:last-child {
-  margin-bottom: 0;
-}
-
-/* 데모 페이지로 가는 링크 버튼 */
-.demo-link-wrap {
-  margin-top: 18px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.demo-link {
-  display: inline-block;
-  text-decoration: none;
-  font-weight: 700;
-  color: #fff;
-  /* 데모 페이지의 16색을 닮은 무지개 그라디언트 (배운 내용: linear-gradient) */
-  background: linear-gradient(90deg, #ff0000, #ffbf00, #1eff00, #00ffff, #2200ff, #e100ff, #ff005d);
-  padding: 12px 22px;
-  border-radius: 999px;
-  border: 2px solid var(--ink);
-  box-shadow: 4px 4px 0 rgba(34, 51, 92, 0.2);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.demo-link:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 6px 8px 0 rgba(34, 51, 92, 0.22);
-}
-
-.demo-desc {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.85rem;
-  color: var(--ink-light);
-  line-height: 1.6;
-}
-
-/* CSS-only 버전 버튼: 흰 바탕에 잉크색 글자로 구분 */
-.demo-link-css {
-  background: var(--paper);
-  color: var(--ink);
-  text-shadow: none;
-}
-
 /* =========================================================
    퀴즈 — 배운 내용: form / fieldset / radio / label / :checked
    자바스크립트 없이 CSS만으로 채점!
@@ -428,8 +372,8 @@ footer {
 }
 
 .copyright {
-  margin-top: 0.5rem;
-  font-size: 1rem;
+  margin-top: 14px;
+  font-size: 0.85rem;
   color: var(--ink-light);
 }
 

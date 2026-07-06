@@ -11,16 +11,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- 배운 내용: CSS 연결은 외부 스타일시트(link) 방식이 권장된다 -->
-  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="example.css">
 </head>
 <body>
 
   <!-- ===== 머리말 (시맨틱 태그: header) ===== -->
   <header class="hero">
-    <!-- <p class="hero-label">HTML · CSS 수업 정리 과제</p> -->
-    <h1><span class="hl">웹개발</span> 학습 노트 <span class="pencil">✏️</span></h1>
-    <!-- <p class="hero-sub">수업에서 배운 내용을 <strong>직접 만든 웹페이지</strong>로 정리했습니다.<br>
-      이 페이지 자체가 <em>배운 태그와 CSS 기술의 실습장</em>입니다.</p> -->
+    <p class="hero-label">HTML · CSS 수업 정리 과제</p>
+    <h1>나의 <span class="hl">웹개발</span> 학습 노트 <span class="pencil">✏️</span></h1>
+    <p class="hero-sub">수업에서 배운 내용을 <strong>직접 만든 웹페이지</strong>로 정리했습니다.<br>
+      이 페이지 자체가 <em>배운 태그와 CSS 기술의 실습장</em>입니다.</p>
   </header>
 
   <!-- ===== 네비게이션 (시맨틱 태그: nav / position: sticky) ===== -->
@@ -28,7 +28,7 @@
     <a href="#analysis" class="tab tab-1">① 사이트 분석</a>
     <a href="#html-note" class="tab tab-2">② HTML 정리</a>
     <a href="#css-note" class="tab tab-3">③ CSS 정리</a>
-    <a href="#quiz" class="tab tab-4">④ 퀴즈</a>
+    <a href="#quiz" class="tab tab-4">④ 퀴즈 5문제</a>
   </nav>
 
   <!-- ===== 본문 (시맨틱 태그: main) ===== -->
@@ -39,114 +39,66 @@
       <h2><span class="hl">1. 마음에 드는 웹사이트 분석</span></h2>
 
       <article class="card analysis-card">
-        <h3>분석한 사이트</h3>
+        <h3>📌 분석한 사이트</h3>
+        <!-- 아래 내용을 [웹사이트 HTML CSS 구조 분석] 채팅에서 정리한 내용으로 바꿔 넣으세요 -->
         <table class="info-table">
           <tr>
             <th>사이트 이름</th>
-            <td>Obys® Experiment Space — 우크라이나 디자인 스튜디오 Obys의 미공개 작업·실험 아카이브</td>
+            <td>여기에 사이트 이름 입력</td>
           </tr>
           <tr>
             <th>주소</th>
-            <td><a href="https://experiment.obys.agency/" target="_blank">https://experiment.obys.agency/</a></td>
+            <td><a href="https://example.com" target="_blank">https://example.com</a></td>
+          </tr>
+          <tr>
+            <th colspan="2" class="table-divider">아래는 나의 분석 내용 (colspan으로 칸 합치기!)</th>
           </tr>
           <tr>
             <th>마음에 든 이유</th>
-            <td>스크롤을 내리면 사진들이 <strong>링·꽃·구(Sphere)·원통(Cylinder) 모양에서 스르륵 한 줄로 펴지는</strong>
-              3D 인터랙션이 인상적이었다. 흑백 위주의 미니멀한 디자인, 커스텀 커서와 마우스 움직임에 따른 시야각 변경 등 디테일이 뛰어났다.</td>
-          </tr>
-          <tr>
-            <th colspan="2" class="table-divider">코드 분석 결과 (클로드야 고맙다!)</th>
+            <td>여기에 첫인상과 마음에 든 이유를 적어 주세요.</td>
           </tr>
           <tr>
             <th>HTML 구조 분석</th>
-            <td>
-              <ul class="table-list">
-                <li><code>&lt;head&gt;</code>에 <code>charset="UTF-8"</code>, viewport,
-                  <mark>og:·twitter: 메타태그</mark>(SNS 공유용), 파비콘, 외부 CSS <code>&lt;link&gt;</code>가 정석대로 들어 있다.</li>
-                <li><code>&lt;body&gt;</code>는 시맨틱 태그 대신 <strong>div + class 중심 구조</strong>
-                  (Webflow 제작 사이트의 특징): 배경 <code>&lt;canvas&gt;</code> →
-                  3D 갤러리 <code>#obys-fluid-gallery</code> → <code>.page-wrapper</code>(제목 텍스트) →
-                  <code>.preloader</code>(로딩 화면) → <code>.mobile-blocker</code>(모바일 안내) 순서.</li>
-                <li>화면의 핵심이 이미지 태그가 아니라 <strong>Three.js가 그리는 <code>&lt;canvas&gt;</code> 한 장</strong>이라는 점이 신기했다.</li>
-              </ul>
-            </td>
+            <td>header / nav / main / footer 등 어떤 구조로 만들어졌는지 적어 주세요.</td>
           </tr>
           <tr>
             <th>CSS 특징 분석</th>
-            <td>
-              <ul class="table-list">
-                <li><code>@font-face</code>로 전용 글꼴 <strong>"OTF Obys NG"</strong>를 직접 등록. <code>letter-spacing</code>이 41번 쓰일 만큼 타이포그래피 중심.</li>
-                <li>레이아웃은 <code>flex</code>와 <code>grid</code>를 함께 사용하고,
-                  겹치는 요소는 <code>position: relative / absolute / fixed</code>로 배치.</li>
-                <li><code>transform</code>·<code>transition</code>·<code>animation</code>으로 움직임 처리,
-                  <mark>커스텀 커서</mark>는 <code>::before / ::after</code> 가상요소로 십자(+) 모양을 만든다.</li>
-                <li>반응형은 <code>@media</code> 479 / 767 / 991px 구간 — 우리가 배운 것과 같은 방식!</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <th>인터랙션 원리<br>(JS/Three.js)</th>
-            <td>모든 이미지가 <strong>Sphere·Ring·Flower·Cylinder·일렬(Horizontal) 5가지 목표 좌표를 미리 계산</strong>해 갖고 있고,
-              마우스 휠로 쌓이는 스크롤 값 하나를 진행도로 삼아 두 좌표 사이를
-              <strong>lerp(보간)로 부드럽게 섞는다</strong>. 스크롤 0~1 구간은 "모양 → 일렬 변신",
-              1 이상부터는 카메라가 옆으로 이동하며 일렬 사진을 훑어보는 아카이브 모드.
-              GSAP 라이브러리로 세부 애니메이션을 다듬었다.</td>
-          </tr>
-          <tr>
-            <th>배운 점</th>
-            <td>화려해 보여도 뼈대는 우리가 배운 <mark>HTML 구조 + flex/grid + position + @media</mark> 그대로였다.
-              "목표 지점을 미리 정해 두고 진행도 값 하나로 부드럽게 전환한다"는 패턴은
-              CSS <code>transition</code>의 원리와도 닮아 있어서, 기초가 곧 응용으로 이어진다는 걸 느꼈다.</td>
+            <td>색상, 글꼴, 레이아웃(flex/grid), 애니메이션 등 눈에 띈 CSS 기술을 적어 주세요.</td>
           </tr>
         </table>
-
-        <!-- 분석 내용을 직접 재현해 본 데모 페이지 링크 (a href + target) -->
-        <div class="demo-link-wrap">
-          <a href="analysis.html" target="_blank" class="demo-link">
-            분석한 원리를 직접 재현! — 16색 Plane 데모 (JS 버전) →
-          </a>
-          <a href="analysis_no_js.html" target="_blank" class="demo-link demo-link-css">
-            자바스크립트 없이 CSS만으로 재현한 버전 →
-          </a>
-
-          <!--
-          <span class="demo-desc">Ring · Flower · Sphere · Cylinder 모양 전환 + 스크롤 일렬 정렬 애니메이션<br>
-            CSS 버전은 <mark>radio + :checked</mark>(퀴즈와 같은 원리!)와
-            <mark>position: sticky</mark> + 스크롤 연동 애니메이션으로 만들었어요.</span>
-            -->
-        </div>
+        <p class="memo">💬 <mark>다른 채팅에서 분석한 내용을 이 표에 붙여 넣으면 완성!</mark></p>
       </article>
     </section>
 
     <!-- ========== 2-1. HTML 정리 ========== -->
     <section id="html-note">
-      <h2><span class="hl">2. HTML 정리</span></h2>
-      <!-- <p class="section-intro">HTML은 웹페이지의 <strong>뼈대(구조)</strong>를 만드는 언어입니다.</p> -->
+      <h2><span class="hl">2. HTML 핵심 정리</span></h2>
+      <p class="section-intro">HTML은 웹페이지의 <strong>뼈대(구조)</strong>를 만드는 언어입니다.</p>
 
       <!-- 배운 내용: display grid로 카드 배치 -->
       <div class="card-grid">
 
         <article class="card">
-          <h3>기본 구조</h3>
+          <h3>🏗️ 기본 구조</h3>
           <ol>
-            <li><code>&lt;!DOCTYPE html&gt;</code> — "이건 HTML 문서야" 선언</li>
-            <li><code>&lt;html lang="ko"&gt;</code> — 문서 시작, 한국어 페이지</li>
-            <li><code>&lt;head&gt;</code> — 화면엔 안 보이는 준비 칸</li>
-            <li><code>&lt;body&gt;</code> — 화면에 보이는 진짜 내용 칸</li>
+            <li><code>&lt;!DOCTYPE html&gt;</code> — HTML5 문서 선언</li>
+            <li><code>&lt;html lang="ko"&gt;</code> — 문서 전체를 감쌈</li>
+            <li><code>&lt;head&gt;</code> — 안 보이는 설정 (charset, title)</li>
+            <li><code>&lt;body&gt;</code> — 화면에 보이는 내용</li>
           </ol>
         </article>
 
         <article class="card">
-          <h3>텍스트 태그</h3>
+          <h3>📝 텍스트 태그</h3>
           <ul>
-            <li>제목 <code>&lt;h1&gt;~&lt;h6&gt;</code> — 숫자가 클수록 글자가 작아짐</li>
+            <li>제목 <code>&lt;h1&gt;~&lt;h6&gt;</code> — 숫자가 클수록 작아짐</li>
             <li>문단 <code>&lt;p&gt;</code>, 줄바꿈 <code>&lt;br&gt;</code>, 구분선 <code>&lt;hr&gt;</code></li>
             <li><strong>strong은 굵게</strong>, <em>em은 기울임</em>, <mark>mark는 형광펜</mark></li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>링크와 미디어</h3>
+          <h3>🔗 링크와 미디어</h3>
           <ul>
             <li>링크 <code>&lt;a href="주소" target="_blank"&gt;</code></li>
             <li>이미지 <code>&lt;img src="파일" alt="설명"&gt;</code></li>
@@ -155,7 +107,7 @@
         </article>
 
         <article class="card">
-          <h3>목록과 표</h3>
+          <h3>📋 목록과 표</h3>
           <ul>
             <li><code>&lt;ul&gt;</code> 순서 없는 목록 / <code>&lt;ol&gt;</code> 순서 있는 목록 + <code>&lt;li&gt;</code></li>
             <li>표: <code>&lt;table&gt; &gt; &lt;tr&gt; &gt; &lt;th&gt;·&lt;td&gt;</code></li>
@@ -164,16 +116,16 @@
         </article>
 
         <article class="card">
-          <h3>폼(입력)</h3>
+          <h3>⌨️ 폼(입력)</h3>
           <ul>
             <li><code>&lt;form&gt;</code> 안에 <code>&lt;label&gt;</code> + <code>&lt;input&gt;</code> + <code>&lt;button&gt;</code></li>
             <li>input type: text, email, password, checkbox, radio, date …</li>
-            <!-- <li>아래 <a href="#quiz">퀴즈</a>가 radio 입력으로 만들어져 있어요!</li> -->
+            <li>👉 아래 <a href="#quiz">퀴즈</a>가 radio 입력으로 만들어져 있어요!</li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>Class와 id, 구조 태그</h3>
+          <h3>🏷️ class와 id, 구조 태그</h3>
           <ul>
             <li><code>class</code> — 여러 요소가 공유 가능 → CSS에서 <code>.이름</code></li>
             <li><code>id</code> — 페이지에 딱 하나 → CSS에서 <code>#이름</code></li>
@@ -187,22 +139,22 @@
 
     <!-- ========== 2-2. CSS 정리 ========== -->
     <section id="css-note">
-      <h2><span class="hl">3. CSS 정리</span></h2>
-      <!-- <p class="section-intro">CSS는 웹페이지에 <strong>옷을 입히는(디자인)</strong> 언어입니다.</p> -->
+      <h2><span class="hl">3. CSS 핵심 정리</span></h2>
+      <p class="section-intro">CSS는 웹페이지에 <strong>옷을 입히는(디자인)</strong> 언어입니다.</p>
 
       <div class="card-grid">
 
         <article class="card">
-          <h3>기본 문법 &amp; 연결</h3>
+          <h3>✒️ 기본 문법 &amp; 연결</h3>
           <pre><code>선택자 { 속성: 값; }
-              h1 { color: navy; }</code></pre>
+h1 { color: navy; }</code></pre>
           <ul>
             <li>외부 <code>&lt;link&gt;</code> (권장) / 내부 <code>&lt;style&gt;</code> / 인라인 <code>style=""</code></li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>선택자</h3>
+          <h3>🎯 선택자</h3>
           <ul>
             <li>요소 <code>p</code> → 클래스 <code>.name</code> → 아이디 <code>#name</code></li>
             <li>자손 선택자 <code>li em</code></li>
@@ -211,40 +163,42 @@
         </article>
 
         <article class="card">
-          <h3>박스 모델</h3>
+          <h3>📦 박스 모델</h3>
           <ul>
             <li>안쪽 여백 <code>padding</code> → 테두리 <code>border</code> → 바깥 여백 <code>margin</code></li>
-            <li><code>box-sizing: border-box</code>로 크기 계산 방식 표준화</li>
+            <li><code>box-sizing: border-box</code>로 크기 계산 깔끔하게</li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>레이아웃</h3>
+          <h3>🧱 레이아웃</h3>
           <ul>
-            <li><code>display: flex</code> — 자식을 가로로 나란히</li>
+            <li><code>display: flex</code> — 한 방향 배치 (이 카드들의 부모는 grid!)</li>
             <li><code>display: grid</code> + <code>repeat(3, 1fr)</code> — 행·열 배치</li>
-            <li><code>position</code>: static / relative / absolute / fixed / sticky</li>
+            <li><code>position</code>: static / relative / absolute / fixed / sticky
+              — 위의 탭 메뉴가 <mark>sticky</mark>예요</li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>반응형 &amp; 가상클래스</h3>
+          <h3>📱 반응형 &amp; 가상클래스</h3>
           <pre><code>@media (max-width: 720px) {
-          /* 폭 조건 만족 시에만 안쪽 규칙 적용 */ }</code></pre>
+  /* 좁은 화면용 스타일 */
+}</code></pre>
           <ul>
             <li><code>:hover</code> <code>:active</code> (순서는 LVHA)</li>
-            <li><code>::before</code> <code>::after</code> + <code>content</code> 속성 필수</li>
+            <li><code>::before</code> <code>::after</code> + <code>content</code> 필수</li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>효과 · 변수 · 리셋</h3>
+          <h3>✨ 효과 · 변수 · 리셋</h3>
           <ul>
-            <li><code>transform</code> + <code>transition</code> — 카드 animation</li>
-            <li><code>@keyframes</code> + <code>animation</code> — Title 연필 animation</li>
+            <li><code>transform</code> + <code>transition</code> — 카드에 마우스를 올려 보세요!</li>
+            <li><code>@keyframes</code> + <code>animation</code> — 위의 연필이 흔들리는 이유</li>
             <li><code>box-shadow</code>, <code>border-radius</code>, <code>linear-gradient</code></li>
             <li>CSS 변수: <code>:root { --잉크색: … }</code> → <code>var(--잉크색)</code></li>
-            <li>CSS 리셋: <code>* { margin:0; padding:0; box-sizing:border-box; }</code></li>
+            <li>리셋: <code>* { margin:0; padding:0; box-sizing:border-box; }</code></li>
           </ul>
         </article>
 
@@ -254,12 +208,9 @@
     <!-- ========== 3. 퀴즈 ========== -->
     <section id="quiz">
       <h2><span class="hl">4. HTML · CSS 퀴즈 5문제</span></h2>
-
-      <!--
       <p class="section-intro">보기를 클릭하면 <span class="ok-text">정답</span>인지
         <span class="no-text">오답</span>인지 바로 알려줘요.
         (radio 입력 + <code>:checked</code> 가상클래스만으로 만든 순수 CSS 퀴즈!)</p>
-        -->
 
       <form class="quiz-form">
 
@@ -303,10 +254,8 @@
 
   </main>
 
-  
   <!-- ===== 꼬리말 (시맨틱 태그: footer) ===== -->
   <footer>
-    <!--
     <p>📚 이 페이지에 사용된 배운 기술:
       <span class="chip">시맨틱 태그</span>
       <span class="chip">표 · 목록 · 폼</span>
@@ -318,8 +267,7 @@
       <span class="chip">transition · @keyframes</span>
       <span class="chip">@media 반응형</span>
     </p>
-     -->
-    <p class="copyright">웹개발 수업 정리 노트입니다.</p>
+    <p class="copyright">웹개발 수업 정리 과제 · 직접 작성한 학습 노트입니다.</p>
   </footer>
 
 </body>
