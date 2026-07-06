@@ -1,0 +1,9 @@
+#title {
+    color: tomato;
+    font-size: 3rem;
+}
+
+button {
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
