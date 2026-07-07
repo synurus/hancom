@@ -1,0 +1,8 @@
+/* 입력칸과 버튼에 여백 */
+input, button { padding: 8px 12px; font-size: 14px; }
+
+/* 과일 목록(id="out")을 크고 굵게 */
+#out { font-size: 18px; font-weight: 700; margin-top: 12px; }
+
+/* 개수 안내(id="info")는 회색 */
+#info { color: #555; margin-top: 4px; }

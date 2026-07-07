@@ -1,0 +1,5 @@
+/* 그림(id="pic") 모서리 둥글게 + 손가락 커서 */
+#pic { border-radius: 10px; cursor: pointer; }
+
+/* 안내 문구를 회색으로 */
+#hint { color: #555; margin-top: 10px; }

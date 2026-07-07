@@ -1,0 +1,5 @@
+/* 인사말(id="greet")을 보라색으로 */
+#greet { color: #7c3aed; }
+
+/* 입력칸과 버튼에 여백 + 오른쪽 간격 */
+input, button { padding: 8px 12px; font-size: 14px; margin-right: 4px; }

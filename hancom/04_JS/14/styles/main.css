@@ -1,0 +1,5 @@
+/* 사람 정보(id="out")를 크고 굵게 + 보라색 */
+#out { font-size: 22px; font-weight: 700; color: #7c3aed; margin-bottom: 10px; }
+
+/* 버튼에 여백 + 오른쪽 간격 */
+button { padding: 8px 12px; font-size: 14px; margin-right: 4px; }

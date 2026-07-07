@@ -1,0 +1,5 @@
+/* 버튼에 여백 + 오른쪽 간격 */
+button { padding: 6px 12px; font-size: 14px; margin-right: 4px; }
+
+/* 목록(id="out")을 크게 + 줄 간격 */
+#out { font-size: 16px; line-height: 1.8; margin-top: 12px; }

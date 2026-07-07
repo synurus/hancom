@@ -1,0 +1,5 @@
+/* 버튼을 크게 + 손가락 커서 */
+button { padding: 10px 20px; font-size: 15px; cursor: pointer; }
+
+/* 누른 횟수(id="count")를 크고 굵게 */
+#count { font-size: 20px; font-weight: 700; margin-top: 12px; }
