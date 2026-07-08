@@ -1,0 +1,976 @@
+/* ============================================
+   흑기사 BLACK_KNIGHT — 픽셀아트 스크롤 사이트
+   색상 테마: 흰 배경 + 검은 톤 픽셀아트
+   ============================================ */
+
+:root {
+    --black: #111111;
+    --white: #ffffff;
+    --gray: #888888;
+    --light-gray: #e8e8e8;
+
+    /* 섹션별 꽃 색 (JS에서도 참조 · 채도 높임) */
+    --flower-red: #ff1744;
+    --flower-blue: #2979ff;
+    --flower-green: #00e676;
+    --flower-yellow: #ffea00;
+    --flower-purple: #d500f9;
+
+    --pixel: 4px; /* 픽셀 단위 */
+    --font-pixel: 'Galmuri11', 'DungGeunMo', monospace;
+
+    /* 반투명 패널 배경 (다크모드에서 값 교체) */
+    --panel: rgba(255, 255, 255, 0.7);
+
+    /* 커스텀 픽셀 커서 (기본=검정 화살표 / 클릭=흰 화살표) */
+    --cur-black: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20shape-rendering='crispEdges'%3E%3Cpath%20d='M3%202L3%2020L8%2015L11%2022L14%2021L11%2014L18%2014Z'%20fill='black'%20stroke='white'%20stroke-width='1.5'/%3E%3C/svg%3E") 3 2;
+    --cur-white: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20shape-rendering='crispEdges'%3E%3Cpath%20d='M3%202L3%2020L8%2015L11%2022L14%2021L11%2014L18%2014Z'%20fill='white'%20stroke='black'%20stroke-width='1.5'/%3E%3C/svg%3E") 3 2;
+}
+
+/* ============================================
+   🌙 밤하늘 다크모드 (body.night 에서 색 반전)
+   ============================================ */
+body.night {
+    --black: #f2f2f2;   /* 글씨·테두리를 밝게 */
+    --white: #0d0d1a;   /* 배경을 밤하늘로 */
+    --gray: #9aa0b5;
+    --light-gray: #23233a;
+    --panel: rgba(13, 13, 26, 0.72);
+}
+
+/* ---------- 리셋 ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;        /* 고정 네비 높이만큼 */
+}
+
+body {
+    font-family: var(--font-pixel);
+    background: var(--white);
+    color: var(--black);
+    line-height: 1.7;
+    overflow-x: hidden;
+    image-rendering: pixelated;
+    -webkit-font-smoothing: none;
+    cursor: var(--cur-black), auto;   /* 커스텀 픽셀 커서 */
+    transition: background 0.4s, color 0.4s;
+}
+
+/* 클릭 가능한 요소는 흰 화살표 커서 */
+a, button, .skin-frame, .filter-btn, .ctrl-btn, .to-top, .gb-del, .topnav a, select {
+    cursor: var(--cur-white), pointer;
+}
+
+/* 입력창은 텍스트 커서 */
+input, textarea {
+    cursor: text;
+}
+
+/* 다크모드에서 서브 타이틀 가독성 */
+body.night .title-sub {
+    color: #c8c8d8;
+}
+
+img {
+    image-rendering: pixelated;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ============================================
+   배경 별 레이어
+   ============================================ */
+
+.starfield {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    width: var(--pixel);
+    height: var(--pixel);
+    /* 배경색은 JS에서 지정 */
+    animation: twinkle 1.5s steps(2) infinite;
+    box-shadow: 0 0 2px currentColor;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: 0.2; transform: scale(0.5); }
+}
+
+/* ============================================
+   타이틀 인트로
+   ============================================ */
+
+.intro {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: var(--panel);
+}
+
+.intro-logos {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.intro-logo {
+    height: 180px;   /* 2배 확대 */
+    width: auto;
+    max-width: 100%;
+    animation: logoBob 2.6s ease-in-out infinite;   /* 둥실 효과 */
+}
+
+.intro-logo.youtube-logo {
+    animation-delay: 0.4s;
+}
+
+@keyframes logoBob {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-10px); }
+}
+
+/* 타이틀 서브에 깜빡이는 픽셀 커서 */
+.title-sub::after {
+    content: '_';
+    margin-left: 4px;
+    animation: blinkCaret 1s steps(1) infinite;
+}
+
+@keyframes blinkCaret {
+    0%, 49%   { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+.intro-logo.youtube-logo {
+    /* 빨간 유튜브 로고를 픽셀 액자에 넣어 이질감 완화 */
+    height: 120px;   /* 2배 확대 */
+    border: var(--pixel) solid var(--black);
+    box-shadow: 6px 6px 0 var(--black);
+}
+
+.logo-plus {
+    font-size: 40px;
+    color: var(--black);
+}
+
+.intro-title {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.title-kr {
+    font-size: 64px;
+    letter-spacing: 8px;
+    font-weight: bold;
+}
+
+.title-en {
+    font-size: 32px;
+    letter-spacing: 4px;
+    color: var(--black);
+}
+
+.title-sub {
+    font-size: 18px;
+    color: #555555;   /* 살짝 더 진하게 */
+    letter-spacing: 2px;
+}
+
+/* 참고 사이트 크레딧 — 더 연한 회색 */
+.intro-credit {
+    margin-bottom: 44px;
+    font-size: 14px;
+    color: #aaaaaa;
+    letter-spacing: 1px;
+}
+
+.intro-credit a {
+    color: #aaaaaa;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.intro-credit a:hover {
+    color: var(--black);
+}
+
+/* 입장 버튼 — 픽셀 스타일 */
+.enter-btn {
+    font-family: var(--font-pixel);
+    font-size: 20px;
+    color: var(--white);
+    background: var(--black);
+    border: none;
+    padding: 18px 36px;
+    cursor: pointer;
+    box-shadow: 8px 8px 0 var(--gray);
+    transition: transform 0.1s steps(2), box-shadow 0.1s steps(2), background 0.2s;
+}
+
+.enter-btn:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 4px 4px 0 var(--gray);
+    background: #333;
+}
+
+.enter-btn:active {
+    transform: translate(8px, 8px);
+    box-shadow: 0 0 0 var(--gray);
+}
+
+.scroll-hint {
+    margin-top: 48px;
+    font-size: 28px;
+    animation: bounce 1.2s steps(3) infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(12px); }
+}
+
+/* ============================================
+   본문 섹션
+   ============================================ */
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+.section {
+    position: relative;
+    min-height: 100vh;
+    padding: 80px 20px 220px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--panel);
+}
+
+/* 섹션 사이 픽셀 구분선 (계단식 블록) */
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    z-index: 3;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--black) 0 8px,
+        transparent 8px 16px
+    );
+}
+
+.section-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* 스크롤 등장 초기 상태 */
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.visible .section-inner {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-num {
+    font-size: 20px;
+    color: var(--gray);
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+}
+
+.section-title {
+    font-size: 40px;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+}
+
+.section-desc {
+    font-size: 16px;
+    color: var(--gray);
+    margin-bottom: 32px;
+}
+
+/* ============================================
+   픽셀 액자 (프레임)
+   ============================================ */
+
+.frame {
+    background: var(--white);
+    border: var(--pixel) solid var(--black);
+    box-shadow:
+        8px 8px 0 var(--black),
+        inset 0 0 0 var(--pixel) var(--white),
+        inset 0 0 0 calc(var(--pixel) * 2) var(--black);
+    padding: 16px;
+    margin: 24px 0 32px;
+    max-width: 100%;
+}
+
+/* 서 있는 액자 (섹션1 로고) — 2배 확대 */
+/* 로고 크기에 맞춰 자연스럽게 감싸는 액자 (클릭 시 채널 이동) */
+.frame-standing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.1s steps(2), box-shadow 0.1s steps(2);
+}
+
+.frame-standing:hover {
+    transform: translate(-4px, -4px);
+    box-shadow:
+        12px 12px 0 var(--black),
+        inset 0 0 0 var(--pixel) var(--white),
+        inset 0 0 0 calc(var(--pixel) * 2) var(--black);
+}
+
+.frame-standing:active {
+    transform: translate(4px, 4px);
+    box-shadow:
+        4px 4px 0 var(--black),
+        inset 0 0 0 var(--pixel) var(--white),
+        inset 0 0 0 calc(var(--pixel) * 2) var(--black);
+}
+
+.frame-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.frame-logo {
+    height: 160px;   /* 2배 확대 */
+    width: auto;
+    max-width: 100%;
+}
+
+/* 영상 액자 (섹션2,3) */
+.frame-video {
+    width: 100%;
+    max-width: 720px;
+    padding: 12px;
+}
+
+.frame-video iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: var(--pixel) solid var(--black);
+}
+
+/* ============================================
+   바닥 설명글
+   ============================================ */
+
+.ground-text {
+    max-width: 640px;
+    font-size: 17px;
+}
+
+.ground-text p {
+    margin-bottom: 12px;
+}
+
+.ground-text ul {
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+    margin: 12px auto;
+}
+
+.ground-text li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 16px;
+    color: var(--white);
+    background: var(--black);
+    padding: 14px 24px;
+    box-shadow: 6px 6px 0 var(--gray);
+    transition: transform 0.1s steps(2), box-shadow 0.1s steps(2);
+}
+
+.cta-btn:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0 var(--gray);
+}
+
+/* ============================================
+   섹션 4 — 스킨 갤러리
+   ============================================ */
+
+.skin-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    width: 100%;
+    margin-top: 16px;
+}
+
+.skin-frame {
+    position: relative;
+    background: var(--white);
+    border: var(--pixel) solid var(--black);
+    box-shadow: 8px 8px 0 var(--black);
+    padding: 12px;
+    cursor: pointer;
+    perspective: 800px;                       /* 3D 뒤집기용 원근 */
+    transition: box-shadow 0.1s steps(2);
+}
+
+.skin-frame:hover {
+    box-shadow: 12px 12px 0 var(--black);
+}
+
+/* 뒤집히는 카드 (앞면/뒷면) — CSS STEP08: 3D transform */
+.skin-card {
+    position: relative;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.skin-frame:hover .skin-card {
+    transform: rotateY(180deg);
+}
+
+.skin-face {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skin-back {
+    position: absolute;
+    inset: 0;
+    transform: rotateY(180deg);
+    justify-content: center;
+    background: var(--white);
+    padding: 8px;
+}
+
+.skin-desc {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.skin-play {
+    font-size: 13px;
+    color: var(--white);
+    background: var(--black);
+    padding: 6px 12px;
+}
+
+/* 캐릭터 로고 자리 (비어있음) */
+.skin-portrait {
+    width: 100%;
+    aspect-ratio: 3 / 4;   /* 초상화 이미지 비율(2304×3072)에 맞춤 */
+    background:
+        repeating-conic-gradient(var(--light-gray) 0% 25%, #f5f5f5 0% 50%) 0 / 20px 20px;
+    border: var(--pixel) solid var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray);
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+/* 캐릭터 이미지가 들어간 액자는 흰 배경 (투명 PNG가 깔끔하게) */
+.skin-portrait.has-img {
+    background: var(--white);
+}
+
+.skin-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;   /* 캐릭터가 잘리지 않게 액자 안에 맞춤 */
+}
+
+.skin-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.skin-group {
+    font-size: 12px;
+    color: var(--gray);
+    margin-top: 4px;
+}
+
+.skin-frame.watched {
+    outline: var(--pixel) solid var(--flower-yellow);
+}
+
+.skin-frame.watched .skin-name::after {
+    content: ' ✔';
+    color: var(--flower-green);
+}
+
+/* ============================================
+   바닥 픽셀 꽃밭
+   ============================================ */
+
+.flowerbed {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 180px;
+    z-index: 1;
+    pointer-events: none;
+    /* 픽셀 잔디 바닥 띠 */
+    border-top: var(--pixel) solid var(--black);
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0 8px,
+            rgba(0, 0, 0, 0.04) 8px 12px
+        );
+}
+
+/* 픽셀 꽃 스프라이트 (box-shadow 픽셀아트) */
+.pixel-flower {
+    position: absolute;
+    bottom: 20px;
+    width: var(--pixel);
+    height: var(--pixel);
+    background: transparent;
+    /* 꽃잎 4방 + 중심 + 줄기 (색은 JS가 변수로 지정) */
+    --p: var(--pixel);
+    --c: var(--flower-red);
+    box-shadow:
+        /* 중심 */
+        0 0 0 0 var(--c),
+        /* 위 꽃잎 */
+        0 calc(var(--p) * -1) 0 0 var(--c),
+        /* 아래(중심 아래) */
+        0 var(--p) 0 0 var(--c),
+        /* 좌 꽃잎 */
+        calc(var(--p) * -1) 0 0 0 var(--c),
+        /* 우 꽃잎 */
+        var(--p) 0 0 0 var(--c),
+        /* 줄기 (초록) */
+        0 calc(var(--p) * 2) 0 0 #3b8f2a,
+        0 calc(var(--p) * 3) 0 0 #3b8f2a;
+}
+
+/* ============================================
+   푸터
+   ============================================ */
+
+.footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 40px 20px;
+    background: var(--black);
+    color: var(--white);
+    font-size: 13px;
+}
+
+.footer-small {
+    color: var(--gray);
+    margin-top: 8px;
+    font-size: 11px;
+}
+
+/* ============================================
+   상단 고정 네비게이션 (position: sticky)
+   ============================================ */
+
+.topnav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 10px;
+    background: var(--black);
+    border-bottom: var(--pixel) solid var(--gray);
+}
+
+.topnav a {
+    color: var(--white);
+    font-size: 14px;
+    padding: 8px 12px;
+    border: var(--pixel) solid transparent;
+    transition: background 0.15s steps(2), color 0.15s steps(2), transform 0.1s steps(2);
+}
+
+.topnav a:hover {
+    background: var(--white);
+    color: var(--black);
+    transform: translateY(-2px);
+}
+
+/* 앵커 점프 시 고정 네비에 안 가리도록 여백 */
+.section {
+    scroll-margin-top: 60px;
+}
+
+/* ============================================
+   방명록 (form + 목록)
+   ============================================ */
+
+.guestbook-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    max-width: 520px;
+    margin: 8px 0 28px;
+    text-align: left;
+}
+
+.guestbook-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 15px;
+}
+
+.guestbook-form input,
+.guestbook-form textarea,
+.guestbook-form select {
+    font-family: var(--font-pixel);
+    font-size: 15px;
+    padding: 10px;
+    border: var(--pixel) solid var(--black);
+    background: var(--white);
+    color: var(--black);
+}
+
+.guestbook-form textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+.guestbook-form input:focus,
+.guestbook-form textarea:focus,
+.guestbook-form select:focus {
+    outline: var(--pixel) solid var(--flower-purple);
+}
+
+.guestbook-list {
+    list-style: none;
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+}
+
+.gb-item {
+    border: var(--pixel) solid var(--black);
+    box-shadow: 5px 5px 0 var(--black);
+    padding: 12px;
+    background: var(--white);
+}
+
+.gb-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gb-name {
+    font-weight: bold;
+}
+
+.gb-stars {
+    color: var(--black);
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.gb-del {
+    margin-left: auto;
+    font-family: var(--font-pixel);
+    border: var(--pixel) solid var(--black);
+    background: var(--white);
+    color: var(--black);
+    cursor: pointer;
+    padding: 2px 8px;
+    transition: background 0.15s steps(2), color 0.15s steps(2);
+}
+
+.gb-del:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+.gb-msg {
+    margin: 8px 0 4px;
+    word-break: break-word;
+}
+
+.gb-date {
+    font-size: 11px;
+    color: var(--gray);
+}
+
+.gb-empty {
+    color: var(--gray);
+    text-align: center;
+}
+
+/* ============================================
+   별똥별
+   ============================================ */
+
+.shooting-star {
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    z-index: 0;
+    pointer-events: none;
+    background: var(--sc, #ffffff);
+    box-shadow: 0 0 8px 2px var(--sc, #ffffff);
+}
+
+.shooting-star::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    width: 70px;
+    height: 3px;
+    background: linear-gradient(270deg, var(--sc, #ffffff), transparent);
+}
+
+/* ============================================
+   스크롤 진행 바
+   ============================================ */
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 0%;
+    z-index: 200;
+    background: linear-gradient(90deg,
+        #ff1744, #ff6d00, #ffea00, #00e676, #2979ff, #d500f9);
+    transition: width 0.1s linear;
+}
+
+/* ============================================
+   우상단 컨트롤 (다크모드 / 음악)
+   ============================================ */
+
+.controls {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 300;
+    display: flex;
+    gap: 8px;
+}
+
+.ctrl-btn {
+    font-family: var(--font-pixel);
+    font-size: 20px;
+    width: 46px;
+    height: 46px;
+    line-height: 1;
+    background: var(--white);
+    color: var(--black);
+    border: var(--pixel) solid var(--black);
+    box-shadow: 4px 4px 0 var(--black);
+    transition: transform 0.1s steps(2), box-shadow 0.1s steps(2);
+}
+
+.ctrl-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--black);
+}
+
+/* ============================================
+   맨 위로 버튼
+   ============================================ */
+
+.to-top {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 300;
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    background: var(--black);
+    color: var(--white);
+    border: var(--pixel) solid var(--black);
+    box-shadow: 4px 4px 0 var(--gray);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.1s steps(2), box-shadow 0.1s steps(2);
+}
+
+.to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.to-top:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--gray);
+}
+
+/* ============================================
+   스킨 카테고리 필터
+   ============================================ */
+
+.skin-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.filter-btn {
+    font-family: var(--font-pixel);
+    font-size: 15px;
+    padding: 8px 18px;
+    background: var(--white);
+    color: var(--black);
+    border: var(--pixel) solid var(--black);
+    box-shadow: 4px 4px 0 var(--black);
+    transition: transform 0.1s steps(2), box-shadow 0.1s steps(2), background 0.15s, color 0.15s;
+}
+
+.filter-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--black);
+}
+
+.filter-btn.active {
+    background: var(--black);
+    color: var(--white);
+}
+
+/* ============================================
+   방명록 — 글자수 / 평균 별점
+   ============================================ */
+
+.gb-count {
+    align-self: flex-end;
+    font-size: 12px;
+    color: var(--gray);
+}
+
+.gb-average {
+    max-width: 520px;
+    width: 100%;
+    margin-bottom: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.gb-avg-sub {
+    color: var(--gray);
+    font-weight: normal;
+    font-size: 12px;
+}
+
+/* ============================================
+   반응형
+   ============================================ */
+
+@media (max-width: 768px) {
+    .title-kr { font-size: 48px; }
+    .title-en { font-size: 24px; }
+    .section-title { font-size: 30px; }
+
+    .skin-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .intro-logo { height: 180px; }
+    .intro-logo.youtube-logo { height: 120px; }
+
+    .frame-logo { height: 150px; }
+}
+
+@media (max-width: 480px) {
+    .intro-logos { gap: 14px; }
+    .intro-logo { height: 120px; }
+    .intro-logo.youtube-logo { height: 80px; }
+
+    .frame-logo { height: 100px; }
+
+    .title-kr { font-size: 40px; letter-spacing: 4px; }
+    .title-en { font-size: 20px; }
+    .title-sub { font-size: 14px; }
+
+    .enter-btn { font-size: 16px; padding: 14px 24px; }
+
+    .section { padding: 60px 16px 200px; }
+    .section-title { font-size: 26px; }
+
+    .skin-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 애니메이션 최소화 선호 사용자 */
+@media (prefers-reduced-motion: reduce) {
+    .star, .scroll-hint { animation: none; }
+    .section-inner { transition: none; }
+}

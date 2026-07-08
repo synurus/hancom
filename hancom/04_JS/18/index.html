@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>흑기사 BLACK_KNIGHT - Youtube Introduction</title>
+
+    <!-- Galmuri 한글 픽셀폰트 (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quiple/galmuri/dist/galmuri.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!--
+    ============================================
+      프로젝트: 흑기사(BLACK_KNIGHT) 픽셀아트 유튜브 소개 사이트
+      콘셉트: 흰 배경 + 검은 톤 픽셀아트, 반짝이는 별 + 픽셀 꽃밭, 세로 스크롤 5섹션
+      참고: y-n10.com
+
+      타이틀: 채널로고 + 유튜브로고 + "흑기사 / BLACK_KNIGHT / Youtube Introduction" + 입장버튼
+      섹션1 채널소개(붉은꽃) / 섹션2 유튜브소개+영상(파란꽃)
+      섹션3 포트나이트소개+영상(초록꽃) / 섹션4 스킨액자 필터·3D뒤집기·클릭→영상(노란꽃)
+      섹션5 방명록 form(보라꽃) / 상단 sticky 네비 · 별똥별
+
+      핵심 기능:
+       1. 픽셀 별·별똥별·꽃 동적 생성 + 스크롤 등장 애니메이션
+       2. 스킨 액자 필터 + 3D 뒤집기 + 클릭 → 영상 이동 (class Character)
+       3. 방명록 폼(form · 글자수 · 평균별점 · 최신순) + localStorage
+       4. 밤하늘 다크모드 토글 / 배경음악(NCS) / 진행바 · 맨위로
+       * 커스텀 픽셀 커서 · 방문/관람/테마 localStorage
+    ============================================
+    -->
+
+    <!-- 배경 별 레이어 (JS가 별 + 별똥별을 채움) -->
+    <div id="starfield" class="starfield" aria-hidden="true"></div>
+
+    <!-- 스크롤 진행 바 -->
+    <div id="progressBar" class="progress-bar" aria-hidden="true"></div>
+
+    <!-- 우상단 컨트롤: 밤하늘 모드 / 배경음악 -->
+    <div class="controls">
+        <button id="themeToggle" class="ctrl-btn" type="button" aria-label="밤하늘 모드 전환" title="밤하늘 모드">🌙</button>
+        <button id="musicToggle" class="ctrl-btn" type="button" aria-label="배경음악 켜기/끄기" title="배경음악">🔊</button>
+    </div>
+
+    <!-- 배경음악 (자동재생 + 반복) · 출처: NCS -->
+    <audio id="bgm" loop autoplay preload="auto"
+        src="assets/Elektronomia%20-%20Sky%20High%20%20Progressive%20House%20%20NCS%20-%20Copyright%20Free%20Music.mp3"></audio>
+
+    <!-- 맨 위로 버튼 -->
+    <button id="toTop" class="to-top" type="button" aria-label="맨 위로">▲</button>
+
+    <!-- ===================== 타이틀 인트로 ===================== -->
+    <header id="intro" class="intro">
+        <div class="intro-logos">
+            <img src="assets/angry-bender.png" alt="흑기사 채널 로고" class="intro-logo channel-logo">
+            <span class="logo-plus">+</span>
+            <img src="assets/external-logo-mono-1.png" alt="유튜브 로고" class="intro-logo youtube-logo">
+        </div>
+
+        <h1 class="intro-title">
+            <span class="title-kr">흑기사</span>
+            <span class="title-en">BLACK_KNIGHT</span>
+            <span class="title-sub">Youtube Introduction</span>
+        </h1>
+
+        <p class="intro-credit">
+            Inspired by
+            <a href="https://y-n10.com/" target="_blank" rel="noopener">y-n10.com</a>
+        </p>
+
+        <button id="enterBtn" class="enter-btn">▶ 입장하기 / ENTER</button>
+
+        <div class="scroll-hint">▼</div>
+    </header>
+
+    <!-- ===================== 본문 ===================== -->
+    <main id="content" class="content">
+
+        <!-- 상단 고정 네비게이션 (position: sticky) -->
+        <nav class="topnav" aria-label="섹션 이동">
+            <a href="#section1">01 채널</a>
+            <a href="#section2">02 유튜브</a>
+            <a href="#section3">03 포트나이트</a>
+            <a href="#section4">04 스킨</a>
+            <a href="#section5">05 방명록</a>
+        </nav>
+
+        <!-- 섹션 1: 채널 소개 (붉은 꽃) -->
+        <section class="section" id="section1" data-flower="red">
+            <div class="section-inner">
+                <p class="section-num">01</p>
+                <h2 class="section-title">채널 소개</h2>
+
+                <a href="https://www.youtube.com/@black_knight" target="_blank" rel="noopener"
+                   class="frame frame-standing" aria-label="흑기사 유튜브 채널로 이동" title="유튜브 채널로 이동">
+                    <div class="frame-logos">
+                        <img src="assets/angry-bender.png" alt="흑기사 로고" class="frame-logo">
+                        <img src="assets/external-logo-mono-1.png" alt="유튜브 로고" class="frame-logo">
+                    </div>
+                </a>
+
+                <div class="ground-text">
+                    <p>안녕하세요, <strong>흑기사(BLACK_KNIGHT)</strong> 입니다.</p>
+                    <p>포트나이트를 중심으로 게임 영상과 라이브 방송을 하는 유튜버·스트리머예요.</p>
+                    <p>아래로 스크롤해서 저를 더 알아가 주세요! ▼</p>
+                </div>
+            </div>
+            <!-- 바닥 꽃밭 (JS가 채움) -->
+            <div class="flowerbed" aria-hidden="true"></div>
+        </section>
+
+        <!-- 섹션 2: 유튜브 소개 (파란 꽃) -->
+        <section class="section" id="section2" data-flower="blue">
+            <div class="section-inner">
+                <p class="section-num">02</p>
+                <h2 class="section-title">유튜브 채널 소개</h2>
+
+                <div class="frame frame-video">
+                    <iframe
+                        src="https://www.youtube.com/embed/USrYdq5Rd8E"
+                        title="채널 트레일러"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="ground-text">
+                    <p>제 채널에서는 이런 걸 볼 수 있어요!</p>
+                    <ul>
+                        <li>🎮 포트나이트 하이라이트</li>
+                        <li>🔴 실시간 라이브 방송</li>
+                        <li>✨ 스킨 리뷰 영상</li>
+                    </ul>
+                    <a href="https://www.youtube.com/@black_knight" target="_blank" rel="noopener" class="cta-btn">채널 구독하러 가기 ▶</a>
+                </div>
+            </div>
+            <div class="flowerbed" aria-hidden="true"></div>
+        </section>
+
+        <!-- 섹션 3: 포트나이트 소개 (초록 꽃) -->
+        <section class="section" id="section3" data-flower="green">
+            <div class="section-inner">
+                <p class="section-num">03</p>
+                <h2 class="section-title">포트나이트란?</h2>
+
+                <div class="frame frame-video">
+                    <iframe
+                        src="https://www.youtube.com/embed/2IpD1zC6omA"
+                        title="포트나이트 트레일러"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="ground-text">
+                    <p>🏝️ <strong>100명이 섬에 떨어져 최후의 1명</strong>을 가리는 배틀로얄!</p>
+                    <p>총 쏘고, 벽 짓고, 춤(이모트)추고... 그런데 진짜 매력은 따로 있죠.</p>
+                    <p>바로 <strong>다양한 콜라보 스킨</strong>! 마블 히어로부터 K-POP 아이돌까지,
+                       포트나이트 안에서 다 만날 수 있답니다. 다음 섹션에서 확인! ▼</p>
+                </div>
+            </div>
+            <div class="flowerbed" aria-hidden="true"></div>
+        </section>
+
+        <!-- 섹션 4: 포트나이트 스킨 (노란 꽃) -->
+        <section class="section" id="section4" data-flower="yellow">
+            <div class="section-inner">
+                <p class="section-num">04</p>
+                <h2 class="section-title">콜라보 스킨 갤러리</h2>
+                <p class="section-desc">액자를 클릭하면 해당 캐릭터 영상으로 이동해요!</p>
+
+                <!-- 카테고리 필터 -->
+                <div class="skin-filters">
+                    <button class="filter-btn active" data-filter="all" type="button">전체</button>
+                    <button class="filter-btn" data-filter="케데헌" type="button">케데헌</button>
+                    <button class="filter-btn" data-filter="오버워치" type="button">오버워치</button>
+                </div>
+
+                <!-- 액자 그리드 (JS가 채움) -->
+                <div id="skinGallery" class="skin-gallery"></div>
+            </div>
+            <div class="flowerbed" aria-hidden="true"></div>
+        </section>
+
+        <!-- 섹션 5: 방명록 (보라 꽃) -->
+        <section class="section" id="section5" data-flower="purple">
+            <div class="section-inner">
+                <p class="section-num">05</p>
+                <h2 class="section-title">방명록</h2>
+                <p class="section-desc">채널에 응원 한마디 남겨주세요! (브라우저에 저장됩니다)</p>
+
+                <form id="guestbookForm" class="guestbook-form">
+                    <label>
+                        닉네임
+                        <input type="text" id="gbName" name="name" maxlength="12" placeholder="닉네임 (최대 12자)" required>
+                    </label>
+
+                    <label>
+                        별점
+                        <select id="gbRating" name="rating">
+                            <option value="5">★★★★★ (최고!)</option>
+                            <option value="4">★★★★☆</option>
+                            <option value="3">★★★☆☆</option>
+                            <option value="2">★★☆☆☆</option>
+                            <option value="1">★☆☆☆☆</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        한마디
+                        <textarea id="gbMessage" name="message" maxlength="100" placeholder="응원 메시지 (최대 100자)" required></textarea>
+                        <span id="gbCount" class="gb-count">0 / 100</span>
+                    </label>
+
+                    <button type="submit" class="cta-btn">남기기 ▶</button>
+                </form>
+
+                <!-- 평균 별점 -->
+                <div id="gbAverage" class="gb-average"></div>
+
+                <!-- 방명록 목록 (JS가 채움 · 최신순) -->
+                <ul id="guestbookList" class="guestbook-list"></ul>
+            </div>
+            <div class="flowerbed" aria-hidden="true"></div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 흑기사 BLACK_KNIGHT · HTML + CSS + JS Mini Project</p>
+        <p class="footer-small">스킨 이미지·영상 저작권은 각 게임/제작사에 있습니다.</p>
+        <p class="footer-small">🎵 BGM: Elektronomia - Sky High [NCS Release] ·
+            <a href="https://www.youtube.com/watch?v=TW9d8vYrVFQ" target="_blank" rel="noopener">출처: NoCopyrightSounds</a>
+        </p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
