@@ -1,0 +1,28 @@
+[
+  {
+    "order": 1,
+    "title": "Project Overview & Specification",
+    "description": "Start by understanding the BLACK_KNIGHT project's vision and scope. The specification document outlines the pixel art YouTube introduction website concept, its 5-section layout (title intro, channel intro, YouTube info, skin gallery, guestbook), core features including dark mode and localStorage-based persistence, and the complete technology stack. This roadmap guides the entire implementation.",
+    "nodeIds": ["document:기획서.md"]
+  },
+  {
+    "order": 2,
+    "title": "HTML Structure & Page Markup",
+    "description": "The HTML file serves as the architectural blueprint for the entire application. It defines the 5 interactive sections that users scroll through, establishes the semantic container structure, embeds the dark mode and music controls, references the audio element for background music, and loads both the stylesheet and main JavaScript file. Understanding this markup is essential before diving into the styling and logic layers.",
+    "nodeIds": ["file:index.html"]
+  },
+  {
+    "order": 3,
+    "title": "Visual Design & Pixel Art Styling",
+    "description": "The stylesheet brings the pixel art aesthetic to life through custom fonts, keyframe animations, and responsive grid layouts. It implements the 3D transforms that power the skin gallery carousel, defines the dark mode color scheme, styles the interactive controls, and creates visual effects like the starfield background and scroll reveal animations. CSS mastery is central to the project's distinctive visual identity.",
+    "nodeIds": ["file:styles/main.css"],
+    "languageLesson": "CSS 3D transforms use perspective, rotateY, and translateZ to create depth. The transform-style: preserve-3d property allows nested elements to participate in the 3D space, making the rotating skin gallery effect possible. Animation keyframes paired with JavaScript-triggered classes enable smooth transitions."
+  },
+  {
+    "order": 4,
+    "title": "Application Logic & Interactivity",
+    "description": "The JavaScript file orchestrates all interactive features and dynamic content generation. It manages pixel, star, and flower generation for visual embellishment; implements the 3D skin gallery with filtering capabilities; handles the guestbook with localStorage persistence so entries survive page refreshes; manages dark mode theming; controls background music playback; and implements scroll reveal animations. This is where the static markup and styling come alive with user interaction and state management.",
+    "nodeIds": ["file:scripts/main.js"],
+    "languageLesson": "localStorage allows persistent client-side data storage without a server backend. When adding guestbook entries, they're stored as JSON strings and retrieved on page load. Event listeners on scroll and DOM elements trigger JavaScript-driven class changes that CSS animations respond to, creating a tightly integrated interaction model. Array methods like map() and filter() power the skin gallery filtering logic."
+  }
+]

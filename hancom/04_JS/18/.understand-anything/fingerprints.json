@@ -1,0 +1,205 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "bc630c82078ad31f49d404967bb8743e90fc63dd",
+  "generatedAt": "2026-07-09T02:55:13.585Z",
+  "files": {
+    ".understand-anything/.understandignore": {
+      "filePath": ".understand-anything/.understandignore",
+      "contentHash": "a4bac9134786442a74bf5ae27c04767f0ba864a0bdf11641db5cc23b807faba4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 43,
+      "hasStructuralAnalysis": false
+    },
+    "기획서.md": {
+      "filePath": "기획서.md",
+      "contentHash": "4e5c8894762a32ed2af19ac0d92ca5d009b546eab10841b125d6a2604bdda7eb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 206,
+      "hasStructuralAnalysis": true
+    },
+    "index.html": {
+      "filePath": "index.html",
+      "contentHash": "56d694a222665d7283072f4e36dd6c31f4ca5e567148bd1fc60304220ece24b7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 242,
+      "hasStructuralAnalysis": false
+    },
+    "scripts/main.js": {
+      "filePath": "scripts/main.js",
+      "contentHash": "9c7f07c951b2c613409088a1a4dc4889ae8567521b8aa83629b9ffd64e7dd283",
+      "functions": [
+        {
+          "name": "rand",
+          "params": [
+            "min",
+            "max"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "pick",
+          "params": [
+            "arr"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "escapeHtml",
+          "params": [
+            "str"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "createStars",
+          "params": [
+            "count"
+          ],
+          "exported": false,
+          "lineCount": 22
+        },
+        {
+          "name": "setupShootingStars",
+          "params": [],
+          "exported": false,
+          "lineCount": 27
+        },
+        {
+          "name": "createFlowers",
+          "params": [],
+          "exported": false,
+          "lineCount": 24
+        },
+        {
+          "name": "setupEnterButton",
+          "params": [],
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "renderSkinGallery",
+          "params": [
+            "filter"
+          ],
+          "exported": false,
+          "lineCount": 46
+        },
+        {
+          "name": "setupSkinFilter",
+          "params": [],
+          "exported": false,
+          "lineCount": 12
+        },
+        {
+          "name": "setupScrollReveal",
+          "params": [],
+          "exported": false,
+          "lineCount": 12
+        },
+        {
+          "name": "loadGuestbook",
+          "params": [],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "saveGuestbook",
+          "params": [
+            "list"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "setupGuestbook",
+          "params": [],
+          "exported": false,
+          "lineCount": 83
+        },
+        {
+          "name": "loadState",
+          "params": [],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "saveState",
+          "params": [
+            "patch"
+          ],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "markWatched",
+          "params": [
+            "id"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "setupTheme",
+          "params": [],
+          "exported": false,
+          "lineCount": 14
+        },
+        {
+          "name": "setupMusic",
+          "params": [],
+          "exported": false,
+          "lineCount": 34
+        },
+        {
+          "name": "setupScrollUI",
+          "params": [],
+          "exported": false,
+          "lineCount": 21
+        },
+        {
+          "name": "init",
+          "params": [],
+          "exported": false,
+          "lineCount": 15
+        }
+      ],
+      "classes": [
+        {
+          "name": "Character",
+          "methods": [
+            "constructor"
+          ],
+          "properties": [],
+          "exported": false,
+          "lineCount": 10
+        }
+      ],
+      "imports": [],
+      "exports": [],
+      "totalLines": 481,
+      "hasStructuralAnalysis": true
+    },
+    "styles/main.css": {
+      "filePath": "styles/main.css",
+      "contentHash": "6d2c0263787de5e9d6dcf72a9d3879aed52a11097d64a71ecd296e547f778f43",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 977,
+      "hasStructuralAnalysis": false
+    }
+  }
+}

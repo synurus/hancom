@@ -1,0 +1,32 @@
+[
+  {
+    "id": "layer:markup",
+    "name": "Markup Layer",
+    "description": "HTML entry point defining the page structure with 5 interactive sections, controls, and semantic layout for the YouTube introduction website.",
+    "nodeIds": ["file:index.html"]
+  },
+  {
+    "id": "layer:logic",
+    "name": "Application Logic",
+    "description": "Core JavaScript handling all interactive features including pixel animations, 3D skin gallery, guestbook with localStorage, dark mode, music control, and UI state management.",
+    "nodeIds": ["file:scripts/main.js"]
+  },
+  {
+    "id": "layer:styling",
+    "name": "Styling Layer",
+    "description": "Complete CSS stylesheet implementing pixel art aesthetic with animations, responsive layouts, 3D transforms, dark mode theming, and visual effects.",
+    "nodeIds": ["file:styles/main.css"]
+  },
+  {
+    "id": "layer:documentation",
+    "name": "Documentation",
+    "description": "Project specification and planning documents detailing design concept, features, technology stack, and development roadmap for the BLACK_KNIGHT website.",
+    "nodeIds": ["document:기획서.md"]
+  },
+  {
+    "id": "layer:tooling",
+    "name": "Tooling Configuration",
+    "description": "Tool-specific configuration files for the development and analysis infrastructure.",
+    "nodeIds": ["file:.understand-anything/.understandignore"]
+  }
+]

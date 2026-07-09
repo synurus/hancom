@@ -1,0 +1,278 @@
+{
+  "nodes": [
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "React 및 Vite를 이용한 최소 구성 템플릿 가이드로, HMR 지원, ESLint 설정, React Compiler 옵션에 대해 설명하고 있습니다.",
+      "tags": [
+        "documentation",
+        "entry-point",
+        "setup-guide"
+      ],
+      "complexity": "simple",
+      "languageNotes": "마크다운 형식으로 작성된 프로젝트 소개 문서이며, 세 개의 주요 섹션(React + Vite, React Compiler, ESLint 설정)을 포함합니다."
+    },
+    {
+      "id": "file:index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "index.html",
+      "summary": "React 애플리케이션의 HTML 진입점으로, root DOM 요소를 제공하고 main.jsx 모듈을 로드합니다.",
+      "tags": [
+        "entry-point",
+        "html",
+        "markup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "package.json",
+      "summary": "프로젝트 메타데이터, 빌드 스크립트, React 19 및 Vite 의존성을 정의하는 npm 설정 파일입니다.",
+      "tags": [
+        "configuration",
+        "build-system",
+        "dependency-management"
+      ],
+      "complexity": "simple",
+      "languageNotes": "ES modules를 사용하는 최신 구성이며, dev, build, lint, preview의 네 가지 주요 스크립트를 포함합니다."
+    },
+    {
+      "id": "file:.understand-anything/.understandignore",
+      "type": "file",
+      "name": ".understandignore",
+      "filePath": ".understand-anything/.understandignore",
+      "summary": "프로젝트 분석에서 제외할 파일과 디렉토리 패턴을 정의하는 설정 파일입니다. node_modules, 빌드 아웃풋, IDE 설정, 환경 파일 등을 제외 대상으로 지정합니다.",
+      "tags": [
+        "configuration",
+        "build-system",
+        "analysis-config"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/config.json",
+      "type": "config",
+      "name": "config.json",
+      "filePath": ".understand-anything/config.json",
+      "summary": "분석 결과 출력 언어를 한국어(ko)로 설정하는 Understand-Anything 플러그인 구성 파일입니다.",
+      "tags": [
+        "configuration",
+        "localization",
+        "plugin-config"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:eslint.config.js",
+      "type": "file",
+      "name": "eslint.config.js",
+      "filePath": "eslint.config.js",
+      "summary": "React Hooks, React Refresh, ESLint 권장 규칙을 포함하는 Flat Config 형식의 ESLint 설정 파일입니다. 브라우저 환경의 JavaScript와 JSX 파일을 대상으로 합니다.",
+      "tags": [
+        "configuration",
+        "linting",
+        "build-system"
+      ],
+      "complexity": "simple",
+      "languageNotes": "ESLint Flat Config(v9+) 형식을 사용하여 모듈화된 설정을 제공합니다."
+    },
+    {
+      "id": "file:src/App.jsx",
+      "type": "file",
+      "name": "App.jsx",
+      "filePath": "src/App.jsx",
+      "summary": "React 19 기반의 메인 애플리케이션 컴포넌트로, 카운터 상태 관리와 Vite 및 React 문서 링크를 포함한 랜딩 페이지를 제공합니다.",
+      "tags": [
+        "entry-point",
+        "component",
+        "state-management"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "React의 useState hook을 사용하여 카운터 상태를 관리하고, 스타일은 별도의 App.css 파일에서 정의합니다."
+    },
+    {
+      "id": "function:src/App.jsx:App",
+      "type": "function",
+      "name": "App",
+      "filePath": "src/App.jsx",
+      "lineRange": [
+        7,
+        120
+      ],
+      "summary": "React 함수형 컴포넌트로 카운터 기능과 함께 Vite와 React 소개 인터페이스를 렌더링합니다.",
+      "tags": [
+        "component",
+        "state-management",
+        "ui"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/index.css",
+      "type": "file",
+      "name": "index.css",
+      "filePath": "src/index.css",
+      "summary": "전역 CSS 변수와 기본 스타일을 정의합니다. 라이트/다크 모드 지원, 타이포그래피, 색상 체계, 반응형 디자인을 포함합니다.",
+      "tags": [
+        "styling",
+        "global-styles",
+        "responsive-design"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "CSS 사용자 정의 속성(CSS variables)으로 테마를 구현하여 다크 모드와 라이트 모드를 지원합니다."
+    },
+    {
+      "id": "file:src/App.css",
+      "type": "file",
+      "name": "App.css",
+      "filePath": "src/App.css",
+      "summary": "App 컴포넌트의 스타일을 정의합니다. 카운터 버튼, 히어로 이미지 레이아웃, 다음 단계 섹션, 반응형 미디어 쿼리를 포함합니다.",
+      "tags": [
+        "styling",
+        "component-styles",
+        "responsive-design"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "SCSS 중첩 선택자 문법과 CSS 변수를 활용하여 유지보수 가능한 컴포넌트 스타일을 작성합니다."
+    },
+    {
+      "id": "file:src/main.jsx",
+      "type": "file",
+      "name": "main.jsx",
+      "filePath": "src/main.jsx",
+      "summary": "React 애플리케이션의 진입점으로, StrictMode로 앱을 래핑하여 개발 중 잠재적 문제를 감지하고, DOM의 root 요소에 App 컴포넌트를 렌더링합니다.",
+      "tags": [
+        "entry-point",
+        "bootstrap",
+        "react-setup"
+      ],
+      "complexity": "simple",
+      "languageNotes": "StrictMode를 사용하여 개발 환경에서 예상치 못한 부작용과 폐기된 API 사용을 감지합니다."
+    },
+    {
+      "id": "file:vite.config.js",
+      "type": "file",
+      "name": "vite.config.js",
+      "filePath": "vite.config.js",
+      "summary": "Vite 빌드 도구의 설정 파일로, React 플러그인을 활성화하여 JSX 변환과 HMR(Hot Module Replacement)을 지원합니다.",
+      "tags": [
+        "configuration",
+        "build-system",
+        "vite"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:README.md",
+      "target": "file:index.html",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:package.json",
+      "target": "file:index.html",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:README.md",
+      "target": "config:package.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/App.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/main.jsx",
+      "target": "file:src/App.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/main.jsx",
+      "target": "file:src/index.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "function:src/App.jsx:App",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "function:src/App.jsx:App",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:eslint.config.js",
+      "target": "file:src/App.jsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:eslint.config.js",
+      "target": "file:src/main.jsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:vite.config.js",
+      "target": "file:src/App.jsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:vite.config.js",
+      "target": "file:src/main.jsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/index.css",
+      "target": "file:src/App.jsx",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/App.css",
+      "target": "file:src/App.jsx",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:.understand-anything/.understandignore",
+      "target": "file:src/App.jsx",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

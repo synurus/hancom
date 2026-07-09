@@ -1,0 +1,1159 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "기획서.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 205,
+      "nonEmptyLines": 157,
+      "sections": [
+        {
+          "heading": "🎮 HTML + CSS + JS 미니 프로젝트 기획서",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "흑기사(BLACK_KNIGHT) — 픽셀아트 유튜브 소개 사이트",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "1. 프로젝트 개요",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "2. 목표 (왜 만드나)",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "3. 디자인 컨셉",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "4. 화면 구성",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "🏁 타이틀 인트로 (첫 화면)",
+          "level": 3,
+          "line": 47
+        },
+        {
+          "heading": "섹션별 구성",
+          "level": 3,
+          "line": 64
+        },
+        {
+          "heading": "섹션 4 스킨 캐릭터 (6개)",
+          "level": 3,
+          "line": 78
+        },
+        {
+          "heading": "5. 핵심 기능 (과제 도전 조건 충족)",
+          "level": 2,
+          "line": 92
+        },
+        {
+          "heading": "기능 ① 픽셀 별·꽃 동적 생성 + 스크롤 등장 애니메이션 ⭐",
+          "level": 3,
+          "line": 94
+        },
+        {
+          "heading": "기능 ② 스킨 액자 3D 뒤집기 + 클릭 → 영상 이동 ⭐메인",
+          "level": 3,
+          "line": 99
+        },
+        {
+          "heading": "기능 ③ 방명록 폼 (form + 배열 + localStorage) ⭐",
+          "level": 3,
+          "line": 104
+        },
+        {
+          "heading": "기능 ④ 방문 기록 저장 (localStorage)",
+          "level": 3,
+          "line": 111
+        },
+        {
+          "heading": "추가 연출·편의 기능",
+          "level": 3,
+          "line": 114
+        },
+        {
+          "heading": "6. 사용 기술 정리 (배운 것 매핑)",
+          "level": 2,
+          "line": 126
+        },
+        {
+          "heading": "7. 폴더 구조",
+          "level": 2,
+          "line": 136
+        },
+        {
+          "heading": "8. 개발 순서 (작게 시작 → 확장)",
+          "level": 2,
+          "line": 159
+        },
+        {
+          "heading": "9. 확장 아이디어 (여유 있으면)",
+          "level": 2,
+          "line": 171
+        },
+        {
+          "heading": "📌 index.html 상단 주석용 압축 버전",
+          "level": 2,
+          "line": 183
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 20
+      }
+    },
+    {
+      "path": "index.html",
+      "language": "html",
+      "fileCategory": "markup",
+      "totalLines": 241,
+      "nonEmptyLines": 204,
+      "metrics": {}
+    },
+    {
+      "path": "scripts/main.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 480,
+      "nonEmptyLines": 400,
+      "functions": [
+        {
+          "name": "rand",
+          "startLine": 52,
+          "endLine": 54,
+          "params": [
+            "min",
+            "max"
+          ]
+        },
+        {
+          "name": "pick",
+          "startLine": 56,
+          "endLine": 58,
+          "params": [
+            "arr"
+          ]
+        },
+        {
+          "name": "escapeHtml",
+          "startLine": 61,
+          "endLine": 65,
+          "params": [
+            "str"
+          ]
+        },
+        {
+          "name": "createStars",
+          "startLine": 71,
+          "endLine": 92,
+          "params": [
+            "count"
+          ]
+        },
+        {
+          "name": "setupShootingStars",
+          "startLine": 94,
+          "endLine": 120,
+          "params": []
+        },
+        {
+          "name": "createFlowers",
+          "startLine": 126,
+          "endLine": 149,
+          "params": []
+        },
+        {
+          "name": "setupEnterButton",
+          "startLine": 155,
+          "endLine": 164,
+          "params": []
+        },
+        {
+          "name": "renderSkinGallery",
+          "startLine": 170,
+          "endLine": 215,
+          "params": [
+            "filter"
+          ]
+        },
+        {
+          "name": "setupSkinFilter",
+          "startLine": 217,
+          "endLine": 228,
+          "params": []
+        },
+        {
+          "name": "setupScrollReveal",
+          "startLine": 234,
+          "endLine": 245,
+          "params": []
+        },
+        {
+          "name": "loadGuestbook",
+          "startLine": 251,
+          "endLine": 258,
+          "params": []
+        },
+        {
+          "name": "saveGuestbook",
+          "startLine": 260,
+          "endLine": 262,
+          "params": [
+            "list"
+          ]
+        },
+        {
+          "name": "setupGuestbook",
+          "startLine": 264,
+          "endLine": 346,
+          "params": []
+        },
+        {
+          "name": "loadState",
+          "startLine": 352,
+          "endLine": 359,
+          "params": []
+        },
+        {
+          "name": "saveState",
+          "startLine": 361,
+          "endLine": 368,
+          "params": [
+            "patch"
+          ]
+        },
+        {
+          "name": "markWatched",
+          "startLine": 370,
+          "endLine": 374,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "setupTheme",
+          "startLine": 380,
+          "endLine": 393,
+          "params": []
+        },
+        {
+          "name": "setupMusic",
+          "startLine": 399,
+          "endLine": 432,
+          "params": []
+        },
+        {
+          "name": "setupScrollUI",
+          "startLine": 438,
+          "endLine": 458,
+          "params": []
+        },
+        {
+          "name": "init",
+          "startLine": 464,
+          "endLine": 478,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "Character",
+          "startLine": 26,
+          "endLine": 35,
+          "methods": [
+            "constructor"
+          ],
+          "properties": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "rand",
+          "callee": "Math.random",
+          "lineNumber": 53
+        },
+        {
+          "caller": "pick",
+          "callee": "Math.floor",
+          "lineNumber": 57
+        },
+        {
+          "caller": "pick",
+          "callee": "Math.random",
+          "lineNumber": 57
+        },
+        {
+          "caller": "escapeHtml",
+          "callee": "String(str).replace",
+          "lineNumber": 62
+        },
+        {
+          "caller": "escapeHtml",
+          "callee": "String",
+          "lineNumber": 62
+        },
+        {
+          "caller": "createStars",
+          "callee": "document.getElementById",
+          "lineNumber": 72
+        },
+        {
+          "caller": "createStars",
+          "callee": "document.createElement",
+          "lineNumber": 76
+        },
+        {
+          "caller": "createStars",
+          "callee": "pick",
+          "lineNumber": 79
+        },
+        {
+          "caller": "createStars",
+          "callee": "Math.floor",
+          "lineNumber": 80
+        },
+        {
+          "caller": "createStars",
+          "callee": "rand",
+          "lineNumber": 80
+        },
+        {
+          "caller": "createStars",
+          "callee": "rand",
+          "lineNumber": 82
+        },
+        {
+          "caller": "createStars",
+          "callee": "rand",
+          "lineNumber": 83
+        },
+        {
+          "caller": "createStars",
+          "callee": "rand",
+          "lineNumber": 88
+        },
+        {
+          "caller": "createStars",
+          "callee": "field.appendChild",
+          "lineNumber": 90
+        },
+        {
+          "caller": "setupShootingStars",
+          "callee": "document.getElementById",
+          "lineNumber": 95
+        },
+        {
+          "caller": "spawn",
+          "callee": "document.createElement",
+          "lineNumber": 99
+        },
+        {
+          "caller": "spawn",
+          "callee": "s.style.setProperty",
+          "lineNumber": 101
+        },
+        {
+          "caller": "spawn",
+          "callee": "pick",
+          "lineNumber": 101
+        },
+        {
+          "caller": "spawn",
+          "callee": "rand",
+          "lineNumber": 102
+        },
+        {
+          "caller": "spawn",
+          "callee": "rand",
+          "lineNumber": 103
+        },
+        {
+          "caller": "spawn",
+          "callee": "field.appendChild",
+          "lineNumber": 104
+        },
+        {
+          "caller": "spawn",
+          "callee": "rand",
+          "lineNumber": 106
+        },
+        {
+          "caller": "spawn",
+          "callee": "rand",
+          "lineNumber": 107
+        },
+        {
+          "caller": "spawn",
+          "callee": "s.animate",
+          "lineNumber": 108
+        },
+        {
+          "caller": "spawn",
+          "callee": "rand",
+          "lineNumber": 111
+        },
+        {
+          "caller": "spawn",
+          "callee": "s.remove",
+          "lineNumber": 112
+        },
+        {
+          "caller": "setupShootingStars",
+          "callee": "(function loop() {\n        spawn();\n        setTimeout(loop, rand(2500, 6000));\n    })",
+          "lineNumber": 116
+        },
+        {
+          "caller": "setupShootingStars",
+          "callee": "spawn",
+          "lineNumber": 117
+        },
+        {
+          "caller": "setupShootingStars",
+          "callee": "setTimeout",
+          "lineNumber": 118
+        },
+        {
+          "caller": "setupShootingStars",
+          "callee": "rand",
+          "lineNumber": 118
+        },
+        {
+          "caller": "createFlowers",
+          "callee": "document.querySelectorAll('.section').forEach",
+          "lineNumber": 127
+        },
+        {
+          "caller": "createFlowers",
+          "callee": "document.querySelectorAll",
+          "lineNumber": 127
+        },
+        {
+          "caller": "createFlowers",
+          "callee": "section.querySelector",
+          "lineNumber": 128
+        },
+        {
+          "caller": "createFlowers",
+          "callee": "document.createElement",
+          "lineNumber": 134
+        },
+        {
+          "caller": "createFlowers",
+          "callee": "flower.style.setProperty",
+          "lineNumber": 136
+        },
+        {
+          "caller": "createFlowers",
+          "callee": "rand",
+          "lineNumber": 137
+        },
+        {
+          "caller": "createFlowers",
+          "callee": "rand",
+          "lineNumber": 138
+        },
+        {
+          "caller": "createFlowers",
+          "callee": "Math.floor",
+          "lineNumber": 140
+        },
+        {
+          "caller": "createFlowers",
+          "callee": "rand",
+          "lineNumber": 140
+        },
+        {
+          "caller": "createFlowers",
+          "callee": "flower.style.setProperty",
+          "lineNumber": 141
+        },
+        {
+          "caller": "createFlowers",
+          "callee": "String",
+          "lineNumber": 144
+        },
+        {
+          "caller": "createFlowers",
+          "callee": "bed.appendChild",
+          "lineNumber": 146
+        },
+        {
+          "caller": "setupEnterButton",
+          "callee": "document.getElementById",
+          "lineNumber": 156
+        },
+        {
+          "caller": "setupEnterButton",
+          "callee": "document.getElementById",
+          "lineNumber": 157
+        },
+        {
+          "caller": "setupEnterButton",
+          "callee": "btn.addEventListener",
+          "lineNumber": 160
+        },
+        {
+          "caller": "setupEnterButton",
+          "callee": "content.scrollIntoView",
+          "lineNumber": 161
+        },
+        {
+          "caller": "setupEnterButton",
+          "callee": "saveState",
+          "lineNumber": 162
+        },
+        {
+          "caller": "renderSkinGallery",
+          "callee": "document.getElementById",
+          "lineNumber": 171
+        },
+        {
+          "caller": "renderSkinGallery",
+          "callee": "loadState",
+          "lineNumber": 175
+        },
+        {
+          "caller": "renderSkinGallery",
+          "callee": "characters.filter",
+          "lineNumber": 179
+        },
+        {
+          "caller": "renderSkinGallery",
+          "callee": "list.forEach",
+          "lineNumber": 182
+        },
+        {
+          "caller": "renderSkinGallery",
+          "callee": "document.createElement",
+          "lineNumber": 183
+        },
+        {
+          "caller": "renderSkinGallery",
+          "callee": "watched.includes",
+          "lineNumber": 186
+        },
+        {
+          "caller": "renderSkinGallery",
+          "callee": "frame.classList.add",
+          "lineNumber": 186
+        },
+        {
+          "caller": "renderSkinGallery",
+          "callee": "escapeHtml",
+          "lineNumber": 201
+        },
+        {
+          "caller": "renderSkinGallery",
+          "callee": "frame.addEventListener",
+          "lineNumber": 207
+        },
+        {
+          "caller": "renderSkinGallery",
+          "callee": "window.open",
+          "lineNumber": 208
+        },
+        {
+          "caller": "renderSkinGallery",
+          "callee": "markWatched",
+          "lineNumber": 209
+        },
+        {
+          "caller": "renderSkinGallery",
+          "callee": "frame.classList.add",
+          "lineNumber": 210
+        },
+        {
+          "caller": "renderSkinGallery",
+          "callee": "gallery.appendChild",
+          "lineNumber": 213
+        },
+        {
+          "caller": "setupSkinFilter",
+          "callee": "document.querySelectorAll",
+          "lineNumber": 218
+        },
+        {
+          "caller": "setupSkinFilter",
+          "callee": "buttons.forEach",
+          "lineNumber": 221
+        },
+        {
+          "caller": "setupSkinFilter",
+          "callee": "btn.addEventListener",
+          "lineNumber": 222
+        },
+        {
+          "caller": "setupSkinFilter",
+          "callee": "buttons.forEach",
+          "lineNumber": 223
+        },
+        {
+          "caller": "setupSkinFilter",
+          "callee": "b.classList.remove",
+          "lineNumber": 223
+        },
+        {
+          "caller": "setupSkinFilter",
+          "callee": "btn.classList.add",
+          "lineNumber": 224
+        },
+        {
+          "caller": "setupSkinFilter",
+          "callee": "renderSkinGallery",
+          "lineNumber": 225
+        },
+        {
+          "caller": "setupScrollReveal",
+          "callee": "entries.forEach",
+          "lineNumber": 236
+        },
+        {
+          "caller": "setupScrollReveal",
+          "callee": "entry.target.classList.add",
+          "lineNumber": 238
+        },
+        {
+          "caller": "setupScrollReveal",
+          "callee": "saveState",
+          "lineNumber": 239
+        },
+        {
+          "caller": "setupScrollReveal",
+          "callee": "document.querySelectorAll('.section').forEach",
+          "lineNumber": 244
+        },
+        {
+          "caller": "setupScrollReveal",
+          "callee": "document.querySelectorAll",
+          "lineNumber": 244
+        },
+        {
+          "caller": "setupScrollReveal",
+          "callee": "observer.observe",
+          "lineNumber": 244
+        },
+        {
+          "caller": "loadGuestbook",
+          "callee": "JSON.parse",
+          "lineNumber": 253
+        },
+        {
+          "caller": "loadGuestbook",
+          "callee": "localStorage.getItem",
+          "lineNumber": 253
+        },
+        {
+          "caller": "loadGuestbook",
+          "callee": "console.error",
+          "lineNumber": 255
+        },
+        {
+          "caller": "saveGuestbook",
+          "callee": "localStorage.setItem",
+          "lineNumber": 261
+        },
+        {
+          "caller": "saveGuestbook",
+          "callee": "JSON.stringify",
+          "lineNumber": 261
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "document.getElementById",
+          "lineNumber": 265
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "document.getElementById",
+          "lineNumber": 266
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "document.getElementById",
+          "lineNumber": 267
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "document.getElementById",
+          "lineNumber": 268
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "document.getElementById",
+          "lineNumber": 269
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "loadGuestbook",
+          "lineNumber": 272
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "msgEl.addEventListener",
+          "lineNumber": 276
+        },
+        {
+          "caller": "renderAverage",
+          "callee": "entries.reduce",
+          "lineNumber": 285
+        },
+        {
+          "caller": "renderAverage",
+          "callee": "(sum / entries.length).toFixed",
+          "lineNumber": 286
+        },
+        {
+          "caller": "render",
+          "callee": "renderAverage",
+          "lineNumber": 292
+        },
+        {
+          "caller": "render",
+          "callee": "[...entries].sort",
+          "lineNumber": 299
+        },
+        {
+          "caller": "render",
+          "callee": "sorted.map((e) => `\n            <li class=\"gb-item\">\n                <div class=\"gb-head\">\n                    <span class=\"gb-name\">${escapeHtml(e.name)}</span>\n                    <span class=\"gb-stars\">${'★'.repeat(e.rating)}${'☆'.repeat(5 - e.rating)}</span>\n                    <button class=\"gb-del\" data-id=\"${e.id}\" aria-label=\"삭제\">✕</button>\n                </div>\n                <p class=\"gb-msg\">${escapeHtml(e.message)}</p>\n                <span class=\"gb-date\">${escapeHtml(e.date)}</span>\n            </li>\n        `).join",
+          "lineNumber": 300
+        },
+        {
+          "caller": "render",
+          "callee": "sorted.map",
+          "lineNumber": 300
+        },
+        {
+          "caller": "render",
+          "callee": "escapeHtml",
+          "lineNumber": 303
+        },
+        {
+          "caller": "render",
+          "callee": "'★'.repeat",
+          "lineNumber": 304
+        },
+        {
+          "caller": "render",
+          "callee": "'☆'.repeat",
+          "lineNumber": 304
+        },
+        {
+          "caller": "render",
+          "callee": "escapeHtml",
+          "lineNumber": 307
+        },
+        {
+          "caller": "render",
+          "callee": "escapeHtml",
+          "lineNumber": 308
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "form.addEventListener",
+          "lineNumber": 314
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "ev.preventDefault",
+          "lineNumber": 315
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "document.getElementById('gbName').value.trim",
+          "lineNumber": 316
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "document.getElementById",
+          "lineNumber": 316
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "msgEl.value.trim",
+          "lineNumber": 317
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "Number",
+          "lineNumber": 318
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "document.getElementById",
+          "lineNumber": 318
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "entries.push",
+          "lineNumber": 321
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "Date.now",
+          "lineNumber": 322
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "Math.random().toString(36).slice",
+          "lineNumber": 322
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "Math.random().toString",
+          "lineNumber": 322
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "Math.random",
+          "lineNumber": 322
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "Date.now",
+          "lineNumber": 323
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "new Date().toLocaleDateString",
+          "lineNumber": 327
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "saveGuestbook",
+          "lineNumber": 330
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "render",
+          "lineNumber": 331
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "form.reset",
+          "lineNumber": 332
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "listEl.addEventListener",
+          "lineNumber": 337
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "ev.target.closest",
+          "lineNumber": 338
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "entries.filter",
+          "lineNumber": 340
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "saveGuestbook",
+          "lineNumber": 341
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "render",
+          "lineNumber": 342
+        },
+        {
+          "caller": "setupGuestbook",
+          "callee": "render",
+          "lineNumber": 345
+        },
+        {
+          "caller": "loadState",
+          "callee": "JSON.parse",
+          "lineNumber": 354
+        },
+        {
+          "caller": "loadState",
+          "callee": "localStorage.getItem",
+          "lineNumber": 354
+        },
+        {
+          "caller": "loadState",
+          "callee": "console.error",
+          "lineNumber": 356
+        },
+        {
+          "caller": "saveState",
+          "callee": "Object.assign",
+          "lineNumber": 363
+        },
+        {
+          "caller": "saveState",
+          "callee": "loadState",
+          "lineNumber": 363
+        },
+        {
+          "caller": "saveState",
+          "callee": "localStorage.setItem",
+          "lineNumber": 364
+        },
+        {
+          "caller": "saveState",
+          "callee": "JSON.stringify",
+          "lineNumber": 364
+        },
+        {
+          "caller": "saveState",
+          "callee": "console.error",
+          "lineNumber": 366
+        },
+        {
+          "caller": "markWatched",
+          "callee": "loadState",
+          "lineNumber": 371
+        },
+        {
+          "caller": "markWatched",
+          "callee": "watched.includes",
+          "lineNumber": 372
+        },
+        {
+          "caller": "markWatched",
+          "callee": "watched.push",
+          "lineNumber": 372
+        },
+        {
+          "caller": "markWatched",
+          "callee": "saveState",
+          "lineNumber": 373
+        },
+        {
+          "caller": "setupTheme",
+          "callee": "document.getElementById",
+          "lineNumber": 381
+        },
+        {
+          "caller": "setupTheme",
+          "callee": "loadState",
+          "lineNumber": 382
+        },
+        {
+          "caller": "setupTheme",
+          "callee": "document.body.classList.add",
+          "lineNumber": 383
+        },
+        {
+          "caller": "setupTheme",
+          "callee": "btn.addEventListener",
+          "lineNumber": 388
+        },
+        {
+          "caller": "setupTheme",
+          "callee": "document.body.classList.toggle",
+          "lineNumber": 389
+        },
+        {
+          "caller": "setupTheme",
+          "callee": "saveState",
+          "lineNumber": 391
+        },
+        {
+          "caller": "setupMusic",
+          "callee": "document.getElementById",
+          "lineNumber": 400
+        },
+        {
+          "caller": "setupMusic",
+          "callee": "document.getElementById",
+          "lineNumber": 401
+        },
+        {
+          "caller": "setupMusic",
+          "callee": "bgm.play().catch",
+          "lineNumber": 406
+        },
+        {
+          "caller": "setupMusic",
+          "callee": "bgm.play",
+          "lineNumber": 406
+        },
+        {
+          "caller": "unmute",
+          "callee": "btn.contains",
+          "lineNumber": 410
+        },
+        {
+          "caller": "unmute",
+          "callee": "bgm.play().catch",
+          "lineNumber": 412
+        },
+        {
+          "caller": "unmute",
+          "callee": "bgm.play",
+          "lineNumber": 412
+        },
+        {
+          "caller": "unmute",
+          "callee": "['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach",
+          "lineNumber": 413
+        },
+        {
+          "caller": "unmute",
+          "callee": "window.removeEventListener",
+          "lineNumber": 414
+        },
+        {
+          "caller": "setupMusic",
+          "callee": "['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach",
+          "lineNumber": 416
+        },
+        {
+          "caller": "setupMusic",
+          "callee": "window.addEventListener",
+          "lineNumber": 417
+        },
+        {
+          "caller": "setupMusic",
+          "callee": "btn.addEventListener",
+          "lineNumber": 421
+        },
+        {
+          "caller": "setupMusic",
+          "callee": "bgm.play().catch",
+          "lineNumber": 424
+        },
+        {
+          "caller": "setupMusic",
+          "callee": "bgm.play",
+          "lineNumber": 424
+        },
+        {
+          "caller": "setupScrollUI",
+          "callee": "document.getElementById",
+          "lineNumber": 439
+        },
+        {
+          "caller": "setupScrollUI",
+          "callee": "document.getElementById",
+          "lineNumber": 440
+        },
+        {
+          "caller": "onScroll",
+          "callee": "toTop.classList.toggle",
+          "lineNumber": 447
+        },
+        {
+          "caller": "setupScrollUI",
+          "callee": "window.addEventListener",
+          "lineNumber": 450
+        },
+        {
+          "caller": "setupScrollUI",
+          "callee": "onScroll",
+          "lineNumber": 451
+        },
+        {
+          "caller": "setupScrollUI",
+          "callee": "toTop.addEventListener",
+          "lineNumber": 454
+        },
+        {
+          "caller": "setupScrollUI",
+          "callee": "window.scrollTo",
+          "lineNumber": 455
+        },
+        {
+          "caller": "init",
+          "callee": "createStars",
+          "lineNumber": 465
+        },
+        {
+          "caller": "init",
+          "callee": "setupShootingStars",
+          "lineNumber": 466
+        },
+        {
+          "caller": "init",
+          "callee": "createFlowers",
+          "lineNumber": 467
+        },
+        {
+          "caller": "init",
+          "callee": "setupEnterButton",
+          "lineNumber": 468
+        },
+        {
+          "caller": "init",
+          "callee": "renderSkinGallery",
+          "lineNumber": 469
+        },
+        {
+          "caller": "init",
+          "callee": "setupSkinFilter",
+          "lineNumber": 470
+        },
+        {
+          "caller": "init",
+          "callee": "setupScrollReveal",
+          "lineNumber": 471
+        },
+        {
+          "caller": "init",
+          "callee": "setupGuestbook",
+          "lineNumber": 472
+        },
+        {
+          "caller": "init",
+          "callee": "setupTheme",
+          "lineNumber": 473
+        },
+        {
+          "caller": "init",
+          "callee": "setupMusic",
+          "lineNumber": 474
+        },
+        {
+          "caller": "init",
+          "callee": "setupScrollUI",
+          "lineNumber": 475
+        },
+        {
+          "caller": "init",
+          "callee": "console.log",
+          "lineNumber": 477
+        },
+        {
+          "caller": "init",
+          "callee": "loadState",
+          "lineNumber": 477
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 20,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "styles/main.css",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 976,
+      "nonEmptyLines": 833,
+      "metrics": {}
+    }
+  ]
+}

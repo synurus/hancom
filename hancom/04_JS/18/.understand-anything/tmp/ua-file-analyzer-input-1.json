@@ -1,0 +1,43 @@
+{
+    "projectRoot":  "C:\\Users\\Har07\\desktop\\hancom\\hancom\\04_js\\18",
+    "batchImportData":  {
+                            "scripts/main.js":  [
+
+                                                ],
+                            "기획서.md":  [
+
+                                       ],
+                            "index.html":  [
+
+                                           ],
+                            "styles/main.css":  [
+
+                                                ]
+                        },
+    "batchFiles":  [
+                       {
+                           "fileCategory":  "docs",
+                           "path":  "기획서.md",
+                           "language":  "markdown",
+                           "sizeLines":  205
+                       },
+                       {
+                           "fileCategory":  "markup",
+                           "path":  "index.html",
+                           "language":  "html",
+                           "sizeLines":  241
+                       },
+                       {
+                           "fileCategory":  "code",
+                           "path":  "scripts/main.js",
+                           "language":  "javascript",
+                           "sizeLines":  480
+                       },
+                       {
+                           "fileCategory":  "markup",
+                           "path":  "styles/main.css",
+                           "language":  "css",
+                           "sizeLines":  976
+                       }
+                   ]
+}

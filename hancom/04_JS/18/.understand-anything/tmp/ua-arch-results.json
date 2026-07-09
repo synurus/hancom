@@ -1,0 +1,131 @@
+{
+  "scriptCompleted": true,
+  "directoryGroups": {
+    "root": [
+      "document:기획서.md",
+      "file:index.html"
+    ],
+    "scripts": [
+      "file:scripts/main.js"
+    ],
+    "styles": [
+      "file:styles/main.css"
+    ]
+  },
+  "nodeTypeGroups": {
+    "document": [
+      "document:기획서.md"
+    ],
+    "file": [
+      "file:index.html",
+      "file:scripts/main.js",
+      "file:styles/main.css"
+    ]
+  },
+  "crossCategoryEdges": [
+    {
+      "fromType": "file",
+      "toType": "file",
+      "edgeType": "imports",
+      "count": 2
+    },
+    {
+      "fromType": "document",
+      "toType": "file",
+      "edgeType": "documents",
+      "count": 3
+    }
+  ],
+  "interGroupImports": [
+    {
+      "from": "root",
+      "to": "styles",
+      "count": 1
+    },
+    {
+      "from": "root",
+      "to": "scripts",
+      "count": 1
+    }
+  ],
+  "intraGroupDensity": {
+    "root": {
+      "internalEdges": 0,
+      "totalEdges": 2,
+      "density": 0
+    },
+    "scripts": {
+      "internalEdges": 0,
+      "totalEdges": 1,
+      "density": 0
+    },
+    "styles": {
+      "internalEdges": 0,
+      "totalEdges": 1,
+      "density": 0
+    }
+  },
+  "patternMatches": {
+    "root": "unknown",
+    "scripts": "utility",
+    "styles": "unknown"
+  },
+  "deploymentTopology": {
+    "hasDockerfile": false,
+    "hasCompose": false,
+    "hasK8s": false,
+    "hasTerraform": false,
+    "hasCI": false,
+    "infraFiles": []
+  },
+  "dataPipeline": {
+    "schemaFiles": [],
+    "migrationFiles": [],
+    "dataModelFiles": [],
+    "apiHandlerFiles": []
+  },
+  "docCoverage": {
+    "groupsWithDocs": 1,
+    "totalGroups": 3,
+    "coverageRatio": 0.3333333333333333,
+    "undocumentedGroups": [
+      "root",
+      "scripts",
+      "styles"
+    ]
+  },
+  "dependencyDirection": [
+    {
+      "dependent": "root",
+      "dependsOn": "styles"
+    },
+    {
+      "dependent": "root",
+      "dependsOn": "scripts"
+    }
+  ],
+  "fileStats": {
+    "totalFileNodes": 4,
+    "filesPerGroup": {
+      "root": 2,
+      "scripts": 1,
+      "styles": 1
+    },
+    "nodeTypeCounts": {
+      "document": 1,
+      "file": 3
+    }
+  },
+  "fileFanIn": {
+    "document:기획서.md": 0,
+    "file:index.html": 0,
+    "file:scripts/main.js": 1,
+    "file:styles/main.css": 1
+  },
+  "fileFanOut": {
+    "document:기획서.md": 0,
+    "file:index.html": 2,
+    "file:scripts/main.js": 0,
+    "file:styles/main.css": 0
+  }
+}

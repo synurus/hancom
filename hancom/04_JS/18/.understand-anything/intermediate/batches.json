@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 4,
+  "totalBatches": 1,
+  "exportsByPath": {
+    "scripts/main.js": []
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": "기획서.md",
+          "language": "markdown",
+          "sizeLines": 205,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "index.html",
+          "language": "html",
+          "sizeLines": 241,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "scripts/main.js",
+          "language": "javascript",
+          "sizeLines": 480,
+          "fileCategory": "code"
+        },
+        {
+          "path": "styles/main.css",
+          "language": "css",
+          "sizeLines": 976,
+          "fileCategory": "markup"
+        }
+      ],
+      "batchImportData": {
+        "기획서.md": [],
+        "index.html": [],
+        "scripts/main.js": [],
+        "styles/main.css": []
+      },
+      "neighborMap": {}
+    }
+  ]
+}

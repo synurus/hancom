@@ -1,0 +1,931 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "BLACK_KNIGHT (흑기사)",
+    "languages": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Markdown"
+    ],
+    "frameworks": [],
+    "description": "Pixel art YouTube introduction website for the BLACK_KNIGHT gaming channel featuring 5 interactive sections with animations, dark mode toggle, and localStorage-based guestbook.",
+    "analyzedAt": "2026-07-09T02:54:01.807Z",
+    "gitCommitHash": "bc630c82078ad31f49d404967bb8743e90fc63dd"
+  },
+  "nodes": [
+    {
+      "id": "file:.understand-anything/.understandignore",
+      "type": "file",
+      "name": ".understandignore",
+      "filePath": ".understand-anything/.understandignore",
+      "summary": "Ignore patterns configuration for the understand-anything tool, specifying files and directories to exclude from analysis.",
+      "tags": [
+        "configuration",
+        "tool-config",
+        "ignore-list"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:기획서.md",
+      "type": "document",
+      "name": "기획서.md",
+      "filePath": "기획서.md",
+      "summary": "Comprehensive project specification for BLACK_KNIGHT pixel art YouTube introduction website, detailing design concept, 5-section layout, core features (pixel animations, 3D skin gallery, guestbook with localStorage), technology stack, folder structure, and development roadmap.",
+      "tags": [
+        "documentation",
+        "project-specification",
+        "entry-point",
+        "design-concept",
+        "feature-requirements"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Korean document with technical specifications. Contains design rationale, feature requirements, and development guidelines for the pixel art website."
+    },
+    {
+      "id": "file:index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "index.html",
+      "summary": "Main HTML entry point defining the page structure with 5 interactive sections (title intro, channel intro, YouTube intro, skin gallery, guestbook), controls for dark mode and music, background starfield, and audio element for background music.",
+      "tags": [
+        "entry-point",
+        "html-structure",
+        "markup",
+        "ui-container"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:scripts/main.js",
+      "type": "file",
+      "name": "main.js",
+      "filePath": "scripts/main.js",
+      "summary": "Core application logic managing all interactive features: dynamic pixel/star/flower generation, 3D skin gallery with filtering, guestbook with localStorage persistence, dark mode theming, background music control, scroll reveal animations, and UI state management.",
+      "tags": [
+        "entry-point",
+        "application-core",
+        "feature-implementation",
+        "state-management",
+        "localStorage-handler"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:styles/main.css",
+      "type": "file",
+      "name": "main.css",
+      "filePath": "styles/main.css",
+      "summary": "Complete stylesheet implementing pixel art aesthetic with custom fonts, animations, responsive grid layouts, 3D transforms for skin gallery, dark mode theming, controls styling, and visual effects (starfield, flowers, scroll reveal, progress bar).",
+      "tags": [
+        "stylesheet",
+        "pixel-art-design",
+        "responsive-layout",
+        "animations",
+        "dark-mode-support"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:scripts/main.js:Character",
+      "type": "class",
+      "name": "Character",
+      "filePath": "scripts/main.js",
+      "lineRange": [
+        26,
+        35
+      ],
+      "summary": "Data model representing a collaborator character with properties for identification, name, group affiliation, YouTube video URL, description, and portrait image.",
+      "tags": [
+        "data-model",
+        "class-definition",
+        "entity-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:rand",
+      "type": "function",
+      "name": "rand",
+      "filePath": "scripts/main.js",
+      "lineRange": [
+        52,
+        54
+      ],
+      "summary": "Utility function generating a random number between min and max values, used for positioning and timing animations.",
+      "tags": [
+        "utility",
+        "random-generator",
+        "helper-function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:pick",
+      "type": "function",
+      "name": "pick",
+      "filePath": "scripts/main.js",
+      "lineRange": [
+        56,
+        58
+      ],
+      "summary": "Utility function selecting a random element from an array, used for color and value randomization.",
+      "tags": [
+        "utility",
+        "array-helper",
+        "random-picker"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:escapeHtml",
+      "type": "function",
+      "name": "escapeHtml",
+      "filePath": "scripts/main.js",
+      "lineRange": [
+        61,
+        65
+      ],
+      "summary": "Security utility sanitizing HTML special characters in user input (guestbook entries) to prevent XSS attacks.",
+      "tags": [
+        "security",
+        "sanitization",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:createStars",
+      "type": "function",
+      "name": "createStars",
+      "filePath": "scripts/main.js",
+      "lineRange": [
+        71,
+        92
+      ],
+      "summary": "Dynamically generates and renders colored pixel stars to the starfield container, positioning them randomly with CSS custom properties.",
+      "tags": [
+        "animation",
+        "visual-effect",
+        "dom-manipulation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/main.js:setupShootingStars",
+      "type": "function",
+      "name": "setupShootingStars",
+      "filePath": "scripts/main.js",
+      "lineRange": [
+        94,
+        120
+      ],
+      "summary": "Initializes shooting stars animation with spawn function creating animated star elements at random intervals, managing their lifecycle and removal.",
+      "tags": [
+        "animation",
+        "visual-effect",
+        "event-loop"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/main.js:createFlowers",
+      "type": "function",
+      "name": "createFlowers",
+      "filePath": "scripts/main.js",
+      "lineRange": [
+        126,
+        149
+      ],
+      "summary": "Generates pixel flower elements for each section's flower bed with section-specific colors, random positioning, and rotation for visual variety.",
+      "tags": [
+        "animation",
+        "visual-effect",
+        "dom-manipulation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/main.js:setupEnterButton",
+      "type": "function",
+      "name": "setupEnterButton",
+      "filePath": "scripts/main.js",
+      "lineRange": [
+        155,
+        164
+      ],
+      "summary": "Attaches click listener to entrance button to scroll into content section and save visited state to localStorage.",
+      "tags": [
+        "event-handler",
+        "navigation",
+        "state-management"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:renderSkinGallery",
+      "type": "function",
+      "name": "renderSkinGallery",
+      "filePath": "scripts/main.js",
+      "lineRange": [
+        170,
+        215
+      ],
+      "summary": "Renders filterable skin gallery with 3D flip cards, marking watched skins, and click handlers opening YouTube videos in new tabs.",
+      "tags": [
+        "ui-component",
+        "gallery-renderer",
+        "api-handler"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:scripts/main.js:setupSkinFilter",
+      "type": "function",
+      "name": "setupSkinFilter",
+      "filePath": "scripts/main.js",
+      "lineRange": [
+        217,
+        228
+      ],
+      "summary": "Configures category filter buttons for skin gallery, toggling active state and triggering gallery re-render on selection.",
+      "tags": [
+        "event-handler",
+        "filter-control",
+        "ui-interaction"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:setupScrollReveal",
+      "type": "function",
+      "name": "setupScrollReveal",
+      "filePath": "scripts/main.js",
+      "lineRange": [
+        234,
+        245
+      ],
+      "summary": "Implements IntersectionObserver-based scroll reveal animation for sections, triggering visibility class and saving scroll progress.",
+      "tags": [
+        "animation",
+        "scroll-handler",
+        "intersection-observer"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/main.js:loadGuestbook",
+      "type": "function",
+      "name": "loadGuestbook",
+      "filePath": "scripts/main.js",
+      "lineRange": [
+        251,
+        258
+      ],
+      "summary": "Retrieves guestbook entries from localStorage, with error handling for corrupted data.",
+      "tags": [
+        "data-loading",
+        "storage-handler",
+        "error-handling"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:saveGuestbook",
+      "type": "function",
+      "name": "saveGuestbook",
+      "filePath": "scripts/main.js",
+      "lineRange": [
+        260,
+        262
+      ],
+      "summary": "Persists guestbook entries array to localStorage as JSON string.",
+      "tags": [
+        "data-persistence",
+        "storage-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:setupGuestbook",
+      "type": "function",
+      "name": "setupGuestbook",
+      "filePath": "scripts/main.js",
+      "lineRange": [
+        264,
+        346
+      ],
+      "summary": "Initializes complete guestbook system with form submission, entry rendering, deletion functionality, localStorage persistence, and rating/comment display with escape sanitization.",
+      "tags": [
+        "form-handler",
+        "data-management",
+        "ui-component"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:scripts/main.js:loadState",
+      "type": "function",
+      "name": "loadState",
+      "filePath": "scripts/main.js",
+      "lineRange": [
+        352,
+        359
+      ],
+      "summary": "Retrieves application state (theme, watched skins) from localStorage with error handling.",
+      "tags": [
+        "state-management",
+        "storage-handler",
+        "initialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:saveState",
+      "type": "function",
+      "name": "saveState",
+      "filePath": "scripts/main.js",
+      "lineRange": [
+        361,
+        368
+      ],
+      "summary": "Merges and persists application state updates to localStorage.",
+      "tags": [
+        "state-management",
+        "storage-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:markWatched",
+      "type": "function",
+      "name": "markWatched",
+      "filePath": "scripts/main.js",
+      "lineRange": [
+        370,
+        374
+      ],
+      "summary": "Marks a skin character as watched and saves the updated state to localStorage.",
+      "tags": [
+        "state-management",
+        "tracking"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:setupTheme",
+      "type": "function",
+      "name": "setupTheme",
+      "filePath": "scripts/main.js",
+      "lineRange": [
+        380,
+        393
+      ],
+      "summary": "Initializes dark mode toggle, applying saved theme preference and attaching click listener for mode switching with state persistence.",
+      "tags": [
+        "theme-handler",
+        "event-handler",
+        "state-management"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:setupMusic",
+      "type": "function",
+      "name": "setupMusic",
+      "filePath": "scripts/main.js",
+      "lineRange": [
+        399,
+        432
+      ],
+      "summary": "Configures background music autoplay with unmute handling for browser autoplay policies, toggle button for mute/unmute control.",
+      "tags": [
+        "audio-handler",
+        "event-handler",
+        "browser-compatibility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/main.js:setupScrollUI",
+      "type": "function",
+      "name": "setupScrollUI",
+      "filePath": "scripts/main.js",
+      "lineRange": [
+        438,
+        458
+      ],
+      "summary": "Manages scroll progress bar and scroll-to-top button visibility, updating on scroll events.",
+      "tags": [
+        "scroll-handler",
+        "ui-component",
+        "event-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:init",
+      "type": "function",
+      "name": "init",
+      "filePath": "scripts/main.js",
+      "lineRange": [
+        464,
+        478
+      ],
+      "summary": "Application initialization orchestrator that calls all setup functions in sequence to initialize stars, flowers, gallery, guestbook, theme, music, and scroll UI.",
+      "tags": [
+        "entry-point",
+        "initialization",
+        "orchestrator"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:index.html",
+      "target": "file:styles/main.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:scripts/main.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "document:기획서.md",
+      "target": "file:index.html",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:기획서.md",
+      "target": "file:scripts/main.js",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:기획서.md",
+      "target": "file:styles/main.css",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:.understand-anything/.understandignore",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "class:scripts/main.js:Character",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:rand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:pick",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:escapeHtml",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:createStars",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:setupShootingStars",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:createFlowers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:setupEnterButton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:renderSkinGallery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:setupSkinFilter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:setupScrollReveal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:loadGuestbook",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:saveGuestbook",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:setupGuestbook",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:loadState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:saveState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:markWatched",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:setupTheme",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:setupMusic",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:setupScrollUI",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:init",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:createStars",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:setupShootingStars",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:createFlowers",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:setupEnterButton",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:renderSkinGallery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:setupSkinFilter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:setupScrollReveal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:setupGuestbook",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:setupTheme",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:setupMusic",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:setupScrollUI",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:setupGuestbook",
+      "target": "function:scripts/main.js:loadGuestbook",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:setupGuestbook",
+      "target": "function:scripts/main.js:saveGuestbook",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:setupGuestbook",
+      "target": "function:scripts/main.js:escapeHtml",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:setupEnterButton",
+      "target": "function:scripts/main.js:saveState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:renderSkinGallery",
+      "target": "function:scripts/main.js:loadState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:renderSkinGallery",
+      "target": "function:scripts/main.js:escapeHtml",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:renderSkinGallery",
+      "target": "function:scripts/main.js:markWatched",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:setupSkinFilter",
+      "target": "function:scripts/main.js:renderSkinGallery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:setupScrollReveal",
+      "target": "function:scripts/main.js:saveState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:markWatched",
+      "target": "function:scripts/main.js:loadState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:markWatched",
+      "target": "function:scripts/main.js:saveState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:createStars",
+      "target": "function:scripts/main.js:rand",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:createStars",
+      "target": "function:scripts/main.js:pick",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:createFlowers",
+      "target": "function:scripts/main.js:rand",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:setupTheme",
+      "target": "function:scripts/main.js:loadState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:setupTheme",
+      "target": "function:scripts/main.js:saveState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:setupMusic",
+      "target": "function:scripts/main.js:pick",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:styles/main.css",
+      "target": "file:index.html",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "file:index.html",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "file:styles/main.css",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:markup",
+      "name": "Markup Layer",
+      "description": "HTML entry point defining the page structure with 5 interactive sections, controls, and semantic layout for the YouTube introduction website.",
+      "nodeIds": [
+        "file:index.html"
+      ]
+    },
+    {
+      "id": "layer:logic",
+      "name": "Application Logic",
+      "description": "Core JavaScript handling all interactive features including pixel animations, 3D skin gallery, guestbook with localStorage, dark mode, music control, and UI state management.",
+      "nodeIds": [
+        "file:scripts/main.js"
+      ]
+    },
+    {
+      "id": "layer:styling",
+      "name": "Styling Layer",
+      "description": "Complete CSS stylesheet implementing pixel art aesthetic with animations, responsive layouts, 3D transforms, dark mode theming, and visual effects.",
+      "nodeIds": [
+        "file:styles/main.css"
+      ]
+    },
+    {
+      "id": "layer:documentation",
+      "name": "Documentation",
+      "description": "Project specification and planning documents detailing design concept, features, technology stack, and development roadmap for the BLACK_KNIGHT website.",
+      "nodeIds": [
+        "document:기획서.md"
+      ]
+    },
+    {
+      "id": "layer:tooling",
+      "name": "Tooling Configuration",
+      "description": "Tool-specific configuration files for the development and analysis infrastructure.",
+      "nodeIds": [
+        "file:.understand-anything/.understandignore"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Project Overview & Specification",
+      "description": "Start by understanding the BLACK_KNIGHT project's vision and scope. The specification document outlines the pixel art YouTube introduction website concept, its 5-section layout (title intro, channel intro, YouTube info, skin gallery, guestbook), core features including dark mode and localStorage-based persistence, and the complete technology stack. This roadmap guides the entire implementation.",
+      "nodeIds": [
+        "document:기획서.md"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "HTML Structure & Page Markup",
+      "description": "The HTML file serves as the architectural blueprint for the entire application. It defines the 5 interactive sections that users scroll through, establishes the semantic container structure, embeds the dark mode and music controls, references the audio element for background music, and loads both the stylesheet and main JavaScript file. Understanding this markup is essential before diving into the styling and logic layers.",
+      "nodeIds": [
+        "file:index.html"
+      ]
+    },
+    {
+      "order": 3,
+      "title": "Visual Design & Pixel Art Styling",
+      "description": "The stylesheet brings the pixel art aesthetic to life through custom fonts, keyframe animations, and responsive grid layouts. It implements the 3D transforms that power the skin gallery carousel, defines the dark mode color scheme, styles the interactive controls, and creates visual effects like the starfield background and scroll reveal animations. CSS mastery is central to the project's distinctive visual identity.",
+      "nodeIds": [
+        "file:styles/main.css"
+      ],
+      "languageLesson": "CSS 3D transforms use perspective, rotateY, and translateZ to create depth. The transform-style: preserve-3d property allows nested elements to participate in the 3D space, making the rotating skin gallery effect possible. Animation keyframes paired with JavaScript-triggered classes enable smooth transitions."
+    },
+    {
+      "order": 4,
+      "title": "Application Logic & Interactivity",
+      "description": "The JavaScript file orchestrates all interactive features and dynamic content generation. It manages pixel, star, and flower generation for visual embellishment; implements the 3D skin gallery with filtering capabilities; handles the guestbook with localStorage persistence so entries survive page refreshes; manages dark mode theming; controls background music playback; and implements scroll reveal animations. This is where the static markup and styling come alive with user interaction and state management.",
+      "nodeIds": [
+        "file:scripts/main.js"
+      ],
+      "languageLesson": "localStorage allows persistent client-side data storage without a server backend. When adding guestbook entries, they're stored as JSON strings and retrieved on page load. Event listeners on scroll and DOM elements trigger JavaScript-driven class changes that CSS animations respond to, creating a tightly integrated interaction model. Array methods like map() and filter() power the skin gallery filtering logic."
+    }
+  ]
+}

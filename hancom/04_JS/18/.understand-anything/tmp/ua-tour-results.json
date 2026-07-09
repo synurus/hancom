@@ -1,0 +1,144 @@
+{
+  "scriptCompleted": true,
+  "entryPointCandidates": [
+    {
+      "id": "file:scripts/main.js",
+      "score": 4,
+      "name": "main.js",
+      "summary": "모든 인터랙티브 기능과 동적 콘텐츠 생성을 관리하는 핵심 애플리케이션 로직으로, 픽셀·별·꽃 동적 생성, 3D 스킨 갤러리 필터링, localStorage 기반 방명록 지속성, 다크모드 테마 전환, 배경음악 제어, 스크롤 reveal 애니메이션 및 UI 상태 관리를 조정합니다."
+    },
+    {
+      "id": "document:기획서.md",
+      "score": 2,
+      "name": "기획서.md",
+      "summary": "흑기사(BLACK_KNIGHT) 픽셀아트 유튜브 소개 사이트의 종합 프로젝트 기획서로, 디자인 컨셉, 5개 섹션 레이아웃, 핵심 기능, 기술 스택, 폴더 구조 및 개발 로드맵이 포함되어 있습니다."
+    },
+    {
+      "id": "file:index.html",
+      "score": 2,
+      "name": "index.html",
+      "summary": "5개의 인터랙티브 섹션을 정의하는 시맨틱 HTML5 마크업으로, 다크모드 및 음악 제어 버튼, 배경 스타필드 컨테이너, 배경음악 오디오 요소를 포함합니다."
+    },
+    {
+      "id": "file:styles/main.css",
+      "score": 1,
+      "name": "main.css",
+      "summary": "픽셀아트 미학을 구현하는 완전한 스타일시트로, 맞춤형 폰트, 키프레임 애니메이션, 반응형 그리드 레이아웃, 스킨 갤러리를 위한 3D 변환, 다크모드 색상 스킴, 제어 버튼 스타일링, 시각 효과를 포함합니다."
+    }
+  ],
+  "fanInRanking": [
+    {
+      "id": "file:scripts/main.js",
+      "name": "main.js",
+      "fanIn": 2
+    },
+    {
+      "id": "file:styles/main.css",
+      "name": "main.css",
+      "fanIn": 2
+    },
+    {
+      "id": "file:index.html",
+      "name": "index.html",
+      "fanIn": 1
+    },
+    {
+      "id": "document:기획서.md",
+      "name": "기획서.md",
+      "fanIn": 0
+    }
+  ],
+  "fanOutRanking": [
+    {
+      "id": "document:기획서.md",
+      "name": "기획서.md",
+      "fanOut": 3
+    },
+    {
+      "id": "file:index.html",
+      "name": "index.html",
+      "fanOut": 2
+    },
+    {
+      "id": "file:scripts/main.js",
+      "name": "main.js",
+      "fanOut": 0
+    },
+    {
+      "id": "file:styles/main.css",
+      "name": "main.css",
+      "fanOut": 0
+    }
+  ],
+  "bfsTraversal": {
+    "startNode": "file:scripts/main.js",
+    "order": [
+      "file:scripts/main.js"
+    ],
+    "depthMap": {
+      "file:scripts/main.js": 0
+    },
+    "byDepth": {
+      "0": [
+        "file:scripts/main.js"
+      ]
+    }
+  },
+  "nonCodeFiles": {
+    "documentation": [
+      {
+        "id": "document:기획서.md",
+        "name": "기획서.md",
+        "summary": "흑기사(BLACK_KNIGHT) 픽셀아트 유튜브 소개 사이트의 종합 프로젝트 기획서로, 디자인 컨셉, 5개 섹션 레이아웃, 핵심 기능, 기술 스택, 폴더 구조 및 개발 로드맵이 포함되어 있습니다."
+      }
+    ],
+    "infrastructure": [],
+    "data": [],
+    "config": []
+  },
+  "clusters": [],
+  "layers": {
+    "count": 3,
+    "list": [
+      {
+        "id": "layer:presentation",
+        "name": "프레젠테이션 계층",
+        "description": "HTML 마크업과 CSS 스타일시트로 사용자 인터페이스 구현"
+      },
+      {
+        "id": "layer:logic",
+        "name": "로직 계층",
+        "description": "JavaScript로 모든 인터랙티브 기능과 상태 관리 구현"
+      },
+      {
+        "id": "layer:docs",
+        "name": "문서 계층",
+        "description": "프로젝트 기획, 요구사항, 개발 가이드 문서"
+      }
+    ]
+  },
+  "nodeSummaryIndex": {
+    "document:기획서.md": {
+      "name": "기획서.md",
+      "type": "document",
+      "summary": "흑기사(BLACK_KNIGHT) 픽셀아트 유튜브 소개 사이트의 종합 프로젝트 기획서로, 디자인 컨셉, 5개 섹션 레이아웃, 핵심 기능, 기술 스택, 폴더 구조 및 개발 로드맵이 포함되어 있습니다."
+    },
+    "file:index.html": {
+      "name": "index.html",
+      "type": "file",
+      "summary": "5개의 인터랙티브 섹션을 정의하는 시맨틱 HTML5 마크업으로, 다크모드 및 음악 제어 버튼, 배경 스타필드 컨테이너, 배경음악 오디오 요소를 포함합니다."
+    },
+    "file:scripts/main.js": {
+      "name": "main.js",
+      "type": "file",
+      "summary": "모든 인터랙티브 기능과 동적 콘텐츠 생성을 관리하는 핵심 애플리케이션 로직으로, 픽셀·별·꽃 동적 생성, 3D 스킨 갤러리 필터링, localStorage 기반 방명록 지속성, 다크모드 테마 전환, 배경음악 제어, 스크롤 reveal 애니메이션 및 UI 상태 관리를 조정합니다."
+    },
+    "file:styles/main.css": {
+      "name": "main.css",
+      "type": "file",
+      "summary": "픽셀아트 미학을 구현하는 완전한 스타일시트로, 맞춤형 폰트, 키프레임 애니메이션, 반응형 그리드 레이아웃, 스킨 갤러리를 위한 3D 변환, 다크모드 색상 스킴, 제어 버튼 스타일링, 시각 효과를 포함합니다."
+    }
+  },
+  "totalNodes": 4,
+  "totalEdges": 5
+}

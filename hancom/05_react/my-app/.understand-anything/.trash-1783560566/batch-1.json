@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "React 및 Vite를 이용한 최소 구성 템플릿 가이드로, HMR 지원, ESLint 설정, React Compiler 옵션에 대해 설명하고 있습니다.",
+      "tags": ["documentation", "entry-point", "setup-guide"],
+      "complexity": "simple",
+      "languageNotes": "마크다운 형식으로 작성된 프로젝트 소개 문서이며, 세 개의 주요 섹션(React + Vite, React Compiler, ESLint 설정)을 포함합니다."
+    },
+    {
+      "id": "file:index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "index.html",
+      "summary": "React 애플리케이션의 HTML 진입점으로, root DOM 요소를 제공하고 main.jsx 모듈을 로드합니다.",
+      "tags": ["entry-point", "html", "markup"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "package.json",
+      "summary": "프로젝트 메타데이터, 빌드 스크립트, React 19 및 Vite 의존성을 정의하는 npm 설정 파일입니다.",
+      "tags": ["configuration", "build-system", "dependency-management"],
+      "complexity": "simple",
+      "languageNotes": "ES modules를 사용하는 최신 구성이며, dev, build, lint, preview의 네 가지 주요 스크립트를 포함합니다."
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:README.md",
+      "target": "file:index.html",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:package.json",
+      "target": "file:index.html",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:README.md",
+      "target": "config:package.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

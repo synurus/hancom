@@ -1,0 +1,76 @@
+{
+  "nodes": [
+    {
+      "id": "document:기획서.md",
+      "name": "기획서.md",
+      "filePath": "기획서.md",
+      "summary": "흑기사(BLACK_KNIGHT) 픽셀아트 유튜브 소개 사이트의 종합 프로젝트 기획서로, 디자인 컨셉, 5개 섹션 레이아웃, 핵심 기능, 기술 스택, 폴더 구조 및 개발 로드맵이 포함되어 있습니다.",
+      "type": "document"
+    },
+    {
+      "id": "file:index.html",
+      "name": "index.html",
+      "filePath": "index.html",
+      "summary": "5개의 인터랙티브 섹션을 정의하는 시맨틱 HTML5 마크업으로, 다크모드 및 음악 제어 버튼, 배경 스타필드 컨테이너, 배경음악 오디오 요소를 포함합니다.",
+      "type": "file"
+    },
+    {
+      "id": "file:scripts/main.js",
+      "name": "main.js",
+      "filePath": "scripts/main.js",
+      "summary": "모든 인터랙티브 기능과 동적 콘텐츠 생성을 관리하는 핵심 애플리케이션 로직으로, 픽셀·별·꽃 동적 생성, 3D 스킨 갤러리 필터링, localStorage 기반 방명록 지속성, 다크모드 테마 전환, 배경음악 제어, 스크롤 reveal 애니메이션 및 UI 상태 관리를 조정합니다.",
+      "type": "file"
+    },
+    {
+      "id": "file:styles/main.css",
+      "name": "main.css",
+      "filePath": "styles/main.css",
+      "summary": "픽셀아트 미학을 구현하는 완전한 스타일시트로, 맞춤형 폰트, 키프레임 애니메이션, 반응형 그리드 레이아웃, 스킨 갤러리를 위한 3D 변환, 다크모드 색상 스킴, 제어 버튼 스타일링, 시각 효과를 포함합니다.",
+      "type": "file"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:index.html",
+      "target": "file:styles/main.css",
+      "type": "imports"
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:scripts/main.js",
+      "type": "imports"
+    },
+    {
+      "source": "document:기획서.md",
+      "target": "file:index.html",
+      "type": "documents"
+    },
+    {
+      "source": "document:기획서.md",
+      "target": "file:scripts/main.js",
+      "type": "documents"
+    },
+    {
+      "source": "document:기획서.md",
+      "target": "file:styles/main.css",
+      "type": "documents"
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:presentation",
+      "name": "프레젠테이션 계층",
+      "description": "HTML 마크업과 CSS 스타일시트로 사용자 인터페이스 구현"
+    },
+    {
+      "id": "layer:logic",
+      "name": "로직 계층",
+      "description": "JavaScript로 모든 인터랙티브 기능과 상태 관리 구현"
+    },
+    {
+      "id": "layer:docs",
+      "name": "문서 계층",
+      "description": "프로젝트 기획, 요구사항, 개발 가이드 문서"
+    }
+  ]
+}

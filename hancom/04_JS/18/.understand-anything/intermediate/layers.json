@@ -1,0 +1,27 @@
+[
+  {
+    "id": "layer:presentation",
+    "name": "프레젠테이션 계층",
+    "description": "HTML 마크업 구조와 픽셀아트 스타일시트로 구성된 사용자 인터페이스 계층으로, 5개의 인터랙티브 섹션, 다크모드 토글, 배경음악 제어, 반응형 레이아웃, 키프레임 애니메이션 및 3D 시각 효과를 구현합니다.",
+    "nodeIds": [
+      "file:index.html",
+      "file:styles/main.css"
+    ]
+  },
+  {
+    "id": "layer:logic",
+    "name": "로직 계층",
+    "description": "모든 상호작용 기능, 동적 콘텐츠 생성, 상태 관리를 담당하는 애플리케이션 핵심으로, 픽셀·별·꽃 애니메이션 생성, 3D 스킨 갤러리 필터링, localStorage 기반 방명록 지속성, 다크모드 테마 전환, 배경음악 제어 및 스크롤 reveal 효과를 조정합니다.",
+    "nodeIds": [
+      "file:scripts/main.js"
+    ]
+  },
+  {
+    "id": "layer:documentation",
+    "name": "문서 계층",
+    "description": "프로젝트 기획서로, 디자인 컨셉, UI/UX 요구사항, 핵심 기능 명세, 기술 스택, 폴더 구조 및 개발 로드맵을 포함하는 포괄적인 프로젝트 설계 문서입니다.",
+    "nodeIds": [
+      "document:기획서.md"
+    ]
+  }
+]

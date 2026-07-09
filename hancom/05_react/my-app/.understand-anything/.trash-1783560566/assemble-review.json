@@ -1,0 +1,15 @@
+{
+  "fixedSectionOk": true,
+  "nodesRecovered": 0,
+  "edgesRestored": 4,
+  "crossBatchEdgesAdded": 0,
+  "typesRemapped": 0,
+  "complexityRemapped": 0,
+  "notes": [
+    "Restored 4 dropped edges by correcting source node ID prefixes from 'config:' to 'file:' for eslint.config.js and vite.config.js",
+    "Batch-2 incorrectly tagged .js config files with 'config:' prefix; merge script correctly used 'file:' prefix",
+    "All 12 nodes present with valid IDs and types; no recovery needed",
+    "Import map validated: vite.config.js and eslint.config.js correctly have no imports per map",
+    "All import relationships in IMPORT_MAP are covered by edges in assembled graph"
+  ]
+}

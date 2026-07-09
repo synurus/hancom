@@ -36,12 +36,12 @@ class Character {
 
 // 섹션4 콜라보 스킨 캐릭터 (class 인스턴스 배열)
 const characters = [
-    new Character('rumi',   '루미',     '케데헌',   'https://www.youtube.com/@black_knight', '케이팝 데몬 헌터스의 카리스마 리더 보컬', 'assets/Rumi_Portrait.png'),
-    new Character('mira',   '미라',     '케데헌',   'https://www.youtube.com/@black_knight', '냉철하고 시크한 데몬 헌터', 'assets/Mira_Portrait.png'),
+    new Character('rumi',   '루미',     '케데헌',   'https://www.youtube.com/shorts/8gJJKRcKbmY', '케이팝 데몬 헌터스의 카리스마 리더 보컬', 'assets/Rumi_Portrait.png'),
+    new Character('mira',   '미라',     '케데헌',   'https://www.youtube.com/shorts/X5_ks2aInxE', '냉철하고 시크한 데몬 헌터', 'assets/Mira_Portrait.png'),
     new Character('zoey',   '조이',     '케데헌',   'https://www.youtube.com/shorts/RcMWYNlCauk', '팀의 분위기 메이커 막내', 'assets/Zoey_Portrait.png'),
-    new Character('dva',    'D.Va',     '오버워치', 'https://www.youtube.com/@black_knight', '메카를 모는 프로게이머 출신 영웅', 'assets/OW2_Dva.jpg'),
-    new Character('tracer', '트레이서', '오버워치', 'https://www.youtube.com/@black_knight', '시간을 넘나드는 스피드스터', 'assets/OW2_Tracer.png'),
-    new Character('mercy',  '메르시',   '오버워치', 'https://www.youtube.com/@black_knight', '전장을 지키는 천사, 최고의 힐러', 'assets/OW2_Mercy.png')
+    new Character('dva',    'D.Va',     '오버워치', 'https://www.youtube.com/shorts/z2NiqXY-mgY', '메카를 모는 프로게이머 출신 영웅', 'assets/OW2_Dva.jpg'),
+    new Character('tracer', '트레이서', '오버워치', 'https://www.youtube.com/shorts/sIhl7hd4VHw', '시간을 넘나드는 스피드스터', 'assets/OW2_Tracer.png'),
+    new Character('mercy',  '메르시',   '오버워치', 'https://www.youtube.com/shorts/Z48uKP3hm5I', '전장을 지키는 천사, 최고의 힐러', 'assets/OW2_Mercy.png')
 ];
 
 const STORAGE_KEY = 'blackKnightPixel';       // 방문/관람/테마 상태

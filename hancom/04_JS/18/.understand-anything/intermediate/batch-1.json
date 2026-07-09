@@ -1,0 +1,646 @@
+{
+  "nodes": [
+    {
+      "id": "document:기획서.md",
+      "type": "document",
+      "name": "기획서.md",
+      "filePath": "기획서.md",
+      "summary": "흑기사 채널 픽셀아트 웹사이트의 포괄적인 기획 문서로, 프로젝트 개요, 목표, 디자인 컨셉, 5개 섹션 구성, 핵심 기능(동적 별 생성, 3D 뒤집기, 방명록, 다크모드, 배경음악), 기술 스택, 폴더 구조, 개발 순서를 상세히 정리한 완전한 개발 가이드.",
+      "tags": ["documentation", "project-planning", "technical-specification", "development-guide", "feature-list"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "index.html",
+      "summary": "흑기사 채널 소개 사이트의 HTML 구조로, Galmuri 픽셀폰트 CDN, 5개의 섹션(채널 소개, 유튜브 소개, 포트나이트 소개, 스킨 갤러리, 방명록), 고정 네비게이션, 제어 버튼(다크모드, 음악), 배경음악, 스크롤 진행 바, 맨 위로 버튼을 포함한 완전한 마크업.",
+      "tags": ["markup", "html5", "semantic-structure", "accessibility", "entry-point"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:scripts/main.js",
+      "type": "file",
+      "name": "main.js",
+      "filePath": "scripts/main.js",
+      "summary": "흑기사 웹사이트의 핵심 기능을 구현한 메인 JavaScript 파일로, 동적 별 및 별똥별 생성, 픽셀 꽃밭 렌더링, 스킨 갤러리(필터, 3D 뒤집기), 방명록(폼 처리, localStorage), 다크모드 토글, 배경음악 제어, 스크롤 애니메이션, 진행 바 업데이트 기능을 포함.",
+      "tags": ["javascript", "dom-manipulation", "interactive-features", "state-management", "animation"],
+      "complexity": "complex",
+      "languageNotes": "Character 클래스를 사용하여 캐릭터 데이터를 구조화하고, 배열 메서드(map, filter, reduce, sort)를 활용하여 데이터 처리. localStorage를 통한 상태 지속성 관리. IntersectionObserver API로 스크롤 등장 애니메이션 구현."
+    },
+    {
+      "id": "file:styles/main.css",
+      "type": "file",
+      "name": "main.css",
+      "filePath": "styles/main.css",
+      "summary": "흑기사 웹사이트의 전체 스타일링 파일로, CSS 변수를 활용한 다크모드 구현, 픽셀아트 미학(pixelated 렌더링, 커스텀 커서), 3D 변환(rotateY, preserve-3d), sticky 네비게이션, 애니메이션 키프레임(별 반짝임, 둥실 효과), 반응형 그리드 레이아웃을 포함.",
+      "tags": ["stylesheet", "css3", "visual-design", "animations", "pixel-art"],
+      "complexity": "complex",
+      "languageNotes": "CSS 변수(--var) 활용으로 다크모드 색상 전환을 효율적으로 관리. 3D transform 적용으로 카드 뒤집기 효과. @keyframes로 별 깜빡임, 반짝임 등 연속 애니메이션 표현."
+    },
+    {
+      "id": "function:scripts/main.js:rand",
+      "type": "function",
+      "name": "rand",
+      "filePath": "scripts/main.js",
+      "lineRange": [52, 54],
+      "summary": "주어진 범위(min, max) 내에서 무작위 실수값을 반환하는 유틸 함수로, 별의 위치, 크기, 별똥별의 애니메이션 지연 시간 등에 활용.",
+      "tags": ["utility", "random-generator", "helper-function"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:pick",
+      "type": "function",
+      "name": "pick",
+      "filePath": "scripts/main.js",
+      "lineRange": [56, 58],
+      "summary": "배열에서 무작위로 하나의 요소를 선택하여 반환하는 유틸 함수로, 별 색상 선택이나 방명록 렌더링에 활용.",
+      "tags": ["utility", "array-helper", "selection"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:escapeHtml",
+      "type": "function",
+      "name": "escapeHtml",
+      "filePath": "scripts/main.js",
+      "lineRange": [61, 65],
+      "summary": "사용자 입력 문자열의 HTML 특수문자(&, <, >, \", ')를 이스케이프하여 XSS 방지 및 안전한 방명록 렌더링을 보장.",
+      "tags": ["security", "input-validation", "sanitization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:createStars",
+      "type": "function",
+      "name": "createStars",
+      "filePath": "scripts/main.js",
+      "lineRange": [71, 92],
+      "summary": "지정된 개수의 동적 별을 배경에 생성하며, 무작위 위치, 색상, 크기, 애니메이션 지연을 설정하여 우주 배경 분위기 연출.",
+      "tags": ["animation", "dom-creation", "visual-effect"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/main.js:setupShootingStars",
+      "type": "function",
+      "name": "setupShootingStars",
+      "filePath": "scripts/main.js",
+      "lineRange": [94, 120],
+      "summary": "별똥별을 일정한 시간 간격으로 반복 생성하며, Web Animations API를 사용하여 화면을 가로질러 이동하는 애니메이션을 구현.",
+      "tags": ["animation", "web-api", "interactive-effect"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/main.js:createFlowers",
+      "type": "function",
+      "name": "createFlowers",
+      "filePath": "scripts/main.js",
+      "lineRange": [126, 149],
+      "summary": "각 섹션의 하단에 섹션별 색상의 픽셀 꽃을 동적으로 생성하여 배치하고, 섹션이 화면에 들어올 때 등장 애니메이션으로 표현.",
+      "tags": ["animation", "dom-creation", "visual-effect"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/main.js:setupEnterButton",
+      "type": "function",
+      "name": "setupEnterButton",
+      "filePath": "scripts/main.js",
+      "lineRange": [155, 164],
+      "summary": "[입장하기] 버튼 클릭 시 본문 섹션으로 부드럽게 스크롤하고 방문 상태를 localStorage에 저장.",
+      "tags": ["event-handler", "navigation", "state-management"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:renderSkinGallery",
+      "type": "function",
+      "name": "renderSkinGallery",
+      "filePath": "scripts/main.js",
+      "lineRange": [170, 215],
+      "summary": "캐릭터 배열을 필터링하여 스킨 갤러리를 렌더링하며, 3D 뒤집기 효과와 영상 열기 기능을 포함한 상호작용형 액자를 생성. 이미 본 영상을 시각적으로 구분.",
+      "tags": ["rendering", "gallery", "3d-transformation", "event-handler"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:scripts/main.js:setupSkinFilter",
+      "type": "function",
+      "name": "setupSkinFilter",
+      "filePath": "scripts/main.js",
+      "lineRange": [217, 228],
+      "summary": "카테고리 필터 버튼(전체, 케데헌, 오버워치)의 클릭 이벤트를 처리하여 갤러리를 동적으로 재렌더링.",
+      "tags": ["event-handler", "filtering", "ui-control"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:setupScrollReveal",
+      "type": "function",
+      "name": "setupScrollReveal",
+      "filePath": "scripts/main.js",
+      "lineRange": [234, 245],
+      "summary": "IntersectionObserver API를 사용하여 섹션이 뷰포트에 진입할 때 페이드·슬라이드 인 애니메이션을 트리거하고 방문 상태를 기록.",
+      "tags": ["animation", "intersection-observer", "scroll-reveal"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/main.js:loadGuestbook",
+      "type": "function",
+      "name": "loadGuestbook",
+      "filePath": "scripts/main.js",
+      "lineRange": [251, 258],
+      "summary": "localStorage에서 방명록 데이터를 JSON으로 읽어 배열로 복원하며, 없을 시 빈 배열 반환.",
+      "tags": ["data-persistence", "local-storage", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:saveGuestbook",
+      "type": "function",
+      "name": "saveGuestbook",
+      "filePath": "scripts/main.js",
+      "lineRange": [260, 262],
+      "summary": "방명록 배열을 JSON으로 직렬화하여 localStorage에 저장.",
+      "tags": ["data-persistence", "local-storage", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:setupGuestbook",
+      "type": "function",
+      "name": "setupGuestbook",
+      "filePath": "scripts/main.js",
+      "lineRange": [264, 346],
+      "summary": "방명록의 폼 제출 처리, 데이터 유효성 검사, 항목 렌더링, 삭제 기능, 평균 별점 계산, 최신순 정렬을 포함한 완전한 방명록 시스템 구현. localStorage에 자동 저장.",
+      "tags": ["form-handling", "data-management", "dom-manipulation", "validation"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:scripts/main.js:loadState",
+      "type": "function",
+      "name": "loadState",
+      "filePath": "scripts/main.js",
+      "lineRange": [352, 359],
+      "summary": "localStorage에서 애플리케이션 상태(테마, 본 섹션, 본 스킨 목록)를 로드하며, 없을 시 기본값 반환.",
+      "tags": ["state-management", "data-persistence", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:saveState",
+      "type": "function",
+      "name": "saveState",
+      "filePath": "scripts/main.js",
+      "lineRange": [361, 368],
+      "summary": "현재 애플리케이션 상태를 입력된 patch 객체로 업데이트하여 localStorage에 저장.",
+      "tags": ["state-management", "data-persistence", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:markWatched",
+      "type": "function",
+      "name": "markWatched",
+      "filePath": "scripts/main.js",
+      "lineRange": [370, 374],
+      "summary": "특정 캐릭터 영상을 본 것으로 표시하여 본 목록에 추가하고 상태를 저장.",
+      "tags": ["state-management", "data-tracking", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:setupTheme",
+      "type": "function",
+      "name": "setupTheme",
+      "filePath": "scripts/main.js",
+      "lineRange": [380, 393],
+      "summary": "다크모드 토글 버튼의 클릭 이벤트를 처리하며, body에 'night' 클래스를 추가/제거하여 테마를 전환하고 선택사항을 localStorage에 저장.",
+      "tags": ["theme-management", "event-handler", "dom-manipulation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/main.js:setupMusic",
+      "type": "function",
+      "name": "setupMusic",
+      "filePath": "scripts/main.js",
+      "lineRange": [399, 432],
+      "summary": "배경음악 재생, 자동 언뮤트 처리(사용자 상호작용 후), 음소거 토글 버튼의 상호작용을 구현하여 멀티미디어 제어 기능 제공.",
+      "tags": ["audio-control", "event-handler", "user-interaction"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/main.js:setupScrollUI",
+      "type": "function",
+      "name": "setupScrollUI",
+      "filePath": "scripts/main.js",
+      "lineRange": [438, 458],
+      "summary": "스크롤 진행 바의 너비를 동적으로 업데이트하고, 맨 위로 버튼의 표시/숨김을 제어하며, 클릭 시 페이지 최상단으로 스크롤.",
+      "tags": ["scroll-handling", "ui-control", "event-handler"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/main.js:init",
+      "type": "function",
+      "name": "init",
+      "filePath": "scripts/main.js",
+      "lineRange": [464, 478],
+      "summary": "페이지 로드 시 모든 초기화 함수를 호출하는 진입점으로, 별 생성, 입장 버튼, 스킨 갤러리, 스크롤 등장, 방명록, 테마, 음악, UI 제어를 순차적으로 설정.",
+      "tags": ["entry-point", "initialization", "orchestration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:scripts/main.js:Character",
+      "type": "class",
+      "name": "Character",
+      "filePath": "scripts/main.js",
+      "lineRange": [26, 35],
+      "summary": "포트나이트 스킨 캐릭터(케데헌, 오버워치)의 데이터 구조를 정의하는 클래스로, 고유 ID, 이름, 그룹, 영상 URL, 설명, 이미지 경로를 속성으로 보유.",
+      "tags": ["data-model", "class-definition", "entity"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:index.html",
+      "target": "file:styles/main.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:scripts/main.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "class:scripts/main.js:Character",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:rand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:pick",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:escapeHtml",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:createStars",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:setupShootingStars",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:createFlowers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:setupEnterButton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:renderSkinGallery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:setupSkinFilter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:setupScrollReveal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:loadGuestbook",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:saveGuestbook",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:setupGuestbook",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:loadState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:saveState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:markWatched",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:setupTheme",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:setupMusic",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:setupScrollUI",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/main.js",
+      "target": "function:scripts/main.js:init",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "document:기획서.md",
+      "target": "file:index.html",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:기획서.md",
+      "target": "file:scripts/main.js",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:기획서.md",
+      "target": "file:styles/main.css",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:styles/main.css",
+      "target": "file:index.html",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:createStars",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:setupShootingStars",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:createFlowers",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:setupEnterButton",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:renderSkinGallery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:setupSkinFilter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:setupScrollReveal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:setupGuestbook",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:setupTheme",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:setupMusic",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:init",
+      "target": "function:scripts/main.js:setupScrollUI",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:createStars",
+      "target": "function:scripts/main.js:rand",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:createStars",
+      "target": "function:scripts/main.js:pick",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:setupShootingStars",
+      "target": "function:scripts/main.js:rand",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:createFlowers",
+      "target": "function:scripts/main.js:rand",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:renderSkinGallery",
+      "target": "function:scripts/main.js:loadState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:renderSkinGallery",
+      "target": "function:scripts/main.js:escapeHtml",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:renderSkinGallery",
+      "target": "function:scripts/main.js:markWatched",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:setupSkinFilter",
+      "target": "function:scripts/main.js:renderSkinGallery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:setupScrollReveal",
+      "target": "function:scripts/main.js:saveState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:setupGuestbook",
+      "target": "function:scripts/main.js:loadGuestbook",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:setupGuestbook",
+      "target": "function:scripts/main.js:escapeHtml",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:setupGuestbook",
+      "target": "function:scripts/main.js:saveGuestbook",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:setupEnterButton",
+      "target": "function:scripts/main.js:saveState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:setupTheme",
+      "target": "function:scripts/main.js:loadState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:setupTheme",
+      "target": "function:scripts/main.js:saveState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:markWatched",
+      "target": "function:scripts/main.js:loadState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:markWatched",
+      "target": "function:scripts/main.js:saveState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/main.js:saveState",
+      "target": "function:scripts/main.js:loadState",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

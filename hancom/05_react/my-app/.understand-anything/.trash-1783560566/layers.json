@@ -1,0 +1,41 @@
+[
+  {
+    "id": "layer:application",
+    "name": "애플리케이션 계층",
+    "description": "React 컴포넌트, 상태 관리, 스타일링을 포함한 핵심 애플리케이션 코드",
+    "nodeIds": [
+      "file:src/App.jsx",
+      "file:src/main.jsx",
+      "file:src/App.css",
+      "file:src/index.css"
+    ]
+  },
+  {
+    "id": "layer:entry-point",
+    "name": "진입점 계층",
+    "description": "HTML 진입점 및 애플리케이션 부팅 관련 파일",
+    "nodeIds": [
+      "file:index.html"
+    ]
+  },
+  {
+    "id": "layer:configuration",
+    "name": "설정 및 빌드 계층",
+    "description": "빌드 도구, 린팅, 패키지 관리 및 프로젝트 설정 파일",
+    "nodeIds": [
+      "config:package.json",
+      "file:vite.config.js",
+      "file:eslint.config.js",
+      "file:.understand-anything/.understandignore",
+      "config:.understand-anything/config.json"
+    ]
+  },
+  {
+    "id": "layer:documentation",
+    "name": "문서 계층",
+    "description": "프로젝트 문서 및 설정 가이드",
+    "nodeIds": [
+      "document:README.md"
+    ]
+  }
+]

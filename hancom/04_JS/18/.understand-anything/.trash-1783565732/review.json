@@ -1,0 +1,31 @@
+{
+  "issues": [
+    "File node 'file:.understand-anything/.understandignore' not in any layer",
+    "File node 'document:기획서.md' not in any layer",
+    "File node 'file:index.html' not in any layer",
+    "File node 'file:scripts/main.js' not in any layer",
+    "File node 'file:styles/main.css' not in any layer"
+  ],
+  "warnings": [],
+  "stats": {
+    "totalNodes": 26,
+    "totalEdges": 58,
+    "totalLayers": 0,
+    "tourSteps": 0,
+    "nodeTypes": {
+      "file": 4,
+      "document": 1,
+      "class": 1,
+      "function": 20
+    },
+    "edgeTypes": {
+      "imports": 2,
+      "documents": 3,
+      "related": 1,
+      "contains": 21,
+      "calls": 28,
+      "configures": 1,
+      "depends_on": 2
+    }
+  }
+}

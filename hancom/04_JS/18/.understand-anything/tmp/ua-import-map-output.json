@@ -1,0 +1,39 @@
+{
+  "scriptCompleted": true,
+  "stats": {
+    "filesScanned": 29,
+    "filesWithImports": 0,
+    "totalEdges": 0
+  },
+  "importMap": {
+    ".understand-anything/.trash-1783565732/assemble-final.js": [],
+    ".understand-anything/.trash-1783565732/assemble-review.json": [],
+    ".understand-anything/.trash-1783565732/assembled-graph.json": [],
+    ".understand-anything/.trash-1783565732/batch-1.json": [],
+    ".understand-anything/.trash-1783565732/batches.json": [],
+    ".understand-anything/.trash-1783565732/final-graph.json": [],
+    ".understand-anything/.trash-1783565732/final-review.json": [],
+    ".understand-anything/.trash-1783565732/fingerprint-input.json": [],
+    ".understand-anything/.trash-1783565732/layers.json": [],
+    ".understand-anything/.trash-1783565732/review.json": [],
+    ".understand-anything/.trash-1783565732/tour.json": [],
+    ".understand-anything/.understandignore": [],
+    ".understand-anything/fingerprints.json": [],
+    ".understand-anything/intermediate/scan-result.json": [],
+    ".understand-anything/knowledge-graph.json": [],
+    ".understand-anything/meta.json": [],
+    ".understand-anything/tmp/ua-file-analyzer-input-1.json": [],
+    ".understand-anything/tmp/ua-file-extract-results-1.json": [],
+    ".understand-anything/tmp/ua-import-map-input.json": [],
+    ".understand-anything/tmp/ua-import-map-output.json": [],
+    ".understand-anything/tmp/ua-inline-validate.cjs": [],
+    ".understand-anything/tmp/ua-scan-files.json": [],
+    ".understand-anything/tmp/ua-tour-analyze.js": [],
+    ".understand-anything/tmp/ua-tour-input.json": [],
+    ".understand-anything/tmp/ua-tour-results.json": [],
+    "기획서.md": [],
+    "index.html": [],
+    "scripts/main.js": [],
+    "styles/main.css": []
+  }
+}

@@ -1,0 +1,43 @@
+# Understand-Anything ignore configuration
+# Uncomment patterns to exclude them from analysis
+
+# Dependencies
+node_modules/
+.venv/
+venv/
+env/
+dist/
+build/
+.next/
+.nuxt/
+
+# Build outputs
+*.min.js
+*.min.css
+coverage/
+.turbo/
+
+# IDE and editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+.pem
+.key
+
+# Git and VCS
+.git/
+.gitignore
+.gitattributes
+
+# Lock files (optional - uncomment if you want to exclude)
+# pnpm-lock.yaml
+# package-lock.json
+# yarn.lock

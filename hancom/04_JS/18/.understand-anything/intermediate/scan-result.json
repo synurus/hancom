@@ -1,0 +1,41 @@
+{
+  "name": "BLACK_KNIGHT",
+  "description": "포트나이트 유튜버 '흑기사' 채널을 픽셀아트 세계로 소개하는 스크롤 기반 웹사이트. HTML, CSS, JavaScript를 활용하여 반짝이는 별과 픽셀 꽃이 깔린 5개의 섹션을 탐험하는 인터랙티브 소개 페이지입니다.",
+  "languages": ["css", "html", "javascript", "markdown"],
+  "frameworks": [],
+  "files": [
+    {
+      "path": "기획서.md",
+      "language": "markdown",
+      "sizeLines": 205,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "index.html",
+      "language": "html",
+      "sizeLines": 241,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "scripts/main.js",
+      "language": "javascript",
+      "sizeLines": 480,
+      "fileCategory": "code"
+    },
+    {
+      "path": "styles/main.css",
+      "language": "css",
+      "sizeLines": 976,
+      "fileCategory": "markup"
+    }
+  ],
+  "totalFiles": 4,
+  "filteredByIgnore": 0,
+  "estimatedComplexity": "small",
+  "importMap": {
+    "기획서.md": [],
+    "index.html": [],
+    "scripts/main.js": [],
+    "styles/main.css": []
+  }
+}

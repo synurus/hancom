@@ -1,0 +1,199 @@
+{
+  "scriptCompleted": true,
+  "files": [
+    {
+      "path": ".understand-anything/.trash-1783565732/assemble-final.js",
+      "language": "javascript",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".understand-anything/.trash-1783565732/assemble-review.json",
+      "language": "json",
+      "sizeLines": 21,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/.trash-1783565732/assembled-graph.json",
+      "language": "json",
+      "sizeLines": 838,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/.trash-1783565732/batch-1.json",
+      "language": "json",
+      "sizeLines": 668,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/.trash-1783565732/batches.json",
+      "language": "json",
+      "sizeLines": 54,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/.trash-1783565732/final-graph.json",
+      "language": "json",
+      "sizeLines": 930,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/.trash-1783565732/final-review.json",
+      "language": "json",
+      "sizeLines": 24,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/.trash-1783565732/fingerprint-input.json",
+      "language": "json",
+      "sizeLines": 11,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/.trash-1783565732/layers.json",
+      "language": "json",
+      "sizeLines": 32,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/.trash-1783565732/review.json",
+      "language": "json",
+      "sizeLines": 30,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/.trash-1783565732/tour.json",
+      "language": "json",
+      "sizeLines": 28,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/.understandignore",
+      "language": "unknown",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".understand-anything/fingerprints.json",
+      "language": "json",
+      "sizeLines": 204,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/scan-result.json",
+      "language": "json",
+      "sizeLines": 48,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/knowledge-graph.json",
+      "language": "json",
+      "sizeLines": 930,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/meta.json",
+      "language": "json",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/tmp/ua-file-analyzer-input-1.json",
+      "language": "json",
+      "sizeLines": 42,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/tmp/ua-file-extract-results-1.json",
+      "language": "json",
+      "sizeLines": 1166,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/tmp/ua-import-map-input.json",
+      "language": "json",
+      "sizeLines": 30,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/tmp/ua-import-map-output.json",
+      "language": "json",
+      "sizeLines": 14,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/tmp/ua-inline-validate.cjs",
+      "language": "javascript",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".understand-anything/tmp/ua-scan-files.json",
+      "language": "json",
+      "sizeLines": 52,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/tmp/ua-tour-analyze.js",
+      "language": "javascript",
+      "sizeLines": 291,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".understand-anything/tmp/ua-tour-input.json",
+      "language": "json",
+      "sizeLines": 85,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/tmp/ua-tour-results.json",
+      "language": "json",
+      "sizeLines": 169,
+      "fileCategory": "config"
+    },
+    {
+      "path": "기획서.md",
+      "language": "markdown",
+      "sizeLines": 205,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "index.html",
+      "language": "html",
+      "sizeLines": 241,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "scripts/main.js",
+      "language": "javascript",
+      "sizeLines": 480,
+      "fileCategory": "code"
+    },
+    {
+      "path": "styles/main.css",
+      "language": "css",
+      "sizeLines": 976,
+      "fileCategory": "markup"
+    }
+  ],
+  "totalFiles": 29,
+  "filteredByIgnore": 0,
+  "estimatedComplexity": "small",
+  "stats": {
+    "filesScanned": 29,
+    "byCategory": {
+      "code": 5,
+      "config": 21,
+      "docs": 1,
+      "markup": 2
+    },
+    "byLanguage": {
+      "javascript": 4,
+      "json": 21,
+      "unknown": 1,
+      "markdown": 1,
+      "html": 1,
+      "css": 1
+    }
+  }
+}

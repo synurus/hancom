@@ -1,0 +1,17 @@
+{
+  "projectRoot": "C:\\Users\\Har07\\desktop\\hancom\\hancom\\05_react\\my-app",
+  "sourceFilePaths": [
+    ".understand-anything/.understandignore",
+    ".understand-anything/config.json",
+    "eslint.config.js",
+    "index.html",
+    "package.json",
+    "README.md",
+    "src/App.css",
+    "src/App.jsx",
+    "src/index.css",
+    "src/main.jsx",
+    "vite.config.js"
+  ],
+  "gitCommitHash": "bc630c82078ad31f49d404967bb8743e90fc63dd"
+}

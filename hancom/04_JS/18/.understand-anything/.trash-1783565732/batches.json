@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 5,
+  "totalBatches": 1,
+  "exportsByPath": {
+    ".understand-anything/.understandignore": [],
+    "scripts/main.js": []
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": ".understand-anything/.understandignore",
+          "language": "unknown",
+          "sizeLines": 42,
+          "fileCategory": "code"
+        },
+        {
+          "path": "기획서.md",
+          "language": "markdown",
+          "sizeLines": 205,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "index.html",
+          "language": "html",
+          "sizeLines": 241,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "scripts/main.js",
+          "language": "javascript",
+          "sizeLines": 480,
+          "fileCategory": "code"
+        },
+        {
+          "path": "styles/main.css",
+          "language": "css",
+          "sizeLines": 976,
+          "fileCategory": "markup"
+        }
+      ],
+      "batchImportData": {
+        ".understand-anything/.understandignore": [],
+        "기획서.md": [],
+        "index.html": [],
+        "scripts/main.js": [],
+        "styles/main.css": []
+      },
+      "neighborMap": {}
+    }
+  ]
+}
