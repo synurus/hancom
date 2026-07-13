@@ -1,0 +1,113 @@
+/* 페이지 전체가 부드럽게 나타나는 애니메이션 */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.track-page-status {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 16px;
+  color: var(--text-sub);
+}
+
+.track-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8px;
+  animation: fade-in 0.35s ease;
+}
+
+.track-page-back {
+  align-self: flex-start;
+  color: var(--text-sub);
+  font-size: 14px;
+  margin-bottom: 20px;
+  transition: color 0.15s;
+  /* 버튼 기본 모양 없애기 (Link → button으로 바뀜) */
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.track-page-back:hover {
+  color: var(--text);
+}
+
+.track-page-img {
+  width: 280px;
+  height: 280px;
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+.track-page-name {
+  font-size: 26px;
+  margin-top: 26px;
+  text-align: center;
+}
+
+.track-page-artist {
+  font-size: 16px;
+  color: var(--text-sub);
+  margin-top: 6px;
+}
+
+.track-page-info {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 8px 24px;
+  margin-top: 26px;
+  padding: 16px 24px;
+  background: var(--card);
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+.track-page-info dt {
+  color: var(--text-sub);
+}
+
+.track-page-info dd {
+  font-weight: 600;
+  text-align: right;
+}
+
+.track-page-listen {
+  margin-top: 28px;
+  padding: 13px 32px;
+  background: linear-gradient(90deg, var(--accent), #ff7854);
+  color: #fff;
+  border-radius: 26px;
+  font-weight: 600;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.track-page-listen:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(232, 52, 90, 0.35);
+}
+
+.track-page-notfound {
+  font-size: 18px;
+  margin: 40px 0 16px;
+}
+
+/* 모바일 화면 대응 (미디어쿼리) */
+@media (max-width: 480px) {
+  .track-page-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .track-page-name {
+    font-size: 22px;
+  }
+}

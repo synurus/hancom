@@ -1,0 +1,55 @@
+/* 은은하게 깜빡이는 로딩 애니메이션 */
+@keyframes skeleton-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.skeleton-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px;
+  background: var(--card);
+  border-radius: 14px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  animation: skeleton-pulse 1.3s ease-in-out infinite;
+}
+
+.skeleton-rank {
+  width: 32px;
+  height: 22px;
+  background: var(--skeleton);
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.skeleton-img {
+  width: 60px;
+  height: 60px;
+  background: var(--skeleton);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.skeleton-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.skeleton-line {
+  display: block;
+  height: 14px;
+  background: var(--skeleton);
+  border-radius: 6px;
+  width: 40%;
+}
+
+.skeleton-line.wide {
+  width: 70%;
+  margin-bottom: 8px;
+}

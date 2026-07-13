@@ -74,7 +74,7 @@ textToHex("기획자")     // → "#5f8e9a" (항상 같은 결과)
 
 ### Profile 컴포넌트에서의 활용
 ```javascript
-const jobWithColors = job.split(' ').map((word, index, arr) => (
+const sentenceWithColors = job.split(' ').map((word, index, arr) => (
     <span key={index}>
         <span style={{ color: textToHex(word) }}>
             {word}

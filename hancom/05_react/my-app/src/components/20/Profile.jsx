@@ -8,7 +8,7 @@ const Profile = ({name, job = "개발자"}) => {
         return `#${hex}`;
     }
 
-    const jobWithColors = job.split(' ').map((word, index, arr) => (
+    const sentenceWithColors = job.split(' ').map((word, index, arr) => (
         <span key={index}>
             <span style={{ color: textToHex(word) }}>
                 {word}
@@ -20,7 +20,7 @@ const Profile = ({name, job = "개발자"}) => {
     return (
         <>
         <h2>{name}</h2>
-        <p>{jobWithColors}</p>
+        <p>{sentenceWithColors}</p>
         </>
     )
 }

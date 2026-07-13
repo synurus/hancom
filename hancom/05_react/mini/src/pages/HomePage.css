@@ -1,0 +1,150 @@
+.home-status {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 16px;
+  color: var(--text-sub);
+}
+
+/* K-POP ↔ Global 전환 탭 */
+.home-country {
+  display: flex;
+  gap: 8px;
+  margin: 4px 0 16px;
+}
+
+.home-country button {
+  flex: 1;
+  padding: 12px 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.home-country button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.home-country button.active {
+  background: linear-gradient(90deg, var(--accent), #ff7854);
+  border-color: transparent;
+  color: #fff;
+}
+
+.home-title {
+  font-size: 22px;
+  margin: 8px 4px 16px;
+}
+
+.home-title-sub {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-sub);
+}
+
+/* 모든 탭 공통 안내 문구 */
+.home-hint {
+  margin: 2px 4px 14px;
+  font-size: 12.5px;
+  color: var(--text-sub);
+}
+
+.home-hint strong {
+  display: inline-block;
+  padding: 1px 7px;
+  font-size: 10px;
+  color: #fff;
+  background: linear-gradient(90deg, var(--accent), #ff7854);
+  border-radius: 8px;
+  vertical-align: 1px;
+}
+
+/* 신곡 탭 설명 박스 */
+.home-notice {
+  padding: 12px 16px;
+  margin-bottom: 14px;
+  background: rgba(232, 52, 90, 0.07);
+  border: 1px solid rgba(232, 52, 90, 0.25);
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.home-notice strong {
+  color: var(--accent);
+}
+
+.home-toolbar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.home-tabs {
+  display: flex;
+  gap: 6px;
+}
+
+.home-tabs button {
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--card);
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.home-tabs button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.home-tabs button.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.home-search {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: 15px;
+  background: var(--card);
+  color: var(--text);
+}
+
+.home-search::placeholder {
+  color: var(--text-sub);
+}
+
+.home-search:focus {
+  outline: 2px solid var(--accent);
+  border-color: transparent;
+}
+
+/* 목록: 기본 1열 Grid
+   minmax(0, 1fr): 긴 제목이 칸을 밀어내지 못하게 함 (말줄임 처리를 위해 필수) */
+.home-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+}
+
+/* 화면이 640px 이상이면 2열로 (미디어쿼리) */
+@media (min-width: 640px) {
+  .home-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,91 @@
+/* 스크롤해도 상단에 고정되는 바 (position: sticky) */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 4px;
+  margin-bottom: 12px;
+  background: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--line);
+}
+
+.navbar-logo {
+  font-size: 22px;
+  font-weight: 800;
+  /* 글자에 그라디언트 입히기 */
+  background: linear-gradient(90deg, var(--accent), #ff7854);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 다크 모드 토글 버튼 */
+.navbar-dark {
+  width: 38px;
+  height: 38px;
+  font-size: 17px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.navbar-dark:hover {
+  transform: rotate(20deg) scale(1.1);
+}
+
+.navbar-fav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  padding: 8px 14px;
+  border: 1px solid rgba(232, 52, 90, 0.35);
+  border-radius: 18px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.navbar-fav:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.navbar-fav-count {
+  min-width: 20px;
+  padding: 1px 6px;
+  font-size: 12px;
+  text-align: center;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 10px;
+}
+
+.navbar-fav:hover .navbar-fav-count {
+  background: #fff;
+  color: var(--accent);
+}
+
+/* 좁은 화면: 로고가 길어서 오른쪽 버튼들과 겹치지 않게 글자 줄이기 */
+@media (max-width: 560px) {
+  .navbar-logo {
+    font-size: 16px;
+  }
+
+  .navbar-fav {
+    font-size: 13px;
+    padding: 7px 10px;
+  }
+}

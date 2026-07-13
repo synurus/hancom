@@ -1,0 +1,108 @@
+/* 카드가 아래에서 살짝 떠오르는 등장 애니메이션 */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.track-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px;
+  background: var(--card);
+  border-radius: 14px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s, box-shadow 0.15s;
+  animation: fade-up 0.3s ease both;
+}
+
+.track-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(232, 52, 90, 0.18);
+}
+
+.track-rank {
+  width: 32px;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  color: #b0b0b5;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* TOP3 순위 강조 */
+.track-rank.top3 {
+  font-size: 22px;
+  color: var(--accent);
+}
+
+/* 최근 30일 이내 발매곡 NEW 뱃지 */
+.track-new-badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 7px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg, var(--accent), #ff7854);
+  border-radius: 8px;
+  vertical-align: 2px;
+}
+
+.track-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.track-info {
+  min-width: 0;
+}
+
+.track-name {
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.track-artist {
+  font-size: 14px;
+  color: var(--text-sub);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 즐겨찾기 ♥ 버튼 */
+.track-heart {
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #c7c7cc;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 4px 6px;
+  transition: transform 0.15s, color 0.15s;
+}
+
+.track-heart:hover {
+  transform: scale(1.2);
+  color: var(--accent);
+}
+
+.track-heart.active {
+  color: var(--accent);
+}

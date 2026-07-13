@@ -1,0 +1,7 @@
+# Netlify 프록시 설정 (Vite 개발 서버 프록시의 배포판)
+# /apple-api/... 요청을 Netlify가 대신 Apple 서버로 전달해준다 (CORS 우회)
+/apple-api/*  https://rss.marketingtools.apple.com/:splat  200
+
+# React Router 대응: 어떤 주소로 접속해도 index.html을 준다
+# (없으면 /favorites 같은 주소에서 새로고침 시 Netlify 404가 뜸)
+/*  /index.html  200
