@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>우리 반 배치도 (사각)</title>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #1b1f27;
+    font-family: "Malgun Gothic", sans-serif;
+    gap: 18px;
+    padding: 60px 0;
+  }
+
+  .nav {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+  }
+
+  .nav a {
+    display: inline-block;
+    padding: 8px 14px;
+    background: #2d3340;
+    color: #e2e8f0;
+    border: 1px solid #4a5568;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+  }
+
+  .nav a:hover {
+    background: #3b4252;
+  }
+
+  .teacher-card {
+    width: 220px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .classroom {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;   /* 좌/우 블록 사이 통로 */
+  }
+
+  .block {
+    display: flex;
+    gap: 10px;
+  }
+
+  .card {
+    width: 72px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  }
+
+  .card.blank {
+    background: #cbd5e0;
+    box-shadow: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="nav"><a href="index.html">◯ 원형 배치도 보기</a></div>
+
+<div class="teacher-card">강사 : 김대진</div>
+<div class="classroom" id="classroom"></div>
+
+<script>
+// 실제 교실 배치도 (좌/우 블록, 각 3자리 x 4줄, null = 빈자리)
+const rows = [
+  { left: [null, '한유진', '한윤지'], right: ['김정아', '김정현', null] },
+  { left: ['이도연', '강하영', '정유진'], right: ['김해냄', '정기준', '표후동'] },
+  { left: ['정선민', '양하은', '유민성'], right: [null, '전욱진', '이현우'] },
+  { left: [null, '박진', '김효인'], right: ['강성원', '임소정', '안치호'] }
+]
+
+const total = rows.reduce((sum, row) =>
+  sum + row.left.filter(Boolean).length + row.right.filter(Boolean).length, 0) // 20명
+
+const classroom = document.getElementById('classroom')
+let i = 0
+
+rows.forEach(row => {
+  const rowEl = document.createElement('div')
+  rowEl.className = 'row'
+
+  const leftEl = document.createElement('div')
+  leftEl.className = 'block'
+  row.left.forEach(name => leftEl.appendChild(addSeat(name)))
+
+  const rightEl = document.createElement('div')
+  rightEl.className = 'block'
+  row.right.forEach(name => rightEl.appendChild(addSeat(name)))
+
+  rowEl.appendChild(leftEl)
+  rowEl.appendChild(rightEl)
+  classroom.appendChild(rowEl)
+})
+
+function addSeat(name) {
+  if (name === null) return makeBlank()   // 자리는 있되 학생이 없는 빈자리
+  const seat = makeCard(name, i)
+  i++
+  return seat
+}
+
+function makeCard(name, index) {
+  // 원형 배치도와 동일한 규칙: 색상환(Hue)을 인원 수만큼 등분, 폰트는 보색
+  const hue = Math.round(index * 360 / total)
+  const compHue = (hue + 180) % 360
+
+  const card = document.createElement('div')
+  card.className = 'card'
+  card.textContent = name
+  card.style.background = `hsl(${hue}, 70%, 50%)`
+  card.style.color = `hsl(${compHue}, 70%, 50%)`
+  return card
+}
+
+function makeBlank() {
+  const card = document.createElement('div')
+  card.className = 'card blank'
+  return card
+}
+</script>
+
+</body>
+</html>

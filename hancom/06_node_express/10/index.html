@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>우리 반 배치도</title>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #1b1f27;
+    font-family: "Malgun Gothic", sans-serif;
+  }
+
+  .nav {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+  }
+
+  .nav a {
+    display: inline-block;
+    padding: 8px 14px;
+    background: #2d3340;
+    color: #e2e8f0;
+    border: 1px solid #4a5568;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+  }
+
+  .nav a:hover {
+    background: #3b4252;
+  }
+
+  .table {
+    position: relative;
+    width: 560px;
+    height: 560px;
+    border: 2px dashed #4a5568;
+    border-radius: 50%;
+  }
+
+  .ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: spin 20s linear infinite;
+  }
+
+  .seat {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 84px;
+    height: 84px;
+    margin: -42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    animation: spin-reverse 20s linear infinite;   /* 원이 돌아도 이름은 똑바로 */
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  @keyframes spin-reverse {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(-360deg); }
+  }
+
+  .teacher {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: white;
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  #status {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    color: #cbd5e0;
+    font-family: sans-serif;
+  }
+</style>
+</head>
+<body>
+
+<div class="nav"><a href="grid.html">▭ 사각 배치도 보기</a></div>
+<div id="status">불러오는 중...</div>
+<div class="table" id="table">
+  <div class="teacher">김대진</div>
+  <div class="ring" id="ring"></div>
+</div>
+
+<script>
+const studentsList = [
+  '강성원', '강하영', '김정아', '김정현', '김해냄', '김효인', '박진', '안치호',
+  '양하은', '유민성', '이도연', '이현우', '임소정', '전욱진', '정기준', '정선민',
+  '정유진', '표후동', '한유진', '한윤지'
+]
+
+// grid.html(사각 배치도)의 읽기 순서와 동일 — 같은 학생이 두 페이지에서 같은 색이 되도록 이 순서로 정렬
+const seatOrder = [
+  '한유진', '한윤지', '김정아', '김정현', '이도연', '강하영', '정유진',
+  '김해냄', '정기준', '표후동', '정선민', '양하은', '유민성', '전욱진',
+  '이현우', '박진', '김효인', '강성원', '임소정', '안치호'
+]
+
+fetch('http://192.168.10.28:5000/hancom/이현우/users', {
+  headers: { 'Authorization': 'HANCOM' }
+})
+  .then(res => res.json())
+  .then(students => {
+    const serverList = students.map(s => s.name)
+    const addedStudents = serverList.filter(name => !studentsList.includes(name)) // 서버엔 있는데 명단엔 없음
+    const fixedStudents = seatOrder.filter(name => serverList.includes(name) && !addedStudents.includes(name)) // 정상 명단만, 배치 순서로 정렬
+
+    document.getElementById('status').textContent = `학생 ${fixedStudents.length}명`
+
+    const ring = document.getElementById('ring')
+    const radius = 240   // 원탁 반지름 (px)
+    const center = 280   // .table 크기(560px)의 절반
+
+    fixedStudents.forEach((name, i) => {
+      const angle = (360 / fixedStudents.length) * i - 90   // 12시 방향부터 시작
+      const rad = angle * Math.PI / 180
+      const x = center + radius * Math.cos(rad)
+      const y = center + radius * Math.sin(rad)
+
+      // 색상환(Hue)을 인원 수만큼 등분한 배경색, 폰트는 반대쪽(보색) 색상
+      const hue = Math.round(i * 360 / fixedStudents.length)
+      const compHue = (hue + 180) % 360
+
+      const seat = document.createElement('div')
+      seat.className = 'seat'
+      seat.textContent = name
+      seat.style.left = x + 'px'
+      seat.style.top = y + 'px'
+      seat.style.background = `hsl(${hue}, 70%, 50%)`
+      seat.style.color = `hsl(${compHue}, 70%, 50%)`
+      ring.appendChild(seat)
+    })
+  })
+  .catch(err => {
+    document.getElementById('status').textContent = '❌ 서버 연결 실패: ' + err.message
+  })
+</script>
+
+</body>
+</html>
