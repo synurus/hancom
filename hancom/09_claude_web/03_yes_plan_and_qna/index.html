@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>픽셀 계산기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <main class="calculator">
+        <h1 class="title">PIXEL CALC</h1>
+
+        <section class="display" aria-live="polite">
+            <div class="display-history" id="history"></div>
+            <div class="display-current" id="current">0</div>
+        </section>
+
+        <div class="grid" id="grid">
+            <button class="btn btn-func" data-action="clear">C</button>
+            <button class="btn btn-func" data-action="sign">±</button>
+            <button class="btn btn-func" data-action="percent">%</button>
+            <button class="btn btn-op" data-op="/">÷</button>
+
+            <button class="btn btn-num" data-digit="7">7</button>
+            <button class="btn btn-num" data-digit="8">8</button>
+            <button class="btn btn-num" data-digit="9">9</button>
+            <button class="btn btn-op" data-op="*">×</button>
+
+            <button class="btn btn-num" data-digit="4">4</button>
+            <button class="btn btn-num" data-digit="5">5</button>
+            <button class="btn btn-num" data-digit="6">6</button>
+            <button class="btn btn-op" data-op="-">−</button>
+
+            <button class="btn btn-num" data-digit="1">1</button>
+            <button class="btn btn-num" data-digit="2">2</button>
+            <button class="btn btn-num" data-digit="3">3</button>
+            <button class="btn btn-op" data-op="+">+</button>
+
+            <button class="btn btn-num btn-zero" data-digit="0">0</button>
+            <button class="btn btn-num" data-action="decimal">.</button>
+            <button class="btn btn-equal" data-action="equals">=</button>
+        </div>
+    </main>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

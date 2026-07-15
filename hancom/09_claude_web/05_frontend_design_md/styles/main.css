@@ -1,0 +1,577 @@
+/* =====================================================================
+   NINTENDO.COM ~2001 CALC-U-LATER
+   Beveled periwinkle chrome + carbon command slabs + rationed warm signal
+   ===================================================================== */
+
+:root {
+  /* Surface / chrome */
+  --canvas:        #7a8aba;
+  --periwinkle:    #8ba1d4;
+  --sky:           #9fbee7;
+  --lavender:      #acace7;
+  --ice:           #c0d5e6;
+  --chrome-indigo: #3d4f97;
+  --muted-indigo:  #60619c;
+  --platinum:      #dedede;
+  --surface:       #ffffff;
+
+  /* Command / ink */
+  --carbon:   #21242e;
+  --ink:      #21242e;
+  --ink-soft: #3d4f97;
+
+  /* Warm signal (action only) */
+  --primary:  #e60012;
+  --signal:   #f68d1f;
+  --amber:    #ecab37;
+  --nav-gold: #e48600;
+
+  /* Edge-light helpers */
+  --hi:  rgba(255, 255, 255, 0.55);   /* top highlight  */
+  --lo:  var(--chrome-indigo);        /* bottom shadow line */
+
+  /* Spacing */
+  --xxs: 2px;  --xs: 4px;  --sm: 8px;  --md: 12px;
+  --lg: 16px;  --xl: 24px; --xxl: 32px;
+
+  /* Type */
+  --pixel: 'Press Start 2P', 'Courier New', monospace;
+  --lcd:   'VT323', 'Courier New', monospace;
+  --body:  Arial, Helvetica, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #4a5680;                 /* darker chassis behind the machine */
+  font-family: var(--body);
+  color: var(--ink);
+  -webkit-font-smoothing: none;
+  image-rendering: pixelated;
+}
+
+body {
+  padding: var(--xl) var(--sm);
+  display: flex;
+  justify-content: center;
+}
+
+/* Bevel plate mixin (applied via class) ------------------------------ */
+.plate {
+  background: var(--canvas);
+  border-top: 2px solid var(--hi);
+  border-left: 1px solid var(--hi);
+  border-right: 1px solid var(--lo);
+  border-bottom: 2px solid var(--lo);
+}
+
+/* Halftone speaker-grille texture for carbon slabs ------------------- */
+.grille {
+  background-color: var(--carbon);
+  background-image: radial-gradient(rgba(255,255,255,0.10) 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+
+/* ===================================================================
+   MACHINE SHELL
+   =================================================================== */
+.machine {
+  width: 820px;
+  max-width: 100%;
+  background: var(--canvas);
+  border-top: 2px solid var(--hi);
+  border-left: 2px solid var(--hi);
+  border-right: 3px solid var(--chrome-indigo);
+  border-bottom: 3px solid var(--chrome-indigo);
+  /* chamfered faceplate corners */
+  clip-path: polygon(
+    14px 0, calc(100% - 14px) 0, 100% 14px,
+    100% calc(100% - 14px), calc(100% - 14px) 100%,
+    14px 100%, 0 calc(100% - 14px), 0 14px
+  );
+  padding: var(--sm);
+}
+
+/* ===================================================================
+   MASTHEAD
+   =================================================================== */
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: var(--sm) var(--xs) var(--md);
+  gap: var(--md);
+}
+
+.mascot { display: flex; align-items: flex-end; gap: var(--sm); }
+
+/* Pure-CSS pixel Mario head */
+.mario {
+  position: relative;
+  width: 40px; height: 44px;
+  flex: none;
+}
+.mario-cap {
+  position: absolute; top: 0; left: 4px;
+  width: 32px; height: 16px;
+  background: var(--primary);
+  box-shadow:
+    -4px 4px 0 0 var(--primary),   /* brim */
+    32px 4px 0 0 var(--primary);
+}
+.mario-face {
+  position: absolute; top: 16px; left: 4px;
+  width: 32px; height: 24px;
+  background: #f2b98a;              /* skin */
+  box-shadow:
+    8px 24px 0 0 #6a4a2a,          /* mustache-ish base */
+    inset 0 -8px 0 0 #6a4a2a;
+}
+
+.mascot-bubble {
+  position: relative;
+  background: var(--surface);
+  color: var(--carbon);
+  font-family: var(--pixel);
+  font-size: 9px;
+  line-height: 1.5;
+  padding: var(--sm) var(--md);
+  border-radius: 10px;
+  border: 2px solid var(--chrome-indigo);
+  max-width: 320px;
+}
+.bubble-tail {
+  position: absolute;
+  left: -8px; bottom: 8px;
+  width: 0; height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 8px solid var(--chrome-indigo);
+}
+
+.masthead-search {
+  display: flex;
+  align-items: center;
+  gap: var(--xs);
+}
+.search-legend {
+  font-family: var(--pixel);
+  font-size: 8px;
+  color: var(--ink-soft);
+  letter-spacing: 0.5px;
+}
+.search-field {
+  font-family: var(--body);
+  font-size: 12px;
+  padding: 4px 6px;
+  height: 22px;
+  border: 1px solid var(--chrome-indigo);
+  border-radius: 2px;
+  background: var(--surface);
+  width: 130px;
+}
+
+/* ===================================================================
+   NAV BAR (carbon command slab)
+   =================================================================== */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--md);
+  padding: var(--sm) var(--md);
+  color: var(--surface);
+  border-top: 1px solid rgba(255,255,255,0.15);
+  border-bottom: 2px solid #000;
+}
+
+.logo-pill {
+  background: var(--surface);
+  color: var(--primary);
+  font-family: var(--pixel);
+  font-size: 11px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 2px solid var(--primary);
+  letter-spacing: 0.5px;
+  flex: none;
+}
+
+.nav-words {
+  list-style: none;
+  display: flex;
+  gap: var(--lg);
+  margin: 0; padding: 0;
+  flex: 1;
+}
+.nav-words a {
+  font-family: var(--pixel);
+  font-size: 11px;
+  color: var(--nav-gold);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 0 #000;
+}
+.nav-words a:hover { color: var(--amber); }
+
+.nav-utils { display: flex; gap: var(--xs); }
+
+/* Chips (amber utility) ---------------------------------------------- */
+.chip {
+  font-family: var(--pixel);
+  font-size: 8px;
+  letter-spacing: 0.5px;
+  padding: 6px 8px;
+  border: none;
+  cursor: pointer;
+  color: var(--carbon);
+  border-radius: 2px;
+}
+.chip-amber {
+  background: var(--amber);
+  border-top: 2px solid rgba(255,255,255,0.6);
+  border-bottom: 2px solid var(--nav-gold);
+}
+.chip-amber:active { background: var(--nav-gold); }
+.search-cat { cursor: default; }
+
+/* ===================================================================
+   SUBNAV STRIP
+   =================================================================== */
+.subnav-strip {
+  background: var(--sky);
+  border-bottom: 2px solid var(--chrome-indigo);
+  padding: var(--xs) var(--md);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--xs);
+}
+.subnav-strip a {
+  font-family: var(--pixel);
+  font-size: 8px;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+.subnav-strip a:hover { color: var(--primary); }
+.subnav-strip .sep { color: var(--muted-indigo); font-size: 10px; }
+
+/* ===================================================================
+   BODY GRID
+   =================================================================== */
+.body-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--lg);
+  padding: var(--lg) var(--xs);
+}
+
+/* ---------- HERO PANEL ---------- */
+.hero-panel {
+  position: relative;
+  background: var(--lavender);
+  background-image:
+    linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(61,79,151,0.15) 100%);
+  border-top: 2px solid var(--hi);
+  border-bottom: 3px solid var(--chrome-indigo);
+  border-radius: 6px;
+  padding: var(--xl) var(--lg);
+  margin-bottom: var(--lg);
+  overflow: hidden;
+}
+.hero-wordmark {
+  display: block;
+  font-family: var(--pixel);
+  font-size: 30px;
+  color: var(--surface);
+  letter-spacing: 1px;
+  -webkit-text-stroke: 2px var(--carbon);
+  text-shadow: 4px 4px 0 var(--chrome-indigo);
+  line-height: 1;
+}
+.hero-tagline {
+  display: block;
+  margin-top: var(--md);
+  font-family: var(--body);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--carbon);
+}
+.hero-arrow {
+  position: absolute;
+  right: var(--lg); bottom: var(--lg);
+  width: 34px; height: 34px;
+  display: grid; place-items: center;
+  background: var(--signal);
+  color: var(--surface);
+  border-radius: 9999px;
+  font-size: 12px;
+  border-top: 2px solid rgba(255,255,255,0.7);
+  border-bottom: 3px solid #a85a10;
+}
+
+/* ---------- CALC PANEL ---------- */
+.calc-panel {
+  background: var(--canvas);
+  border-top: 2px solid var(--hi);
+  border-bottom: 3px solid var(--chrome-indigo);
+  border-radius: 6px;
+  padding: 0 0 var(--md);
+  overflow: hidden;
+}
+
+.section-label-bar {
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--pixel);
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  padding: var(--sm) var(--md);
+  border-bottom: 2px solid var(--chrome-indigo);
+  border-top: 2px solid var(--hi);
+  display: flex; align-items: center; gap: var(--sm);
+}
+.label-glyph {
+  width: 10px; height: 10px;
+  background: var(--signal);
+  display: inline-block;
+  box-shadow: inset 0 0 0 2px var(--carbon);
+}
+
+/* Recessed display (inset / level 0) */
+.calc-inset {
+  margin: var(--md);
+  padding: var(--sm) var(--md);
+  background: #b9c4a0;                 /* pale LCD green-gray */
+  border-top: 3px solid var(--chrome-indigo);
+  border-left: 3px solid var(--chrome-indigo);
+  border-right: 2px solid var(--hi);
+  border-bottom: 2px solid var(--hi);
+  border-radius: 2px;
+}
+.calc-subline {
+  font-family: var(--lcd);
+  font-size: 20px;
+  color: #4c5a3a;
+  text-align: right;
+  min-height: 20px;
+  line-height: 1;
+  letter-spacing: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.calc-display {
+  font-family: var(--lcd);
+  font-size: 46px;
+  color: #1c2416;
+  text-align: right;
+  line-height: 1.05;
+  letter-spacing: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.25);
+}
+.calc-display.is-error { color: var(--primary); }
+
+/* Keypad */
+.calc-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sm);
+  padding: 0 var(--md);
+}
+
+.key {
+  font-family: var(--pixel);
+  font-size: 14px;
+  height: 52px;
+  cursor: pointer;
+  color: var(--carbon);
+  background: var(--surface);
+  border: none;
+  border-radius: 2px;
+  border-top: 3px solid rgba(255,255,255,0.9);
+  border-left: 2px solid rgba(255,255,255,0.7);
+  border-right: 2px solid var(--chrome-indigo);
+  border-bottom: 4px solid var(--chrome-indigo);
+  user-select: none;
+  transition: none;
+}
+.key:hover { background: var(--platinum); }
+
+/* pressed bevel: sink the plate */
+.key.is-pressed,
+.key:active {
+  border-top: 4px solid var(--chrome-indigo);
+  border-bottom: 3px solid rgba(255,255,255,0.9);
+  transform: translateY(1px);
+}
+
+.key-zero { grid-column: span 1; }
+
+/* operator keys = signal orange (forward/action) */
+.key-op {
+  background: var(--signal);
+  color: var(--surface);
+  border-right-color: #a85a10;
+  border-bottom-color: #a85a10;
+}
+.key-op:hover { background: #ff9c33; }
+
+/* util keys = amber (tools/marks) */
+.key-util {
+  background: var(--amber);
+  color: var(--carbon);
+  border-right-color: var(--nav-gold);
+  border-bottom-color: var(--nav-gold);
+}
+.key-util:hover { background: #f2ba52; }
+
+/* equals = big signal commit */
+.key-equals {
+  background: var(--signal);
+  color: var(--surface);
+  border-right-color: #a85a10;
+  border-bottom-color: #a85a10;
+}
+.key-equals:hover { background: #ff9c33; }
+
+/* ===================================================================
+   RIGHT ACTION RAIL
+   =================================================================== */
+.rail { display: flex; flex-direction: column; gap: var(--sm); }
+
+.rail-btn {
+  background-color: var(--carbon);
+  background-image: radial-gradient(rgba(255,255,255,0.10) 1px, transparent 1px);
+  background-size: 4px 4px;
+  color: var(--surface);
+  font-family: var(--pixel);
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  padding: var(--md);
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.18);
+  border-bottom: 2px solid #000;
+  cursor: pointer;
+  display: flex; align-items: center; gap: var(--sm);
+}
+.rail-btn:hover { color: var(--amber); }
+.rail-btn:active { transform: translateY(1px); }
+.rail-icon {
+  color: var(--signal);
+  font-size: 12px;
+  width: 14px; text-align: center;
+}
+.rail-btn.flash { color: var(--amber); }
+
+.info-box {
+  background: var(--surface);
+  border-radius: 4px;
+  border-top: 2px solid var(--hi);
+  border-bottom: 3px solid var(--chrome-indigo);
+  overflow: hidden;
+}
+.info-tab {
+  background: var(--amber);
+  color: var(--carbon);
+  font-family: var(--pixel);
+  font-size: 8px;
+  letter-spacing: 0.5px;
+  padding: var(--sm);
+  border-bottom: 2px solid var(--nav-gold);
+}
+.info-box p {
+  font-family: var(--body);
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ink);
+  margin: 0;
+  padding: var(--md);
+}
+
+.promo-card {
+  position: relative;
+  background: var(--lavender);
+  border-radius: 4px;
+  border-top: 2px solid var(--hi);
+  border-bottom: 3px solid var(--chrome-indigo);
+  padding: var(--md);
+  text-align: center;
+}
+.promo-wordmark {
+  font-family: var(--pixel);
+  font-size: 13px;
+  color: var(--surface);
+  -webkit-text-stroke: 1.5px var(--carbon);
+  text-shadow: 2px 2px 0 var(--chrome-indigo);
+  line-height: 1.4;
+  display: block;
+}
+.promo-render {
+  width: 46px; height: 46px;
+  margin: var(--sm) auto;
+  background: var(--signal);
+  border: 3px solid var(--carbon);
+  box-shadow: inset -4px -4px 0 rgba(0,0,0,0.25), 3px 3px 0 var(--chrome-indigo);
+}
+.promo-note {
+  font-family: var(--pixel);
+  font-size: 7px;
+  color: var(--carbon);
+  letter-spacing: 0.5px;
+}
+
+/* ===================================================================
+   FOOTER (carbon chamfered slab)
+   =================================================================== */
+.footer-bar {
+  background-color: var(--carbon);
+  background-image: radial-gradient(rgba(255,255,255,0.10) 1px, transparent 1px);
+  background-size: 4px 4px;
+  padding: var(--lg);
+  display: flex;
+  align-items: center;
+  gap: var(--md);
+  flex-wrap: wrap;
+  border-top: 2px solid #000;
+}
+.esrb-badge {
+  background: var(--amber);
+  color: var(--carbon);
+  font-family: var(--pixel);
+  font-size: 7px;
+  letter-spacing: 0.5px;
+  padding: 6px 8px;
+  border-radius: 2px;
+  flex: none;
+}
+.footer-copy {
+  font-family: var(--pixel);
+  font-size: 7px;
+  line-height: 1.6;
+  color: var(--sky);
+  flex: 1;
+  min-width: 200px;
+}
+.footer-link {
+  font-family: var(--pixel);
+  font-size: 7px;
+  color: var(--amber);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+.footer-link:hover { color: var(--signal); }
+
+/* ===================================================================
+   NARROW WINDOW — stack rail below content
+   =================================================================== */
+@media (max-width: 720px) {
+  .body-grid { grid-template-columns: 1fr; }
+  .hero-wordmark { font-size: 22px; }
+  .calc-display { font-size: 36px; }
+  .masthead { flex-direction: column; align-items: stretch; }
+}

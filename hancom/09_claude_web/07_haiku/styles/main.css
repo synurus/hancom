@@ -1,0 +1,407 @@
+/* ============================================================
+   PlayStation 디자인 시스템 기반 계산기
+   SONY_DESIGN.md 토큰 · Dark Canvas 모드
+   ============================================================ */
+
+/* --- Design Tokens (CSS Custom Properties) --- */
+:root {
+    /* Colors */
+    --colors-canvas-dark: #000000;
+    --colors-surface-dark-card: #181818;
+    --colors-surface-dark-elevated: #121314;
+    --colors-hairline-dark: rgba(229, 229, 229, 0.2);
+    --colors-on-dark: #ffffff;
+    --colors-body-dark: rgba(255, 255, 255, 0.7);
+    --colors-mute-dark: rgba(229, 229, 229, 0.55);
+    --colors-primary: #0070d1;
+    --colors-primary-pressed: #0064b7;
+    --colors-primary-active: #004d8d;
+    --colors-warning: #c81b3a;
+
+    /* DualSense Button Colors (extension palette) */
+    --colors-button-green: #2FBF71;
+    --colors-button-red: #FF4D6A;
+    --colors-button-blue: #3B82F6;
+    --colors-button-pink: #D65DB1;
+
+    /* Typography */
+    --font-display: "Roboto", Arial, sans-serif;
+    --font-ui: "Inter", Arial, sans-serif;
+
+    --size-display-xl: 54px;
+    --size-display-lg: 44px;
+    --size-display-md: 35px;
+    --size-heading-lg: 22px;
+    --size-body-md: 18px;
+    --size-body-sm: 16px;
+    --size-caption-md: 14px;
+    --size-button-lg: 18px;
+    --size-button-md: 14px;
+
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+    /* Spacing */
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+    --spacing-section: 96px;
+
+    /* Radius */
+    --rounded-sm: 4px;
+    --rounded-md: 8px;
+    --rounded-full: 9999px;
+
+    /* Shadows */
+    --shadow-lift: 0 4px 12px rgba(0, 0, 0, 0.16);
+}
+
+/* --- Accessibility --- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* --- Reset & Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--colors-canvas-dark);
+    color: var(--colors-on-dark);
+    font-family: var(--font-ui);
+    font-size: var(--size-body-md);
+    font-weight: var(--weight-regular);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+button:focus-visible {
+    outline: 2px solid var(--colors-primary);
+    outline-offset: 2px;
+}
+
+/* --- Layout --- */
+.stage {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-section) var(--spacing-xl);
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+}
+
+.eyebrow {
+    font-size: var(--size-caption-md);
+    font-weight: var(--weight-medium);
+    color: var(--colors-mute-dark);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    letter-spacing: 0.1px;
+}
+
+/* --- Device Container --- */
+.device {
+    background-color: var(--colors-surface-dark-card);
+    border: 1px solid var(--colors-hairline-dark);
+    border-radius: var(--rounded-md);
+    padding: var(--spacing-lg);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* --- LCD Display --- */
+.lcd {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--colors-hairline-dark);
+}
+
+.lcd__expr {
+    font-size: var(--size-caption-md);
+    font-weight: var(--weight-regular);
+    color: var(--colors-body-dark);
+    text-align: right;
+    min-height: 20px;
+    margin-bottom: var(--spacing-xs);
+    font-family: var(--font-ui);
+}
+
+.lcd__value {
+    font-size: var(--size-display-lg);
+    font-weight: var(--weight-light);
+    font-family: var(--font-display);
+    color: var(--colors-on-dark);
+    text-align: right;
+    word-break: break-word;
+    word-wrap: break-word;
+    font-variant-numeric: tabular-nums;
+}
+
+.device.is-error .lcd {
+    border-bottom-color: var(--colors-warning);
+}
+
+.device.is-error .lcd__value {
+    color: var(--colors-warning);
+}
+
+/* --- Keypad Grid --- */
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* --- Key Base Styles --- */
+.key {
+    aspect-ratio: 1;
+    border-radius: var(--rounded-md);
+    background-color: var(--colors-surface-dark-elevated);
+    color: var(--colors-on-dark);
+    font-size: var(--size-body-md);
+    font-weight: var(--weight-bold);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    transition: background-color 0.12s, box-shadow 0.12s;
+    min-height: 44px;
+    border: 1px solid var(--colors-hairline-dark);
+}
+
+.key:hover:not(:active) {
+    background-color: #1a1a1a;
+}
+
+.key:active,
+.key.is-press {
+    box-shadow: var(--shadow-lift), inset 0 2px 4px rgba(0, 0, 0, 0.3);
+    background-color: #0f0f0f;
+}
+
+/* --- Key Label (for utility keys with icons) --- */
+.key__label {
+    display: block;
+    font-size: var(--size-button-md);
+    font-weight: var(--weight-regular);
+    opacity: 0.7;
+}
+
+/* --- Operator Keys (outline style) --- */
+.key--op {
+    background-color: transparent;
+    border: 1px solid var(--colors-hairline-dark);
+    color: var(--colors-body-dark);
+}
+
+.key--op:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Operator active state (when waiting for operand) */
+.key--op.is-active {
+    background-color: var(--colors-primary);
+    border-color: var(--colors-primary);
+    color: var(--colors-on-dark);
+}
+
+.key--op.is-active:hover:not(:active) {
+    background-color: var(--colors-primary-pressed);
+    border-color: var(--colors-primary-pressed);
+}
+
+.key--op.is-active:active {
+    background-color: var(--colors-primary-active);
+    border-color: var(--colors-primary-active);
+}
+
+/* --- Utility Keys (DualSense button colors) --- */
+.key--util {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
+    border: 1px solid var(--colors-hairline-dark);
+    font-size: var(--size-heading-lg);
+    color: var(--colors-on-dark);
+    font-weight: var(--weight-medium);
+    gap: 4px;
+}
+
+.key--util-green {
+    --util-color: var(--colors-button-green);
+}
+
+.key--util-red {
+    --util-color: var(--colors-button-red);
+}
+
+.key--util-blue {
+    --util-color: var(--colors-button-blue);
+}
+
+.key--util-pink {
+    --util-color: var(--colors-button-pink);
+}
+
+.key--util::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--util-color);
+    flex-shrink: 0;
+}
+
+.key--util:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0.15) 100%);
+}
+
+.key--util:active {
+    box-shadow: var(--shadow-lift), inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Equals Key (primary CTA button) --- */
+.key--equals {
+    background-color: var(--colors-primary);
+    border: 1px solid var(--colors-primary);
+    color: var(--colors-on-dark);
+    border-radius: var(--rounded-full);
+    font-size: var(--size-button-lg);
+    font-weight: var(--weight-bold);
+}
+
+.key--equals:hover:not(:active) {
+    background-color: var(--colors-primary-pressed);
+    border-color: var(--colors-primary-pressed);
+}
+
+.key--equals:active {
+    background-color: var(--colors-primary-active);
+    border-color: var(--colors-primary-active);
+    box-shadow: var(--shadow-lift), inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Hint Bar --- */
+.hint-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-xs);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--colors-hairline-dark);
+}
+
+.hint-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--size-caption-md);
+}
+
+.hint-icon {
+    font-size: var(--size-heading-lg);
+    font-weight: var(--weight-semibold);
+    color: var(--colors-mute-dark);
+}
+
+.hint-text {
+    font-size: 11px;
+    color: var(--colors-mute-dark);
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    :root {
+        --spacing-section: 64px;
+        --size-display-lg: 38px;
+        --size-body-md: 16px;
+    }
+
+    .stage {
+        padding: var(--spacing-section) var(--spacing-md);
+    }
+
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --spacing-section: 48px;
+        --size-display-lg: 32px;
+        --size-body-md: 14px;
+    }
+
+    .stage {
+        padding: var(--spacing-section) var(--spacing-sm);
+    }
+
+    .device {
+        padding: var(--spacing-md);
+    }
+
+    .keys {
+        gap: 8px;
+    }
+
+    .key {
+        font-size: var(--size-button-md);
+        min-height: 40px;
+    }
+}
+
+@media (max-width: 320px) {
+    :root {
+        --spacing-section: 32px;
+        --size-display-lg: 28px;
+        --spacing-lg: 16px;
+    }
+
+    .device {
+        padding: var(--spacing-sm);
+    }
+
+    .hint-bar {
+        gap: 4px;
+    }
+
+    .hint-text {
+        font-size: 10px;
+    }
+}

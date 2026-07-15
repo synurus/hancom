@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nintendo Calc-U-Later!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <div class="machine">
+
+    <!-- ==================== MASTHEAD ==================== -->
+    <header class="masthead">
+      <div class="mascot">
+        <div class="mario" aria-hidden="true">
+          <span class="mario-cap"></span>
+          <span class="mario-face"></span>
+        </div>
+        <div class="mascot-bubble">
+          <span class="bubble-tail"></span>
+          Welcome to Nintendo Calc&#8209;U&#8209;Later!
+        </div>
+      </div>
+      <div class="masthead-search">
+        <span class="search-legend">SEARCH</span>
+        <input type="text" class="search-field" placeholder="find a number..." aria-label="search" />
+        <span class="chip chip-amber search-cat">ALL &#9662;</span>
+        <button type="button" class="chip chip-amber">GO</button>
+      </div>
+    </header>
+
+    <!-- ==================== PRIMARY NAV ==================== -->
+    <nav class="nav-bar">
+      <span class="logo-pill">Nintendo</span>
+      <ul class="nav-words">
+        <li><a href="#calc">CALC</a></li>
+        <li><a href="#history">HISTORY</a></li>
+        <li><a href="#about">ABOUT</a></li>
+      </ul>
+      <div class="nav-utils">
+        <span class="chip chip-amber">CODE BANK</span>
+        <span class="chip chip-amber">GAME FINDER</span>
+      </div>
+    </nav>
+
+    <!-- ==================== SUBNAV STRIP ==================== -->
+    <div class="subnav-strip">
+      <a href="#">Parents</a><span class="sep">|</span>
+      <a href="#">Customer Service</a><span class="sep">|</span>
+      <a href="#">Corporate</a><span class="sep">|</span>
+      <a href="#">Global</a><span class="sep">|</span>
+      <a href="#">Privacy</a><span class="sep">|</span>
+      <a href="#">Store</a><span class="sep">|</span>
+      <a href="#">Contact</a>
+    </div>
+
+    <!-- ==================== BODY ==================== -->
+    <div class="body-grid">
+
+      <!-- ---------- CONTENT COLUMN ---------- -->
+      <main class="content-col">
+        <section class="hero-panel" id="calc">
+          <span class="hero-wordmark">CALCULATOR</span>
+          <span class="hero-tagline">Crunch every number with power-up precision.</span>
+          <span class="hero-arrow" aria-hidden="true">&#9654;</span>
+        </section>
+
+        <section class="calc-panel">
+          <div class="section-label-bar">
+            <span class="label-glyph"></span> PLAYER&#39;S CALCULATOR
+          </div>
+
+          <div class="calc-inset">
+            <div class="calc-subline" id="subline" aria-hidden="true">&nbsp;</div>
+            <div class="calc-display" id="display" role="status" aria-live="polite">0</div>
+          </div>
+
+          <div class="calc-keys" id="keys">
+            <button type="button" class="key key-util" data-action="clear">AC</button>
+            <button type="button" class="key key-util" data-action="sign">&#177;</button>
+            <button type="button" class="key key-util" data-action="percent">%</button>
+            <button type="button" class="key key-op" data-op="/">&#247;</button>
+
+            <button type="button" class="key" data-digit="7">7</button>
+            <button type="button" class="key" data-digit="8">8</button>
+            <button type="button" class="key" data-digit="9">9</button>
+            <button type="button" class="key key-op" data-op="*">&#215;</button>
+
+            <button type="button" class="key" data-digit="4">4</button>
+            <button type="button" class="key" data-digit="5">5</button>
+            <button type="button" class="key" data-digit="6">6</button>
+            <button type="button" class="key key-op" data-op="-">&#8722;</button>
+
+            <button type="button" class="key" data-digit="1">1</button>
+            <button type="button" class="key" data-digit="2">2</button>
+            <button type="button" class="key" data-digit="3">3</button>
+            <button type="button" class="key key-op" data-op="+">+</button>
+
+            <button type="button" class="key key-zero" data-digit="0">0</button>
+            <button type="button" class="key" data-action="dot">.</button>
+            <button type="button" class="key key-equals" data-action="equals">=</button>
+          </div>
+        </section>
+      </main>
+
+      <!-- ---------- RIGHT ACTION RAIL ---------- -->
+      <aside class="rail">
+        <button type="button" class="rail-btn" data-action="copy" id="copyBtn">
+          <span class="rail-icon">&#9878;</span> COPY RESULT
+        </button>
+        <button type="button" class="rail-btn" data-action="clear">
+          <span class="rail-icon">&#9633;</span> CLEAR ALL
+        </button>
+        <button type="button" class="rail-btn" id="about">
+          <span class="rail-icon">?</span> HELP
+        </button>
+
+        <div class="info-box">
+          <div class="info-tab">WHAT IS &#8212; CALC-U-LATER</div>
+          <p>A pocket power-up for everyday math. Tap the keys or use your keyboard:
+          digits, <b>+ &minus; &times; &divide;</b>, <b>Enter</b> for =, <b>Esc</b> to clear,
+          <b>Backspace</b> to undo a digit.</p>
+        </div>
+
+        <div class="promo-card">
+          <span class="promo-wordmark">POWER<br>PLAYER</span>
+          <div class="promo-render" aria-hidden="true"></div>
+          <span class="promo-note">Chain your combos!</span>
+        </div>
+      </aside>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer-bar">
+      <span class="esrb-badge">ESRB &#8212; PRIVACY CERTIFIED</span>
+      <span class="footer-copy">&copy;1997&#8211;2001 Nintendo. Calc-U-Later is a fan-style tribute. All numbers reserved.</span>
+      <a href="#" class="footer-link">Privacy Policy</a>
+    </footer>
+
+  </div>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

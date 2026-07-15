@@ -1,0 +1,77 @@
+/* 전체 레이아웃: 화면 중앙 정렬 */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e9edf2;
+    font-family: "Segoe UI", "Malgun Gothic", sans-serif;
+}
+
+/* 계산기 카드 */
+.calculator {
+    width: 320px;
+    background: #1c1c1e;
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* 디스플레이: 우측 정렬, 큰 폰트 */
+.display {
+    height: 88px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0 8px 8px;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 300;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+/* 버튼 그리드: 4열 */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.btn {
+    height: 64px;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #fff;
+    background: #333336;
+    cursor: pointer;
+    transition: filter 0.12s;
+}
+
+.btn:hover { filter: brightness(1.2); }
+.btn:active { filter: brightness(0.85); }
+
+/* 기능 버튼 (C, ±, %) */
+.btn.func {
+    background: #a5a5a5;
+    color: #1c1c1e;
+}
+
+/* 연산자 버튼 */
+.btn.op { background: #ff9500; }
+
+/* = 버튼 */
+.btn.equals { background: #ff9500; }
+
+/* 0 버튼은 2칸 차지 → 원형 대신 알약 모양 */
+.btn.zero {
+    grid-column: span 2;
+    border-radius: 32px;
+    text-align: left;
+    padding-left: 26px;
+}

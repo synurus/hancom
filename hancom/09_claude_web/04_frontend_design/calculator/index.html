@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEGMA DS-74 · 계산기</title>
+
+    <!-- Type: DSEG7 (7-segment readout), Space Grotesk (plate), Space Mono (utility), Noto Sans KR (한글) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dseg@0.46.0/css/dseg.css">
+
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <main class="stage">
+        <!-- The calculator, treated as a physical object on a desk -->
+        <div class="device" role="application" aria-label="계산기">
+
+            <!-- Etched model plate -->
+            <div class="plate">
+                <span class="plate__mark">SEGMA</span>
+                <span class="plate__model">DS-74</span>
+                <span class="plate__solar" aria-hidden="true">
+                    <i></i><i></i><i></i><i></i>
+                </span>
+            </div>
+
+            <!-- LCD: expression line + big 7-segment readout over ghost segments -->
+            <div class="lcd">
+                <div class="lcd__status" aria-hidden="true">
+                    <span data-flag="op" class="lcd__flag">&nbsp;</span>
+                    <span data-flag="err" class="lcd__flag">E</span>
+                </div>
+                <div class="lcd__expr" id="expr" aria-hidden="true">&nbsp;</div>
+                <div class="lcd__readout">
+                    <!-- ghost 8s sit behind the live value -->
+                    <span class="lcd__ghost" aria-hidden="true">8.8.8.8.8.8.8.8.8.8.</span>
+                    <span class="lcd__value" id="value" aria-live="polite" aria-atomic="true">0</span>
+                </div>
+            </div>
+
+            <!-- Keypad -->
+            <div class="keys">
+                <button type="button" class="key key--fn" data-action="clear">AC</button>
+                <button type="button" class="key key--fn" data-action="back" aria-label="지우기">⌫</button>
+                <button type="button" class="key key--fn" data-action="percent">%</button>
+                <button type="button" class="key key--op" data-op="/" aria-label="나누기">÷</button>
+
+                <button type="button" class="key" data-digit="7">7</button>
+                <button type="button" class="key" data-digit="8">8</button>
+                <button type="button" class="key" data-digit="9">9</button>
+                <button type="button" class="key key--op" data-op="*" aria-label="곱하기">×</button>
+
+                <button type="button" class="key" data-digit="4">4</button>
+                <button type="button" class="key" data-digit="5">5</button>
+                <button type="button" class="key" data-digit="6">6</button>
+                <button type="button" class="key key--op" data-op="-" aria-label="빼기">−</button>
+
+                <button type="button" class="key" data-digit="1">1</button>
+                <button type="button" class="key" data-digit="2">2</button>
+                <button type="button" class="key" data-digit="3">3</button>
+                <button type="button" class="key key--op" data-op="+" aria-label="더하기">+</button>
+
+                <button type="button" class="key key--fn" data-action="negate" aria-label="부호 바꾸기">±</button>
+                <button type="button" class="key" data-digit="0">0</button>
+                <button type="button" class="key" data-action="decimal">.</button>
+                <button type="button" class="key key--eq" data-action="equals" aria-label="계산">=</button>
+            </div>
+        </div>
+
+        <p class="hint" aria-hidden="true">키보드로도 입력됩니다 · Enter&nbsp;=&nbsp;계산 · Esc&nbsp;=&nbsp;초기화</p>
+    </main>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>말랑 계산기</title>
+  <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fastly.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+  />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <main class="calc" aria-label="말랑 계산기">
+    <header class="calc__top">
+      <h1 class="calc__brand">
+        <span class="calc__mallang">말랑</span> 계산기
+      </h1>
+      <button
+        type="button"
+        class="theme-toggle"
+        id="themeToggle"
+        aria-pressed="false"
+        aria-label="어두운 화면으로 바꾸기"
+      >
+        <span class="theme-toggle__icon" aria-hidden="true">☾</span>
+      </button>
+    </header>
+
+    <section class="screen" aria-label="계산 결과">
+      <div class="screen__expression" id="expression" aria-hidden="true">&nbsp;</div>
+      <output class="screen__result" id="result" aria-live="polite">0</output>
+    </section>
+
+    <div class="keys" id="keys">
+      <button type="button" class="key key--util" data-action="clear" aria-label="전체 지우기">AC</button>
+      <button type="button" class="key key--util" data-action="negate" aria-label="부호 바꾸기">±</button>
+      <button type="button" class="key key--util" data-action="percent" aria-label="퍼센트">%</button>
+      <button type="button" class="key key--op" data-op="/" aria-label="나누기">÷</button>
+
+      <button type="button" class="key key--num" data-digit="7">7</button>
+      <button type="button" class="key key--num" data-digit="8">8</button>
+      <button type="button" class="key key--num" data-digit="9">9</button>
+      <button type="button" class="key key--op" data-op="*" aria-label="곱하기">×</button>
+
+      <button type="button" class="key key--num" data-digit="4">4</button>
+      <button type="button" class="key key--num" data-digit="5">5</button>
+      <button type="button" class="key key--num" data-digit="6">6</button>
+      <button type="button" class="key key--op" data-op="-" aria-label="빼기">−</button>
+
+      <button type="button" class="key key--num" data-digit="1">1</button>
+      <button type="button" class="key key--num" data-digit="2">2</button>
+      <button type="button" class="key key--num" data-digit="3">3</button>
+      <button type="button" class="key key--op" data-op="+" aria-label="더하기">+</button>
+
+      <button type="button" class="key key--util" data-action="backspace" aria-label="한 자리 지우기">⌫</button>
+      <button type="button" class="key key--num" data-digit="0">0</button>
+      <button type="button" class="key key--num" data-action="." aria-label="소수점">.</button>
+      <button type="button" class="key key--equals" data-action="equals" aria-label="계산하기">=</button>
+    </div>
+
+    <footer class="calc__foot">SEED Design 기반</footer>
+  </main>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayStation 시스템 계산기</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <main class="stage">
+        <div class="container">
+            <div class="eyebrow">SYSTEM · CALCULATOR</div>
+
+            <div class="device" role="application" aria-label="PlayStation 계산기">
+                <!-- LCD 디스플레이 -->
+                <div class="lcd">
+                    <div class="lcd__expr" id="expr" aria-hidden="true">&nbsp;</div>
+                    <div class="lcd__value" id="value" aria-live="polite" aria-atomic="true">0</div>
+                </div>
+
+                <!-- 키패드 -->
+                <div class="keys">
+                    <button type="button" class="key key--util key--util-green" data-action="clear" aria-label="초기화">△<span class="key__label">AC</span></button>
+                    <button type="button" class="key key--util key--util-red" data-action="back" aria-label="지우기">○<span class="key__label">⌫</span></button>
+                    <button type="button" class="key key--util key--util-pink" data-action="percent" aria-label="퍼센트">□<span class="key__label">%</span></button>
+                    <button type="button" class="key key--op" data-op="/" aria-label="나누기">✕<span class="key__label">÷</span></button>
+
+                    <button type="button" class="key" data-digit="7">7</button>
+                    <button type="button" class="key" data-digit="8">8</button>
+                    <button type="button" class="key" data-digit="9">9</button>
+                    <button type="button" class="key key--op" data-op="*" aria-label="곱하기">×</button>
+
+                    <button type="button" class="key" data-digit="4">4</button>
+                    <button type="button" class="key" data-digit="5">5</button>
+                    <button type="button" class="key" data-digit="6">6</button>
+                    <button type="button" class="key key--op" data-op="-" aria-label="빼기">−</button>
+
+                    <button type="button" class="key" data-digit="1">1</button>
+                    <button type="button" class="key" data-digit="2">2</button>
+                    <button type="button" class="key" data-digit="3">3</button>
+                    <button type="button" class="key key--op" data-op="+" aria-label="더하기">+</button>
+
+                    <button type="button" class="key key--util key--util-blue" data-action="negate" aria-label="부호 바꾸기">□<span class="key__label">±</span></button>
+                    <button type="button" class="key" data-digit="0">0</button>
+                    <button type="button" class="key" data-action="decimal">.</button>
+                    <button type="button" class="key key--equals" data-action="equals" aria-label="계산">=</button>
+                </div>
+
+                <!-- 힌트 바 -->
+                <div class="hint-bar">
+                    <div class="hint-item">
+                        <span class="hint-icon">✕</span>
+                        <span class="hint-text">계산</span>
+                    </div>
+                    <div class="hint-item">
+                        <span class="hint-icon">△</span>
+                        <span class="hint-text">초기화</span>
+                    </div>
+                    <div class="hint-item">
+                        <span class="hint-icon">○</span>
+                        <span class="hint-text">지우기</span>
+                    </div>
+                    <div class="hint-item">
+                        <span class="hint-icon">□</span>
+                        <span class="hint-text">부호변경</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

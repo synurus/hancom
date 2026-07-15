@@ -1,0 +1,277 @@
+/* ============================================================
+   SEGMA DS-74 — "Olive LCD" calculator
+   Signature: 7-segment readout over pale ghost segments.
+   ============================================================ */
+
+:root {
+    --field:      #8f9a7d;   /* page — the calculator's world */
+    --field-deep: #7c876a;
+    --case:       #20241c;   /* device body */
+    --case-edge:  #2c3125;
+    --lcd:        #b4bd9f;    /* liquid-crystal panel */
+    --lcd-edge:   #9aa585;
+    --seg-on:     #1a1e15;    /* lit segments / text */
+    --seg-ghost:  rgba(26, 30, 21, 0.075);  /* unlit ghost segments */
+    --key:        #eef0e6;    /* bone keys */
+    --key-edge:   #cfd2c4;
+    --key-face:   #33382b;    /* key glyph */
+    --accent:     #f2b705;    /* marigold — the one signal, on = only */
+    --accent-ink: #241c00;
+
+    --r-device: 26px;
+    --r-key: 12px;
+    --shadow-key: 0 3px 0 var(--key-edge), 0 5px 9px rgba(20, 24, 18, 0.28);
+
+    --font-plate: "Space Grotesk", system-ui, sans-serif;
+    --font-mono:  "Space Mono", ui-monospace, monospace;
+    --font-kr:    "Noto Sans KR", sans-serif;
+    --font-seg:   "DSEG7-Classic", "Space Mono", ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { height: 100%; }
+
+body {
+    font-family: var(--font-mono), var(--font-kr);
+    color: var(--seg-on);
+    background:
+        radial-gradient(120% 80% at 50% 0%, var(--field) 0%, var(--field-deep) 100%);
+    -webkit-font-smoothing: antialiased;
+}
+
+.stage {
+    min-height: 100%;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    gap: 22px;
+    padding: clamp(20px, 5vw, 56px);
+}
+
+/* -------------------------------------------------- device */
+
+.device {
+    width: min(92vw, 360px);
+    padding: 22px 22px 26px;
+    background: linear-gradient(180deg, var(--case-edge) 0%, var(--case) 40%);
+    border-radius: var(--r-device);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        inset 0 -3px 10px rgba(0, 0, 0, 0.5),
+        0 26px 50px -12px rgba(24, 30, 18, 0.55),
+        0 6px 0 var(--field-deep);
+}
+
+/* -------------------------------------------------- plate */
+
+.plate {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 2px 4px 14px;
+    color: #9aa08c;
+}
+
+.plate__mark {
+    font-family: var(--font-plate);
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    font-size: 15px;
+    color: #c3c9b4;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
+}
+
+.plate__model {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #7f866f;
+    padding-top: 2px;
+}
+
+.plate__solar {
+    margin-left: auto;
+    display: flex;
+    gap: 3px;
+}
+.plate__solar i {
+    width: 12px;
+    height: 16px;
+    border-radius: 2px;
+    background: linear-gradient(160deg, #3a4a55, #16202a);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* -------------------------------------------------- LCD */
+
+.lcd {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 14px 16px 16px;
+    background: linear-gradient(175deg, var(--lcd) 0%, var(--lcd-edge) 100%);
+    border-radius: 10px;
+    box-shadow:
+        inset 0 2px 6px rgba(20, 26, 14, 0.45),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.25),
+        0 1px 0 rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+}
+
+.lcd__status {
+    display: flex;
+    justify-content: flex-end;
+    height: 14px;
+    margin-bottom: 2px;
+}
+.lcd__flag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--seg-on);
+    opacity: 0;
+    transition: opacity 0.12s;
+}
+.lcd.is-op   [data-flag="op"]  { opacity: 0.85; }
+.lcd.is-error [data-flag="err"] { opacity: 0.9; }
+
+.lcd__expr {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    text-align: right;
+    color: rgba(26, 30, 21, 0.62);
+    min-height: 18px;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    direction: rtl;   /* keep the right (latest) side visible when long */
+}
+
+.lcd__readout {
+    position: relative;
+    text-align: right;
+    line-height: 1;
+    margin-top: 4px;
+    min-height: 46px;
+}
+
+/* the ghost 8s and the live value share the exact same box so they stack */
+.lcd__ghost,
+.lcd__value {
+    font-family: var(--font-seg);
+    font-size: clamp(38px, 12vw, 46px);
+    letter-spacing: 0.02em;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.lcd__ghost {
+    position: absolute;
+    inset: 0;
+    color: var(--seg-ghost);
+    pointer-events: none;
+    user-select: none;
+}
+
+.lcd__value {
+    position: relative;
+    color: var(--seg-on);
+    text-shadow: 0 0 1px rgba(26, 30, 21, 0.25);
+}
+
+/* subtle LCD refresh when a result settles */
+.lcd__value.is-settle { animation: lcd-refresh 0.18s steps(2, end); }
+@keyframes lcd-refresh {
+    0%   { opacity: 0.55; }
+    100% { opacity: 1; }
+}
+
+/* -------------------------------------------------- keys */
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.key {
+    font-family: var(--font-mono);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--key-face);
+    background: linear-gradient(180deg, #fbfcf8 0%, var(--key) 70%);
+    border: none;
+    border-radius: var(--r-key);
+    aspect-ratio: 1 / 0.92;
+    cursor: pointer;
+    box-shadow: var(--shadow-key);
+    transition: transform 0.06s ease, box-shadow 0.06s ease, background 0.12s;
+    user-select: none;
+}
+
+.key:hover { background: linear-gradient(180deg, #ffffff 0%, #f4f6ec 70%); }
+
+.key:active,
+.key.is-press {
+    transform: translateY(3px);
+    box-shadow: 0 0 0 var(--key-edge), 0 1px 3px rgba(20, 24, 18, 0.3);
+}
+
+.key:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* function keys (AC ⌫ % ±): quieter, recessed */
+.key--fn {
+    color: #e7e9df;
+    background: linear-gradient(180deg, #454b3b 0%, #363b2d 75%);
+    box-shadow: 0 3px 0 #23271d, 0 5px 9px rgba(20, 24, 18, 0.3);
+    font-size: 17px;
+}
+.key--fn:hover { background: linear-gradient(180deg, #4d5341 0%, #3b4030 75%); }
+.key--fn:active,
+.key--fn.is-press { box-shadow: 0 0 0 #23271d, 0 1px 3px rgba(0, 0, 0, 0.3); }
+
+/* operator keys: same bone family, marigold glyph to read as "math" */
+.key--op { color: #b8860b; font-size: 24px; }
+
+/* equals: the one bold move */
+.key--eq {
+    color: var(--accent-ink);
+    background: linear-gradient(180deg, #ffca2b 0%, var(--accent) 75%);
+    box-shadow: 0 3px 0 #b98a00, 0 5px 12px rgba(180, 130, 0, 0.4);
+    font-size: 24px;
+}
+.key--eq:hover { background: linear-gradient(180deg, #ffd451 0%, #ffc107 75%); }
+.key--eq:active,
+.key--eq.is-press { box-shadow: 0 0 0 #b98a00, 0 1px 3px rgba(120, 88, 0, 0.4); }
+
+/* -------------------------------------------------- hint */
+
+.hint {
+    font-family: var(--font-mono), var(--font-kr);
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: rgba(26, 34, 18, 0.55);
+    text-align: center;
+}
+
+/* -------------------------------------------------- responsive */
+
+@media (max-width: 360px) {
+    .keys { gap: 8px; }
+    .key { font-size: 18px; }
+}
+
+/* -------------------------------------------------- reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    .key,
+    .lcd__flag { transition: none; }
+    .key:active,
+    .key.is-press { transform: none; }
+    .lcd__value.is-settle { animation: none; }
+}

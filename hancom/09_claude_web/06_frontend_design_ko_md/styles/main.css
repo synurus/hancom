@@ -1,0 +1,262 @@
+/* ============================================================
+   말랑 계산기 — SEED(Carrot) 시각 언어 차용
+   role token 색 체계 · 라이트/다크 layer · 9999px full pill
+   ============================================================ */
+
+:root {
+  /* --- Carrot / Gray palette (CARROT_DESIGN.md, OKLCH 원본) --- */
+  --carrot-100: oklch(0.970 0.016 47);
+  --carrot-600: oklch(0.696 0.204 43);
+  --carrot-700: oklch(0.618 0.195 40);
+  --carrot-800: oklch(0.529 0.173 38);
+  --gray-000: oklch(1.000 0.000 0);
+  --gray-100: oklch(0.979 0.002 248);
+  --gray-200: oklch(0.967 0.002 248);
+  --gray-300: oklch(0.952 0.003 265);
+  --gray-400: oklch(0.901 0.007 269);
+  --gray-700: oklch(0.636 0.015 262);
+  --gray-1000: oklch(0.226 0.008 264);
+  --critical: oklch(0.640 0.233 28);
+
+  /* --- Role tokens (Light) --- */
+  --bg-page: var(--carrot-100);
+  --bg-surface: var(--gray-000);
+  --bg-screen: var(--gray-100);
+  --bg-num: var(--gray-200);
+  --bg-num-press: var(--gray-300);
+  --bg-util: var(--gray-100);
+  --bg-brand-weak: var(--carrot-100);
+  --bg-brand-solid: var(--carrot-600);
+  --bg-brand-press: var(--carrot-700);
+  --fg-neutral: var(--gray-1000);
+  --fg-muted: var(--gray-700);
+  --fg-brand: var(--carrot-700);
+  --fg-on-brand: var(--gray-000);
+  --stroke-muted: var(--gray-400);
+  --focus-ring: var(--carrot-600);
+
+  /* --- Radius (둥근 느낌) --- */
+  --r-screen: 20px;
+  --r-card: 32px;
+  --r-full: 9999px;
+
+  /* --- Spacing --- */
+  --gutter: 20px;
+  --key-gap: 12px;
+
+  --font-ui: "Pretendard Variable", -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Noto Sans", sans-serif;
+
+  --ease-squish: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+[data-theme="dark"] {
+  --bg-page: oklch(0.205 0.008 275);
+  --bg-surface: oklch(0.243 0.011 261);
+  --bg-screen: oklch(0.205 0.008 275);
+  --bg-num: oklch(0.300 0.010 264);
+  --bg-num-press: oklch(0.360 0.012 264);
+  --bg-util: oklch(0.274 0.010 264);
+  --bg-brand-weak: oklch(0.274 0.022 42);
+  --fg-neutral: var(--gray-100);
+  --fg-muted: oklch(0.700 0.012 262);
+  --fg-brand: var(--carrot-100);
+  --stroke-muted: oklch(1 0 0 / 0.09);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-ui);
+  background: var(--bg-page);
+  color: var(--fg-neutral);
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.4s ease;
+}
+
+/* --- Calculator card --- */
+.calc {
+  width: 100%;
+  max-width: 380px;
+  background: var(--bg-surface);
+  border-radius: var(--r-card);
+  padding: var(--gutter);
+  padding-bottom: 28px;
+  border: 1px solid var(--stroke-muted);
+  transition: background 0.4s ease, border-color 0.4s ease;
+}
+
+.calc__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 6px 16px;
+}
+
+.calc__brand {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.calc__mallang {
+  display: inline-block;
+  color: var(--fg-brand);
+  animation: wobble 3.6s var(--ease-squish) infinite;
+}
+
+@keyframes wobble {
+  0%, 92%, 100% { transform: scale(1, 1); }
+  95% { transform: scale(1.12, 0.88); }
+  98% { transform: scale(0.96, 1.04); }
+}
+
+/* --- Theme toggle --- */
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: var(--r-full);
+  background: var(--bg-util);
+  color: var(--fg-muted);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s ease, transform 0.2s var(--ease-squish);
+}
+
+.theme-toggle:hover { background: var(--bg-brand-weak); color: var(--fg-brand); }
+.theme-toggle:active { transform: scale(0.9); }
+
+/* --- Screen --- */
+.screen {
+  background: var(--bg-screen);
+  border-radius: var(--r-screen);
+  padding: 20px 22px;
+  margin-bottom: 20px;
+  text-align: right;
+  min-height: 118px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  transition: background 0.4s ease;
+}
+
+.screen__expression {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--fg-muted);
+  min-height: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-variant-numeric: tabular-nums;
+}
+
+.screen__result {
+  font-size: clamp(2.2rem, 11vw, 2.9rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--fg-neutral);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.screen--error .screen__result { color: var(--critical); font-size: 1.5rem; }
+
+/* --- Keypad --- */
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--key-gap);
+}
+
+.key {
+  aspect-ratio: 1 / 1;
+  border: none;
+  border-radius: var(--r-full);
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  color: var(--fg-neutral);
+  background: var(--bg-num);
+  transition: transform 0.12s var(--ease-squish), background 0.15s ease,
+    filter 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.key--num { background: var(--bg-num); }
+.key--util { background: var(--bg-util); color: var(--fg-muted); font-size: 1.25rem; }
+.key--op {
+  background: var(--bg-brand-weak);
+  color: var(--fg-brand);
+  font-size: 1.7rem;
+}
+.key--equals {
+  background: var(--bg-brand-solid);
+  color: var(--fg-on-brand);
+  font-size: 1.7rem;
+}
+
+.key:hover { filter: brightness(0.97); }
+.key--equals:hover { background: var(--bg-brand-press); filter: none; }
+
+/* 말랑 press */
+.key:active,
+.key.is-pressed {
+  transform: scale(0.9);
+}
+.key--num:active,
+.key--num.is-pressed { background: var(--bg-num-press); }
+.key--equals:active,
+.key--equals.is-pressed { background: var(--bg-brand-press); }
+
+.key:focus-visible,
+.theme-toggle:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+/* --- Footer --- */
+.calc__foot {
+  margin-top: 22px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--fg-muted);
+  letter-spacing: 0.01em;
+  opacity: 0.75;
+}
+
+@media (max-width: 360px) {
+  .key { font-size: 1.3rem; }
+  .keys { gap: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  .calc__mallang { animation: none !important; transition: none !important; }
+  .key:active,
+  .key.is-pressed,
+  .theme-toggle:active { transform: none; }
+}

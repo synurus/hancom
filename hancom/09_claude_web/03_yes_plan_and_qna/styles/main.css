@@ -1,0 +1,161 @@
+/* ===== 네온 아케이드 픽셀 계산기 ===== */
+
+:root {
+    --bg: #0d0d0d;
+    --panel: #16131f;
+    --lcd-bg: #05100f;
+    --neon-pink: #ff2e88;
+    --neon-cyan: #25f4ee;
+    --num-face: #2a2740;
+    --num-shadow: #100e1c;
+    --text-dim: #6d6a85;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--bg);
+    /* 픽셀 스캔라인 질감 */
+    background-image: repeating-linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.03) 0px,
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    font-family: 'Press Start 2P', 'Courier New', monospace;
+    -webkit-font-smoothing: none;
+    image-rendering: pixelated;
+}
+
+.calculator {
+    width: 320px;
+    padding: 18px;
+    background: var(--panel);
+    border: 4px solid var(--neon-cyan);
+    /* 하드(오프셋) 그림자로 8비트 입체감 */
+    box-shadow:
+        8px 8px 0 var(--num-shadow),
+        0 0 18px rgba(37, 244, 238, 0.35);
+}
+
+.title {
+    font-size: 12px;
+    text-align: center;
+    color: var(--neon-pink);
+    margin-bottom: 14px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0 var(--num-shadow), 0 0 10px var(--neon-pink);
+}
+
+/* ===== LCD 디스플레이 ===== */
+.display {
+    background: var(--lcd-bg);
+    border: 3px solid #0b2b28;
+    padding: 12px;
+    margin-bottom: 16px;
+    text-align: right;
+    overflow: hidden;
+    box-shadow: inset 0 0 12px rgba(37, 244, 238, 0.25);
+}
+
+.display-history {
+    min-height: 12px;
+    font-size: 9px;
+    color: var(--text-dim);
+    word-break: break-all;
+    margin-bottom: 8px;
+}
+
+.display-current {
+    font-size: 20px;
+    color: var(--neon-cyan);
+    word-break: break-all;
+    text-shadow: 0 0 8px rgba(37, 244, 238, 0.8);
+}
+
+.display-current.error {
+    color: var(--neon-pink);
+    text-shadow: 0 0 8px var(--neon-pink);
+}
+
+/* ===== 버튼 그리드 ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.btn {
+    font-family: inherit;
+    font-size: 12px;
+    padding: 14px 0;
+    color: #fff;
+    background: var(--num-face);
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 var(--num-shadow);
+    transition: transform 0.05s, box-shadow 0.05s;
+}
+
+.btn-num {
+    color: var(--neon-cyan);
+}
+
+.btn-func {
+    color: var(--text-dim);
+    background: #211d30;
+}
+
+.btn-op {
+    color: var(--neon-pink);
+    text-shadow: 0 0 8px rgba(255, 46, 136, 0.7);
+}
+
+.btn-equal {
+    background: var(--neon-pink);
+    color: #10000a;
+    box-shadow: 3px 3px 0 #7a0f3f;
+}
+
+.btn-zero {
+    grid-column: span 2;
+}
+
+/* 눌리는 픽셀 애니메이션 */
+.btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0 0 0 var(--num-shadow);
+}
+
+.btn-equal:active {
+    box-shadow: 0 0 0 #7a0f3f;
+}
+
+.btn:hover {
+    filter: brightness(1.2);
+}
+
+/* ===== 반응형 ===== */
+@media (max-width: 360px) {
+    .calculator {
+        width: 100%;
+    }
+    .display-current {
+        font-size: 16px;
+    }
+    .btn {
+        font-size: 10px;
+        padding: 12px 0;
+    }
+}
