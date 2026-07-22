@@ -1,0 +1,10 @@
+from google import genai
+import os
+
+client = genai.Client(api_key=os.environ["GEMINI_TOKEN"])
+
+print("--- 이용 가능한 전체 모델 목록 ---")
+for model in client.models.list():
+    # 이미지 생성 기능(generateImages 또는 predict)을 지원하는 모델 조회
+    if "image" in model.name or "imagen" in model.name:
+        print(f"모델 이름: {model.name}")
