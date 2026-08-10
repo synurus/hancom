@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zeteo 시안 2 — 하단 탭 전환 (기획서 v3.0 반영)</title>
+<style>
+/* ── Zeteo Day 0 합의 토큰 (시안 1과 동일한 이름·값 — 비교가 색 때문에 갈리면 안 된다) ── */
+:root{
+  --color-bg:#0d0d0f; --color-surface:#19181b;
+  --color-line:color-mix(in srgb,#f2efe9 14%,transparent);
+  --color-text:#f2efe9; --color-muted:color-mix(in srgb,#f2efe9 55%,transparent);
+  --color-accent:#b3261e; --color-danger:#ff5449;
+  --space-2:8px; --space-4:16px; --radius:6px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background:var(--color-bg); color:var(--color-text);
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+
+#wbadge{
+  position:fixed; top:8px; left:50%; transform:translateX(-50%); z-index:99;
+  padding:3px 12px; font-size:11px; letter-spacing:.04em; border-radius:999px;
+  color:#0d0d0f; background:#f2efe9; pointer-events:none;
+  opacity:0; transition:opacity .25s;
+}
+#wbadge.show{opacity:.92}
+
+/* ── 앱 셸 ─────────────────────────────────────────────────────────── */
+.app{
+  display:flex; flex-direction:column;
+  height:100dvh; max-width:1280px; margin:0 auto;
+  position:relative; /* 스크림의 기준 */
+}
+
+/* ① 헤더 — 시안 1과 같은 자리·같은 답(D4). 여기서 갈리면 비교가 안 되는 항목이라 맞춰뒀다 */
+.hd{
+  display:flex; align-items:center; gap:var(--space-2);
+  flex:none; padding:10px var(--space-4);
+  border-bottom:1px solid var(--color-line);
+}
+.round{
+  flex:none; padding:1px 8px; font-size:12px; font-weight:700;
+  border:1px solid var(--color-line); border-radius:999px;
+}
+.phase{
+  font-size:13px; color:var(--color-muted);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.word{
+  flex:none; margin-left:auto; padding:3px 10px;
+  font-size:14px; font-weight:700;
+  background:color-mix(in srgb,var(--color-accent) 18%,transparent);
+  border:1px solid color-mix(in srgb,var(--color-accent) 55%,transparent);
+  border-radius:var(--radius);
+}
+.word .cat{color:var(--color-muted); font-weight:400}
+
+/* ② 무대 — 폰에서는 한 번에 한 판(pane)만, 데스크톱에서는 둘 다 */
+.stage{flex:1; min-height:0; display:flex; position:relative}
+
+.pane{display:flex; flex-direction:column; min-height:0; min-width:0}
+.pane[hidden]{display:none}
+
+/* 채팅 판 */
+.pane-chat{flex:1}
+
+/* 참가자 띠 — 채팅 판 맨 위, 항상 보임. 투표 탭으로 안 넘어가도 생존 현황을 놓치지 않게 */
+.strip{
+  flex:none; display:flex; gap:6px; overflow-x:auto;
+  padding:10px var(--space-4); border-bottom:1px solid var(--color-line);
+}
+.pchip{
+  flex:none; display:flex; align-items:center; gap:5px;
+  padding:5px 10px; font-size:12px; font-weight:700;
+  background:var(--color-surface); border:1px solid var(--color-line); border-radius:999px;
+}
+.pchip .dot{width:6px; height:6px; border-radius:999px; background:#6bcf7f}
+.pchip.out{opacity:.4; text-decoration:line-through}
+.pchip.out .dot{background:var(--color-muted)}
+.pchip.mine{border-color:var(--color-text)}
+.pchip .v{margin-left:2px; font-size:10px; font-weight:400; color:var(--color-muted)}
+
+.log{
+  flex:1; min-height:0; overflow-y:auto;
+  padding:var(--space-4); display:flex; flex-direction:column; gap:10px;
+}
+.msg{display:flex; gap:var(--space-2); align-items:flex-start; max-width:86%}
+.msg .av{
+  flex:none; width:28px; height:28px; display:grid; place-items:center;
+  font-size:13px; font-weight:700; border-radius:var(--radius);
+  background:var(--color-surface); border:1px solid var(--color-line);
+}
+.bub{
+  min-width:0; padding:7px 11px; font-size:14px;
+  background:var(--color-surface); border:1px solid var(--color-line);
+  border-radius:var(--radius);
+}
+.msg.me{align-self:flex-end; flex-direction:row-reverse}
+.msg.me .bub{
+  background:color-mix(in srgb,var(--color-accent) 26%,var(--color-surface));
+  border-color:color-mix(in srgb,var(--color-accent) 50%,transparent);
+}
+.msg.me .av{border-color:color-mix(in srgb,var(--color-accent) 50%,transparent)}
+.sys{
+  margin:6px calc(var(--space-4) * -1); padding:8px var(--space-4);
+  font-size:13px; font-weight:600; text-align:center;
+  background:var(--color-bg);
+  border-top:1px solid var(--color-line); border-bottom:1px solid var(--color-line);
+}
+
+.inp{
+  flex:none; display:flex; gap:var(--space-2);
+  padding:10px var(--space-4);
+  border-top:1px solid var(--color-line); background:var(--color-bg);
+}
+.inp input{
+  flex:1; min-width:0; padding:10px 12px; font:inherit; font-size:14px;
+  color:var(--color-text); background:var(--color-surface);
+  border:1px solid var(--color-line); border-radius:var(--radius);
+}
+.inp .send{flex:none; padding:0 16px; font-weight:700; background:var(--color-accent); border-radius:var(--radius)}
+.locked{
+  flex:none; padding:14px var(--space-4); text-align:center;
+  font-size:13px; color:var(--color-muted); border-top:1px solid var(--color-line);
+}
+.locked[hidden],.inp[hidden]{display:none}
+
+/* 투표 판 — 폰에서는 탭으로 전체화면 전환, 데스크톱에서는 우측 280px 기둥 */
+.pane-vote{
+  flex:1; padding:var(--space-4); gap:10px; overflow-y:auto;
+}
+.vote-heading{font-size:13px; color:var(--color-muted)}
+.cands{display:flex; flex-direction:column; gap:8px}
+.cand{
+  display:flex; align-items:center; gap:12px;
+  padding:14px 16px; font-size:15px; font-weight:700;
+  background:var(--color-surface); border:1px solid var(--color-line); border-radius:var(--radius);
+}
+.cand .av{
+  flex:none; width:32px; height:32px; display:grid; place-items:center;
+  font-size:14px; border-radius:var(--radius);
+  background:var(--color-bg); border:1px solid var(--color-line);
+}
+.cand .name{flex:1}
+.cand .n{font-size:12px; font-weight:400; color:var(--color-muted)}
+.cand .cnt{font-size:14px; font-variant-numeric:tabular-nums}
+.cand.mine{border-color:var(--color-text); border-width:2px; background:color-mix(in srgb,var(--color-accent) 30%,var(--color-surface))}
+.cand.out{opacity:.35; text-decoration:line-through; cursor:not-allowed}
+.abstain-row{margin-top:2px}
+.abstain{
+  width:100%; padding:12px; font-size:13px; font-weight:700; text-align:center;
+  background:var(--color-surface); border:1px dashed var(--color-line); border-radius:var(--radius);
+}
+.vhint{font-size:11px; color:var(--color-muted)}
+
+/* ③ 팝업 — 시안 1과 다른 답. 전체화면 스크림(현재 실제 구현과 동일한 방식)을 그대로 써서
+   "채팅 영역만 덮는 방식"과 나란히 비교할 수 있게 했다. 탭이 무엇이든 위를 덮는다. */
+.scrim{
+  position:absolute; inset:0; z-index:20;
+  display:flex; align-items:center; justify-content:center;
+  padding:var(--space-4);
+  background:rgb(0 0 0/.7);
+}
+.scrim[hidden]{display:none}
+.modal{
+  width:100%; max-width:360px; max-height:100%; overflow-y:auto;
+  padding:var(--space-4) var(--space-4) 18px; text-align:center;
+  background:var(--color-surface);
+  border:2px solid var(--color-accent); border-radius:10px;
+  box-shadow:0 14px 36px rgb(0 0 0/.6);
+  position:relative;
+}
+.modal .x{
+  position:absolute; top:6px; right:8px;
+  width:32px; height:32px; font-size:16px; line-height:1;
+  color:var(--color-muted); border-radius:var(--radius);
+}
+.modal .x:hover{color:var(--color-text); background:var(--color-line)}
+.modal-head{
+  display:flex; align-items:center; justify-content:space-between;
+  padding-bottom:10px; margin-bottom:10px; border-bottom:1px solid var(--color-line);
+}
+.modal .tag{
+  display:inline-block; padding:2px 9px; font-size:11px;
+  background:var(--color-accent); border-radius:999px;
+}
+.modal .t{font-size:14px; font-weight:700; font-variant-numeric:tabular-nums}
+.modal h3{font-size:16px; margin-bottom:4px}
+.modal p{font-size:12px; color:var(--color-muted)}
+.modal .slot{
+  margin-top:12px; padding:26px 0; font-size:12px; color:var(--color-muted);
+  border:1px dashed var(--color-line); border-radius:var(--radius);
+}
+.reopen{
+  position:absolute; z-index:15; right:var(--space-4); bottom:12px;
+  padding:7px 13px; font-size:12px; font-weight:700;
+  background:var(--color-accent); border-radius:999px;
+  box-shadow:0 4px 16px rgb(0 0 0/.55);
+}
+.reopen[hidden]{display:none}
+
+/* ④+⑤ 답: 하단 탭 바 — 폰에서만. 채팅/투표를 화면 전체로 번갈아 보여준다 */
+.tabbar{
+  flex:none; display:flex; border-top:1px solid var(--color-line); background:var(--color-bg);
+}
+.tab{
+  flex:1; display:flex; flex-direction:column; align-items:center; gap:2px;
+  position:relative; padding:9px 4px 10px; font-size:11px; color:var(--color-muted);
+}
+.tab .ico{font-size:17px}
+.tab.is-active{color:var(--color-text)}
+.tab.is-active::before{
+  content:""; position:absolute; top:0; left:18%; right:18%; height:2px;
+  background:var(--color-accent); border-radius:2px;
+}
+.tab .badge{
+  position:absolute; top:4px; right:calc(50% - 26px);
+  min-width:16px; height:16px; padding:0 4px; display:grid; place-items:center;
+  font-size:10px; font-weight:700; color:#fff;
+  background:var(--color-accent); border-radius:999px;
+}
+.tab .badge[hidden]{display:none}
+
+/* ── ≥768px: 탭이 사라지고 두 판이 나란히 보인다. 시안 1과 같은 값으로 맞췄다
+   (기획서 v3.0 §2-3 — 화면마다 기준선이 다르면 그 사이 폭에서 배치가 어긋난다) ── */
+@media (min-width:768px){
+  .app{border-inline:1px solid var(--color-line)}
+  .log{padding:20px 24px}
+  .msg{max-width:70%}
+  .strip{padding:12px 24px}
+
+  .pane[hidden]{display:flex} /* 탭으로 숨긴 판도 데스크톱에선 강제로 보인다 */
+
+  .pane-vote{
+    flex:0 0 280px; border-left:1px solid var(--color-line);
+    background:color-mix(in srgb,var(--color-accent) 10%,var(--color-surface));
+  }
+  .cand{padding:11px 14px; font-size:15px}
+
+  .tabbar{display:none}
+  .modal{max-width:440px}
+}
+
+.notes{
+  max-width:1280px; margin:0 auto; padding:24px var(--space-4) 56px;
+  font-size:13px; color:var(--color-muted); border-top:1px solid var(--color-line);
+}
+.notes h4{color:var(--color-text); font-size:14px; margin-bottom:6px}
+.notes dt{color:var(--color-text); font-weight:700; margin-top:14px}
+.notes b{color:var(--color-text)}
+.notes code{
+  padding:1px 5px; font-size:12px; background:var(--color-surface);
+  border:1px solid var(--color-line); border-radius:4px;
+}
+</style>
+</head>
+<body>
+<div id="wbadge">—</div>
+
+<div class="app">
+  <!-- ① 헤더: 제시어 상시 고정. 시안 1과 동일한 답(D4) -->
+  <header class="hd">
+    <span class="round">2라운드</span>
+    <span class="phase">토론 진행 중</span>
+    <span class="word"><span class="cat">동물 /</span> 고양이</span>
+  </header>
+
+  <div class="stage">
+    <!-- 채팅 판 -->
+    <section class="pane pane-chat" id="paneChat">
+      <div class="strip" id="strip">
+        <span class="pchip"><span class="dot"></span>A<span class="v">0표</span></span>
+        <span class="pchip mine"><span class="dot"></span>B<span class="v">2표</span></span>
+        <span class="pchip"><span class="dot"></span>C(나)<span class="v">0표</span></span>
+        <span class="pchip"><span class="dot"></span>D<span class="v">1표</span></span>
+        <span class="pchip out"><span class="dot"></span>E</span>
+      </div>
+
+      <div class="log" id="log">
+        <div class="msg"><span class="av">A</span><span class="bub">눈이 선함</span></div>
+        <div class="msg"><span class="av">B</span><span class="bub">니가 범인</span></div>
+        <div class="msg"><span class="av">D</span><span class="bub">A는 아까부터 계속 남 얘기만 하는데요</span></div>
+        <div class="sys">E님이 탈락했습니다.</div>
+        <div class="msg"><span class="av">A</span><span class="bub">저 진짜 아니에요 제시어 알아요</span></div>
+        <div class="sys">A님이 살아남았습니다. 토론을 재개합니다.</div>
+        <div class="msg me"><span class="av">C</span><span class="bub">제대로 하자</span></div>
+        <div class="msg"><span class="av">B</span><span class="bub">그럼 C는 왜 아무 말도 안 했지</span></div>
+        <div class="msg me"><span class="av">C</span><span class="bub">난 아까 다 말했는데</span></div>
+        <div class="msg"><span class="av">D</span><span class="bub">B 표 몰리는 게 좀 급한 거 아닌가요</span></div>
+        <div class="msg"><span class="av">A</span><span class="bub">저는 B가 맞다고 봐요. 묘사가 너무 뭉뚱그려졌어요</span></div>
+        <div class="msg"><span class="av">B</span><span class="bub">그건 다들 그랬잖아</span></div>
+        <div class="msg me"><span class="av">C</span><span class="bub">D는 왜 계속 말 돌려</span></div>
+        <div class="msg"><span class="av">D</span><span class="bub">돌린 적 없는데요</span></div>
+        <div class="msg"><span class="av">A</span><span class="bub">시간 얼마 안 남았어요 정합시다</span></div>
+      </div>
+
+      <div class="inp" id="inp">
+        <input placeholder="메시지 입력…">
+        <button class="send">전송</button>
+      </div>
+      <div class="locked" id="locked" hidden>🔒 팝업이 떠 있는 동안에는 발언할 수 없습니다</div>
+    </section>
+
+    <!-- 투표 판 — 폰에선 탭으로 전체화면 전환, 데스크톱에선 우측 기둥 -->
+    <section class="pane pane-vote" id="paneVote" hidden>
+      <p class="vote-heading">생존 4명 · 3명 투표 완료 · 자기 자신도 지목 가능</p>
+      <div class="cands" id="cands">
+        <button class="cand"><span class="av">A</span><span class="name">참가자 A</span><span class="cnt">0표</span></button>
+        <button class="cand mine"><span class="av">B</span><span class="name">참가자 B</span><span class="cnt">2표</span></button>
+        <button class="cand"><span class="av">C</span><span class="name">나</span><span class="cnt">0표</span></button>
+        <button class="cand"><span class="av">D</span><span class="name">참가자 D</span><span class="cnt">1표</span></button>
+        <button class="cand out" disabled><span class="av">E</span><span class="name">탈락</span><span class="cnt">—</span></button>
+      </div>
+      <div class="abstain-row"><button class="abstain">기권</button></div>
+      <p class="vhint">투표는 언제든 바꿀 수 있습니다. 채팅 탭으로 돌아가도 선택은 유지됩니다.</p>
+    </section>
+
+    <!-- ③ 팝업: 전체화면 스크림 — 시안 1과 다른 답. 탭이 뭐든 위를 덮는다 -->
+    <div class="scrim" id="scrim">
+      <div class="modal">
+        <button class="x" id="popX" aria-label="팝업 닫기">✕</button>
+        <div class="modal-head">
+          <span class="tag">팝업창</span>
+          <span class="t">⏱ 0:08</span>
+        </div>
+        <h3>역할 배정 · 생사 투표 · 결과 · 제시어 추측 · 봇 지목 공용</h3>
+        <p>v3.0에서 봇 지목(botVote)이 채팅 안으로 들어오며 팝업이 4종 → 5종이 됐다</p>
+        <div class="slot">내용 영역</div>
+      </div>
+    </div>
+    <button class="reopen" id="reopen" hidden>팝업 다시 보기</button>
+  </div>
+
+  <!-- ④+⑤ 답: 하단 탭 바 -->
+  <nav class="tabbar" id="tabbar">
+    <button class="tab is-active" id="tabChat" data-pane="paneChat">
+      <span class="ico">💬</span>채팅
+    </button>
+    <button class="tab" id="tabVote" data-pane="paneVote">
+      <span class="ico">🗳</span>투표
+      <span class="badge" id="voteBadge">B</span>
+    </button>
+  </nav>
+</div>
+
+<div class="notes">
+  <h4>시안 2 — 하단 탭 전환 (기획서 v3.0 반영)</h4>
+  <p>시안 1과 같은 상황·같은 폭 조건. 미해결 4가지에 <b>다른 답</b>을 준 버전이다 — D2 기준(가시성
+     문제가 색·대비인지 레이아웃 구조인지)을 테스트하려면 구조 자체가 달라야 비교가 된다.
+     브라우저 창을 <b>768px 앞뒤로</b> 줄였다 늘리면 전환이 보입니다.</p>
+  <dl>
+    <dt>① 폰에서 투표 패널이 어디로 가는가 — 시안 1과 다른 답</dt>
+    <dd>겹쳐두지 않고 <b>탭으로 전체 화면을 바꾼다.</b> 하단 [채팅]·[투표] 두 탭 중 하나만 항상
+        화면 전체를 차지한다. 투표 탭에는 내가 새로 받은 표가 있으면 <b>배지</b>가 뜬다. 시안 1은
+        "채팅을 보면서 투표도 같이" 였고, 이 안은 "필요할 때만 투표 화면으로 넘어간다" 다 —
+        어느 쪽이 나은지는 실제로 눌러봐야 갈린다.</dd>
+
+    <dt>② 제시어를 어디에 상시 표시하는가 — 시안 1과 같은 답</dt>
+    <dd>헤더 오른쪽 끝 고정. <code>동물 / 고양이</code>, 라이어는 <code>동물 / ???</code>가 같은
+        자리·같은 크기로 온다. 여기서 갈리면 비교가 안 되는 항목이라 시안 1과 맞춰뒀다(D4).</dd>
+
+    <dt>③ 팝업이 떠 있을 때 어떻게 보이는가 — 시안 1과 다른 답</dt>
+    <dd><b>전체 화면 스크림</b>으로 되돌렸다 — 지금 실제로 구현된 방식과 같다. 탭이 채팅이든
+        투표든 상관없이 팝업이 전부 덮는다. 시안 1의 "채팅 영역만 덮는다"와 정반대 답을 둬서
+        두 방식을 나란히 볼 수 있게 했다. 잠금 규칙은 동일 — ✕로 닫아도 <b>입력창은 팝업
+        페이즈 내내 잠긴 채</b>다.</dd>
+
+    <dt>④ 플레이어 목록이 폰에서 어디 있는가 — 시안 1과 다른 답</dt>
+    <dd><b>두 군데에 나눠 둔다.</b> 채팅 탭 맨 위에는 가로로 스크롤되는 <b>참가자 띠</b>(생존
+        여부·득표만 요약)가 항상 떠 있고, 투표 탭에는 같은 사람들이 <b>큰 버튼</b>으로 다시
+        나온다. 시안 1은 "투표 패널이 곧 목록"으로 하나로 합쳤는데, 이 안은 채팅을 보는 동안에도
+        목록을 놓치지 않게 하려고 일부러 중복시켰다 — 정보를 하나로 합칠지 두 곳에 반복할지도
+        구조 문제의 일부라 다르게 답했다.</dd>
+  </dl>
+  <p style="margin-top:16px">
+    <b>768px부터는</b> 탭 바가 사라지고 채팅·투표가 좌우로 나란히 보인다(투표는 우측 280px
+    고정 기둥) — 이 지점은 시안 1과 값을 맞췄다. 폰에서만 갈리던 ①·④의 차이가 데스크톱에서는
+    사라진다는 뜻이다.
+  </p>
+  <p style="margin-top:16px">
+    <b>기획서 v3.0 반영:</b> 팝업 문구에 이번에 늘어난 5번째 종류(봇 지목)를 넣어뒀다 —
+    지목 화면이 박진님에서 이현우님 소유로 넘어오면서 채팅 안의 팝업이 됐다. 이 시안 자체는
+    "채팅(토론 진행 중)" 화면 조건만 그리므로 봇 지목 팝업 내용까지 그리지는 않았다.
+  </p>
+</div>
+
+<script>
+const tabChat=document.getElementById('tabChat'), tabVote=document.getElementById('tabVote');
+const paneChat=document.getElementById('paneChat'), paneVote=document.getElementById('paneVote');
+const voteBadge=document.getElementById('voteBadge');
+
+function selectTab(name){
+  const chatActive = name==='paneChat';
+  paneChat.hidden = !chatActive; paneVote.hidden = chatActive;
+  tabChat.classList.toggle('is-active', chatActive);
+  tabVote.classList.toggle('is-active', !chatActive);
+  if(!chatActive) voteBadge.hidden = true; // 투표 탭을 보면 배지(놓친 표 알림)는 사라진다
+}
+tabChat.addEventListener('click',()=>selectTab('paneChat'));
+tabVote.addEventListener('click',()=>selectTab('paneVote'));
+
+document.querySelectorAll('.cand:not(.out)').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.cand').forEach(x=>x.classList.remove('mine'));
+  b.classList.add('mine');
+}));
+
+const scrim=document.getElementById('scrim'), reopen=document.getElementById('reopen');
+const inp=document.getElementById('inp'), locked=document.getElementById('locked');
+function setPopup(open){
+  scrim.hidden=!open; reopen.hidden=open;
+  // 팝업 페이즈 동안 입력은 계속 잠긴다 — ✕는 "뒤를 잠깐 본다"는 뜻일 뿐이다(시안 1과 동일 규칙)
+  inp.hidden=true; locked.hidden=false;
+}
+document.getElementById('popX').addEventListener('click',()=>setPopup(false));
+reopen.addEventListener('click',()=>setPopup(true));
+
+const badge=document.getElementById('wbadge'); let t;
+function paint(){
+  const w=innerWidth;
+  badge.textContent=w+'px · '+(w>=768?'데스크톱 배치':'폰 배치');
+  badge.classList.add('show'); clearTimeout(t);
+  t=setTimeout(()=>badge.classList.remove('show'),1200);
+}
+addEventListener('resize',paint);
+
+const log=document.getElementById('log'); log.scrollTop=log.scrollHeight;
+</script>
+</body>
+</html>
