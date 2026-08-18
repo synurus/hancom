@@ -1,0 +1,219 @@
+③ 최후변론 ~ 정체 공개 — 지목 · 생사 투표 · 판정
+게임 진행 순서 발표용 — 화면(파트 C)부터 서버(파트 A)까지
+(기준: feat/game-ui + dev 서버 코드)
+
+============================================================
+이 구간의 경계
+============================================================
+
+시작: 토론(debate) 투표가 집계돼 "지목"이 확정되는 순간
+끝  : 정체가 공개되고, 처형된 게 라이어면 다음 구간(④ 제시어 추측)으로 넘어가기 직전
+
+  debate 투표 집계 → [지목 확정] → finalDefense → lifeVote → [판정] → reveal → (guessWord로 이양)
+
+화면 쪽 파일: MainScreen.tsx(지목 배너) · LifeVote.tsx · Reveal.tsx · Modal.tsx
+서버 쪽 파일: stateMachine.ts · vote.ts · index.ts · view.ts
+
+이 구간을 한 문장으로 요약하면 — 화면은 사람의 선택(누굴 죽일까)을 받아서 서버로
+올려보내기만 하고, "결국 어떻게 되는가"는 전부 서버(stateMachine.ts)가 정한다.
+이름 그대로 "서버가 결과를 정하는 구간"이다.
+
+============================================================
+1. 지목 확정 — 이 구간의 시작점
+============================================================
+
+토론(debate) 페이즈에서 사람들이 던진 투표는 이 구간이 시작될 때 한 번에 집계된다.
+집계 자체는 stateMachine.ts의 debate 전이 함수(17줄~)가 한다.
+
+  vote.ts · tallyDebateVotes(room)
+    - 살아있는 사람의 표만 센다 (기권 제외)
+    - 최다 득표가 여러 명이면 tie: true
+    - 최다 득표가 한 명이면 그 id를 accusedId로 반환
+
+  stateMachine.ts · debate 전이 (17~42줄)
+    tie === true  → round += 1, votes 초기화, "동점입니다. 재투표를 시작합니다"
+                    → 다시 debate로 (무한정 반복될 수 있음)
+    accusedId 없음 → 아무도 안 지목됨 → 라이어 승리 예약(pendingLiarGameResult)
+                    → botVote로 (이 구간을 건너뛴다)
+    accusedId 있음 → room.accusedId = accusedId
+                    → "OO님이 최다 득표로 지목되었습니다" 시스템 메시지
+                    → finalDefense로
+
+  ⚠ "아무도 지목 안 됨 = 라이어 승"인 경우, 이 구간(최후변론~정체공개) 자체가
+    통째로 생략되고 곧바로 봇 지목(botVote)으로 넘어간다. 발표에서 "이 구간이
+    항상 실행되는 건 아니다"를 짚을 만하다.
+
+  화면에서 이 순간: MainScreen.tsx가 accused를 받아서 헤더 아래 배너를 띄운다.
+    isFinalDefense && <div className="zt-accused">
+      <span className="zt-badge">지목됨</span>
+      <strong>{accused?.label}</strong>
+      <span className="zt-vote-count">{accusedVotes}표</span>
+    </div>
+  accused/accusedVotes는 서버가 계산해서 내려준 값을 그대로 표시만 한다 —
+  화면은 "누가 최다 득표인지" 계산을 하지 않는다.
+
+============================================================
+2. 최후변론 (finalDefense) — 판정에는 관여하지 않는 구간
+============================================================
+
+  stateMachine.ts · finalDefense 전이 (43줄, 한 줄짜리)
+    finalDefense: () => 'lifeVote'
+
+  전이 함수가 이게 전부다. 조건도 계산도 없다 — 60초(PHASE_DURATIONS.finalDefense)가
+  지나면 그냥 다음 페이즈로 넘어간다. 최후변론 페이즈 자체는 판정에 어떤 값도
+  만들어내지 않는다. 이름과 달리 "판정"에 기여하는 게 아니라, 순수하게 지목당한
+  사람에게 발언 기회를 주는 시간일 뿐이다. 실제 판정은 다음 단계(lifeVote)에서
+  전부 결정된다.
+
+  화면: 새 팝업이 뜨지 않는다. 1절의 지목 배너가 그대로 떠 있는 채로 채팅만
+  계속된다(MainScreen이 상시 화면에서 처리 — describe/debate와 같은 방식).
+  발언 이벤트도 debate와 같은 t:'chat' 그대로다(최후변론 전용 이벤트가 따로
+  없다 — describe만 t:'describe'로 구분된다).
+
+  봇도 이 구간에서 말할 수 있다(파트 B 영역) — 다만 투표 같은 "루프를 끊는 액션"이
+  없어서, 봇이 계속 말하려 들면 침묵 확률(CHAT_IN_FINAL_DEFENSE_CHANCE)과 반복
+  감지(isEcho)로만 제어된다. 실측 10연속 발화가 났던 적이 있다는 코드 주석이 있다.
+
+============================================================
+3. 생사 투표 시작 — lifeVote 진입
+============================================================
+
+  화면: modalFor.tsx가 lifeVote phase를 보고 LifeVote.tsx를 팝업으로 띄운다.
+  지목된 본인(isAccused)에게는 "당신에 대한 투표가 진행 중입니다"만 보이고
+  투표 버튼 자체가 없다 — 자기 자신에게 투표할 수 없는 규칙을 화면에서도 반영.
+
+    <button onClick={() => onEvent({ t: 'lifeVote', kill: true })}>죽인다</button>
+    <button onClick={() => onEvent({ t: 'lifeVote', kill: false })}>살린다</button>
+
+  화면에 보이는 안내 문구:
+    const voters = state.players.length - 1;
+    const majority = Math.floor(voters / 2) + 1;
+    "{voters}명 중 {majority}표 = 처형"
+
+  ⚠ 이건 사용자에게 보여주는 "대략적인 기준 안내"다. 실제 판정 로직(4절)은
+  이 숫자를 직접 쓰지 않고 kill 표 수와 spare 표 수를 비교하는 방식으로 정한다 —
+  결과적으로 같은 기준이지만, 화면이 계산하는 값과 서버가 판정에 쓰는 값은
+  서로 다른 코드 경로다. (질문거리로 쓸 만한 지점 — 6절 참고)
+
+  서버 쪽 검증 (index.ts 'lifeVote' 케이스, 530~542줄):
+    - phase가 lifeVote가 아니면 거부
+    - 본인(accusedId)이면 거부 — "본인에 대한 생사 투표에는 참여할 수 없습니다"
+    - 이미 투표했으면 거부 — "이미 투표했습니다"
+    통과하면 room.lifeVotes[플레이어id] = kill 여부만 기록. 판정은 아직 안 한다.
+
+============================================================
+4. 판정 — 두 갈래 확정 조건 + 결정 로직
+============================================================
+
+[ 언제 판정하는가 — 두 가지 경로 ]
+
+  (A) 전원 투표 완료 — isVotingComplete(room)
+      살아있고 지목자 본인이 아닌 사람 전원이 투표하면 즉시 advancePhase.
+
+  (B) 조기 확정 — isLifeVoteDecided(room)  (index.ts 229~240줄)
+      아직 다 투표 안 했어도, 남은 사람이 전부 한쪽으로 몰아줘도 결과를
+      못 뒤집는 경우를 미리 계산한다.
+
+        const remaining = alive.length - (kill + spare);
+        return kill > spare + remaining || spare >= kill + remaining;
+
+      확정되면 바로 넘어가지 않고 3초 유예를 준다:
+        room.lifeVoteDecided = true;
+        setPhaseTimer(room, 3000, () => advancePhase(room));
+
+      → 사실상 이미 진 투표라도 3초는 더 볼 시간을 준다는 뜻. "결과가 이미
+        정해졌는데 왜 3초 더 기다리지?"라는 질문이 나올 만한 지점.
+
+  [ 실제 판정 로직 ]
+
+    vote.ts · tallyLifeVote(room)
+      let kill = 0, spare = 0;
+      // 살아있는 사람 표만 카운트
+      return kill > spare;   // 동률이면 false(살린다) — kill이 spare보다 "많아야만" 처형
+
+    → 화면의 "과반이면 처형" 안내와 결과적으로 같은 기준이지만, 서버는 정확히
+      "죽인다 표 > 살린다 표"만 본다. 기권 개념 자체가 없다(이 투표는 둘 중 하나).
+
+  [ 결과에 따라 갈리는 두 경로 ]
+
+    stateMachine.ts · lifeVote 전이 (45~74줄)
+
+    kill === true (처형)
+      accused.isAlive = false;          // ★ 처형 확정
+      room.revealedRole = accused.role;  // ★ 역할을 여기서 미리 공개해둔다
+      return 'reveal';
+
+      ⚠ 중요한 타이밍 트릭: revealedRole을 reveal 페이즈에 "들어갈 때"(lifeVote를
+      나가는 이 시점)에 채운다. reveal 페이즈 "나갈 때" 채우면, reveal 화면이
+      뜨고도 첫 몇 초는 역할이 안 보이는 버그가 생긴다는 게 코드 주석에 명시돼
+      있다. "phase가 바뀌는 순간 = 그 phase가 필요로 하는 값이 이미 채워져
+      있어야 하는 순간"이라는 설계 원칙이 여기 그대로 적용된 것.
+
+    kill === false (살린다)
+      room.accusedId = null;
+      room.votes = {};  room.lifeVotes = {};  room.lifeVoteDecided = false;
+      room.round += 1;
+      room.turnOrder = [];  room.currentTurnIndex = 0;
+      return 'debate';   // 토론으로 복귀
+
+      ⚠ 살리기로 결정되면 지목 전 상태로 완전히 리셋되고 토론이 처음부터
+      다시 시작된다. 횟수 제한이 없다 — 이론상 "지목→최후변론→살린다"가
+      계속 반복될 수 있다. round만 계속 올라간다.
+
+============================================================
+5. 정체 공개 — reveal
+============================================================
+
+  화면: Reveal.tsx가 reveal phase를 그린다. revealedRole은 이미 4절에서
+  채워져 있으므로 팝업이 뜨자마자 바로 보인다(지연 없음).
+
+    const wasLiar = state.revealedRole === 'liar';
+    <p>{executed?.label}은(는)</p>
+    <p>{state.revealedRole === 'liar' ? '라이어' : '시민'}</p>
+    <p>이었습니다</p>
+
+  liarGameResult를 보여주는 블록도 있지만, 이 시점엔 항상 null이라 절대 안 뜬다
+  (서버가 스포일러 방지를 위해 일부러 result 직전까지 안 채움 — 아래 참고).
+
+  서버: stateMachine.ts · reveal 전이 (76~89줄)
+    revealedRole === 'liar' → 'guessWord'로 (이 구간 끝, ④ 파트로 이양)
+    revealedRole !== 'liar' → 시민이 처형된 것 → pendingLiarGameResult = 'liarWin'
+                              → 'botVote'로 (guessWord를 건너뛴다)
+
+  ⚠ 즉 "라이어를 잡았느냐 아니냐"에 따라 다음 구간 진입 경로 자체가 갈린다.
+    시민이 잘못 처형됐으면 제시어 추측 기회 자체가 없다 — 라이어는 이미
+    안 죽었으니까.
+
+============================================================
+6. 화면-서버 계약 — 이 구간에서 오가는 값
+============================================================
+
+  화면 → 서버 (onEvent)
+    { t: 'lifeVote', kill: true | false }   ← LifeVote.tsx에서만
+
+  서버 → 화면 (GameState, 이 구간에서 쓰는 필드)
+    accused           지목된 사람 id
+    myLifeVote        내가 이미 던진 표 (null=아직 안 던짐)
+    lifeVoteCounts     { kill, spare }  ← 진행 중 집계 표시용
+    revealedRole       reveal 진입 시점부터 값이 참
+    liarGameResult     이 구간 내내 항상 null (view.ts가 result·survey 전엔 강제로 숨김)
+
+  ★ 확인해볼 만한 점 — 파트 A에게 물어볼 질문 후보
+    화면(LifeVote.tsx)이 보여주는 "N명 중 M표 = 처형"이라는 과반 계산과, 서버가
+    실제로 쓰는 "kill > spare" 판정은 서로 다른 코드에 따로 구현돼 있다. 지금은
+    결과적으로 같은 기준이지만, 인원수 계산 방식이 앞으로 바뀌면(예: 기권 허용
+    같은 규칙 추가) 두 곳 중 한쪽만 고쳐질 위험이 있다. 이 두 로직을 하나로
+    합칠 계획이 있는지 물어봐도 좋을 것 같다.
+
+============================================================
+7. 발표에서 강조할 만한 지점 정리
+============================================================
+
+  · 이 구간은 항상 실행되지 않는다 — 토론에서 아무도 지목 안 되면 통째로 생략.
+  · 최후변론(finalDefense) 자체는 "판정"에 아무 값도 만들지 않는다 — 순수 발언 구간.
+  · "살린다"는 횟수 제한이 없다 — 지목·최후변론·생사투표가 여러 번 반복될 수 있다.
+  · 조기 확정돼도 3초는 더 기다린다(setPhaseTimer 3000ms) — 몰표 상황에서 화면이
+    뚝 끊기지 않게 하는 의도로 보인다.
+  · revealedRole은 reveal에 "들어갈 때"(=lifeVote를 나갈 때) 미리 채워둔다 —
+    "나갈 때" 채우면 몇 초간 빈 화면이 뜨는 버그가 났었다는 기록이 코드에 남아있다.
+  · 라이어를 못 잡으면(시민 처형) guessWord 구간(④) 자체가 스킵된다.
