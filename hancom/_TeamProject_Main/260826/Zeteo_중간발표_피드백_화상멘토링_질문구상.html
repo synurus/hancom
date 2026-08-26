@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<!-- saved from url=(0253)https://a8f714a5-c49f-4036-90a5-650ef77a10f3.frame.claudeusercontent.com/_f/1787711263-e9c0/?__frame_t=vrpSWshvL-MVv_qQIRAaKM-M.a9befa6c-eba3-4fac-8993-90dc2380402c.3d2c10c1-7c0c-4bc6-ace1-3f92a70f849d.1787715066&__frame_v=manifest.5eb6d35931eb8842.json -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!-- frame-runtime --><!--<base href="/_f/1787711263-e9c0/">--><base href="."><script>window.__FRAME_PREAMBLE={"v":1,"capabilities":{"artifact":"artifact.oqIe8shs.js","assets":"assets.DBUJcvq_.js","comments":"comments.GLuHR3zP.js","db":"db.CRhVHzSt.js","downloads":"downloads.C3GSvEDP.js","embed":"embed.CxGAyc-v.js","mcp":"mcp.Bvma3qD7.js","network":"network.B5UA9Su4.js","permissions":"permissions.BNySkLV5.js","room":"room.DE7EMui-.js","sample":"sample.BW2Uysoh.js","self":"artifact.oqIe8shs.js","user":"user.BpKav-Rf.js"},"transforms":"_transforms.CQm3TZ9K.js","comments":"_comments.PBVy184F.js","translate":"_translate.5HCW4BJh.js"}</script><script>(function(){"use strict";var X=["light","dark","system"],G=/^[A-Za-z0-9_-]{1,64}$/,D=/^[a-zA-Z_:][a-zA-Z0-9_:.-]{0,127}$/,V=new Set(["class","hidden","value","checked"]);function Z(e){const t=e.toLowerCase();return t.startsWith("data-")||t.startsWith("aria-")||V.has(t)}var Ae="http://www.w3.org/1999/xhtml",J="http://www.w3.org/2000/svg",Q=new Set(["script","style","iframe","noscript","noframes","noembed","xmp","plaintext","template","title","textarea","object","embed"]),ee=new Set(["script","style"]);function te(e){const t=e.localName.toLowerCase();return e.namespaceURI==="http://www.w3.org/1999/xhtml"?!Q.has(t):e.namespaceURI===J?!ee.has(t):!1}var re=new Set(["html","head","body","frameset"]);function ne(e){return e.namespaceURI==="http://www.w3.org/1999/xhtml"&&re.has(e.localName)}function oe(e){if(e===null||typeof e!="object")return!1;const t=e;if(typeof t.target!="string"||!G.test(t.target)||t.text!==void 0&&typeof t.text!="string")return!1;if(t.attrsSet!==void 0){if(t.attrsSet===null||typeof t.attrsSet!="object")return!1;for(const[r,o]of Object.entries(t.attrsSet))if(!D.test(r)||typeof o!="string")return!1}if(t.attrsRemoved!==void 0){if(!Array.isArray(t.attrsRemoved))return!1;for(const r of t.attrsRemoved)if(typeof r!="string"||!D.test(r))return!1}return!0}function se(e,t){if(e===null||typeof e!="object")return!1;const{seq:r,elements:o}=e;if(typeof r!="number"||!Number.isSafeInteger(r)||!Array.isArray(o)||o.length===0||o.length>64)return!1;for(let a=0;a<o.length;a++)if(!t(o[a]))return!1;return!0}function ae(e){return e===null||typeof e!="object"?!1:se(e.__frame_patch,oe)}function ie(e){if(e===null||typeof e!="object")return!1;const t=e.__frame_init;return t!==null&&typeof t=="object"}function le(e){return e!==null&&typeof e=="object"&&e.__frame_size_poke===!0}function ce(e){if(e===null||typeof e!="object")return!1;const t=e.__frame_theme;if(t===null||typeof t!="object")return!1;const r=t.theme;return typeof r=="string"&&X.includes(r)}function ue(){return{post(e,t){parent.postMessage(e,t)},on(e){const t=r=>{r.source===parent&&e(r.data,r.origin)};return addEventListener("message",t),()=>removeEventListener("message",t)}}}var C="__frame_scroll",fe=150,pe=310,de=160,me=3e4;function he(){let e=0,t=!1,r=!1,o=!1,a=0,i=null;const u=l=>{try{sessionStorage.setItem(C,JSON.stringify({y:l}))}catch{}},f=()=>{if(clearTimeout(e),i===null)return;const l=i;i=null,u(l)},R=()=>{if(t){t=!1;return}r=!0,i=scrollY,clearTimeout(e),e=setTimeout(f,fe)};try{addEventListener("scroll",R,{passive:!0}),addEventListener("pagehide",f)}catch{}const y=()=>{let l;try{l=sessionStorage.getItem(C)}catch{return null}if(l===null)return null;let d;try{d=JSON.parse(l)}catch{d=null}const p=d?.y;if(!(typeof p=="number"&&Number.isFinite(p)&&p>=0)){try{sessionStorage.removeItem(C)}catch{}return null}return p};let E=!1;const v=l=>{try{const d=scrollY;scrollTo({top:l,left:0,behavior:"instant"}),a=l,o=!0,clearTimeout(e),i=null,u(l);const p=scrollY;p!==d&&(t=!0),p!==l&&!E&&(E=!0,addEventListener("load",()=>{try{if(scrollY===p){const h=y();v(h!==null?h:a)}}catch{}},{once:!0}))}catch{}},w=()=>{try{return!!location.hash}catch{return!0}};let b=!1;const n=()=>{try{if(b||innerWidth>pe||innerHeight>de)return;b=!0;const l=Date.now(),d=()=>{try{removeEventListener("resize",d)}catch{}if(Date.now()-l>me||r||w())return;const p=y();v(p!==null?p:a)};addEventListener("resize",d)}catch{}};let c=!1,_=!1;return{restore(){if(c||(c=!0,w()))return;const l=y();l!==null&&(v(l),n())},promoted(){if(_||(_=!0,w()))return;const l=y();l!==null?(v(l),n()):o&&v(a)}}}var Se="modulepreload",Re=function(e){return"/"+e},ke={},_e=function(t,r,o){let a=Promise.resolve();function i(u){const f=new Event("vite:preloadError",{cancelable:!0});if(f.payload=u,window.dispatchEvent(f),!f.defaultPrevented)throw u}return a.then(u=>{for(const f of u||[])f.status==="rejected"&&i(f.reason);return t().catch(i)})},m=ue();(function(){const e=Object.defineProperty,t=globalThis,r=["RTCPeerConnection","webkitRTCPeerConnection","RTCDataChannel","RTCIceCandidate","RTCSessionDescription","RTCRtpSender","RTCRtpReceiver"];let o=0;for(let a=0;a<r.length;a++){const i=r[a];try{e(t,i,{value:void 0,writable:!1,configurable:!1})}catch{try{delete t[i]}catch{}try{e(t,i,{value:void 0,writable:!1,configurable:!0})}catch{}}typeof t[i]=="function"&&o++}if(o&&window!==top)try{m.post({__frame_rtc_lockdown_failed:o},"*")}catch{}})();var ve=1e4,ye=Object.freeze([...window.__FRAME_PREAMBLE?.origins??["https://claude.ai","https://preview.claude.ai"]]);function F(e){for(const t of ye)if(t.endsWith(":*"))try{const r=new URL(e);if(`${r.protocol}//${r.hostname}:*`===t)return!0}catch{}else if(e===t)return!0;return!1}var k=Object.freeze({...window.__FRAME_PREAMBLE?.capabilities}),M=window.__FRAME_PREAMBLE?.transforms,O=window.__FRAME_PREAMBLE?.comments,j=window.__FRAME_PREAMBLE?.translate,T=/^[\w.-]+\.js$/;function L(e){return _e(()=>import("/_runtime/"+e),void 0)}function z(e,t){return{contract:e.contract,changes:new Set(e.changes??[]),flags:new Set(e.flags??[]),capabilities:e.capabilities??{},capBudgets:e.capBudgets??{},transforms:new Map,shellOrigin:t,mount:W,pipe:()=>({wrap:(r,o)=>(...a)=>{try{return o(...a)}catch(i){return Promise.reject(i)}}})}}var P=null,g=null;function q(e,t,r){try{Object.defineProperty(e,t,{value:r,writable:!1,configurable:!1,enumerable:!0})}catch{try{Object.defineProperty(e,t,{value:r,writable:!1,configurable:!0,enumerable:!0})}catch{}}}var N=!1;function we(e,t){const r=[];for(const o of e.elements){const a=document.querySelector(`[data-id="${o.target}"]`);if(!a){m.post({__frame_patch_miss:{seq:e.seq}},t);return}if([...Object.keys(o.attrsSet??{}),...o.attrsRemoved??[]].some(i=>!Z(i))){m.post({__frame_patch_miss:{seq:e.seq}},t);return}if(o.text!==void 0&&(!te(a)||ne(a))){m.post({__frame_patch_miss:{seq:e.seq}},t);return}for(const[i,u]of Object.entries(o.attrsSet??{}))if(!$(a,i)){try{a.setAttribute(i,u)}catch{}H(a,i,u)}for(const i of o.attrsRemoved??[])$(a,i)||(a.removeAttribute(i),H(a,i,null));typeof o.text=="string"&&(a.textContent=o.text),r.push(o.target)}try{document.dispatchEvent(new CustomEvent("claude:edit",{detail:{seq:e.seq,targets:r}}))}catch{}}function H(e,t,r){if(!(e instanceof HTMLInputElement))return;const o=t.toLowerCase();o==="checked"?e.checked=r!==null:o==="value"&&e.type!=="file"&&(e.value=r??"")}function $(e,t){const r=t.toLowerCase(),o=e;return r==="data-id"||(r==="value"||r==="checked")&&(o.__artifactSecret===!0||/^(password|hidden|file)$/.test(o.type??"")||/(^|\s)(cc-|one-time-code|current-password|new-password)/i.test(`${e.getAttribute("autocomplete")??""} ${o.autocomplete??""}`))}function K(e){const t=document.documentElement;e==="light"||e==="dark"?(t.dataset.theme=e,t.style.colorScheme=e,N=!0):N&&(delete t.dataset.theme,t.style.colorScheme="",N=!1)}var S=new Map;function be(){let e;const t={u:new Promise(r=>{e=r}),r:r=>{t.done=!0,e(r)},done:!1,nulled:!1};return t}var ge=Object.freeze(Object.assign(Object.create(null),{call:Function.prototype.call,apply:Function.prototype.apply,bind:Function.prototype.bind})),W=(e,t)=>{const r=S.get(e);if(!r||r.done){r?.nulled&&g&&m.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:e}},g);return}const o=typeof t=="function"?Object.setPrototypeOf(t,ge):Object.assign(Object.create(null),t);typeof o.then=="function"&&delete o.then,r.r(Object.freeze(o))},I=Object.getOwnPropertyDescriptor(window,"claude");if(window!==top&&!(I&&I.writable===!1)){const e=M&&T.test(M)?L(M).catch(()=>{}):Promise.resolve(void 0),t=n=>{if(n.type==="auxclick"&&n.button!==1)return;const c=n.target,_=c&&c.closest?c.closest("a[href],area[href]"):null;if(!_)return;const l=_.getAttribute("href");if(!l)return;let d;try{d=new URL(l,document.baseURI)}catch{return}if((d.protocol==="http:"||d.protocol==="https:")&&d.origin!==location.origin){n.preventDefault();const p=(_.getAttribute("target")??"").toLowerCase(),h=n.type==="auxclick"||n.metaKey||n.ctrlKey||n.shiftKey||n.altKey||!["","_self","_top","_parent"].includes(p);m.post({__frame_nav:!0,url:d.href,newTab:h},"*")}};addEventListener("click",t,!0),addEventListener("auxclick",t,!0);const r={},o=n=>{n.isTrusted&&(r.pointer=!0)},a=n=>{n.isTrusted&&(r.click=!0)};addEventListener("pointermove",o,{capture:!0,passive:!0}),addEventListener("click",a,{capture:!0,passive:!0}),e.then(n=>{n?.wireNav&&(n.wireNav(),removeEventListener("click",t,!0),removeEventListener("auxclick",t,!0),removeEventListener("pointermove",o,!0),removeEventListener("click",a,!0),n.wireEngagement?.(r))});let i=null;try{i=he()}catch{}const u=I?.value??{};q(window,"claude",u);for(const n of Object.keys(k)){if(u[n]!==void 0){q(u,n,u[n]);continue}S.set(n,be())}if(u.use===void 0){const n=c=>{if(typeof c!="string"||!Object.hasOwn(k,c))return Promise.resolve(null);const _=S.get(c);return _?_.u:Promise.resolve(u[c]??null)};try{Object.defineProperty(u,"use",{value:n,writable:!0,configurable:!0,enumerable:!1})}catch{}}let f=null,R=null,y=0;const E=m.on((n,c)=>{F(c)&&ie(n)&&(f=n.__frame_init,g=c,E(),clearTimeout(y),R?.())});m.post({__frame_connect:!0},"*");const v=new Promise(n=>{R=n,y=setTimeout(()=>{E(),n()},ve)}),w=document.readyState==="loading"?new Promise(n=>document.addEventListener("DOMContentLoaded",()=>n(),{once:!0})):Promise.resolve();w.then(()=>{try{i?.restore()}catch{}});const b={cb:null};m.on((n,c)=>{if(F(c)&&le(n)){try{i?.promoted()}catch{}b.cb?.()}}),v.then(async()=>{if(!f||!g){for(const s of S.values())s.nulled=!0,s.r(null);return}K(f.theme);const n=g;let c=!1,_=!1;m.on((s,B)=>{if(B!==n)return;ce(s)&&K(s.__frame_theme.theme),ae(s)&&we(s.__frame_patch,n);const A=s?.__fc_mode;A&&typeof A=="object"&&!c&&O&&T.test(O)&&(c=!0,L(O).then(x=>x.install?.(n,A.on===!0)).catch(()=>{}));const U=s?.__ft_cmd;U&&typeof U=="object"&&!_&&j&&T.test(j)&&(_=!0,L(j).then(x=>x.install?.(n,U)).catch(()=>{}))});const l=Object.keys(f.capabilities??{}).filter(s=>Object.hasOwn(k,s)).map(s=>[s,k[s]]).filter(s=>typeof s[1]=="string"&&T.test(s[1])),d=await Promise.allSettled(l.map(([,s])=>L(s))),p=await e,h=g;if(p?.buildBoot||m.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:"_transforms"}},h),p?.buildBoot)try{P=p.buildBoot(f,p.TRANSFORMS??{},{shellOrigin:h,mount:W},s=>m.post({__frame_cap_telemetry:s},h))}catch{m.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:"_transforms"}},h),P=z(f,h)}else P=z(f,h);const Y=s=>m.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:s}},h),Ee=P;d.forEach((s,B)=>{const A=l[B][0];if(s.status!=="fulfilled"){Y(A);return}try{s.value?.install?.(Ee)}catch{Y(A)}});for(const s of S.values())s.done||(s.nulled=!0,s.r(null));await w,m.post({__frame_ready:!0},g),e.then(s=>s?.installSizeReporter?.(h,b))})}})();</script><!-- /frame-runtime --><meta name="viewport" content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}</style></head><body>
+<title>Zeteo 멘토링 40분</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link rel="stylesheet" href="./css2">
+
+<style>
+  :root{
+    --ground:#FBF8F7;
+    --surface:#FFFFFF;
+    --surface-2:#F5F0EF;
+    --ink:#241B1C;
+    --ink-2:#4B3E3F;
+    --muted:#7C6D6E;
+    --line:#E6DCDB;
+    --line-strong:#D3C4C3;
+    --accent:#9E2B2B;
+    --accent-ink:#7E2020;
+    --accent-soft:#F4E6E4;
+    --shadow:0 1px 2px rgba(36,27,28,.05), 0 8px 24px -16px rgba(36,27,28,.28);
+    --f-display:"Gowun Batang", "Nanum Myeongjo", Georgia, serif;
+    --f-body:"IBM Plex Sans KR", "Malgun Gothic", system-ui, sans-serif;
+    --f-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#161112;
+      --surface:#1E1718;
+      --surface-2:#251D1E;
+      --ink:#F1E9E8;
+      --ink-2:#D5C7C6;
+      --muted:#9E8D8D;
+      --line:#332728;
+      --line-strong:#463738;
+      --accent:#E2807A;
+      --accent-ink:#EFA39D;
+      --accent-soft:#3A2526;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#161112;
+    --surface:#1E1718;
+    --surface-2:#251D1E;
+    --ink:#F1E9E8;
+    --ink-2:#D5C7C6;
+    --muted:#9E8D8D;
+    --line:#332728;
+    --line-strong:#463738;
+    --accent:#E2807A;
+    --accent-ink:#EFA39D;
+    --accent-soft:#3A2526;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--ground);
+    color:var(--ink);
+    font-family:var(--f-body);
+    font-weight:400;
+    font-size:16px;
+    line-height:1.72;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:56px 24px 96px;}
+
+  /* ---------- header ---------- */
+  .eyebrow{
+    font-family:var(--f-mono);
+    font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--accent);margin:0 0 18px;
+  }
+  h1{
+    font-family:var(--f-display);
+    font-weight:700;
+    font-size:clamp(34px,5.4vw,50px);
+    line-height:1.2;
+    letter-spacing:-.01em;
+    margin:0 0 18px;
+    text-wrap:balance;
+  }
+  .lede{
+    font-size:17px;color:var(--ink-2);max-width:60ch;margin:0 0 32px;
+  }
+  .lede strong{color:var(--ink);font-weight:600;}
+
+  .facts{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:1px;background:var(--line);border:1px solid var(--line);
+    border-radius:3px;overflow:hidden;margin:0 0 52px;
+  }
+  .fact{background:var(--surface);padding:14px 16px;}
+  .fact dt{
+    font-family:var(--f-mono);font-size:10.5px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--muted);margin:0 0 4px;
+  }
+  .fact dd{margin:0;font-size:15px;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums;}
+
+  /* ---------- generic section heads ---------- */
+  h2{
+    font-family:var(--f-display);font-weight:700;
+    font-size:26px;line-height:1.32;margin:0 0 6px;letter-spacing:-.005em;
+  }
+  h3{font-size:16.5px;font-weight:600;margin:0;line-height:1.5;}
+
+  .rules{
+    border:1px solid var(--line);border-radius:3px;
+    background:var(--surface);padding:24px 26px;margin:0 0 56px;
+    box-shadow:var(--shadow);
+  }
+  .rules h2{font-size:19px;margin-bottom:14px;}
+  .rules ol{margin:0;padding-left:1.35em;display:flex;flex-direction:column;gap:9px;}
+  .rules li{color:var(--ink-2);font-size:15px;}
+  .rules li strong{color:var(--ink);font-weight:600;}
+
+  /* ---------- timeline ---------- */
+  .block{
+    display:grid;grid-template-columns:104px 1fr;gap:0 28px;
+    position:relative;padding-bottom:44px;
+  }
+  .block::before{
+    content:"";position:absolute;left:103px;top:12px;bottom:0;
+    width:1px;background:var(--line);
+  }
+  .block:last-of-type::before{display:none;}
+  .rail{position:relative;padding-top:2px;}
+  .rail::after{
+    content:"";position:absolute;right:-30px;top:9px;
+    width:9px;height:9px;border-radius:50%;
+    background:var(--accent);border:2px solid var(--ground);
+  }
+  .time{
+    font-family:var(--f-mono);font-size:13px;font-weight:500;
+    font-variant-numeric:tabular-nums;color:var(--ink);display:block;
+  }
+  .dur{
+    font-family:var(--f-mono);font-size:11px;color:var(--muted);
+    display:block;margin-top:2px;
+  }
+  .body{min-width:0;}
+  .block-head{margin-bottom:18px;}
+  .block-head p{margin:6px 0 0;color:var(--muted);font-size:14.5px;max-width:56ch;}
+
+  /* ---------- question cards ---------- */
+  .q{
+    background:var(--surface);border:1px solid var(--line);
+    border-radius:3px;padding:20px 22px;margin-bottom:14px;
+    box-shadow:var(--shadow);
+  }
+  .q-top{
+    display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-bottom:12px;
+  }
+  .tag{
+    font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;
+    text-transform:uppercase;padding:3px 7px;border-radius:2px;
+    white-space:nowrap;flex-shrink:0;
+  }
+  .tag.p1{background:var(--accent);color:var(--surface);}
+  :root[data-theme="dark"] .tag.p1{color:#161112;}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tag.p1{color:#161112;}}
+  .tag.p2{background:var(--accent-soft);color:var(--accent-ink);}
+  .tag.who{background:var(--surface-2);color:var(--muted);border:1px solid var(--line);}
+  .q-top h3{flex:1 1 260px;}
+
+  .now{
+    font-size:14.5px;color:var(--muted);margin:0 0 12px;
+    padding-left:13px;border-left:2px solid var(--line-strong);
+  }
+  .say{
+    font-family:var(--f-display);
+    font-size:17px;line-height:1.68;color:var(--ink);
+    background:var(--surface-2);border-radius:3px;
+    padding:15px 17px;margin:0 0 12px;
+  }
+  .say::before{content:"“";color:var(--accent);font-weight:700;}
+  .say::after{content:"”";color:var(--accent);font-weight:700;}
+  .why{
+    font-size:14px;color:var(--ink-2);margin:0;
+    display:flex;gap:9px;align-items:flex-start;
+  }
+  .why b{
+    font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--accent);
+    padding-top:5px;flex-shrink:0;
+  }
+
+  /* ---------- avoid list ---------- */
+  .avoid{
+    margin:20px 0 56px;border:1px solid var(--line);border-radius:3px;
+    background:var(--surface);overflow:hidden;
+  }
+  .avoid h2{
+    font-size:19px;padding:20px 24px 0;margin:0 0 12px;
+  }
+  .avoid ul{list-style:none;margin:0;padding:0 0 8px;}
+  .avoid li{
+    display:grid;grid-template-columns:1fr;gap:2px;
+    padding:12px 24px;border-top:1px solid var(--line);
+  }
+  .avoid li span{font-size:15px;font-weight:500;color:var(--ink);}
+  .avoid li em{font-style:normal;font-size:14px;color:var(--muted);}
+
+  .prep h2{font-size:19px;margin-bottom:14px;}
+  .prep ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;}
+  .prep li{
+    font-size:15px;color:var(--ink-2);padding-left:26px;position:relative;
+  }
+  .prep li::before{
+    content:"";position:absolute;left:0;top:7px;width:11px;height:11px;
+    border:1.5px solid var(--line-strong);border-radius:2px;
+  }
+  .prep li strong{color:var(--ink);font-weight:600;}
+
+  hr.sep{
+    border:0;border-top:1px solid var(--line);margin:0 0 40px;
+  }
+
+  @media (max-width:640px){
+    .wrap{padding:40px 18px 72px;}
+    .block{grid-template-columns:1fr;gap:0;}
+    .block::before{display:none;}
+    .rail{display:flex;align-items:baseline;gap:10px;margin-bottom:10px;
+      padding-left:0;border-left:0;}
+    .rail::after{display:none;}
+    .dur{margin-top:0;}
+    .say{font-size:16px;}
+  }
+</style>
+
+<div class="wrap">
+
+  <p class="eyebrow">Zeteo · 현직 개발자 화상 40분</p>
+  <h1>귀한 40분을 쓰는 법</h1>
+  <p class="lede">
+    이 자리의 상대는 <strong>우리 중간발표를 실제로 채점한 사람</strong>입니다.
+    기능은 사실상 끝났고 남은 건 버그·최적화, 그리고 무엇을 더 다듬을지 고르는 일뿐입니다.
+    그러니 이 40분은 새 기능을 상의하는 자리가 아니라
+    <strong>남은 시간을 어디에 쓸지 채점자에게 직접 확인받는 자리</strong>로 씁니다.
+    받은 지적 다섯 개는 이미 다 손댔으니 짧게 보고하고, 무게는 <strong>꾸미기 · 봇 판단 · 12분 발표 설계</strong>에 둡니다.
+  </p>
+
+  <dl class="facts">
+    <div class="fact"><dt>총 시간</dt><dd>40분</dd></div>
+    <div class="fact"><dt>프로젝트</dt><dd>28분</dd></div>
+    <div class="fact"><dt>커리어</dt><dd>12분</dd></div>
+    <div class="fact"><dt>기능</dt><dd>사실상 완료</dd></div>
+    <div class="fact"><dt>남은 것</dt><dd>버그 · 최적화 · 꾸미기</dd></div>
+    <div class="fact"><dt>기능 동결</dt><dd>8/30</dd></div>
+    <div class="fact"><dt>최종 발표</dt><dd>9/8 · 12분</dd></div>
+  </dl>
+
+  <div class="rules">
+    <h2>진행 규칙 넷</h2>
+    <ol>
+      <li><strong>질문마다 배경을 먼저 30초.</strong> 배경 없이 물으면 일반론이 돌아옵니다. 카드마다 「지금 상태」를 먼저 읽고 질문으로 넘어가세요.</li>
+      <li><strong>화면을 띄워놓고 시작합니다.</strong> 말로 설명하면 3분이 날아갑니다. 게임 화면·설문 화면·최종발표 목차 초안을 미리 공유해 두세요.</li>
+      <li><strong>한 사람이 다 묻지 않습니다.</strong> 카드마다 담당이 적혀 있습니다. 자기 파트를 자기가 물어야 답이 구체적으로 옵니다.</li>
+      <li><strong>답이 겉돌면 선택을 강요하세요.</strong> "일반적으로는…"이 나오면 <em>"저희 상황이면 둘 중 어느 쪽을 고르시겠어요?"</em>로 되받습니다.</li>
+    </ol>
+  </div>
+
+  <hr class="sep">
+
+  <!-- 0 -->
+  <div class="block">
+    <div class="rail"><span class="time">0:00</span><span class="dur">2분</span></div>
+    <div class="body">
+      <div class="block-head">
+        <h2>열기</h2>
+        <p>안부와 자기소개로 5분을 쓰지 않습니다. 상대가 시간을 배분할 수 있게 오늘 물을 것을 먼저 알립니다.</p>
+      </div>
+      <div class="q">
+        <div class="q-top"><span class="tag p1">1순위</span><h3>오늘 무엇을 물을지 먼저 말한다</h3><span class="tag who">PM</span></div>
+        <p class="say">중간발표 때 주신 질문 다섯 개에 대한 저희 답이 맞는지 확인받는 게 오늘 가장 큰 목적입니다. 그다음이 남은 4일 우선순위, 최종발표 구성이고, 마지막 10분쯤은 개발자로서의 조언을 여쭙고 싶습니다.</p>
+        <p class="why"><b>왜</b><span>상대가 40분을 어떻게 나눌지 스스로 계산하게 만듭니다. 이 한마디로 "마지막에 시간 없어서 커리어 질문 못 함"이 사라집니다.</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- A -->
+  <div class="block">
+    <div class="rail"><span class="time">2:00</span><span class="dur">5분</span></div>
+    <div class="body">
+      <div class="block-head">
+        <h2>A · 받은 지적 다섯 개, 전부 손댔습니다</h2>
+        <p>중간발표에서 이미 답한 내용이라 길게 끌지 않습니다. <strong>처리 결과는 60초에 보고하고, 제대로 묻는 건 딱 하나</strong>입니다.</p>
+      </div>
+
+      <div class="q">
+        <div class="q-top"><span class="tag p1">1순위</span><h3>완료 보고를 먼저, 그다음 의도를 묻는다</h3><span class="tag who">PM</span></div>
+        <p class="now">지금 상태 — 재접속 복구·방 만들기 구현 완료. 리플레이는 설문 화면에 통합. 설문 기반 봇 개선은 구조까지 완성, 실플레이 데이터 적용만 남음.</p>
+        <p class="say">주신 질문 다섯 개는 전부 손을 댔습니다. 재접속은 복구까지 넣었고, 리플레이는 설문 화면 안에 넣었고, 설문 데이터로 봇을 개선하는 구조도 만들어뒀습니다. 하나씩 보여드리기 전에 먼저 여쭙고 싶은 게 있는데 — 그 다섯 개는 무엇을 확인하려고 던지신 질문이었나요?</p>
+        <p class="why"><b>왜</b><span>완료를 먼저 알려야 상대가 같은 얘기를 반복하지 않습니다. 그리고 답 다섯 개를 각각 재확인받는 것보다 <strong>채점자의 판단 기준 하나</strong>를 얻는 게 큽니다 — 9/8 질의응답 8분 대비의 기준선이 됩니다.</span></p>
+      </div>
+
+      <div class="q">
+        <div class="q-top"><span class="tag p1">1순위</span><h3>리플레이 화면만 30초 보여주고 방향 확인</h3><span class="tag who">화면</span></div>
+        <p class="now">지금 상태 — 다섯 개 중 유일하게 "요청받아 새로 만든 것". 화면을 따로 만들지 않고 설문 화면 안에 흡수했습니다.</p>
+        <p class="say">(화면 공유) 리플레이만 잠깐 보여드리겠습니다. 화면을 따로 만드는 대신 설문 화면 안에 넣어서, 라이브 중엔 익명이던 발언자 이름을 여기서만 열고 대화를 다시 보며 설문에 답하게 했습니다. 말씀하신 의도가 이 형태였을까요?</p>
+        <p class="why"><b>왜</b><span>나머지 넷은 말로 보고하고 넘어가되 <strong>이것만 눈으로 보여주세요.</strong> 유일하게 "시켜서 새로 만든 것"이라 확인 한마디의 값어치가 다릅니다.</span></p>
+      </div>
+
+      <div class="q">
+        <div class="q-top"><span class="tag p2">2순위</span><h3>몇 판이 쌓여야 "봇이 나아졌다"고 말해도 되나</h3><span class="tag who">서버 · 봇</span></div>
+        <p class="say">설문으로 봇을 개선하는 구조는 만들었는데 실제 플레이 데이터가 아직 없습니다. 한 판에 사람이 넷이라 표본이 작은데, 몇 판쯤 쌓여야 발표에서 "봇이 나아졌다"고 주장해도 되는 수준일까요?</p>
+        <p class="why"><b>왜</b><span>구조는 끝났고 데이터만 남은 상태라 질문이 아주 구체적입니다. <strong>"몇 판"이라는 숫자를 받으면 남은 기간 테스트 플레이 횟수가 그대로 정해집니다.</strong></span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- B -->
+  <div class="block">
+    <div class="rail"><span class="time">7:00</span><span class="dur">8분</span></div>
+    <div class="body">
+      <div class="block-head">
+        <h2>B · 남은 시간을 꾸미는 데 쓴다 — 맞는 판단인가</h2>
+        <p>기능은 사실상 끝났고 버그·최적화만 남았습니다. <strong>오늘의 실질적 본론이 이 블록</strong>입니다.</p>
+      </div>
+
+      <div class="q">
+        <div class="q-top"><span class="tag p1">1순위</span><h3>시연 영상에서 가장 티가 나는 하나는 무엇인가</h3><span class="tag who">PM · 화면</span></div>
+        <p class="now">지금 상태 — 게임이 채팅 기반이라 1분 시연 영상에 흐르는 텍스트밖에 안 남습니다. 8개 페이즈가 한 화면에서 갈리는 게 저희 설계 자랑인데, 역설적으로 <strong>화면이 안 바뀌니 영상에서 진행이 안 보입니다.</strong></p>
+        <p class="say">(화면 공유) 기능은 거의 끝나서 남은 시간을 화면 꾸미는 데 쓸까 합니다. 그런데 저희 게임이 채팅 기반이라 1분 시연 영상에 흐르는 텍스트밖에 안 남습니다. 페이즈 전환 효과, 아바타 이미지, 배경 — 이 중에 영상에서 가장 티가 나는 건 어느 하나일까요?</p>
+        <p class="why"><b>왜</b><span>"꾸밀까요?"는 답이 무한합니다. <strong>"영상에서 뭐가 티가 납니까"로 물으면 답이 하나로 좁혀지고, 그 답이 곧 작업 지시가 됩니다.</strong> 어차피 만들어야 하는 시연 영상이 기준이라 상대도 답하기 쉽습니다.</span></p>
+      </div>
+
+      <div class="q">
+        <div class="q-top"><span class="tag p1">1순위</span><h3>기능 동결 이후에도 UI는 계속 손대도 되나</h3><span class="tag who">PM</span></div>
+        <p class="say">8월 30일에 기능을 동결하는데, 디자인 작업은 그 뒤에도 계속해도 되는 걸까요? 실무에서 동결 이후에 UI를 손대는 건 어디까지 허용됩니까?</p>
+        <p class="why"><b>왜</b><span>동결 이후 발표까지 8일이 통째로 남습니다. "디자인은 기능 동결 대상이 아니다"라는 답을 받으면 <strong>꾸밀 수 있는 기간이 4일이 아니라 12일</strong>이 됩니다. 오늘 가장 크게 시간을 벌어줄 수 있는 질문.</span></p>
+      </div>
+
+      <div class="q">
+        <div class="q-top"><span class="tag p2">2순위</span><h3>이미 만든 배경 장식이 안 보이는데, 살릴까 새로 만들까</h3><span class="tag who">레이아웃</span></div>
+        <p class="now">지금 상태 — 달빛·핏방울 배경 장식이 이미 들어가 있지만, 화면 배경이 뷰포트를 불투명하게 덮고 있어서 실제로는 거의 안 보일 가능성이 있습니다.</p>
+        <p class="say">사실 배경 장식은 이미 만들어뒀는데 다른 레이어에 가려서 거의 안 보입니다. 새로 만들기 전에 이걸 살리는 게 나을까요, 아니면 이런 은은한 장식은 어차피 발표 영상에선 안 보이니 더 확실한 쪽에 시간을 쓰는 게 나을까요?</p>
+        <p class="why"><b>왜</b><span>새로 만드는 것보다 이미 만든 걸 살리는 게 항상 쌉니다. 답이 "그건 영상에서 안 보인다"여도 소득 — <strong>시간을 안 쓸 이유</strong>가 생깁니다.</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- C -->
+  <div class="block">
+    <div class="rail"><span class="time">15:00</span><span class="dur">5분</span></div>
+    <div class="body">
+      <div class="block-head">
+        <h2>C · 봇 다수 — 되돌릴지가 아니라, 줄인 판단이 맞았는지</h2>
+        <p>7월 기획서는 6명 중 봇 3~5명짜리 마피아였습니다. 지금은 다섯 중 봇 하나. <strong>이 축소를 되돌릴지 묻는 게 아니라, 축소한 판단을 검증받습니다.</strong></p>
+      </div>
+
+      <div class="q">
+        <div class="q-top"><span class="tag p1">1순위</span><h3>지금 봇을 다시 늘리지 않기로 한 판단, 맞습니까</h3><span class="tag who">봇</span></div>
+        <p class="now">지금 상태 — 원 기획은 봇 3~5명 · 성격 6종 · 판별자 봇까지 있는 마피아. 현재는 5명 중 봇 1명 라이어게임이고, 발표 전체가 "다섯 중 하나는 사람이 아니다" 위에 서 있습니다.</p>
+        <p class="say">처음 기획은 봇이 3~5명인 마피아였는데 4주 안엔 못 하겠다고 판단해서 봇 하나짜리 라이어게임으로 줄였습니다. 지금 다시 늘리는 건 게임 밸런스를 처음부터 다시 재야 하고, 설문 학습 데이터도 봇별로 쪼개져서 안 하는 쪽으로 봤는데요 — 이 판단이 맞다고 보시나요?</p>
+        <p class="why"><b>왜</b><span>허락을 받는 질문이 아니라 <strong>근거를 검증받는 질문</strong>입니다. "맞다"면 그대로 발표 한 장이 되고, "틀렸다"면 되돌릴 수 있는 마지막 시점입니다. 판단과 근거를 먼저 말하고 물어야 기획성 점수를 지키면서 조언도 받습니다.</span></p>
+      </div>
+
+      <div class="q">
+        <div class="q-top"><span class="tag p1">1순위</span><h3>"안 만든 이유"를 발표에 넣으면 가산인가, 변명인가</h3><span class="tag who">PM</span></div>
+        <p class="now">지금 상태 — 중간발표에 이미 「고르지 않은 것들」 슬라이드가 있습니다(Vercel·Next.js·Rust·react-router, 각각 안 고른 이유까지).</p>
+        <p class="say">중간발표 때 "고르지 않은 것들"이라고 기술 선택을 안 한 이유를 정리한 장이 있었는데, 거기에 "봇을 여러 명으로 안 한 이유"도 같은 형식으로 넣으려고 합니다. 심사 기준으로는 이런 게 가산이 됩니까, 아니면 "결국 못 만든 것"으로 읽힙니까?</p>
+        <p class="why"><b>왜</b><span>이게 이 블록의 진짜 질문입니다. <strong>원본 기획서가 남아 있다는 게 자산인지 부채인지</strong>가 여기서 갈립니다. 가산이라면 기획성 15점과 논리성 25점을 동시에 건드리는 슬라이드가 한 장 생깁니다.</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- D -->
+  <div class="block">
+    <div class="rail"><span class="time">20:00</span><span class="dur">9분</span></div>
+    <div class="body">
+      <div class="block-head">
+        <h2>D · 12분짜리 최종발표를 설계한다</h2>
+        <p>공지에 "초과·조기 종료 시 감점, 11분 30초 스크립트 권장"이 박혀 있습니다. 채점자에게 <strong>뭘 버릴지</strong>를 직접 묻는 건 이 자리에서만 가능합니다.</p>
+      </div>
+
+      <div class="q">
+        <div class="q-top"><span class="tag p1">1순위</span><h3>중간발표에서 없어도 됐던 슬라이드가 어디였나</h3><span class="tag who">PM · 화면</span></div>
+        <p class="now">지금 상태 — 중간발표는 질문 4개마다 트러블슈팅까지 붙여 두꺼웠습니다. 최종은 항목이 9개인데 시간은 그대로 12분입니다.</p>
+        <p class="say">최종발표는 항목이 아홉 개인데 시간은 똑같이 12분입니다. 중간발표를 들으신 입장에서, 심사위원 입장에선 <strong>없어도 됐던 슬라이드</strong>가 어디였나요?</p>
+        <p class="why"><b>왜</b><span>"뭘 넣을까요"보다 <strong>"뭘 빼도 되나요"가 훨씬 정확한 답을 부릅니다.</strong> 감점 요인(시간 초과)을 채점자 본인의 입으로 제거하는 질문.</span></p>
+      </div>
+
+      <div class="q">
+        <div class="q-top"><span class="tag p1">1순위</span><h3>핵심 코드 리뷰 — 넷이 하나씩 vs 하나를 깊게</h3><span class="tag who">PM</span></div>
+        <p class="say">핵심 코드 리뷰를 중간발표처럼 네 명이 하나씩 하면 12분이 안 나올 것 같습니다. 네 개를 얕게 vs 하나를 깊게 — 어느 쪽이 점수가 높습니까? 하나만 고른다면 저희 넷 중 어느 이야기가 제일 들을 만했나요?</p>
+        <p class="why"><b>왜</b><span>뒷문장이 핵심입니다. <strong>"어느 이야기가 제일 들을 만했나"는 채점자만 답할 수 있고, 답이 곧 최종발표의 중심축</strong>이 됩니다. 다만 팀워크 항목에 "모두가 역할을 분배했음을 드러내라"가 있으니, 줄이더라도 나머지 셋의 기여를 어디에 넣을지까지 같이 물으세요.</span></p>
+      </div>
+
+      <div class="q">
+        <div class="q-top"><span class="tag p2">2순위</span><h3>6분짜리 한 판을 1분으로 자르면 뭘 남기나</h3><span class="tag who">화면</span></div>
+        <p class="say">저희는 한 판이 최소 6분이라 1분 영상으로 자르면 대부분이 잘립니다. 이 게임에서 심사위원이 꼭 봐야 하는 1분은 어디라고 보시나요?</p>
+        <p class="why"><b>왜</b><span>B블록이 "무엇을 꾸밀까"였다면 이건 "무엇을 남길까"입니다. 답이 곧 편집 대본이 되고, <strong>꾸미기 우선순위도 여기서 한 번 더 검증</strong>됩니다.</span></p>
+      </div>
+
+      <div class="q">
+        <div class="q-top"><span class="tag p2">2순위</span><h3>사업성 10점을 억지스럽지 않게 채우는 법</h3><span class="tag who">서버</span></div>
+        <p class="say">평가 항목에 사업성이 10점 있는데, 저희는 수익 구조를 진지하게 주장하기가 솔직히 어렵습니다. 이런 프로젝트에서 그 항목을 억지스럽지 않게 채우려면 어떻게 말해야 할까요?</p>
+        <p class="why"><b>왜</b><span>10점이 통째로 비어 있고, 최종발표 "활용 방안 · 기대 효과" 두 장이 아직 없습니다. <strong>솔직히 어렵다고 말하고 묻는 편</strong>이 억지 수익모델을 만들어 가는 것보다 낫습니다.</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- E -->
+  <div class="block">
+    <div class="rail"><span class="time">29:00</span><span class="dur">10분</span></div>
+    <div class="body">
+      <div class="block-head">
+        <h2>E · 현직자에게만 물을 수 있는 것</h2>
+        <p>검색하면 나오는 건 묻지 않습니다. <strong>"이 사람이 아니면 답할 수 없는 것"</strong>만 남겼습니다. 한 사람이 하나씩 맡으세요.</p>
+      </div>
+
+      <div class="q">
+        <div class="q-top"><span class="tag p1">1순위</span><h3>AI로 짠 코드를 면접에서 어떻게 말해야 하나</h3><span class="tag who">봇</span></div>
+        <p class="say">평가 기준에도 "AI 도구로 생성된 코드를 주도적으로 제어·수정했는가"가 들어 있더라고요. 실제 면접에서는 "AI로 짰다"를 어떻게 말해야 감점이 안 됩니까? 반대로 숨기면 어디서 티가 나나요?</p>
+        <p class="why"><b>왜</b><span>2026년 신입 시장에서 가장 현실적인 질문인데 정답이 공개돼 있지 않습니다. 면접관 자리에 앉아 본 사람만 답할 수 있고, <strong>9/8 질의응답에서도 그대로 나올 수 있는 질문</strong>입니다.</span></p>
+      </div>
+
+      <div class="q">
+        <div class="q-top"><span class="tag p1">1순위</span><h3>넷이 만든 걸 "내가 한 것"으로 어떻게 증명하나</h3><span class="tag who">서버</span></div>
+        <p class="now">지금 상태 — 20일 동안 196커밋, PR 기록, 각자 작업 로그가 남아 있습니다.</p>
+        <p class="say">이력서에 "팀 프로젝트로 라이어 게임을 만들었다"고 쓰면 네 명이 전부 같은 문장을 쓰게 됩니다. 커밋 기록이나 PR, 트러블슈팅 로그 중에 실제로 읽히는 게 있습니까? 아니면 그런 건 아무도 안 보고 면접에서 말로 확인하나요?</p>
+        <p class="why"><b>왜</b><span>이미 갖고 있는 자산(196커밋·PR·로그)이 <strong>취업에서 값이 나가는 물건인지</strong> 확인하는 질문입니다. "안 본다"는 답이 나와도 소득 — 말로 설명할 준비를 하면 됩니다.</span></p>
+      </div>
+
+      <div class="q">
+        <div class="q-top"><span class="tag p1">1순위</span><h3>AI 이후 주니어 프론트엔드에게 기대하는 게 뭐가 달라졌나</h3><span class="tag who">화면</span></div>
+        <p class="say">AI 도구가 널리 쓰이고 나서 주니어 프론트엔드를 뽑을 때 기대하는 게 실제로 달라졌나요? 2~3년 전에 신입에게 기대하던 것과 지금 기대하는 게 어떻게 다른지 궁금합니다.</p>
+        <p class="why"><b>왜</b><span>기사와 블로그에는 추측만 있습니다. <strong>실제로 사람을 뽑아 본 사람의 관찰</strong>은 검색으로 못 얻습니다. 답에 따라 남은 준비 방향 자체가 바뀝니다.</span></p>
+      </div>
+
+      <div class="q">
+        <div class="q-top"><span class="tag p1">1순위</span><h3>우리에게서 "신입 티"가 난 지점은 어디였나</h3><span class="tag who">레이아웃 · 반드시 마지막</span></div>
+        <p class="say">마지막으로 좀 아픈 질문 하나 드려도 될까요. 저희 발표나 코드에서 "아, 아직 신입이구나" 싶으셨던 지점이 어디였나요? 고칠 수 있는 거면 남은 2주에 고쳐보고 싶습니다.</p>
+        <p class="why"><b>왜</b><span>가장 아프지만 가장 값집니다. <strong>반드시 마지막에</strong> 두세요 — 앞에 두면 분위기가 방어적으로 바뀌어 나머지 답이 조심스러워집니다. "고쳐보고 싶다"를 붙여야 상대가 솔직해집니다.</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- close -->
+  <div class="block">
+    <div class="rail"><span class="time">39:00</span><span class="dur">1분</span></div>
+    <div class="body">
+      <div class="block-head">
+        <h2>닫기</h2>
+      </div>
+      <div class="q">
+        <div class="q-top"><span class="tag p1">1순위</span><h3>오늘 정해진 것을 그 자리에서 복창한다</h3><span class="tag who">PM</span></div>
+        <p class="say">오늘 들은 걸로 저희가 정한 건 ①____, ②____, ③____ 입니다. 혹시 잘못 알아들은 게 있을까요?</p>
+        <p class="why"><b>왜</b><span>통화가 끝나면 네 명의 기억이 서로 다릅니다. 30초 복창으로 <strong>바로잡을 마지막 기회</strong>를 만들고, 그대로 팀 회의록이 됩니다.</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="avoid">
+    <h2>물어봐도 시간만 쓰는 질문</h2>
+    <ul>
+      <li><span>"저희 프로젝트 어떻게 보셨어요?"</span><em>열린 질문에는 뻔한 칭찬이 돌아옵니다. 대신 "없어도 됐던 슬라이드가 어디였나요"처럼 한 지점을 지목해서 물으세요.</em></li>
+      <li><span>"뭘 더 공부하면 좋을까요?"</span><em>검색하면 나오는 답입니다. "저희 코드에서 신입 티가 난 지점"으로 바꾸면 같은 질문이 우리 것이 됩니다.</em></li>
+      <li><span>"봇을 더 늘릴까요?"</span><em>허락을 구하는 형태라 "해보세요"가 나오면 4일이 통째로 날아갑니다. C블록처럼 <strong>우리 판단과 근거를 먼저 말하고</strong> 그 판단이 맞는지 물으세요.</em></li>
+      <li><span>기능을 새로 하나 더 제안받는 질문 전부</span><em>동결까지 4일입니다. 오늘 새로 알게 된 기능은 못 넣습니다. 질문은 <strong>이미 있는 것을 다듬는 방향</strong>으로만.</em></li>
+      <li><span>중간발표 지적 다섯 개를 하나씩 다시 답해드리기</span><em>이미 그 자리에서 답했고 전부 처리했습니다. 반복하면 A블록 하나에 15분이 날아갑니다. <strong>60초 보고 + 리플레이 화면 30초</strong>로 끝내세요.</em></li>
+    </ul>
+  </div>
+
+  <div class="prep">
+    <h2>시작 전 준비물</h2>
+    <ul>
+      <li><strong>화면 공유 탭 4개를 미리 열어둘 것</strong> — 게임 화면(모바일), 설문 화면(리플레이 통합된 모습), 중간발표 장표, 최종발표 목차 초안. B블록은 화면을 안 띄우면 질문 자체가 성립하지 않습니다.</li>
+      <li><strong>기록 담당 1명 고정</strong> — 나머지 셋은 질문에 집중. 녹화가 가능하면 양해를 구하고 녹화까지.</li>
+      <li><strong>질문 카드별 담당 확인</strong> — 각 카드 오른쪽 회색 라벨. 자기 파트를 자기가 물어야 답이 구체적으로 옵니다.</li>
+      <li><strong>1순위만 다 물어도 성공</strong> — 40분에 다 못 묻습니다. 2순위는 시간이 남을 때만.</li>
+    </ul>
+  </div>
+
+</div>
+
+</body></html>
