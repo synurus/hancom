@@ -1,0 +1,176 @@
+<meta charset="utf-8">
+<title>ZETEO Q&A 치트시트</title>
+<style>
+  @page { size: A4 portrait; margin: 10mm 9mm; }
+  :root{
+    --ink:#1A1A1A; --sub:#575757; --red:#C21620; --hot:#E9423E;
+    --rule:#DCDCDC; --wash:#F4F4F4; --dark:#160607;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:'Noto Sans CJK KR','Malgun Gothic',sans-serif;
+    color:var(--ink); font-size:8.4pt; line-height:1.42;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:'Noto Sans Mono CJK KR','DejaVu Sans Mono',monospace;font-size:7.6pt}
+
+  header{background:var(--dark);color:#F3E6E6;padding:7px 12px;margin-bottom:2px;
+    display:flex;align-items:baseline;justify-content:space-between}
+  header h1{font-size:14pt;font-weight:700;letter-spacing:-.01em}
+  header .k{font-size:7.6pt;color:#D3BFC0}
+  .redline{height:2.2px;background:var(--hot);margin-bottom:9px}
+
+  .cols{column-count:2;column-gap:8mm;column-fill:balance}
+  section{break-inside:avoid;margin-bottom:8px}
+  h2{font-size:7.6pt;font-weight:700;color:var(--red);letter-spacing:.06em;
+    padding-bottom:2.5px;border-bottom:1.4px solid var(--ink);margin-bottom:5px}
+
+  .qa{break-inside:avoid;margin-bottom:6.5px}
+  .q{font-weight:700;font-size:8.6pt;color:var(--ink);margin-bottom:1.5px}
+  .q::before{content:"Q ";color:var(--hot);font-weight:800}
+  .a{color:var(--sub)}
+  .a b{color:var(--ink);font-weight:700}
+  .fill{background:#FFE9E9;color:var(--red);font-weight:700;padding:0 3px}
+
+  footer{margin-top:6px;border-top:1.4px solid var(--ink);padding-top:5px;
+    font-size:7.4pt;color:var(--sub);column-span:all}
+  footer b{color:var(--ink)}
+</style>
+
+<header>
+  <h1>ZETEO — 질의응답 치트시트</h1>
+  <div class="k">최종발표 2026.09.08 · TeamB · <span class="fill">분홍칸 = 발표 전 채워 넣을 것</span></div>
+</header>
+<div class="redline"></div>
+
+<div class="cols">
+
+<section>
+  <h2>기술 선택 — "왜 이걸 골랐나"</h2>
+
+  <div class="qa">
+    <div class="q">왜 SSR을 안 쓰고 CSR인가요?</div>
+    <div class="a">검색 노출이 필요 없는 서비스고, 화면이 소켓 이벤트로 계속 바뀝니다. <b>서버가 미리 그려 줄 게 없습니다.</b> Next.js도 봤지만 강점인 SSR·SEO·파일 라우팅을 하나도 안 써서 뺐습니다.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">HTTP로는 안 되나요? 왜 WebSocket인가요?</div>
+    <div class="a">HTTP는 물어봐야 답합니다. 봇이 말하거나 남이 투표하면 <b>서버가 먼저 말을 걸어야</b> 합니다. 폴링으로도 되지만 지연과 요청 수가 늘어납니다.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">왜 Vercel이 아니라 Railway인가요?</div>
+    <div class="a">Vercel은 <b>WebSocket 연결 상한이 5분</b>입니다. 저희 한 판은 그보다 깁니다.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">왜 Express인가요? Nest·Fastify는요?</div>
+    <div class="a">필요한 게 실시간 소켓 서버 하나였습니다. 딱 그만큼 하는 걸 골랐고, 정적 파일 서빙까지 겸해서 <b>프로세스도 포트도 하나</b>입니다.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">Redux·Zustand 같은 상태 관리는 왜 없나요?</div>
+    <div class="a">클라이언트가 상태를 소유하지 않기 때문입니다. <b>서버가 보낸 GameState 하나가 유일한 진실</b>이고, 화면은 그걸 그리는 함수입니다.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">라우터는 왜 안 뒀나요?</div>
+    <div class="a">URL이 두 번째 진실이 되면 <b>새로고침·뒤로가기가 진행 중인 판을 깹니다.</b> <span class="mono">state.phase</span> 하나로 화면을 가릅니다.</div>
+  </div>
+</section>
+
+<section>
+  <h2>데이터 · DB</h2>
+
+  <div class="qa">
+    <div class="q">왜 PostgreSQL인가요? NoSQL은요?</div>
+    <div class="a">설문의 "어느 발언이 봇 같았나" 값이 <b>발언 기록을 정확히 가리켜야</b> 합니다. 표 사이 연결이 자가개선의 핵심이라 관계형을 썼습니다.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">Supabase는 뭔가요?</div>
+    <div class="a">PostgreSQL을 대신 운영해 주는 서비스입니다. <b>DB 종류는 PostgreSQL</b>, 호스팅하는 곳이 Supabase입니다.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">데이터는 얼마나 쌓였나요?</div>
+    <div class="a"><span class="fill">테스트 판 수 · 설문 응답 수 · 발언 수</span> — 발표 직전 실측해서 채울 것.</div>
+  </div>
+</section>
+
+<section>
+  <h2>봇 · 자가개선 루프</h2>
+
+  <div class="qa">
+    <div class="q">봇이 진짜 스스로 개선되나요? 사람은 뭘 하나요?</div>
+    <div class="a">다섯 판이 쌓이면 루프가 스스로 깨어납니다. 실패 장면 확인 → 기준선 측정 → 지침 수정 → 재측정 → 설문 갱신 → PR. <b>사람이 하는 건 마지막 승인 하나입니다.</b></div>
+  </div>
+
+  <div class="qa">
+    <div class="q">왜 완전 자동으로 안 했나요?</div>
+    <div class="a">사람 검토 없이 프롬프트가 바뀌는 안(설문 자동 주입)은 <b>구현까지 갔다가 뺐습니다.</b> 나온 결과를 그냥 믿어야 하는 게 문제였습니다.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">개선됐다는 걸 어떻게 증명하나요?</div>
+    <div class="a">고치기 전 상태를 반복 측정해 <b>기준선</b>을 잡고, 같은 상황에서 다시 재 전후를 비교합니다. 게다가 그 지점을 겨냥해 설문 문항이 갱신돼서 <b>다음 참가자가 다시 확인해 줍니다.</b></div>
+  </div>
+
+  <div class="qa">
+    <div class="q">어떤 모델을 쓰나요?</div>
+    <div class="a">Anthropic 호환 · OpenAI 호환(OpenRouter)을 <b>설정으로 교체</b>합니다. 게임마다 어떤 커밋·어떤 모델로 돌았는지 DB에 남깁니다.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">여러 모델을 비교한 결과가 있나요?</div>
+    <div class="a"><b>아직 없습니다.</b> 지금 구조에서 바로 할 수 있다는 단계까지 왔습니다 — 그래서 활용 방안을 벤치마크로 잡았습니다. <i>(모르는 건 모른다고)</i></div>
+  </div>
+</section>
+
+<section>
+  <h2>보안 · 안정성</h2>
+
+  <div class="qa">
+    <div class="q">F12를 열면 제시어가 보이지 않나요?</div>
+    <div class="a">애초에 안 보냅니다. <span class="mono">view.ts</span>가 <b>받는 사람별로 상태를 잘라서</b> 보냅니다. 5명이면 이 함수를 5번 돌립니다.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">API 키는 어떻게 관리하나요?</div>
+    <div class="a">LLM 키·Webhook URL·DB 키 모두 <b>서버에서만</b> 읽습니다. 브라우저 번들에 들어가지 않습니다.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">서버가 이상한 값을 보내면 화면이 죽지 않나요?</div>
+    <div class="a">타입은 빌드가 끝나면 사라지므로 <b>진입점에서 한 번 더 확인</b>합니다. 그래도 터지면 최상위 ErrorBoundary가 받아 흰 화면 대신 돌아올 길을 남깁니다.</div>
+  </div>
+</section>
+
+<section>
+  <h2>프론트엔드 구현</h2>
+
+  <div class="qa">
+    <div class="q">페이즈가 8개인데 화면은 왜 1개인가요?</div>
+    <div class="a">여덟 개를 비교하니 실제로 다른 건 <b>네 가지</b>(채팅 잠금 · 투표 패널 · 지목 배너 · 헤더 문구)뿐이었습니다. 순수 함수 <span class="mono">modalFor</span>가 판단하고 <span class="mono">MainScreen</span> 하나가 그립니다.</div>
+  </div>
+
+  <div class="qa">
+    <div class="q">모바일 대응은 했나요?</div>
+    <div class="a">PC 창을 줄여 만든 모바일과 <b>실제 폰은 달랐습니다.</b> 배포 후 실기기에서 채팅 입력 지연을 잡았고, 원인은 이벤트마다 목록 전체를 다시 그리던 것이었습니다.</div>
+  </div>
+</section>
+
+<section>
+  <h2>한 줄로 잇기 — 막혔을 때</h2>
+  <div class="qa">
+    <div class="a">Vite가 만든 화면을 Express가 내보내고, React가 그린 화면이 Socket.IO로 서버와 계속 이야기하고, 그 결과가 PostgreSQL에 남습니다. 전부 Railway 하나 위에 올라가 있습니다.</div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <b>모르면</b> "그건 확인해 보고 말씀드리겠습니다"가 지어내는 것보다 낫습니다. &nbsp;·&nbsp;
+  <b>숫자는</b> 발표 직전에 다시 확인 — 커밋 수 · 파일 수 · 테스트 판 수. &nbsp;·&nbsp;
+  <b>되돌아갈 문장</b> — "게임이 봇을 재고, 그 결과가 다시 게임으로 돌아갑니다."
+</footer>
