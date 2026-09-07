@@ -1,0 +1,482 @@
+[
+  {
+    "id": 1,
+    "category_id": 1,
+    "text": "낙타"
+  },
+  {
+    "id": 2,
+    "category_id": 1,
+    "text": "호랑이"
+  },
+  {
+    "id": 3,
+    "category_id": 1,
+    "text": "펭귄"
+  },
+  {
+    "id": 4,
+    "category_id": 1,
+    "text": "캥거루"
+  },
+  {
+    "id": 5,
+    "category_id": 1,
+    "text": "판다"
+  },
+  {
+    "id": 6,
+    "category_id": 1,
+    "text": "기린"
+  },
+  {
+    "id": 7,
+    "category_id": 1,
+    "text": "코끼리"
+  },
+  {
+    "id": 8,
+    "category_id": 1,
+    "text": "사자"
+  },
+  {
+    "id": 9,
+    "category_id": 2,
+    "text": "파스타"
+  },
+  {
+    "id": 10,
+    "category_id": 2,
+    "text": "라면"
+  },
+  {
+    "id": 11,
+    "category_id": 2,
+    "text": "삼겹살"
+  },
+  {
+    "id": 12,
+    "category_id": 2,
+    "text": "떡볶이"
+  },
+  {
+    "id": 13,
+    "category_id": 2,
+    "text": "초밥"
+  },
+  {
+    "id": 14,
+    "category_id": 2,
+    "text": "피자"
+  },
+  {
+    "id": 15,
+    "category_id": 2,
+    "text": "짜장면"
+  },
+  {
+    "id": 16,
+    "category_id": 2,
+    "text": "김치찌개"
+  },
+  {
+    "id": 17,
+    "category_id": 3,
+    "text": "참외"
+  },
+  {
+    "id": 18,
+    "category_id": 3,
+    "text": "파인애플"
+  },
+  {
+    "id": 19,
+    "category_id": 3,
+    "text": "복숭아"
+  },
+  {
+    "id": 20,
+    "category_id": 3,
+    "text": "포도"
+  },
+  {
+    "id": 21,
+    "category_id": 3,
+    "text": "수박"
+  },
+  {
+    "id": 22,
+    "category_id": 3,
+    "text": "딸기"
+  },
+  {
+    "id": 23,
+    "category_id": 3,
+    "text": "바나나"
+  },
+  {
+    "id": 24,
+    "category_id": 3,
+    "text": "사과"
+  },
+  {
+    "id": 25,
+    "category_id": 4,
+    "text": "파"
+  },
+  {
+    "id": 26,
+    "category_id": 4,
+    "text": "마늘"
+  },
+  {
+    "id": 27,
+    "category_id": 4,
+    "text": "고구마"
+  },
+  {
+    "id": 28,
+    "category_id": 4,
+    "text": "브로콜리"
+  },
+  {
+    "id": 29,
+    "category_id": 4,
+    "text": "오이"
+  },
+  {
+    "id": 30,
+    "category_id": 4,
+    "text": "감자"
+  },
+  {
+    "id": 31,
+    "category_id": 4,
+    "text": "양파"
+  },
+  {
+    "id": 32,
+    "category_id": 4,
+    "text": "당근"
+  },
+  {
+    "id": 33,
+    "category_id": 5,
+    "text": "개발자"
+  },
+  {
+    "id": 34,
+    "category_id": 5,
+    "text": "미용사"
+  },
+  {
+    "id": 35,
+    "category_id": 5,
+    "text": "선생님"
+  },
+  {
+    "id": 36,
+    "category_id": 5,
+    "text": "요리사"
+  },
+  {
+    "id": 37,
+    "category_id": 5,
+    "text": "경찰관"
+  },
+  {
+    "id": 38,
+    "category_id": 5,
+    "text": "소방관"
+  },
+  {
+    "id": 39,
+    "category_id": 5,
+    "text": "변호사"
+  },
+  {
+    "id": 40,
+    "category_id": 5,
+    "text": "의사"
+  },
+  {
+    "id": 41,
+    "category_id": 6,
+    "text": "볼링"
+  },
+  {
+    "id": 42,
+    "category_id": 6,
+    "text": "테니스"
+  },
+  {
+    "id": 43,
+    "category_id": 6,
+    "text": "골프"
+  },
+  {
+    "id": 44,
+    "category_id": 6,
+    "text": "수영"
+  },
+  {
+    "id": 45,
+    "category_id": 6,
+    "text": "배구"
+  },
+  {
+    "id": 46,
+    "category_id": 6,
+    "text": "농구"
+  },
+  {
+    "id": 47,
+    "category_id": 6,
+    "text": "야구"
+  },
+  {
+    "id": 48,
+    "category_id": 6,
+    "text": "축구"
+  },
+  {
+    "id": 49,
+    "category_id": 7,
+    "text": "헬리콥터"
+  },
+  {
+    "id": 50,
+    "category_id": 7,
+    "text": "배"
+  },
+  {
+    "id": 51,
+    "category_id": 7,
+    "text": "버스"
+  },
+  {
+    "id": 52,
+    "category_id": 7,
+    "text": "오토바이"
+  },
+  {
+    "id": 53,
+    "category_id": 7,
+    "text": "자전거"
+  },
+  {
+    "id": 54,
+    "category_id": 7,
+    "text": "기차"
+  },
+  {
+    "id": 55,
+    "category_id": 7,
+    "text": "비행기"
+  },
+  {
+    "id": 56,
+    "category_id": 7,
+    "text": "자동차"
+  },
+  {
+    "id": 57,
+    "category_id": 8,
+    "text": "선풍기"
+  },
+  {
+    "id": 58,
+    "category_id": 8,
+    "text": "정수기"
+  },
+  {
+    "id": 59,
+    "category_id": 8,
+    "text": "텔레비전"
+  },
+  {
+    "id": 60,
+    "category_id": 8,
+    "text": "청소기"
+  },
+  {
+    "id": 61,
+    "category_id": 8,
+    "text": "전자레인지"
+  },
+  {
+    "id": 62,
+    "category_id": 8,
+    "text": "에어컨"
+  },
+  {
+    "id": 63,
+    "category_id": 8,
+    "text": "세탁기"
+  },
+  {
+    "id": 64,
+    "category_id": 8,
+    "text": "냉장고"
+  },
+  {
+    "id": 65,
+    "category_id": 9,
+    "text": "부산"
+  },
+  {
+    "id": 66,
+    "category_id": 9,
+    "text": "런던"
+  },
+  {
+    "id": 67,
+    "category_id": 9,
+    "text": "방콕"
+  },
+  {
+    "id": 68,
+    "category_id": 9,
+    "text": "하와이"
+  },
+  {
+    "id": 69,
+    "category_id": 9,
+    "text": "뉴욕"
+  },
+  {
+    "id": 70,
+    "category_id": 9,
+    "text": "도쿄"
+  },
+  {
+    "id": 71,
+    "category_id": 9,
+    "text": "파리"
+  },
+  {
+    "id": 72,
+    "category_id": 9,
+    "text": "제주도"
+  },
+  {
+    "id": 73,
+    "category_id": 10,
+    "text": "자"
+  },
+  {
+    "id": 74,
+    "category_id": 10,
+    "text": "풀"
+  },
+  {
+    "id": 75,
+    "category_id": 10,
+    "text": "가위"
+  },
+  {
+    "id": 76,
+    "category_id": 10,
+    "text": "노트"
+  },
+  {
+    "id": 77,
+    "category_id": 10,
+    "text": "필통"
+  },
+  {
+    "id": 78,
+    "category_id": 10,
+    "text": "볼펜"
+  },
+  {
+    "id": 79,
+    "category_id": 10,
+    "text": "지우개"
+  },
+  {
+    "id": 80,
+    "category_id": 10,
+    "text": "연필"
+  },
+  {
+    "id": 81,
+    "category_id": 11,
+    "text": "하모니카"
+  },
+  {
+    "id": 82,
+    "category_id": 11,
+    "text": "첼로"
+  },
+  {
+    "id": 83,
+    "category_id": 11,
+    "text": "플루트"
+  },
+  {
+    "id": 84,
+    "category_id": 11,
+    "text": "트럼펫"
+  },
+  {
+    "id": 85,
+    "category_id": 11,
+    "text": "바이올린"
+  },
+  {
+    "id": 86,
+    "category_id": 11,
+    "text": "드럼"
+  },
+  {
+    "id": 87,
+    "category_id": 11,
+    "text": "기타"
+  },
+  {
+    "id": 88,
+    "category_id": 11,
+    "text": "피아노"
+  },
+  {
+    "id": 89,
+    "category_id": 12,
+    "text": "캠핑"
+  },
+  {
+    "id": 90,
+    "category_id": 12,
+    "text": "사진찍기"
+  },
+  {
+    "id": 91,
+    "category_id": 12,
+    "text": "그림그리기"
+  },
+  {
+    "id": 92,
+    "category_id": 12,
+    "text": "요리"
+  },
+  {
+    "id": 93,
+    "category_id": 12,
+    "text": "게임"
+  },
+  {
+    "id": 94,
+    "category_id": 12,
+    "text": "낚시"
+  },
+  {
+    "id": 95,
+    "category_id": 12,
+    "text": "등산"
+  },
+  {
+    "id": 96,
+    "category_id": 12,
+    "text": "독서"
+  }
+]

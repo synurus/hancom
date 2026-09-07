@@ -1,0 +1,54 @@
+{
+  "backedUpAt": "2026-09-07T01:21:21.504Z",
+  "source": "https://dndluavxymizmehqtran.supabase.co",
+  "tables": [
+    {
+      "table": "categories",
+      "rows": 12
+    },
+    {
+      "table": "game_messages",
+      "rows": 440
+    },
+    {
+      "table": "game_votes",
+      "rows": 105
+    },
+    {
+      "table": "games",
+      "rows": 10
+    },
+    {
+      "table": "players",
+      "rows": 46
+    },
+    {
+      "table": "survey_questions",
+      "rows": 2
+    },
+    {
+      "table": "survey_reasons",
+      "rows": 10
+    },
+    {
+      "table": "survey_response_reasons",
+      "rows": 24
+    },
+    {
+      "table": "survey_responses",
+      "rows": 31
+    },
+    {
+      "table": "v_survey_free_texts",
+      "rows": 19
+    },
+    {
+      "table": "v_survey_reason_counts",
+      "rows": 10
+    },
+    {
+      "table": "words",
+      "rows": 96
+    }
+  ]
+}

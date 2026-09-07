@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "question_id": 1,
+    "code": "awkward_speech",
+    "text": "말이 어색했다.",
+    "sort_order": 1,
+    "is_other": false,
+    "created_at": "2026-08-10T03:59:55.147745+00:00"
+  },
+  {
+    "id": 2,
+    "question_id": 1,
+    "code": "slow_response",
+    "text": "반응이 느렸다.",
+    "sort_order": 2,
+    "is_other": false,
+    "created_at": "2026-08-10T03:59:55.147745+00:00"
+  },
+  {
+    "id": 3,
+    "question_id": 1,
+    "code": "different_info",
+    "text": "다른 사람들과 다른 정보를 아는 것 같았다.",
+    "sort_order": 3,
+    "is_other": false,
+    "created_at": "2026-08-10T03:59:55.147745+00:00"
+  },
+  {
+    "id": 4,
+    "question_id": 1,
+    "code": "just_a_feeling",
+    "text": "그냥 감이었다.",
+    "sort_order": 4,
+    "is_other": false,
+    "created_at": "2026-08-10T03:59:55.147745+00:00"
+  },
+  {
+    "id": 5,
+    "question_id": 1,
+    "code": "other",
+    "text": "기타",
+    "sort_order": 5,
+    "is_other": true,
+    "created_at": "2026-08-10T03:59:55.147745+00:00"
+  },
+  {
+    "id": 7,
+    "question_id": 4,
+    "code": "same_phrases",
+    "text": "매번 비슷한 말투나 문구를 썼다.",
+    "sort_order": 1,
+    "is_other": false,
+    "created_at": "2026-08-28T08:15:46.137441+00:00"
+  },
+  {
+    "id": 8,
+    "question_id": 4,
+    "code": "too_vague",
+    "text": "아무도 콕 집지 않고 두루뭉술하게만 말했다.",
+    "sort_order": 2,
+    "is_other": false,
+    "created_at": "2026-08-28T08:15:46.137441+00:00"
+  },
+  {
+    "id": 9,
+    "question_id": 4,
+    "code": "off_context",
+    "text": "상황에 안 맞는 말을 했다.",
+    "sort_order": 3,
+    "is_other": false,
+    "created_at": "2026-08-28T08:15:46.137441+00:00"
+  },
+  {
+    "id": 10,
+    "question_id": 4,
+    "code": "knows_too_much",
+    "text": "다른 사람들과 다른 정보를 아는 것 같았다.",
+    "sort_order": 4,
+    "is_other": false,
+    "created_at": "2026-08-28T08:15:46.137441+00:00"
+  },
+  {
+    "id": 11,
+    "question_id": 4,
+    "code": "other",
+    "text": "기타",
+    "sort_order": 5,
+    "is_other": true,
+    "created_at": "2026-08-28T08:15:46.137441+00:00"
+  }
+]

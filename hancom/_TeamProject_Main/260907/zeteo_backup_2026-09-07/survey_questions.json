@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "code": "bot_reason",
+    "text": "왜 봇이라고 생각했나요?",
+    "created_at": "2026-08-10T03:59:55.147745+00:00",
+    "description": "적중자 대상 · 해당하는 이유 선택 (복수)",
+    "is_active": false
+  },
+  {
+    "id": 4,
+    "code": "bot_reason_g2",
+    "text": "왜 봇이라고 생각했나요?",
+    "created_at": "2026-08-28T08:15:46.000079+00:00",
+    "description": "적중자 대상 · 해당하는 이유 선택 (복수)",
+    "is_active": true
+  }
+]

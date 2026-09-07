@@ -1,0 +1,3502 @@
+{
+  "guild": {
+    "id": "1531480546134462484",
+    "name": "ZETEO",
+    "iconUrl": "https://cdn.discordapp.com/icons/1531480546134462484/b900b60579718444a13ba25447b7a1c6.png?size=512"
+  },
+  "channel": {
+    "id": "1533060065903251546",
+    "type": "GuildTextChat",
+    "categoryId": "1533059955018432673",
+    "category": "work-logs",
+    "name": "이현우-logs",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2026-09-07T09:43:15.1057724+09:00",
+  "messages": [
+    {
+      "id": "1533449439061086339",
+      "type": "Default",
+      "timestamp": "2026-08-02T21:20:36.385+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [
+        {
+          "id": "1533449437727428698",
+          "url": "https://cdn.discordapp.com/attachments/1533060065903251546/1533449437727428698/partc_mock_13screens.png?ex=6a9f54d4&is=6a9e0354&hm=bfb0e3376c3683341f05cd46adf5d4e384a5f44660a9e77ca721371b7d0ddd9e&",
+          "fileName": "partc_mock_13screens.png",
+          "fileSizeBytes": 142443
+        },
+        {
+          "id": "1533449438230614096",
+          "url": "https://cdn.discordapp.com/attachments/1533060065903251546/1533449438230614096/Zeteo_PARTC_.md?ex=6a9f54d4&is=6a9e0354&hm=95148c63e9c806d66d0d58dc934e730472f0d7a50aacd3b7debc4e448753529b&",
+          "fileName": "Zeteo_PARTC_.md",
+          "fileSizeBytes": 15902
+        },
+        {
+          "id": "1533449438604038306",
+          "url": "https://cdn.discordapp.com/attachments/1533060065903251546/1533449438604038306/zeteo-partc.zip?ex=6a9f54d4&is=6a9e0354&hm=49b4d97afc8f17f5ba7f7d637f6956b16eef338d3c920e145c4b364273022469&",
+          "fileName": "zeteo-partc.zip",
+          "fileSizeBytes": 20886
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "1347110218206679051",
+              "name": "mr.park0",
+              "discriminator": "0000",
+              "nickname": "FE_12_박진",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1533651872617988096",
+      "type": "Default",
+      "timestamp": "2026-08-03T10:45:00.306+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@이현우 현우님, 어젯밤에 파트 C 스캐폴드 전체를 읽어봤어요. **먼저 확인된 것부터 말씀드릴게요.**\n\n━━━━━━━━━━━━━━━━━━━━\n**✅ 확인한 것**\n\n- mock에 `: GameState` 타입 붙여두신 것 — 이게 없으면 통합 때 어긋나는데, 정확히 처리하셨어요\n- `game.css`의 `var(--토큰, fallback)` 방식 — **박진님 파일이 늦어도 렌더되고 나중에 fallback만 지우면 되는 구조.** 되돌릴 코드가 없다는 게 큽니다\n- 과반을 인원수에서 계산하신 것 (`Math.floor(voters / 2) + 1`) — 인원이 바뀌어도 안 깨져요\n- `GameScreen.tsx` 단일 진입점 + `default: return null`로 파트 D 경계 지킨 것\n\n**★ 6개는 전부 타당하다고 판단했습니다.** 특히 **★1 `myId`는 제 기획서 초안의 실수**였어요. 클라이언트가 자기 id를 알 방법이 계약에 아예 없었는데, 화면을 실제로 그려보셔서 발견하신 거죠. 오늘 회의에서 승인이 아니라 확정으로 처리할 예정입니다.\n\n━━━━━━━━━━━━━━━━━━━━\n**\uD83D\uDD0D 그런데 두 가지가 빠져 있어요**\n\n**1. `reveal-liar` mock이 없습니다 — 게임 하이라이트가 미검증 상태예요**\n\nmock에 `reveal` 페이즈가 `reveal-citizen` 하나뿐이고, 거기 `revealedRole: 'citizen'`이라서요. 그래서 `Reveal.tsx`의 이 줄이 **한 번도 화면에 나온 적이 없어요.**\n\n```tsx\n{wasLiar && <p>제시어 추측 단계로 넘어갑니다…</p>}\n```\n\n시민을 죽이면 게임이 그냥 끝나지만, **라이어를 잡으면 제시어 추측으로 이어지는 클라이맥스**잖아요. 그쪽이 검증이 안 된 상태입니다.\n\n```ts\n'reveal-liar': { ...base, phase: 'reveal', accused: 'p2',\n                 revealedRole: 'liar', liarGameResult: 'citizenWin' },\n```\n\n**2. `round: 2` 화면을 한번 띄워봐 주실 수 있나요?**\n\n★2로 `round`를 제안하신 근거가 *\"재투표·살린다 복귀 시 표가 그냥 사라진 것으로 보인다\"*였는데, **정작 그 상태의 mock이 없어서 실물을 못 봤어요.** `base`에 `round: 1`로 고정돼 있어서요.\n\n실물을 봐야 답이 나오는 질문이 세 개 있습니다.\n\n- 재투표하면 **이전 라운드 채팅이 남나요, 지워지나요?**\n- \"2라운드\"를 화면 어디에 표시하나요?\n- **동점 재투표와 \"살린다\" 복귀를 화면에서 구분해서 보여줄 건가요?**\n\n마지막이 핵심이에요. 플레이어 입장에선 두 상황의 의미가 완전히 다른데(*\"의견이 안 갈렸다\"* vs *\"박진은 살았으니 다른 사람을 찾아라\"*), 지금 계약으론 **둘 다 `phase: 'debate'` + `round` 증가로 똑같이 보입니다.**\n\n다만 **★6(`speakerId: 'system'`)으로 해결될 수도 있어요.** 서버가 채팅에 안내를 넣어주면 되니까요.\n> *시스템: 동점입니다. 재투표를 시작합니다.*\n> *시스템: 박진님이 살아남았습니다. 토론을 재개합니다.*\n\n이러면 별도 필드 없이 구분됩니다. **화면을 보시면 어느 쪽이 나은지 바로 판단되실 것 같아요.** 별도 필드가 필요하다는 결론이면 ★7이 되는 거고요.\n\n두 개 다 오늘 중에 확인 가능하실까요?",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1531483488815943793",
+          "name": "ihyeonu_56073",
+          "discriminator": "0000",
+          "nickname": "이현우",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        }
+      ],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "✅",
+          "code": "white_check_mark",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDD0D",
+          "code": "mag",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f50d.svg"
+        }
+      ]
+    },
+    {
+      "id": "1533661880583979199",
+      "type": "Default",
+      "timestamp": "2026-08-03T11:24:46.391+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "1. reveal-liar 화면 추가\n2. debate-novote / debate-voted 화면 수정\n   - [1라운드] 배지 추가. mock 데이터는 그대로고 표시만 늘어남.",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [
+        {
+          "id": "1533661880428527626",
+          "url": "https://cdn.discordapp.com/attachments/1533060065903251546/1533661880428527626/partc_mock_14screens.png?ex=6a9ec92e&is=6a9d77ae&hm=c386129ac9e6d33cf3641296e789a859d17884af3b5b8a5174c10f892951e360&",
+          "fileName": "partc_mock_14screens.png",
+          "fileSizeBytes": 190745
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1533662144170819674",
+      "type": "Default",
+      "timestamp": "2026-08-03T11:25:49.235+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "round: 2 화면\n - 헤더 왼쪽에 배지 추가",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [
+        {
+          "id": "1533662143923097660",
+          "url": "https://cdn.discordapp.com/attachments/1533060065903251546/1533662143923097660/partc_round2_compare.png?ex=6a9ec96d&is=6a9d77ed&hm=5c2e143ec73bc4ac8e20657b844a3dd0078ff68adb62a7536d79930022262155&",
+          "fileName": "partc_round2_compare.png",
+          "fileSizeBytes": 160894
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1533663017416265828",
+      "type": "Default",
+      "timestamp": "2026-08-03T11:29:17.433+09:00",
+      "timestampEdited": "2026-08-03T11:30:28.389+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Q&A\n\n1. 재투표하면 이전 라운드 채팅이 남나요, 지워지나요?\n 이전 라운드 채팅은 남깁니다. 룰북 S4에 *\"매 라운드 정보가 누적되어 자연히 수렴한다는 전제\"*라고 적혀 있음. 지우면 그 전제가 깨짐. 봇 판별 데이터 측면에서도 발언 패턴 누적 필요.\n\n2. \"2라운드\"를 화면 어디에 표시하나요?\n 헤더 왼쪽에 배지 추가\n\n3. 동점 재투표와 \"살린다\" 복귀를 화면에서 구분해서 보여줄 건가요?\n 시스템 메시지만으로 충분합니다. ★7은 필요 없다고 봅니다.\n\n  별도 필드보다 시스템 메시지가 나은 이유가 두 개 있습니다.\n\n첫째, returnReason: 'tie' | 'spared' 같은 필드를 만들면 화면이 그걸 문구로 번역해야 해서 카피가 프론트에 하드코딩됩니다. 시스템 메시지는 서버가 문장까지 만들어 보내니까 민성님이 한 곳에서 관리하실 수 있어요.\n\n둘째, *\"박진님이 살아남았습니다\"*처럼 이름이 들어간 문장은 필드로 표현이 안 됩니다. 결국 화면이 조립해야 하고요.\n\n.is-system에 위아래 구분선을 넣어서 라운드 경계선으로 읽히게 했습니다. 로그가 길어져도 어디서 라운드가 갈렸는지 보여요.\n\n다만 round 필드는 그대로 필요합니다. 시스템 메시지는 스크롤되어 올라가버려서 3라운드쯤 되면 화면 밖으로 나갑니다. 헤더 배지는 항상 보이고요. 둘은 대체 관계가 아니라 역할이 다릅니다 — round는 상태(지금 몇 번째인가), 시스템 메시지는 사건(왜 돌아왔는가).",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1533663698617634876",
+      "type": "Default",
+      "timestamp": "2026-08-03T11:31:59.844+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [
+        {
+          "id": "1533663698076565545",
+          "url": "https://cdn.discordapp.com/attachments/1533060065903251546/1533663698076565545/zeteo-partc.zip?ex=6a9ecadf&is=6a9d795f&hm=f3d098a9753a715355fbab895ec2f442edc4d6c8183df74eacbe57174185874d&",
+          "fileName": "zeteo-partc.zip",
+          "fileSizeBytes": 38169
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1533672102182518815",
+      "type": "Default",
+      "timestamp": "2026-08-03T12:05:23.41+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "현우님, 저장소 구조가 바뀌었어요 (유민성님이 만든 모노레포 구조를 기반으로 다시 세팅함).\n\n화면 파일들은 그대로 다 가져왔고, 코드는 안 건드렸어요. 위치랑 import 경로만 바뀌었습니다.\n- `client/src/screens/...` → `apps/frontend/src/screens/...` (경로 앞부분만 이동)\n- `'../../../shared/types'` 같은 상대경로 import → `'@zeteo/shared-types'`로 일괄 변경\n\n작업 이어가시려면\n```\ngit fetch origin\ngit reset --hard origin/main\n```\n(main을 강제로 다시 써서 기존 클론이면 pull이 아니라 이렇게 하셔야 해요. 아니면 그냥 새로 클론)\n\n화면 확인은 `npm install` → `npm run dev -w frontend` → `/?mock=`으로 이전과 동일하게 됩니다.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1533720145317597307",
+      "type": "Default",
+      "timestamp": "2026-08-03T15:16:17.786+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "현우님, 추가 작업분 확인했어요. **그리고 먼저 정정할 게 하나 있어요.**\n\n**제가 틀렸어요.** `reveal-liar` mock을 드리면서 `liarGameResult: 'citizenWin'`으로 쓰라고 했는데, 현우님이 `null`로 두시고 *\"제시어 추측 결과가 나와야 확정된다\"*고 달아두신 게 맞습니다. 라이어를 잡아도 게임이 안 끝나고 제시어 추측이 남아 있으니까요. **룰을 화면 상태로 옮기는 과정에서 제가 한 단계 앞서 판정해버린 거예요.** 기획서 v2.0에 \"`reveal` 단계에서 `liarGameResult`는 항상 `null`\"로 명시할게요.\n\n라운드 건도 요청드린 것보다 더 해주셨네요 — 진입 경로 2종(`revote` / `spared`)을 각각 mock으로 파신 것, `spared` 쪽에서 `accused`를 같이 푸신 것 둘 다 정확해요. **★7 기각 판단도 그대로 채택합니다.** 특히 이 정리가 좋았어요.\n\n> `round`는 상태(지금 몇 번째인가), 시스템 메시지는 사건(왜 돌아왔는가).\n\n서버가 시스템 메시지 문장까지 만들어 보내는 걸로 확정했고, 이건 민성님 작업 항목으로 넘겼어요.\n\n**\uD83D\uDCCC 부탁: 작업분을 브랜치에 올려주세요**\n\n지금 `main`엔 mock이 13개예요. 바뀐 파일은 3개고요 — `mock/states.ts`, `screens/Debate.tsx`, `screens/game.css`.\n```\ngit clone https://github.com/Scalmia/Zeteo.git\ncd Zeteo && npm install\ngit checkout feat/game-ui\n# 위 3개 파일 반영 (import 경로만 '@zeteo/shared-types' 로)\nnpm run format\nnpm run build -w frontend\ngit add -A && git commit -m \"feat(ui): 라운드 배지 · 재투표/살린다 mock · reveal-liar 추가\"\ngit push origin feat/game-ui\n```\nDiscord로 파일 주고받는 것보다 이게 훨씬 빨라요. 앞으로 이 방식으로 부탁드려요.\n\n**\uD83D\uDCCC 알아두실 것 2가지**\n\n1. **다크 테마로 확정됐어요.** 박진님 `tokens.css` 초안이 라이트(크림+금색)로 나왔는데, 팀 논의 결과 다크로 갑니다. **현우님이 `game.css`에 박아두신 fallback 값들이 사실상 기준선**이 됐어요. 다만 그 값 그대로 확정은 아니고 계속 다듬을 예정이에요.\n2. **결과 화면에 설문이 추가됐어요** — 박진님 제안, 채택. 봇을 맞힌 사람에게 \"왜 봇이라 생각했나\"를 묻는 건데 S7(박진님 구역)이라 현우님 화면엔 영향 없어요. `ClientEvent`에 이벤트 하나가 늘어난다는 것만 참고해주세요.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCCC",
+          "code": "pushpin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cc.svg"
+        }
+      ]
+    },
+    {
+      "id": "1533743554822799371",
+      "type": "Default",
+      "timestamp": "2026-08-03T16:49:19.047+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "관리자에게 전할 것 하나\n\nnpm run format은 이번에 일부러 건너뛰었어. 지금 저장소가 LF로 커밋돼 있는데 Windows에서 체크아웃하면 CRLF로 깔려서, npm run format을 돌리면 줄바꿈만 바뀐 40개 파일이 전부 수정으로 잡혀. 루트에 .gitattributes 한 줄이면 해결돼:\n\n* text=auto eol=lf\n\n전 파트 작업 폴더에 영향 가는 파일이라 관리자가 올리는 게 맞고, 그때까지는 각자 git add -A 대신 파일 지정으로 커밋하는 게 안전해. 커밋 끝내고 전달하면 될 것 같아.",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1533746233800396963",
+      "type": "Default",
+      "timestamp": "2026-08-03T16:59:57.765+09:00",
+      "timestampEdited": "2026-08-03T17:07:19.691+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "물어볼 것:\n\n§4 \"reveal에서 liarGameResult는 항상 null\" — 시민 처형 케이스도 포함인가요? 그 경우엔 reveal 시점에 라이어 승이 확정되는데, null이면 승패 표시가 S7 전용이 됩니다. 의도하신 게 맞으면 Reveal.tsx의 승패 표시 블록을 삭제하고 reveal-citizen mock도 null로 맞추겠습니다. (반전 연출을 위해 일부러 미루는 거라면 그게 더 나은 설계 같습니다.)",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1533993085111898112",
+      "type": "Default",
+      "timestamp": "2026-08-04T09:20:51.704+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "https://help.openai.com/ko-kr/articles/10306912-sharing-feedback-evaluation-and-fine-tuning-data-and-api-inputs-and-outputs-with-openai#h_f2f71332e6\n\nOpenAI와 평가 및 파인튜닝 데이터를 공유하는 방법\n기본적으로 평가 및 파인튜닝 데이터에 대한 데이터 공유는 모든 조직에서 비활성화되어 있습니다. 계정 소유자는 조직의 설정 페이지에서 모든 프로젝트 또는 선택한 프로젝트에 대해서만 이 기능에 참여할 수 있습니다. 계정 소유자는 언제든지 이러한 설정을 변경하고 다시 참여 해제를 선택할 수 있습니다. 이 설정은 데이터 비보관이 활성화된 고객을 포함한 일부 조직에서는 사용할 수 없습니다.\n\n이 설정이 ‘Enabled’로 되어 있으면, 활성화된 프로젝트에서 OpenAI로 전송된 평가 및 파인튜닝 데이터가 OpenAI와 공유됩니다. OpenAI와 공유하는 평가는 현재 주당 최대 7회 실행까지 무료로 처리됩니다. 강화학습 기반 파인튜닝 작업의 데이터를 공유하는 경우, 결과 모델에는 할인된 추론 요금이 적용됩니다.",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1533998646134181959",
+      "type": "Default",
+      "timestamp": "2026-08-04T09:42:57.555+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "현우님, 둘 다 답 드릴게요.\n\n**1. `.gitattributes` 넣었습니다**\n루트에 `* text=auto eol=lf` 한 줄 추가해서 `main`에 푸시했어요. 이제 로컬 디스크 줄바꿈이 OS 상관없이 `LF`로 고정되니, `npm run format` + `git add -A` 다시 편하게 쓰셔도 됩니다. 다른 분들께도 이제 문제없다고 전달해둘게요.\n\n**2. reveal 결과 표시 — 확정: 시민을 잘못 죽인 경우도 즉시 안 보여주고 S7까지 미룹니다**\n\n이유는, 라이어 잡은 경우만 결과를 숨기고 시민 죽인 경우만 즉시 보여주면 — **\"reveal 화면에서 결과가 안 뜬다\"는 사실 자체가 \"라이어를 잡았다\"는 스포일러가 되기 때문**이에요. 어느 쪽이든 화면만 보고 구분 못 하게 둘 다 똑같이 숨겨야 해요. 말씀하신 \"반전 연출\"에 가까운 쪽으로 확정입니다.\n\n그래서:\n- **프론트는 지금 그대로 두시면 됩니다.** `{state.liarGameResult && (...)}` 조건부 블록, 지우실 필요 없어요 — reveal 단계에선 값이 항상 null이라 자연히 안 뜨는 것뿐이고, 나중에 로직이 바뀌어도 그대로 살아있는 게 안전해요.\n- **`reveal-citizen` mock의 `liarGameResult`만 `null`로 맞춰주세요.** 지금 거기 값이 들어있으면(전에 \"라이어 승리\" 뜨던 그 mock) 이제 안 맞는 상태예요.\n- 백엔드(`liarGameResult`를 실제로 채우는 로직)는 아직 아무 데도 없어요 — `room.ts`가 `null`로 시작한 뒤로 아무도 안 채우고 있습니다. `result` 단계 진입 직전에 채우는 걸로 확정했고, 이건 민성님 작업 항목입니다.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "1531483488815943793",
+              "name": "ihyeonu_56073",
+              "discriminator": "0000",
+              "nickname": "이현우",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1534007226581258390",
+      "type": "Default",
+      "timestamp": "2026-08-04T10:17:03.293+09:00",
+      "timestampEdited": "2026-08-04T10:18:33.169+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "git ls-tree origin/dev로 확인해보니 .gitattributes가 dev에 없습니다. main에만 있어서 feat/* 브랜치 작업자들에겐 아직 적용이 안 됩니다.\n\n겸사겸사, main이 e887783 이후로 몇 커밋 앞서 있는데 dev는 착수 시점 그대로입니다. README 규약은 feat/* → dev → main 순인데 지금 main에 직접 들어가고 있어서, 나중에 dev를 main에 병합할 때 꼬일 것 같습니다. .gitattributes를 dev에 넣는 김에 정리하면 좋겠습니다.",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1534008907448713386",
+      "type": "Default",
+      "timestamp": "2026-08-04T10:23:44.043+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "현우님 말씀 맞았어요 — `main`에만 있었어요. `dev`, `feat/server`, `feat/game-ui`, `feat/layout`, `feat/bot` 전부에 같은 파일 추가해서 push했습니다. 이제 어느 브랜치에서 작업하시든 `npm run format` + `git add -A` 문제없이 쓰실 수 있어요. 짚어주셔서 감사해요.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1534358343706214580",
+      "type": "Default",
+      "timestamp": "2026-08-05T09:32:16.139+09:00",
+      "timestampEdited": "2026-08-05T11:19:44.915+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\"fix(ui): 계약 확정 반영 — PublicPlayer.label 대응, mock에 S6/S7 필드 추가\"\n푸쉬완료",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDE0E",
+            "code": "sunglasses",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f60e.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "610425959442808842",
+              "name": ".scalmia",
+              "discriminator": "0000",
+              "nickname": "김정현",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1534381655635136523",
+      "type": "Default",
+      "timestamp": "2026-08-05T11:04:54.136+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "현우님, 두 가지 알려드릴게요.\n\n**1. `view.ts`의 `reasons` 컴파일 에러 — 이미 해결돼 있어요**\n\n민성님이 `view.ts` 상단에 placeholder를 넣어두셨어요. `feat/server` 최신에서 확인했습니다.\n```ts\nconst SURVEY_REASONS: SurveyReason[] = [\n  { id: 1, label: '말이 어색했다' },\n  { id: 2, label: '반응이 느렸다' },\n  ...\n]\n```\n*\"실제 문구는 설문 기획 확정되면 교체\"* 주석까지 달려 있어요. 그 커밋 전 상태를 보신 것 같으니 다시 fetch해보시면 될 것 같아요.\n\n**2. \uD83D\uDD34 `PublicPlayer`에 `isReady`가 추가됩니다 — mock이 또 깨져요**\n\n박진님이 대기실 화면 만들다가 \"누가 준비 완료했는지\" 표시할 방법이 없다고 하셔서 추가했어요. 민성님이 이미 서버 쪽엔 반영하신 상태고요.\n```ts\nexport interface PublicPlayer {\n  id: string;\n  label: string;\n  isAlive: boolean;\n  isReady: boolean;   // ← 추가\n}\n```\n\n현우님 `mock/states.ts`의 플레이어 리터럴이 `TS2741`로 걸릴 거예요.\n```ts\n{ id: 'p1', label: '참가자 4', isAlive: true },   // ← isReady 필요\n```\n\n**어제처럼 dev에 반영되면 그때 같이 고쳐주시면 됩니다.** 계약 변경이 이틀 새 네 번째라 번거로우실 텐데, 화면을 실제 데이터에 연결할 때마다 빠진 게 드러나는 거라 지금 나오는 게 나아요. 곧 잦아들 거예요.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDD34",
+          "code": "red_circle",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f534.svg"
+        }
+      ]
+    },
+    {
+      "id": "1534385294940442735",
+      "type": "Default",
+      "timestamp": "2026-08-05T11:19:21.814+09:00",
+      "timestampEdited": "2026-08-05T11:19:38.811+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\"chore: 실명을 역할 라벨로 교체 (README.md, mock/states.ts 주석에 팀원 이름 들어간 부분 수정)\"\n푸쉬완료",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1534460344775348276",
+      "type": "Default",
+      "timestamp": "2026-08-05T16:17:35.089+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "영상리뷰\n\n- 대기실 준비시간? : 시간을 무한으로 줄 수는 없고 준비 안된 경우 어떻게 할지 고려\n\n- 역할창 준비완료 시간? : 시간을 무한으로 줄 수는 없고 준비 안된 경우 어떻게 할지 고려\n \n- 채팅 나오는 화면들 UI 일관성\n  키워드발언 - 자유발언 - 최후변론\n  전환 과정에서 UI 변동이큼\n\n- 전체화면이 아니라 채팅창만 스크롤하게 변경",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1534740703677124739",
+      "type": "Default",
+      "timestamp": "2026-08-06T10:51:37.86+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [
+        {
+          "id": "1534740703433723956",
+          "url": "https://cdn.discordapp.com/attachments/1533060065903251546/1534740703433723956/6658ed06680658db.png?ex=6a9ec169&is=6a9d6fe9&hm=73090a61b9918bfea54aaa682d9c7e33b10e71b6698afb0ee6c972ee03a91db9&",
+          "fileName": "6658ed06680658db.png",
+          "fileSizeBytes": 132996
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1534746976208556034",
+      "type": "Default",
+      "timestamp": "2026-08-06T11:16:33.348+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Mock 2개 제거\n\"chore(mock): debate-novote, debate-round2-revote 제거 — debate-voted, debate-round2-spared로 충분\"\n푸쉬완료",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1534747873885950193",
+      "type": "Default",
+      "timestamp": "2026-08-06T11:20:07.371+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "채팅창만 스크롤되게 변경\n\"fix(ui): 채팅 로그가 페이지를 스크롤시키던 문제 — 타이머·투표 패널 이탈 해결 (B-1, B-2)\"\n푸쉬완료",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1534782384312946830",
+      "type": "Default",
+      "timestamp": "2026-08-06T13:37:15.298+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "2026-08-06 12:00\nMoch 1개 제거\n\"@synurus\nchore(mock): finalDefense-other 제거 — finalDefense-accused와 화면 차이 없음\"\n푸쉬완료",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1534826998797439106",
+      "type": "Default",
+      "timestamp": "2026-08-06T16:34:32.22+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "2026-08-06 16:34\n\"feat(ui): RoleReveal 준비완료 버튼 옆에 잔여시간 타이머 추가\"\n푸쉬완료",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1534828406229962852",
+      "type": "Default",
+      "timestamp": "2026-08-06T16:40:07.778+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "2026-08-06 16:39\n\"fix(ui): RoleReveal 준비완료 버튼 제거 — roleReveal은 타이머로만 전환됨\"\n푸쉬완료",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1534924911100035182",
+      "type": "Default",
+      "timestamp": "2026-08-06T23:03:36.332+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [
+        {
+          "id": "1534924910793719941",
+          "url": "https://cdn.discordapp.com/attachments/1533060065903251546/1534924910793719941/-001.png?ex=6a9ec438&is=6a9d72b8&hm=d0c7f398fbc41bd0f17c45d19f04ab4bee1261df0c6701632982afbb9a971e4a&",
+          "fileName": "-001.png",
+          "fileSizeBytes": 192358
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535079316218716201",
+      "type": "Default",
+      "timestamp": "2026-08-07T09:17:09.381+09:00",
+      "timestampEdited": "2026-08-07T09:17:25.061+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "시각자료 되게 좋은데, PC 기준으로 만들어 주는게 좋을 것 같아요. 모바일은 있으면 좋다 수준이지 필수는 아니거든요.\n\n혹시 이런 느낌으로 PC 구조를 설계하려고 하는거면 말해주세요.\n\n(꼭 계속 만들어달라는건 아니예요. 혹시나 만든다면)",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535082242169380946",
+      "type": "Default",
+      "timestamp": "2026-08-07T09:28:46.982+09:00",
+      "timestampEdited": "2026-08-07T09:29:09.729+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "전체적인 틀은 PC랑 모바일에서 동일하고, 크기가 조정되는 정도겠네.\n토론 종료 시점 같이 이벤트 팝업창 뜨는 상황에, PC에서는 [그림+텍스트]로 보여주는데, 모바일에서는 텍스트로만 보여줘서 채팅창 많이 가리지 않게 처리하는게 좋아보이고.",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535082854013472871",
+      "type": "Default",
+      "timestamp": "2026-08-07T09:31:12.857+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "그게 가능할까요? PC랑 모바일은 별개의 화면을 만들어야 되지 않나 싶어요. 같은 방식으로 하는 경우는 저는 본적이 없어서요.\n\n```PC에서는 [그림+텍스트]로 보여주는데, 모바일에서는 텍스트로만 보여줘서 채팅창 많이 가리지 않게 처리하는게 좋아보이고. ``` 이거는 그렇게 해야하나라는 생각이 들긴해요. 어차피 스크롤이 가능하다면 크게 문제 될 것 같진 않아요.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535083608367300710",
+      "type": "Default",
+      "timestamp": "2026-08-07T09:34:12.709+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [
+        {
+          "id": "1535083607348092990",
+          "url": "https://cdn.discordapp.com/attachments/1533060065903251546/1535083607348092990/PC.png?ex=6a9f5804&is=6a9e0684&hm=5be52c1feeab7e610adefb1ab5ae3dd4092120d169aa48492206c0b3715bc1b3&",
+          "fileName": "PC.png",
+          "fileSizeBytes": 63533
+        },
+        {
+          "id": "1535083607889018993",
+          "url": "https://cdn.discordapp.com/attachments/1533060065903251546/1535083607889018993/090a8cc5d7d4cabd.png?ex=6a9f5804&is=6a9e0684&hm=17165777e7c86adde9c6874a6b5974004f430b0ed241995f058a78aaaf356eeb&",
+          "fileName": "090a8cc5d7d4cabd.png",
+          "fileSizeBytes": 44183
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535083721231704135",
+      "type": "Default",
+      "timestamp": "2026-08-07T09:34:39.618+09:00",
+      "timestampEdited": "2026-08-07T09:36:26.819+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "클로드 브라우저에서 보면 창은 똑같고 크기만 다른걸 확인할 수 있지",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535083845463056457",
+      "type": "Default",
+      "timestamp": "2026-08-07T09:35:09.237+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "PC랑 모바일에서 팝업창 다른거는 중요한건 아니고 테스트할때 거슬리면 바꿀 수 있다정도로 생각하면 될듯",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535084046999363634",
+      "type": "Default",
+      "timestamp": "2026-08-07T09:35:57.287+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "제가 봤던 여러 화면에서 모바일 화면으로 전환하기, PC 화면으로 전환하기 가 있어서 헷갈렸나봐요. 음.. 이 쪽에 대해선 잘 모르겠다만, 완전히 새로운 화면을 만들 필욘 없다는 정도로 이해할게요",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "1531483488815943793",
+              "name": "ihyeonu_56073",
+              "discriminator": "0000",
+              "nickname": "이현우",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535138394043064370",
+      "type": "Default",
+      "timestamp": "2026-08-07T13:11:54.632+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "주제 / 키워드 추가",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [
+        {
+          "id": "1535138393804111912",
+          "url": "https://cdn.discordapp.com/attachments/1533060065903251546/1535138393804111912/-001.png?ex=6a9ee24a&is=6a9d90ca&hm=a6ec21fb7fae0cb5e3e6853dcefa97e7d9f11b9ccc37d3cccae33401b64d7fc7&",
+          "fileName": "-001.png",
+          "fileSizeBytes": 230304
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536178672715956365",
+      "type": "Default",
+      "timestamp": "2026-08-10T10:05:36.395+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "npm run dev -w frontend\nhttp://localhost:5173/?mock=\n\nroleReveal-citizen\nroleReveal-liar\ndescribe-myturn\ndescribe-waiting\ndebate-voted\ndebate-round2-spared\nfinalDefense-accused\nlifeVote-voter\nlifeVote-accused\nreveal-citizen\nreveal-liar\nguessWord-liar\nguessWord-watcher",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536179505864122399",
+      "type": "Default",
+      "timestamp": "2026-08-10T10:08:55.033+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\"zeteo\\apps\\frontend\\src\\LobbyScreen.tsx\", \"zeteo\\apps\\frontend\\src\\LandingScreen.tsx\"\n\"zeteo\\apps\\frontend\\src\\ResultScreen.tsx\"\n\"zeteo\\apps\\frontend\\src\\SurveyScreen.tsx\"\n\"zeteo\\apps\\frontend\\src\\VoteScreen.tsx\"",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536182297563504721",
+      "type": "Default",
+      "timestamp": "2026-08-10T10:20:00.626+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Landing → Lobby → Vote → Result → Survey",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536185379512778833",
+      "type": "Default",
+      "timestamp": "2026-08-10T10:32:15.42+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\"refactor(ui): 게임 화면 13개를 메인화면 1개 + 페이즈 팝업 4종으로 통합\"\n\n\"feat(mock): 파트 D 화면 5종 추가 — 랜딩·대기실·봇지목·결과·설문 (13 → 18)\"\n\n푸쉬 2회 완료",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536185402019418284",
+      "type": "Default",
+      "timestamp": "2026-08-10T10:32:20.786+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "npm run dev -w frontend\nhttp://localhost:5173/?mock=",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536268347359105074",
+      "type": "Default",
+      "timestamp": "2026-08-10T16:01:56.496+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "시안1에서 \"dead\"(탈락) 상태는 채팅 게임 화면의 투표 패널(이현우 병장님 쪽, MainScreen/VotePanel)에서 나온 개념입니다. 오늘 D3 결정이 \"투표 패널이 곧 플레이어 목록\"이었죠 — 그래서 이미 게임 중 탈락한 참가자도 투표 패널 안에 계속 자리를 차지하되, 흐리게+취소선+클릭 불가로 표시하도록 설계돼 있었습니다.\n\n시안1 원본 코드로는 이렇게 돼 있습니다.\n\n<button class=\"cand out\" disabled>\n  <span>E</span><span class=\"n\">탈락</span><span class=\"cnt\">—</span>\n</button>\n.cand.out { opacity: .32; text-decoration: line-through; cursor: not-allowed; }\n\n즉 원래 의도된 상황은 저희(파트 D) 봇지목 화면이 아니라, 토론 도중 이미 죽은 참가자를 게임 화면 투표 패널에서 표시하는 경우였습니다. 그 부분은 이현우 병장님 파일 쪽 작업이라, 저희 Avatar.tsx엔 공용으로 쓰라고 미리 정의만 해둔 상태고 실제 연결은 안 돼 있는 겁니다.",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536272513728913488",
+      "type": "Default",
+      "timestamp": "2026-08-10T16:18:29.836+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\"feat(layout): feat/layout 확정 토큰 반영 - bp-mobile 768px, --vote-bg, 공용 Avatar\"\n\n\"fix(avatar): dead(탈락) 상태 표시 제거 - 이 게임엔 없는 상태\"\n\n푸쉬 2회 완료",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536272919129235506",
+      "type": "Reply",
+      "timestamp": "2026-08-10T16:20:06.491+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "dead 상태 삭제해서 커밋 완료.\nfeat/game-ui 브랜치에 적용완료",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1347110218206679051",
+          "name": "mr.park0",
+          "discriminator": "0000",
+          "nickname": "FE_12_박진",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1536268347359105074",
+        "channelId": "1533060065903251546",
+        "guildId": "1531480546134462484"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536533277731721248",
+      "type": "Default",
+      "timestamp": "2026-08-11T09:34:40.819+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "현우님, 어제 작업분 확인했습니다. 진행이 빨라서 놀랐어요.\n\n```\n14:52  투표 패널 → 접이식 하단 시트 (D3 해소)\n16:15  박진님 토큰 반영 — bp-mobile 768px 맞춤\n16:17  Avatar dead 상태 제거\n```\n\n**기획서 D3를 커밋 주석에 그대로 인용해주신 것** 잘 봤습니다. *\"세로로 이어붙이는 방식은 배제한다\"*가 실제 구현으로 이어졌네요. 900px로 임시 적용됐던 것도 박진님 토큰 나오자마자 768px로 맞춰주셨고요. 이게 어제 유일하게 제대로 굴러간 흐름이었습니다.\n\n━━━━━━━━━━━━━━━━━━━━\n## \uD83D\uDD34 다만 알려드릴 게 하나 있어요 — 색은 아직 확정이 아닙니다\n\n지금 `tokens.css`에 들어간 색·폰트는 **박진님이 새로 정한 게 아니라 V2.0 때 쓰던 걸 그대로 가져온 것**입니다. 배치는 현우님 시안으로 확정됐지만, **테마(색·분위기)는 아직 아무도 안 정한 상태예요.**\n\n박진님이 지금부터 테마를 새로 잡으실 예정입니다. 그러면 **나중에 색이 한 번 더 바뀝니다.**\n\n## 그래서 부탁 하나\n\n**색·폰트·간격을 리터럴로 직접 쓰지 말고 토큰(`var(--...)`)으로만 써주세요.**\n\n```css\n❌  background: #7c5cff;\n✅  background: var(--color-accent);\n```\n\n이러면 박진님 테마가 나올 때 **`tokens.css` 한 곳만 바뀌고 채팅 화면은 자동으로 따라옵니다.** 리터럴로 박아두면 그때 채팅 화면을 통째로 다시 훑어야 해요.\n\n`f06c0fa`에서 이미 `--vote-bg` 토큰을 참조하도록 바꿔주신 걸 보니 감은 잡고 계신 것 같은데, **fallback 값도 나중엔 정리 대상**이라는 것만 염두에 두시면 될 것 같습니다.\n\n```css\n/* 지금 */\nbackground: var(--vote-bg, color-mix(... #1a1a22));\n                           ↑ 이 fallback 이 테마 바뀌어도 살아남습니다\n```\n\n━━━━━━━━━━━━━━━━━━━━\n## 진행은 그대로 하시면 됩니다\n\n배치는 이미 확정이라 **채팅 화면 구현은 계속 나가셔도 됩니다.** 색만 토큰으로 빼두시면 테마가 나중에 붙어도 손댈 게 없어요.\n\n`botVote`(봇 지목)가 채팅 화면 안으로 들어오는 것도 잊지 마시고요 — 다섯 화면 체계에서 박진님 별도 화면이 아니라 현우님 쪽입니다. 2차 테스트 때 나왔던 *\"봇 지목할 때 대화도 같이 보여달라\"*가 이걸로 해결됩니다.\n\n고생 많으십니다!",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "1531483488815943793",
+              "name": "ihyeonu_56073",
+              "discriminator": "0000",
+              "nickname": "이현우",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDD34",
+          "code": "red_circle",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f534.svg"
+        }
+      ]
+    },
+    {
+      "id": "1536603741556314153",
+      "type": "Default",
+      "timestamp": "2026-08-11T14:14:40.704+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\"chore(tokens): feat/layout 병합 대비 선반영 — Avatar 이니셜 로직, tokens.css 동기화\"\n\n\"feat(sian1): 제시어 상시 표시(D4) 반영\"\n\n\"test(mock): GameScreen 팝업 확인용 mock 화면 추가\"\n\n\"fix: 시안대로 레이아웃 재구성 (하단바/입력창 폭 100%, 투표패널 하단바 밀착), mock 칩 바 채팅로그 하단으로 이동\"\n\n\"fix: 투표현황그래프 참가자 표시 버그 수정, 기권을 후보 목록에 병합, mock 참가자 라벨 영문자로 변경\"\n\n푸쉬 5회 완료",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536613440456753172",
+      "type": "Default",
+      "timestamp": "2026-08-11T14:53:13.102+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "fix: mock 팝업을 화면전환 대신 기본화면 오버레이로 변경, 투표 후보 목록 PC세로/모바일가로 적용, 투표요약탭에 타이머 추가\n\nfix: 모바일 투표 버튼 아바타 이중 링 제거, 시안 1과 일치하도록 수정\n\n푸쉬 2회 완료",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536624346934542358",
+      "type": "Default",
+      "timestamp": "2026-08-11T15:36:33.409+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "fix: 모바일 투표 버튼 강조색·기권 버튼 크기를 시안대로 수정\n\nfix: 기권 버튼 크기를 li 기준 flex sizing으로 근본 수정, mock 투표 그래프 실시간 갱신 반영\n\n푸쉬완료",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536629006118690918",
+      "type": "Default",
+      "timestamp": "2026-08-11T15:55:04.245+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "시안 기반으로 화면 작업 중.\ngame-ui 브랜치 적용 후\n\nnpm run dev -w frontend\nhttp://localhost:5173/?mock=game-test\n\n게임 화면 테스트 가능",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536636129590116392",
+      "type": "Default",
+      "timestamp": "2026-08-11T16:23:22.613+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "- Chat.tsx — myId prop 추가, 아바타 뱃지 마크업, 내 메시지 판별·오른쪽 정렬 로직 신규 추가\n- VotePanel.tsx — 득표 진행률 바 섹션(JSX) 신규 추가\n- MainScreen.tsx — 참가자 칩 목록 JSX, 제시어 배지 JSX 추가, Chat에 myId 전달하는 줄 추가\n\n**game.css**도 있습니다 — 원래 \"값만\" 범위였는데, 이번엔 값 조정을 넘어 .zt-word .zt-players/.zt-player .zt-tally* .zt-msg-avatar .zt-msg.is-mine 등 새 클래스 자체를 다수 신설했습니다.",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536890921415745586",
+      "type": "Reply",
+      "timestamp": "2026-08-12T09:15:49.718+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": ".zt-tally(득표 진행률 바) — 이미 있어. 그것도 그냥 있는 정도가 아니라 방금 이번 세션(7차)에서 실시간 갱신 버그까지 고쳐서 검증 완료한 바로 그 기능이야(VotePanel.tsx의 zt-tally-bar/zt-tally-fill, 8/10에 확정). D가 \"득표 진행률 바 섹션 신규 추가\"라고 한 건 이걸 모르고 새로 또 만드는 걸로 보여 — 그대로 병합하면 방금 고친 기능이 통째로 덮일 위험이 커.\n\n.zt-word(제시어 배지) — 이것도 이미 있어. 8/11 D4 결정으로 \"제시어를 전 페이즈 헤더에 상시 고정 표시\"까지 반영해서 지금 화면에 떠 있는 상태야. D의 \"제시어 배지 JSX 추가\"도 중복.\n\n참가자 칩 목록(.zt-players/.zt-player) — 이건 중복이 아니라 결정 번복이야. 예전에 팀이 \"좌측 참가자 목록은 없앤다, 발언 순서·진행도는 헤더 한 곳(zt-turn)으로 충분하다\"고 확정했었어(2026-08-06). D가 참가자 칩 목록을 다시 넣으려는 건 이 결정을 뒤집는 거라 나 혼자 판단할 문제가 아니야.",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1347110218206679051",
+          "name": "mr.park0",
+          "discriminator": "0000",
+          "nickname": "FE_12_박진",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1536636129590116392",
+        "channelId": "1533060065903251546",
+        "guildId": "1531480546134462484"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536897444275822774",
+      "type": "Default",
+      "timestamp": "2026-08-12T09:41:44.889+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": ".zt-tally(득표 진행률 바) - 이현우 코드로 진행\n\n.zt-word(제시어 배지) - 이현우 코드로 진행\n\n참가자 칩 목록(.zt-players/.zt-player) - 투표창을 개조해서 사용하기로 결정",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536910153343959121",
+      "type": "Default",
+      "timestamp": "2026-08-12T10:32:14.967+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "feat: 묘사 페이즈 발언 순서 표시를 투표 패널 재사용으로 구현\n\n푸쉬완료",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536916255817339040",
+      "type": "Default",
+      "timestamp": "2026-08-12T10:56:29.91+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "fix: 채팅 입력바 높이 통일, 화면 테두리 추가\n푸쉬완료",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536925098777256088",
+      "type": "Default",
+      "timestamp": "2026-08-12T11:31:38.236+09:00",
+      "timestampEdited": "2026-08-12T11:31:43.676+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "git merge origin/dev\n머지완료",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536928216621645875",
+      "type": "Default",
+      "timestamp": "2026-08-12T11:44:01.588+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "게임 화면 테스트\nnpm run dev -w frontend\nhttp://localhost:5173/?mock=game-test",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536929110146818079",
+      "type": "Default",
+      "timestamp": "2026-08-12T11:47:34.621+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "fix: 투표 관련 버튼 폰트 상속 안 되던 문제 수정, 투표창 회색 텍스트를 흰색으로 변경\n푸쉬완료",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536948380188545125",
+      "type": "Default",
+      "timestamp": "2026-08-12T13:04:08.957+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "fix: 투표창 배경 명도·강조표시 색 버그 수정, 화면 최대폭 1200px 제한\n푸쉬완료",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537007281324032061",
+      "type": "Default",
+      "timestamp": "2026-08-12T16:58:12.082+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "fix: 투표 패널 배경이 후보 버튼과 같은 톤이라 너무 어두워 보이던 문제 수정\nstyle: 파트D 텍스트 통일 지침 게임화면 적용 — 채팅입력창/버튼, 내 메시지 우측정렬, 헤더 폰트\n푸쉬완료",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537253485807013981",
+      "type": "Default",
+      "timestamp": "2026-08-13T09:16:31.805+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "fix: 봇 지목 클릭 무반응 버그 수정, 익명투표 태그 제거, 항상 PC 레이아웃 고정\n푸쉬완료",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537258845825409074",
+      "type": "Default",
+      "timestamp": "2026-08-13T09:37:49.733+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "fix: 채팅 팝업 스크롤 고정 + 새 메시지 스마트 자동스크롤",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537264493489299466",
+      "type": "Default",
+      "timestamp": "2026-08-13T10:00:16.241+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "fix: 모바일 100vh 스크롤바 깜빡임 수정 (100dvh 적용)",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537267576185425982",
+      "type": "Default",
+      "timestamp": "2026-08-13T10:12:31.213+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "feat: 투표창/투표현황바 전 페이즈 상시 노출 (PC 항상 펼침, 모바일은 토론시만 자동 펼침, 비토론 읽기전용)",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537270255162884127",
+      "type": "Default",
+      "timestamp": "2026-08-13T10:23:09.931+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "test: mock에 채팅 자동생성 토글 추가 (스크롤 고정·새메시지 알림 테스트용)",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537274358459015198",
+      "type": "Default",
+      "timestamp": "2026-08-13T10:39:28.233+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "test: mock 칩 바 위치를 좌상단 고정 패널로 변경 (알림핀·모달 접기칩 가림 수정)",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537278873538928671",
+      "type": "Default",
+      "timestamp": "2026-08-13T10:57:24.712+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "A안: animation 속성과 @keyframes zt-bg-pulse만 제거 — 깜빡이는 움직임은 없어지지만, 정적인 필름 그레인 질감(filter: url(#zt-noise))은 화면에 그대로 남음",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537293551845515375",
+      "type": "Default",
+      "timestamp": "2026-08-13T11:55:44.293+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "style: 채팅 로그에서 이름 라벨 제거 (아이콘·텍스트만 표시)",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537294998876332052",
+      "type": "Default",
+      "timestamp": "2026-08-13T12:01:29.292+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "⑤ apps/frontend/src/types.ts — LobbyPlayer에도 추가 (31~35줄)\n\n찾기:\n\nts\nexport interface LobbyPlayer {\n  id: PlayerId;\n  label: string;\n  isReady: boolean;\n}\n\n바꾸기:\n\nts\nexport interface LobbyPlayer {\n  id: PlayerId;\n  label: string;\n  isReady: boolean;\n  name: string | null;\n}\n\n⑥ apps/frontend/src/LobbyScreen.tsx — 화면에 이름 표시 (57~63줄)\n\n찾기:\n\ntsx\n              <span style={{ display: \"flex\", alignItems: \"center\", gap: \"var(--space-2)\" }}>\n                <Avatar label={p ? p.label : \"–\"} variant={p && p.id === myId ? \"mine\" : \"default\"} />\n                <span style={{ fontSize: \"var(--text-body)\", fontWeight: p ? 600 : 400, color: p ? \"var(--color-text)\" : \"var(--color-muted)\" }}>\n                  {p ? p.label : \"대기중\"}\n                  {p && p.id === myId ? \" (나)\" : \"\"}\n                </span>\n              </span>\n\n바꾸기:\n\ntsx\n              <span style={{ display: \"flex\", alignItems: \"center\", gap: \"var(--space-2)\" }}>\n                <Avatar label={p ? (p.name ?? \"?\") : \"–\"} variant={p && p.id === myId ? \"mine\" : \"default\"} />\n                <span style={{ fontSize: \"var(--text-body)\", fontWeight: p ? 600 : 400, color: p ? \"var(--color-text)\" : \"var(--color-muted)\" }}>\n                  {p ? (p.name ?? \"?\") : \"대기중\"}\n                  {p && p.id === myId ? \" (나)\" : \"\"}\n                </span>\n              </span>",
+      "author": {
+        "id": "389975441601200138",
+        "name": "hari1224",
+        "discriminator": "0000",
+        "nickname": "하리1224",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537324138538995742",
+      "type": "Default",
+      "timestamp": "2026-08-13T13:57:16.729+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "style: 채팅 메시지에 말풍선 스타일 추가 (내 메시지 accent 배경 구분)",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537357578370289767",
+      "type": "Default",
+      "timestamp": "2026-08-13T16:10:09.406+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "fix: 제시어 입력창 테마 적용, 역할 배정 라벨 표기, 모바일 투표 자기표시 강조 강화",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537367842482032704",
+      "type": "Default",
+      "timestamp": "2026-08-13T16:50:56.561+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "fix: 모바일 투표 자기표시 강조를 흰색 글자 + glow 재조정",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537617720302895144",
+      "type": "Default",
+      "timestamp": "2026-08-14T09:23:52.076+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "현우님, 어제 배포판 테스트에서 나온 것 하나 전달드려요.\n\n**모바일에서 채팅 입력창만 반응이 느립니다** (PC는 정상, 다른 컴포넌트도 정상).\n\n코드 보니 `ChatInputBar`(`components/Chat.tsx`) 자체는 문제없어요 — `text` 상태가 컴포넌트 안에 잘 갇혀 있습니다. 다만 이 컴포넌트가 **자주 리렌더되는 `MainScreen` 안에 있어서**, 서버가 상태를 통째로 보낼 때마다(설계원칙 2) 같이 다시 그려지는 것 같습니다. PC는 여유가 있어서 안 느껴지고 모바일은 CPU가 약해서 체감되는 거고요.\n\n**타이머가 매초 도는 게 원인일 가능성이 있어요** — Timer 컴포넌트 갱신이 부모까지 리렌더시키면 1초마다 입력창도 같이 다시 그려집니다. 혹시 \"1초 간격으로 뚝뚝 끊긴다\"는 느낌이었는지, 아니면 \"메시지 도착할 때만 끊긴다\"는 느낌이었는지 보시면 원인 좁히기 편할 것 같아요.\n\n고치신다면 `ChatInputBar`를 `React.memo`로 감싸는 게 제일 간단할 것 같습니다 (부모가 리렌더돼도 props 안 바뀌면 건너뜀). 그래도 안 되면 Timer를 별도로 격리하는 방향이고요.\n\n편하실 때 봐주세요!",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537623420668223549",
+      "type": "Default",
+      "timestamp": "2026-08-14T09:46:31.149+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "1. 채팅 속도 매우 느림 \n2. 상단, 하단 화면 고정 필요\n3. 채팅 입력시 투표현황란 닫히는게 좋을듯함\n4. 채팅 입력시 화면 크기 변경됨",
+      "author": {
+        "id": "389975441601200138",
+        "name": "hari1224",
+        "discriminator": "0000",
+        "nickname": "하리1224",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537651258184433785",
+      "type": "Default",
+      "timestamp": "2026-08-14T11:37:08.13+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "원인\n\nChatLog가 messages.map(...)로 전체 메시지 배열을 매번 새로 그리는데, 이게 \"새 메시지가 왔을 때만\" 도는 게 아니라 게임 상태(state)가 바뀔 때마다 — 즉 누가 투표하든, 봇이 채팅을 하든, 타이머 phase가 바뀌든, 서버에서 브로드캐스트가 올 때마다 매번 통째로 다시 실행돼요. key={m.id}가 있어서 실제 DOM은 안 바뀐 메시지는 안 건드리긴 하지만, React가 \"이 메시지, 안 바뀌었으니 건너뛰어도 돼\"라고 판단하려면 각 메시지 행이 React.memo로 감싸져 있어야 하는데 지금은 그게 없어요. 그래서 메시지 하나하나에 대해 Avatar까지 포함해서 컴포넌트 함수 자체를 매번 다시 실행하고 다시 diff하고 있는 거예요.\n\n즉 대화가 쌓일수록(N이 커질수록) 이벤트 하나당 처리 비용이 N에 비례해서 커지고, 이벤트는 게임 내내 계속 발생하니까 총 비용이 눈덩이처럼 불어나는 구조예요. PC는 CPU 여유가 있어서 안 느껴지다가, 모바일 CPU에서는 이게 그대로 \"채팅 쌓일수록 렉\"으로 체감되는 거고요.\n\n해결 방법 — 메시지 한 줄을 별도 컴포넌트로 빼서 React.memo로 감싸면 됩니다. 그러면 안 바뀐 옛날 메시지들은 리렌더 자체를 건너뛰고, 진짜 바뀐 부분(새로 추가된 메시지)만 처리돼요. 백엔드는 전혀 안 건드려도 되고 Chat.tsx 한 파일 안에서 끝나는 수정입니다.\n\napps/frontend/src/components/Chat.tsx\n\n① import에 memo 추가\n\nts\nimport { useEffect, useRef, useState } from 'react';\n\n→\n\nts\nimport { memo, useEffect, useRef, useState } from 'react';",
+      "author": {
+        "id": "389975441601200138",
+        "name": "hari1224",
+        "discriminator": "0000",
+        "nickname": "하리1224",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537651286135144469",
+      "type": "Default",
+      "timestamp": "2026-08-14T11:37:14.794+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "② ChatLog 함수 위(또는 파일 아무 최상단 위치)에 메시지 한 줄짜리 컴포넌트를 새로 추가\n\ntsx\nexport function ChatLog({ messages, players, myId, modal }: LogProps) {\n\n바로 위에 이렇게 추가:\n\ntsx\n/** 메시지 한 줄. React.memo로 감싸서, message/isMine/name이 안 바뀐 옛날 메시지는\n *  ChatLog가 리렌더될 때마다(투표·봇 발화 등 채팅과 무관한 이벤트에서도) 매번\n *  다시 그려지는 걸 막는다 — 채팅이 쌓일수록 렉이 심해지던 원인. */\nconst ChatMessageRow = memo(function ChatMessageRow({\n  message,\n  isMine,\n  name,\n}: {\n  message: Message;\n  isMine: boolean;\n  name: string;\n}) {\n  const rowClass =\n    message.speakerId === 'system' ? 'zt-msg is-system' : isMine ? 'zt-msg is-mine' : 'zt-msg';\n  return (\n    <div className={rowClass}>\n      {message.speakerId !== 'system' && (\n        <Avatar label={name} variant={isMine ? 'mine' : 'default'} />\n      )}\n      <span className=\"zt-msg-text\">{message.text}</span>\n    </div>\n  );\n});\n\nexport function ChatLog({ messages, players, myId, modal }: LogProps) {",
+      "author": {
+        "id": "389975441601200138",
+        "name": "hari1224",
+        "discriminator": "0000",
+        "nickname": "하리1224",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537651289637257237",
+      "type": "Default",
+      "timestamp": "2026-08-14T11:37:15.629+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "③ 기존 messages.map(...) 부분을 이 새 컴포넌트를 쓰도록 교체\n\ntsx\n        {messages.map((m) => {\n          // 8/12: 파트 D 코멘트로 다시 요청받은 \"내 메시지 우측 정렬\" — is-system과는\n          // 겹칠 일이 없다(system은 myId가 될 수 없음). 시스템 메시지 판정이 우선이라\n          // 순서상 먼저 검사한다.\n          const isMine = m.speakerId !== 'system' && m.speakerId === myId;\n          const rowClass = m.speakerId === 'system' ? 'zt-msg is-system' : isMine ? 'zt-msg is-mine' : 'zt-msg';\n          return (\n            <div key={m.id} className={rowClass}>\n              {m.speakerId !== 'system' && (\n                <Avatar label={nameOf(m.speakerId)} variant={isMine ? 'mine' : 'default'} />\n              )}\n              <span className=\"zt-msg-text\">{m.text}</span>\n            </div>\n          );\n        })}\n\n→\n\ntsx\n        {messages.map((m) => {\n          const isMine = m.speakerId !== 'system' && m.speakerId === myId;\n          return (\n            <ChatMessageRow key={m.id} message={m} isMine={isMine} name={nameOf(m.speakerId)} />\n          );\n        })}\n\n이렇게 바뀌는 이유를 짚어드리면: room.messages는 백엔드에서 push로만 늘어나고 기존 메시지 객체 자체는 절대 다시 안 만들어지기 때문에, 옛날 메시지의 m 객체 참조는 매 브로드캐스트마다 그대로 유지돼요. isMine/name도 문자열·불리언 값이라 내용이 같으면 매번 새로 계산해도 === 비교에서 같다고 나옵니다. 그래서 React.memo의 기본 얕은 비교만으로도 \"이 메시지 행, props 다 그대로네 — 리렌더 스킵\"이 정확히 작동해요. 결과적으로 채팅 하나 늘 때마다 실제로 다시 그려지는 건 새로 추가된 그 한 줄뿐이고, 나머지는 게임이 아무리 길어져도 매번 건너뛰게 됩니다.\n\n혹시 이후에도(라운드가 아주 많이 도는 극단적인 경우) 여전히 느리다면, 그땐 화면에 최근 메시지 몇백 개만 유지하고 오래된 건 걷어내는 것도 옵션인데, 지금 게임 길이 기준으로는 이 메모이제이션만으로 충분히 해결될 가능성이 높아요.",
+      "author": {
+        "id": "389975441601200138",
+        "name": "hari1224",
+        "discriminator": "0000",
+        "nickname": "하리1224",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537652670653796494",
+      "type": "Default",
+      "timestamp": "2026-08-14T11:42:44.889+09:00",
+      "timestampEdited": "2026-08-14T11:42:54.246+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "모든 화면 전체화면 추가(or 모바일만)",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537652917442449469",
+      "type": "Default",
+      "timestamp": "2026-08-14T11:43:43.728+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "화면 축소/확대 기능 제한",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537653596173107311",
+      "type": "Default",
+      "timestamp": "2026-08-14T11:46:25.55+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "화면 자체가 스크롤 되는 것이 아닌, 채팅 화면만 스크롤",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537653694324150292",
+      "type": "Default",
+      "timestamp": "2026-08-14T11:46:48.951+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "비율을 절대적으로",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537655184040394812",
+      "type": "Default",
+      "timestamp": "2026-08-14T11:52:44.127+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "fix: 채팅 메시지 행 React.memo 적용 - 무관한 상태 갱신마다 전체 리렌더되던 문제 해결",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537678304583229440",
+      "type": "Default",
+      "timestamp": "2026-08-14T13:24:36.494+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "모바일 확대/축소 방지, 키보드 자동확대·스크롤바 버그 수정, 전체화면 버튼 추가",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537681753152692266",
+      "type": "Default",
+      "timestamp": "2026-08-14T13:38:18.697+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "채팅 입력 포커스 시 투표창 자동 접힘",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537685332173135932",
+      "type": "Default",
+      "timestamp": "2026-08-14T13:52:32.002+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "채팅 입력줄 높이 재정렬",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537688546595446884",
+      "type": "Default",
+      "timestamp": "2026-08-14T14:05:18.38+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "애니메이션 수정",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537690079500177448",
+      "type": "Default",
+      "timestamp": "2026-08-14T14:11:23.853+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "ParticleTrail 수정",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1538782073764978709",
+      "type": "Default",
+      "timestamp": "2026-08-17T14:30:35.574+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "■ 1. 요약\n\n게임이 도는 동안 플레이어가 보는 화면 전부를 담당한다.\n\n역할 배정부터 묘사·토론·최후변론·생사투표·결과공개·제시어추측·봇지목까지\n여덟 페이즈를 화면 하나로 만들어야 한다.\n\n파트 D가 \"여러 화면이 한 서비스로 보이게\" 하는 일이라면,\n파트 C는 \"화면 하나가 여덟 상황을 전부 소화하게\" 하는 일이다.\n\n■ 2. 내가 만들어야 했던 것\n\n[ 여덟 화면을 하나로 합치기 ]\n\n기획서 v2.0까지는 여덟 페이즈가 각각 별도 화면이었다.\n화면이 넘어갈 때마다 레이아웃이 달라지고 필요한 정보를 제대로 파악하기 힘들었다.\n\n그래서 두 겹 구조로 바꿨다. 채팅 로그를 중심으로 상황별 팝업이 얹혔다 걷힌다.\n· 상시 화면 — 묘사·토론·최후변론. 세 페이즈가 실제로 달랐던 건\n  채팅 잠금·투표 패널 활성화·지목 배너·헤더 문구 네 가지뿐이라 조건으로 흡수됐다.\n· 팝업 5종 — 역할 배정·생사 투표·결과·제시어 추측·봇 지목.\n  팝업 중에도 채팅 로그 영역 위에만 얹혀 투표 패널·입력창은 계속 보인다.\n\n봇 지목은 원래 파트 D 소유였는데 \"봇을 지목할 때 우리가 했던 말을 같이 보여달라\"는\n요청 때문에 파트 C로 넘어왔다.\n\n[ 정보 배치 — 세 층 ]\n\n· 상단바: 로고 / 라운드 / 현재 페이즈 / 발언 순서 / 제시어 / 타이머 / 전체화면 버튼\n  제시어는 전 페이즈 상시 고정이다. 라이어에겐 같은 자리에 \"???\"가 뜬다.\n· 메인창: 채팅 로그가 중심, 투표 패널이 붙고, 팝업이 로그 위에 뜬다.\n· 하단 투표현황바: 투표 현황 / 내 선택 / 타이머.\n  모바일에선 이 바가 곧 투표 패널을 여닫는 손잡이다. 탭하면 투표+발언순서 창이\n  올라오고 다시 탭하면 접힌다. 좁은 화면에서 투표 패널이 먹을 공간을 한 줄로 압축한 것.\n· 최하단 채팅 입력바: 발언할 수 없을 때는 입력 자체가 잠긴다.\n  잠금 여부를 판단하는 곳은 한 곳뿐이고, 입력창은 결과만 받는다.",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "610425959442808842",
+              "name": ".scalmia",
+              "discriminator": "0000",
+              "nickname": "김정현",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1538782184012390462",
+      "type": "Default",
+      "timestamp": "2026-08-17T14:31:01.859+09:00",
+      "timestampEdited": "2026-08-18T09:34:19.042+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "■ 3. 막혔던 것\n\n(1) PC에서 창을 줄여 만든 모바일 화면은, 진짜 폰의 모바일 화면이 아니었다\n\n- 시도: 모바일 대응을 PC 브라우저 창 폭을 줄여 개발했다. 기기 시뮬레이터까지\n  써서 768px 이하 레이아웃을 맞췄고, 그 안에서는 의도대로 정확히 동작했다.\n\n- 실패: 배포 후 실제 폰으로 플레이하자 PC에서 한 번도 안 보이던 버그가 줄줄이 나왔다.\n  제일 심각한 건 채팅 입력 시 반응이 느려지는 것이었고, 대화가 쌓일수록 심해졌다.\n  원인은 채팅 로그가 새 메시지가 올 때만이 아니라 서버 브로드캐스트가 올 때마다\n  (누가 투표하든, 봇이 말하든, 페이즈가 넘어가든) 전체 메시지를 통째로 다시 그리던 것.\n  메시지가 N개면 이벤트 하나당 비용이 N에 비례하고 이벤트는 게임 내내 발생한다.\n  PC는 CPU 여유로 흡수했고, 모바일 CPU에선 그대로 렉이 됐다.\n\n- 전환: 메시지 한 줄을 별도 컴포넌트로 빼서 React.memo로 감쌌다.\n  안 바뀐 옛 메시지는 리렌더를 건너뛰고 새로 추가된 한 줄만 처리된다.\n  여기서 한 번 더 걸린 게 있다 — 메시지 객체를 통째로 넘기면 최적화가 무효가 된다.\n  서버 상태는 브로드캐스트마다 JSON으로 새로 파싱돼 들어와서 내용이 같아도\n  객체 참조가 매번 새로 생기기 때문이다. 원시값으로 풀어 넘겨야 값 비교가 성립한다.\n\n(2) 화면이 저절로 확대되던 문제 — 한 줄 태그로 막힐 줄 알았다\n\n- 시도: 폰에서 채팅을 입력하면 키보드가 올라오며 화면이 제멋대로 확대됐다.\n  확대를 막으면 될 문제로 보여 viewport 메타에 maximum-scale, user-scalable=no를 넣었다.\n\n- 실패: iOS Safari는 iOS 10부터 이 태그를 의도적으로 무시한다. 접근성 정책이라\n  코드로 우회할 수 없다. 게다가 진짜 원인은 핀치 줌이 아니었다 —\n  iOS Safari는 폰트가 16px보다 작은 입력창에 포커스가 가면 자동으로 화면을 확대한다.\n  사용자가 확대한 게 아니라 브라우저가 한 것이라, 확대 금지 태그로는 애초에 막힐 수 없었다.\n\n- 전환: 원인을 나눠 각각 처리했다.\n  · 자동 확대 → 채팅 입력창 폰트를 16px로 올려 브라우저가 확대할 이유를 없앴다.\n  · 스크롤바 → 별개 원인이었다. 화면 컨테이너에 height:100dvh와 min-height:100vh가\n    같이 걸려 있었는데 둘이 함께면 최종값은 큰 쪽이다. 키보드로 dvh가 작아져도\n    min-height가 덮어써 body가 화면보다 길어졌다. min-height:0으로 해소.\n  · 주소창이 화면을 먹는 문제 → 상단바 우측에 전체화면 버튼 추가.\n    단 iOS Safari는 Fullscreen API 자체를 지원하지 않아, 지원 여부를 확인해\n    안 되는 브라우저에선 버튼을 아예 렌더링하지 않는다.\n\n■ 4. 핵심 파일 2개\n\napps/frontend/src/screens/game.css (961줄)\n  게임 화면 전체의 레이아웃과 스타일. 상단바·채팅 로그·투표 패널·투표현황바·\n  입력창의 배치와, 768px을 경계로 갈라지는 모바일 레이아웃이 전부 여기 있다.\n  색·간격·폰트는 리터럴 없이 파트 D 토큰을 참조한다 —\n  파트 D와의 계약이 실제로 코드에 새겨져 있는 파일이고, 3절의 모바일 버그 수정도\n  대부분 이 파일에서 끝났다.\n\napps/frontend/src/screens/MainScreen.tsx (285줄)\n  여덟 페이즈를 화면 하나로 흡수하는 판단이 모여 있는 곳. 페이즈별로 무엇이\n  달라지는지를 조건으로 정리하고, 모바일 투표 패널 여닫힘과 전체화면 버튼도 관리한다.\n  채팅 잠금 규칙을 판단하는 유일한 지점이라 아래 컴포넌트들은 결과만 받는다.",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "610425959442808842",
+              "name": ".scalmia",
+              "discriminator": "0000",
+              "nickname": "김정현",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1538782272025534465",
+      "type": "Default",
+      "timestamp": "2026-08-17T14:31:22.843+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "■ 5. 이음새 — 파트가 바뀌는 지점\n\n① 내 코드를 부르는 곳: apps/frontend/src/App.tsx · renderScreen() — 파트 D\n  파트 D가 서버의 phase를 보고 화면을 고르는 곳. 게임 페이즈 여덟 개일 때\n  <GameScreen> 하나만 마운트한다. 파트 D는 그 안에 팝업이 몇 종인지 알 필요가 없고,\n  파트 C도 랜딩·대기실·결과·설문을 알 필요가 없다.\n  두 파트의 접점이 컴포넌트 하나로 좁혀져 있다.\n\n② 내 코드가 부르는 곳: apps/frontend/src/hooks/useGameState.ts · onEvent() — 서버(파트 A)로\n  플레이어의 행동을 서버로 올려보내는 통로. 파트 C가 보내는 건 여섯 종류뿐이다 —\n  vote, describe, chat, lifeVote, guessWord, botVote.\n  파트 C는 소켓을 직접 잡지 않고 이 함수 하나로만 나간다.\n  화면이 통신 방식을 몰라도 되게 경계를 좁힌 것이라, 재연결·에러 처리가\n  화면 코드로 새어들어오지 않는다.\n\n③ 내 코드가 참조하는 곳: apps/frontend/src/styles/tokens.css — 파트 D (이름 참조)\n  파트 D 자료의 그 이음새를 반대쪽에서 본 것. 호출이 아니라 이름에 의한 결합이라\n  타입 검사에도 안 걸리고 빌드도 통과한다 — 이름이 바뀌면 화면을 열어봐야 안다.\n  공용 컴포넌트 Avatar.tsx(이니셜 배지)·Button.tsx(전송 버튼)도 파트 D 소유를 그대로 쓴다.\n\n  세 이음새 모두 @zeteo/shared-types의 GameState·ClientEvent 위에 서 있다(파트 B 관리).\n  GameState 27개 필드 중 파트 C는 19개를 읽기만 하고 6종 이벤트를 쓴다.\n  나머지는 파트 D의 결과 화면 몫이다.",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "610425959442808842",
+              "name": ".scalmia",
+              "discriminator": "0000",
+              "nickname": "김정현",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539078199953072148",
+      "type": "Default",
+      "timestamp": "2026-08-18T10:07:17.559+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [
+        {
+          "id": "1539078199634296862",
+          "url": "https://cdn.discordapp.com/attachments/1533060065903251546/1539078199634296862/Zeteo_C_.txt?ex=6a9eb705&is=6a9d6585&hm=8d0f804fc754ab330647b2b85c758426a1269a44621686238410e3d6376be168&",
+          "fileName": "Zeteo_C_.txt",
+          "fileSizeBytes": 31891
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539101621215166506",
+      "type": "Default",
+      "timestamp": "2026-08-18T11:40:21.623+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "질문\n1. 메세지 객체를 통쨰로 넘기면 최적화가 무효화된다고하셨는데, 원시값으로 풀어 넘긴다는게 어떻게 표현되는지?\n2. 채팅 입력창 폰트를 16px로 올렸는데 왜 16포인트인지? 혹시 이값으로 한 이유가 한개씩 넣어보고 발견한건지? 아니면 찾아낸 방법이 있는지?",
+      "author": {
+        "id": "389975441601200138",
+        "name": "hari1224",
+        "discriminator": "0000",
+        "nickname": "하리1224",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539103384366354533",
+      "type": "Default",
+      "timestamp": "2026-08-18T11:47:21.991+09:00",
+      "timestampEdited": "2026-08-18T11:47:25.087+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "요약본 中 ：\n\nZeteo\\apps\\frontend\\src\\components\\Chat.tsx :\n- `memo`로 줄 단위는 막았는데, `ChatLog` 자체는 여전히 브로드캐스트마다 다시 실행돼요. 이는 무시할 만한 수준인가요?",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539106951227506808",
+      "type": "Default",
+      "timestamp": "2026-08-18T12:01:32.397+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "웹에서 안보이는 모바일 지연현상은 파트c 코드상에서 재발의 위험은 없는지?",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539118929136582717",
+      "type": "Default",
+      "timestamp": "2026-08-18T12:49:08.153+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [
+        {
+          "id": "1539118928817688576",
+          "url": "https://cdn.discordapp.com/attachments/1533060065903251546/1539118928817688576/2ae020e9cfccb613.txt?ex=6a9edcf4&is=6a9d8b74&hm=b8174d577c3dc9487eaf4206572b86120e5accc2e0bf8ec2dd48fafdd33952b4&",
+          "fileName": "2ae020e9cfccb613.txt",
+          "fileSizeBytes": 3751
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539120273130004501",
+      "type": "Default",
+      "timestamp": "2026-08-18T12:54:28.586+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [
+        {
+          "id": "1539120272580288542",
+          "url": "https://cdn.discordapp.com/attachments/1533060065903251546/1539120272580288542/C__3.txt?ex=6a9ede34&is=6a9d8cb4&hm=c61d54c6d06ec241a334663b64c3c60713871ef8343dbce1989c6a2eb49037bf&",
+          "fileName": "C__3.txt",
+          "fileSizeBytes": 12455
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539161085880303707",
+      "type": "Default",
+      "timestamp": "2026-08-18T15:36:39.104+09:00",
+      "timestampEdited": "2026-08-18T15:36:58.525+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "킥파트\n\n1. 여덟 화면을 하나로 합치기\n  역할 배정부터 묘사·토론·최후변론·생사투표·결과공개·제시어추측·봇지목까지 여덟 페이즈를 화면 하나로 만들어야 한다.\n  모바일 화면도 고려하여 와이어 프레임을 구성해야 한다.\n\n2. 배포 후 모바일 화면에서 새로운 버그 다수 등장\n  채팅 입력 딜레이\n  화면 자동 확대\n  PC 브라우저 크기를 줄여서 테스트 했을때와 상황이 달랐다",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539169735252512808",
+      "type": "Default",
+      "timestamp": "2026-08-18T16:11:01.275+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "현우님, 발표 구조가 바뀌어서 네 가지만 부탁드립니다.\n\n**■ 바뀐 것**\n강사님 피드백이 두 가지였습니다 — ①ZETEO 소개와 개발 이야기가 자연스럽게 이어질 것 ②백엔드 1 · AI 1 · **프론트 3**의 킥 자료를 갖출 것.\n\n기존엔 프론트가 Q3 하나에 두 분이 묶여 있어서 킥이 1개뿐이었습니다. 그래서 **한 사람이 질문 하나씩** 갖도록 나눴습니다.\n```\nQ1  봇      김정현\nQ2  프론트   이현우   ← 현우님\nQ3  프론트   박진\nQ4  백      유민성\n```\n각자 **개요 1장 + 트러블슈팅 1장**을 갖고, Q&A 때 그 질문은 그분이 답하시면 됩니다.\n\n**■ 부탁드릴 네 가지** (한두 줄씩이면 됩니다)\n\n**① 질문을 직접 지어주세요**\n제가 임의로 붙이지 않겠습니다. \"우리가 답해야 했던 질문\"을 현우님 언어로 한 문장으로요.\n예) 파트 B는 \"봇이 사람 사이에 섞일 수 있는가\" 로 잡았습니다.\n\n**② 발표에 쓸 트러블슈팅 이야기 하나**\n제출글에 두 개 써주셨죠 — 모바일 실기기 렌더 문제, viewport 자동확대 문제.\n**어느 쪽을 발표에서 하고 싶으신지** 골라주세요. 슬라이드가 한 장이라 하나만 들어갑니다.\n\n**③ 그 이야기의 결론을 한 문장으로**\n이 문장이 슬라이드 한 장을 통째로 차지합니다.\n예) 파트 B — \"프롬프트는 경향을 만들 뿐, 보장하지 않는다\"\n\n**④ 청중이 이 파트에서 딱 하나만 기억한다면?**\n한 줄이면 됩니다. 강사님이 말씀하신 \"킥\"이 이겁니다.\n\n**■ 나머지는 제가 합니다**\n도식·개조식·핵심 파일·이음새는 이미 주신 글에서 뽑겠습니다. **다시 쓰지 않으셔도 됩니다.**\n\n가능하면 오늘 안에, 늦어도 내일 아침 전까지 부탁드립니다 \uD83D\uDE4F",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDE4F",
+          "code": "pray",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f64f.svg"
+        }
+      ]
+    },
+    {
+      "id": "1539172643759071275",
+      "type": "Default",
+      "timestamp": "2026-08-18T16:22:34.717+09:00",
+      "timestampEdited": "2026-08-18T16:24:50.508+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "① 여덟개의 화면을 하나의 페이지(모바일)에 담을 수 있는가\n\n② 두번째도 모바일 실기기 렌더 문제라 하나로 합칠 수 있는 이야기라고 생각함. 하나를 고르라면 모바일 실기기 렌더 문제.\n\n③ PC에서 창을 줄여 만든 모바일 화면은, 진짜 폰의 모바일 화면이 아니었다.\n\n④ 정보의 용도와 필요한 상황에 따라 와이어 프레임을 구성해야 한다.",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539175921121239091",
+      "type": "Default",
+      "timestamp": "2026-08-18T16:35:36.101+09:00",
+      "timestampEdited": "2026-08-18T16:39:42.995+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "남은거\n\n- 최초 기획의도는 사람 다수와 봇 다수(봇 인원수 미공개)가 게임을 진행하고 마지막에 내가 지목한 플레이어 이외에는 봇여부를 알려주지 않아서 신비로움을 주겠다는 목적이 있었음. 인원수 부족에 대한 해결책도 된다고 봄. 봇 다수에 대한 기획 검토 필요.\n\n- 방 목록(화면 추가 필요)\n\n- 아이콘 및 페이즈 변화시 팝업창에 그림 추가(시각 요소 추가)",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539452199225270332",
+      "type": "Default",
+      "timestamp": "2026-08-19T10:53:25.934+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "기획서v3.0\n라우팅: react-router 쓰지 않음 — 확정. 화면을 정하는 것은 서버의 phase다. URL이 또 하나의 진실이 되면 뒤로가기 한 번에 어긋난다. [설계원칙 1]과 정면으로 충돌한다.\n\n[설계원칙 1 - 기획서v2.0 설계원칙]\n서버가 단일 진실 공급원(Single Source of Truth) — 클라이언트는 상태를 소유하지 않는다.\n\n이 둘을 이으면 이유가 분명해집니다.\n\n이 게임은 화면 전환을 클라이언트가 스스로 판단하지 않고, 서버가 브로드캐스트하는 GameState.phase 값 하나로만 결정합니다(설계원칙 1). 그런데 React Router를 쓰면 \"지금 어느 화면인가\"를 결정하는 근거가 서버의 phase와 브라우저의 URL, 두 개로 갈라집니다. 이 둘은 서로 독립적으로 바뀔 수 있는 값이라, 예를 들어 유저가 브라우저 뒤로가기를 한 번만 눌러도 URL은 이전 화면으로 넘어가는데 서버의 게임 진행 상태는 그대로거나 이미 다음 phase로 넘어가 있는 어긋남이 생깁니다. 즉 URL이 \"또 하나의 진실\"이 되어버려서, 서버 하나만 믿으면 되던 구조가 두 출처를 맞춰야 하는 구조로 깨진다는 것 — 이게 설계원칙 1과 \"정면 충돌\"이라고 표현한 이유입니다.",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539818090970480640",
+      "type": "Default",
+      "timestamp": "2026-08-20T11:07:21.324+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "랜딩/대기실/결과/설문 화면에 전체화면 버튼 추가, 결과/설문 화면 뷰포트 맞춤",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539823896382017637",
+      "type": "Default",
+      "timestamp": "2026-08-20T11:30:25.442+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "전체화면 버튼 위치를 뷰포트 우상단에서 카드 내부 우상단으로 변경",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539827876809936987",
+      "type": "Default",
+      "timestamp": "2026-08-20T11:46:14.45+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "묘사단계 시작시 모바일화면에서 묘사순서패널 열리게 변경",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539874129853808700",
+      "type": "Default",
+      "timestamp": "2026-08-20T14:50:02.035+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "설문 화면에 리플레이 기능 통합 (기획서 v4.0)",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1540192547941384242",
+      "type": "Default",
+      "timestamp": "2026-08-21T11:55:18.823+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "fix: 봇+라이어 겹침 시 뱃지 둘 다 표시하도록 수정",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1540225120340156416",
+      "type": "Default",
+      "timestamp": "2026-08-21T14:04:44.688+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "fix: Ambience 장식 레이어가 랜딩/대기실/결과 화면 배경 위로 비치는 버그 수정",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1540238568398528562",
+      "type": "Default",
+      "timestamp": "2026-08-21T14:58:10.955+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "fix(mock): mock 하네스에 Ambience 장식 마운트 추가",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541604640297066607",
+      "type": "Default",
+      "timestamp": "2026-08-25T09:26:27.876+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "useGameState.ts에서 어제(1fcf449, \"v2 수정\") 건드린 건 딱 한 군데예요. roomList 이벤트 처리 분기에 setError(null) 한 줄 추가한 것.\n\n전후 맥락 (useGameState.ts:24-37, 서버 이벤트 구독부):\n- state 이벤트: setState + setError(null) (기존)\n- error 이벤트: setError(e.reason) (기존)\n- roomList 이벤트: setRooms(e.rooms)만 하던 걸 → setError(null)도 같이 하도록 추가\n\n왜 필요했는지: 방 입장 실패('없는 방입니다' 등)는 error 이벤트만 오고 state는 영영 안 오는 실패 경로라, 기존엔 빨간 에러 배너가 화면에 계속 남아있었음. roomList가 새로 온다는 건 사용자가 랜딩 화면에서 다시 움직였다는 뜻(방 목록 재조회 등)이라, 이 시점에 에러도 같이 지우도록 함.\n\n이건 지난번 정리해드린 PR #35(feat/server, \"v2 수정\")에 같이 포함된 프론트 변경 중 하나이고, 그 PR에서 백엔드 쪽(방 입장 실패 시 '없는 방입니다' 에러를 던지도록 한 것)과 짝을 이루는 수정이에요 — 백엔드가 명확한 에러를 던지게 되면서, 프론트도 그 에러 배너를 언제 지울지 같이 손본 셈입니다.",
+      "author": {
+        "id": "389975441601200138",
+        "name": "hari1224",
+        "discriminator": "0000",
+        "nickname": "하리1224",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541604729111715981",
+      "type": "Default",
+      "timestamp": "2026-08-25T09:26:49.051+09:00",
+      "timestampEdited": "2026-08-25T09:27:00.564+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "> 방 검색에서 존재하지않는 방입니다  문구 팝업창으로 띄우기\n> 방장도 게임시작 버튼 삭제 (방 만든후 모두가 동등한 지위?)\n> survey 화면 부자연스러움 해결",
+      "author": {
+        "id": "389975441601200138",
+        "name": "hari1224",
+        "discriminator": "0000",
+        "nickname": "하리1224",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541616839631577148",
+      "type": "Default",
+      "timestamp": "2026-08-25T10:14:56.424+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "fix(room): 없는 방번호는 팝업으로 알리고, 게임시작 버튼 제거",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541616874091974666",
+      "type": "Default",
+      "timestamp": "2026-08-25T10:15:04.64+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [
+        {
+          "id": "1541616873756426341",
+          "url": "https://cdn.discordapp.com/attachments/1533060065903251546/1541616873756426341/e77eeeb84878fa05.png?ex=6a9eb8d8&is=6a9d6758&hm=a0d5037b609a0af9cb7c27db2e13a476e95c3fb5a69000a75c83399b16901abd&",
+          "fileName": "e77eeeb84878fa05.png",
+          "fileSizeBytes": 55816
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541619844934271146",
+      "type": "Default",
+      "timestamp": "2026-08-25T10:26:52.944+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Mock: room-list 목업 추가",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541637935353307231",
+      "type": "Default",
+      "timestamp": "2026-08-25T11:38:46.036+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "현우님, 봇 자가개선 루프 설계하면서 채팅 화면 쪽을 확인했는데 **요청드릴 게 없습니다.** 확인 결과만 공유드립니다.\n\n설문에 **\"가장 봇 같았던 발언 고르기\"** 를 넣으려고 발언 데이터가 클라이언트까지 오는지 봤는데, 이미 다 와 있었습니다.\n\n```\nview.ts:66        messages: room.messages     ← 통째로 내보냄 (id 포함)\nSurveyScreen      messages 를 이미 prop 으로 받고 있음\n```\n\n**리플레이 기능(PR #26) 만드시면서 붙여두신 게 그대로 쓰입니다.** 설문에서 발언 목록을 보여주는 데 필요한 것이 이미 다 있어서, 프론트 쪽 추가 작업이 없어졌습니다.\n\n남은 건 백엔드 쪽 문제 하나뿐입니다 — 런타임 `Message.id` 와 DB `game_messages.id` 가 서로 다른 값이라 고른 발언을 저장할 수가 없어서, 그건 민성님께 요청드렸습니다.\n\n━━━━━━━━━━━━━━━━━━━━\n\n혹시 나중에 **채팅 화면에서 발언마다 id 를 쓰는 방식이 바뀌면** 알려주세요. 설문이 그 id 로 발언을 지목하게 될 거라, 그때는 서로 영향이 생깁니다.\n\n전체 설계는 #공지-요구사항 공지에 있습니다 \uD83D\uDE4F",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDE4F",
+          "code": "pray",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f64f.svg"
+        }
+      ]
+    },
+    {
+      "id": "1541684208542687243",
+      "type": "Default",
+      "timestamp": "2026-08-25T14:42:38.424+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "스크롤바 컬러 변경",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544585752162074624",
+      "type": "Default",
+      "timestamp": "2026-09-02T14:52:20.331+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "랜딩 방목록 대기실 결과 설문 화면 / 디자인 토큰 공용컴퍼넌트 만듬",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544586343114604645",
+      "type": "Default",
+      "timestamp": "2026-09-02T14:54:41.225+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [
+        {
+          "id": "1544586342715887747",
+          "url": "https://cdn.discordapp.com/attachments/1533060065903251546/1544586342715887747/ZETEO__.md?ex=6a9efa61&is=6a9da8e1&hm=0e9b16d3c7e81f1d33d5b36a0ab2dd1d61a03edf9221f4a111ef04a3bf36a9a0&",
+          "fileName": "ZETEO__.md",
+          "fileSizeBytes": 45710
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544609704389640212",
+      "type": "Default",
+      "timestamp": "2026-09-02T16:27:30.987+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\"event로 클라이언트에 전송할 때 봇 식별자 같은 민감 정보가 그대로 실리지 않도록, 서버에서 역할별로 필터링해서 내보내는 방식으로 설계했습니다.\"",
+      "author": {
+        "id": "389975441601200138",
+        "name": "hari1224",
+        "discriminator": "0000",
+        "nickname": "하리1224",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1545279916738871306",
+      "type": "Default",
+      "timestamp": "2026-09-04T12:50:42.063+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "사업성 논증흐름 엠디파일에 있어요 연락 한 곳은\n이화여자대학교 언어교육원\n고려대학교 한국어센터\n경희대학교 국제교육원",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1545279940973564017",
+      "type": "Default",
+      "timestamp": "2026-09-04T12:50:47.841+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "세종학당재단",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1545280084670283866",
+      "type": "Default",
+      "timestamp": "2026-09-04T12:51:22.101+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [
+        {
+          "id": "1545280084133548092",
+          "url": "https://cdn.discordapp.com/attachments/1533060065903251546/1545280084133548092/8b37afe21fe5c9fd.png?ex=6a9edd79&is=6a9d8bf9&hm=6727a47759b8a03b490158240321c51d2f2c8f511321fcbba1790e57d6a3012a&",
+          "fileName": "8b37afe21fe5c9fd.png",
+          "fileSizeBytes": 69966
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1545284826792460358",
+      "type": "Default",
+      "timestamp": "2026-09-04T13:10:12.711+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "README 현행화 + 게임 플레이 절 추가",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1545285043927257198",
+      "type": "Default",
+      "timestamp": "2026-09-04T13:11:04.48+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "PR 올려주세요",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1545285342658302053",
+      "type": "Reply",
+      "timestamp": "2026-09-04T13:12:15.703+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "완",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "610425959442808842",
+          "name": ".scalmia",
+          "discriminator": "0000",
+          "nickname": "김정현",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1545285043927257198",
+        "channelId": "1533060065903251546",
+        "guildId": "1531480546134462484"
+      },
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 120
+}

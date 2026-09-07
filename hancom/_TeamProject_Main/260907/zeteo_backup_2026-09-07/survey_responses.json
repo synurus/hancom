@@ -1,0 +1,312 @@
+[
+  {
+    "id": "3af3087d-aca7-48ec-b063-af24aa4bb6fa",
+    "game_id": 1,
+    "voter_label": "T",
+    "guessed_bot_label": "X",
+    "guessed_correctly": false,
+    "free_text": null,
+    "created_at": "2026-08-27T07:56:06.323306+00:00",
+    "picked_message_runtime_id": null
+  },
+  {
+    "id": "5a3325af-acd5-4275-9401-5c0ef06aeea9",
+    "game_id": 1,
+    "voter_label": "X",
+    "guessed_bot_label": "W",
+    "guessed_correctly": true,
+    "free_text": "매판 보엿던 문구였어",
+    "created_at": "2026-08-27T07:56:40.296682+00:00",
+    "picked_message_runtime_id": "m1787817142669_f572"
+  },
+  {
+    "id": "ef4dc872-9c3d-458c-824c-e4b44cbbf480",
+    "game_id": 1,
+    "voter_label": "H",
+    "guessed_bot_label": "W",
+    "guessed_correctly": true,
+    "free_text": "대부분의 게임에서 비슷한말을함",
+    "created_at": "2026-08-27T07:56:45.73042+00:00",
+    "picked_message_runtime_id": "m1787817142669_f572"
+  },
+  {
+    "id": "1a2c488e-647d-4ffd-aad3-a5566507dedc",
+    "game_id": 1,
+    "voter_label": "G",
+    "guessed_bot_label": "W",
+    "guessed_correctly": true,
+    "free_text": "한 명 몰아가고 있는 상황에서 \"좀 더 봐야겠는데\" 같은 설명을 함.",
+    "created_at": "2026-08-27T07:56:47.652158+00:00",
+    "picked_message_runtime_id": "m1787817205964_jd9y"
+  },
+  {
+    "id": "dd4b60e0-325d-49b5-8481-e9ddd47bf1f4",
+    "game_id": 2,
+    "voter_label": "F",
+    "guessed_bot_label": "Z",
+    "guessed_correctly": false,
+    "free_text": null,
+    "created_at": "2026-08-28T07:26:08.481655+00:00",
+    "picked_message_runtime_id": null
+  },
+  {
+    "id": "863f2c39-cc3c-4f11-9232-b471c95fc563",
+    "game_id": 2,
+    "voter_label": "Z",
+    "guessed_bot_label": "G",
+    "guessed_correctly": true,
+    "free_text": "봇이 자주 하는 말임",
+    "created_at": "2026-08-28T07:26:26.679309+00:00",
+    "picked_message_runtime_id": "m1787901756904_zcvb"
+  },
+  {
+    "id": "7116dbd7-9424-4557-9daa-e1f1bc40c876",
+    "game_id": 2,
+    "voter_label": "J",
+    "guessed_bot_label": "G",
+    "guessed_correctly": true,
+    "free_text": "매판 하는말이다",
+    "created_at": "2026-08-28T07:26:27.334962+00:00",
+    "picked_message_runtime_id": "m1787901756904_zcvb"
+  },
+  {
+    "id": "3ae0bec5-c9d5-4145-a8f0-dbf51106c21e",
+    "game_id": 2,
+    "voter_label": "M",
+    "guessed_bot_label": "G",
+    "guessed_correctly": true,
+    "free_text": "이미 F를 의심하고 있고, 누군가를 의심하는 중인데 애매하다고 함. 문맥상 말이 안됨.",
+    "created_at": "2026-08-28T07:26:54.015117+00:00",
+    "picked_message_runtime_id": "m1787901768326_4s6p"
+  },
+  {
+    "id": "2879ca2f-8168-4ff5-a7e4-1efdfbc5cbe8",
+    "game_id": 3,
+    "voter_label": "Y",
+    "guessed_bot_label": "L",
+    "guessed_correctly": true,
+    "free_text": null,
+    "created_at": "2026-08-28T07:33:50.064295+00:00",
+    "picked_message_runtime_id": "m1787902250378_dmzt"
+  },
+  {
+    "id": "817e3bb1-a972-44ee-95cd-7eb9b4851fed",
+    "game_id": 3,
+    "voter_label": "P",
+    "guessed_bot_label": "L",
+    "guessed_correctly": true,
+    "free_text": "사람은 제시어를 직접적으로 말하지 않음",
+    "created_at": "2026-08-28T07:33:50.167205+00:00",
+    "picked_message_runtime_id": "m1787902250378_dmzt"
+  },
+  {
+    "id": "14498abf-55ed-42ce-aa78-52af2675b8d8",
+    "game_id": 3,
+    "voter_label": "H",
+    "guessed_bot_label": null,
+    "guessed_correctly": null,
+    "free_text": null,
+    "created_at": "2026-08-28T07:34:19.940916+00:00",
+    "picked_message_runtime_id": "m1787902124435_3ufj"
+  },
+  {
+    "id": "1608c9b9-0b37-4987-9729-b77f265e45b7",
+    "game_id": 3,
+    "voter_label": "T",
+    "guessed_bot_label": "L",
+    "guessed_correctly": true,
+    "free_text": "자기가 예측한 답을 말함으로 변호하려 한것 같지만, 어색했음.",
+    "created_at": "2026-08-28T07:36:07.018422+00:00",
+    "picked_message_runtime_id": "m1787902250378_dmzt"
+  },
+  {
+    "id": "a20a6fde-c1a3-406e-a63e-988fbda8df0d",
+    "game_id": 4,
+    "voter_label": "W",
+    "guessed_bot_label": "O",
+    "guessed_correctly": false,
+    "free_text": null,
+    "created_at": "2026-08-28T07:42:30.095327+00:00",
+    "picked_message_runtime_id": null
+  },
+  {
+    "id": "a48276ec-b29b-4db8-85be-4b29727b442c",
+    "game_id": 4,
+    "voter_label": "A",
+    "guessed_bot_label": "P",
+    "guessed_correctly": false,
+    "free_text": null,
+    "created_at": "2026-08-28T07:42:46.476195+00:00",
+    "picked_message_runtime_id": "m1787902708179_97hl"
+  },
+  {
+    "id": "cf165809-c526-492e-b572-8bacb8b3ee31",
+    "game_id": 4,
+    "voter_label": "P",
+    "guessed_bot_label": "V",
+    "guessed_correctly": true,
+    "free_text": "봇이 라이어일때 묘사 표현법이 있는듯",
+    "created_at": "2026-08-28T07:43:23.370997+00:00",
+    "picked_message_runtime_id": "m1787902655481_ihfc"
+  },
+  {
+    "id": "ac19fc63-1829-4bb4-8e44-15daae878a69",
+    "game_id": 4,
+    "voter_label": "O",
+    "guessed_bot_label": "V",
+    "guessed_correctly": true,
+    "free_text": "몰리는 와중에 말을 너무 애매하게 끊었음.",
+    "created_at": "2026-08-28T07:44:32.031971+00:00",
+    "picked_message_runtime_id": "m1787902751509_nmxc"
+  },
+  {
+    "id": "dac0ff2d-a355-4edf-a310-245950d1f974",
+    "game_id": 5,
+    "voter_label": "M",
+    "guessed_bot_label": "Y",
+    "guessed_correctly": false,
+    "free_text": null,
+    "created_at": "2026-08-28T07:57:25.586599+00:00",
+    "picked_message_runtime_id": null
+  },
+  {
+    "id": "2a0f7c5d-c11d-477b-b37e-bed15062a81e",
+    "game_id": 5,
+    "voter_label": "X",
+    "guessed_bot_label": "B",
+    "guessed_correctly": true,
+    "free_text": "봇이 자주 하는 말임",
+    "created_at": "2026-08-28T07:57:56.756085+00:00",
+    "picked_message_runtime_id": "m1787903246383_lsoz"
+  },
+  {
+    "id": "cd3fed09-b0f1-4533-92f8-8e86e419a38c",
+    "game_id": 5,
+    "voter_label": "Y",
+    "guessed_bot_label": "M",
+    "guessed_correctly": false,
+    "free_text": null,
+    "created_at": "2026-08-28T07:58:23.556768+00:00",
+    "picked_message_runtime_id": null
+  },
+  {
+    "id": "1e24a1c9-6b1b-4df5-9210-044c22d0fb88",
+    "game_id": 5,
+    "voter_label": "P",
+    "guessed_bot_label": "B",
+    "guessed_correctly": true,
+    "free_text": "대놓고 의심되는 사람이 있는데 애매하다는 표현을 매크로 처럼 씀",
+    "created_at": "2026-08-28T07:58:57.822506+00:00",
+    "picked_message_runtime_id": "m1787903246383_lsoz"
+  },
+  {
+    "id": "ce03d887-a79c-421c-a67b-7384493ee31e",
+    "game_id": 6,
+    "voter_label": "F",
+    "guessed_bot_label": "O",
+    "guessed_correctly": true,
+    "free_text": "굳이 여기타이밍에서 두번나눠쓸필요가있나?",
+    "created_at": "2026-08-28T08:30:16.922748+00:00",
+    "picked_message_runtime_id": "m1787905619693_16z3"
+  },
+  {
+    "id": "ef41a46e-7618-4544-bb2c-f1d1da60faa7",
+    "game_id": 6,
+    "voter_label": "V",
+    "guessed_bot_label": null,
+    "guessed_correctly": null,
+    "free_text": "너무 억지로 말을 끊음",
+    "created_at": "2026-08-28T08:30:33.564432+00:00",
+    "picked_message_runtime_id": "m1787905619693_16z3"
+  },
+  {
+    "id": "17fa501a-06f8-4900-a44b-3744a3bf9e47",
+    "game_id": 7,
+    "voter_label": "H",
+    "guessed_bot_label": "H",
+    "guessed_correctly": false,
+    "free_text": "자신의 지목이였는데 호응을하고있음",
+    "created_at": "2026-08-31T02:33:32.920006+00:00",
+    "picked_message_runtime_id": "m1788143376319_gr9f"
+  },
+  {
+    "id": "4e99f816-6a17-4b2c-a524-6c12e8cbd8b5",
+    "game_id": 7,
+    "voter_label": "K",
+    "guessed_bot_label": "F",
+    "guessed_correctly": false,
+    "free_text": null,
+    "created_at": "2026-08-31T02:34:07.179028+00:00",
+    "picked_message_runtime_id": "m1788143243637_xxkh"
+  },
+  {
+    "id": "0eb64b9d-bddd-47a5-bf53-2b91dc32ffe2",
+    "game_id": 7,
+    "voter_label": "F",
+    "guessed_bot_label": "U",
+    "guessed_correctly": true,
+    "free_text": "너무 직접적으로 제시어를 풀어버렸음. 라이어든, 사람이든 이렇게 바로 말은 안할 것 같음.",
+    "created_at": "2026-08-31T02:34:38.932879+00:00",
+    "picked_message_runtime_id": "m1788143458476_9zt5"
+  },
+  {
+    "id": "4298e7a9-0c45-45e4-929c-03ac63b0c335",
+    "game_id": 8,
+    "voter_label": "P",
+    "guessed_bot_label": "Y",
+    "guessed_correctly": false,
+    "free_text": null,
+    "created_at": "2026-08-31T02:43:23.564825+00:00",
+    "picked_message_runtime_id": "m1788144072201_dkw7"
+  },
+  {
+    "id": "90b2a106-15bc-4796-910c-ea85ac7bca08",
+    "game_id": 8,
+    "voter_label": "Y",
+    "guessed_bot_label": "L",
+    "guessed_correctly": true,
+    "free_text": "모두까기",
+    "created_at": "2026-08-31T02:43:42.859152+00:00",
+    "picked_message_runtime_id": "m1788144004973_uwq2"
+  },
+  {
+    "id": "d9291ff5-f38f-4a14-a70e-bc0ec701a1d7",
+    "game_id": 8,
+    "voter_label": "X",
+    "guessed_bot_label": "L",
+    "guessed_correctly": true,
+    "free_text": "이번판은 봇같은건 안느껴졌음.",
+    "created_at": "2026-08-31T02:43:56.133712+00:00",
+    "picked_message_runtime_id": null
+  },
+  {
+    "id": "786bd5b0-1727-4a87-804c-e2330feb9295",
+    "game_id": 10,
+    "voter_label": "Q",
+    "guessed_bot_label": "I",
+    "guessed_correctly": true,
+    "free_text": null,
+    "created_at": "2026-08-31T05:33:43.996047+00:00",
+    "picked_message_runtime_id": "m1788154293380_bsdb"
+  },
+  {
+    "id": "ca1bd39a-ee33-41f3-85a5-3a8d2c101b99",
+    "game_id": 10,
+    "voter_label": "M",
+    "guessed_bot_label": "I",
+    "guessed_correctly": true,
+    "free_text": "애매한데 라는 표현을 너무 자주 씀",
+    "created_at": "2026-08-31T05:34:14.36897+00:00",
+    "picked_message_runtime_id": null
+  },
+  {
+    "id": "f9ef3409-0dfd-416f-970a-c3efa7fe6894",
+    "game_id": 10,
+    "voter_label": "D",
+    "guessed_bot_label": "I",
+    "guessed_correctly": true,
+    "free_text": null,
+    "created_at": "2026-08-31T05:34:31.041608+00:00",
+    "picked_message_runtime_id": "m1788154293380_bsdb"
+  }
+]

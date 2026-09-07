@@ -1,0 +1,3472 @@
+{
+  "guild": {
+    "id": "1531480546134462484",
+    "name": "ZETEO",
+    "iconUrl": "https://cdn.discordapp.com/icons/1531480546134462484/b900b60579718444a13ba25447b7a1c6.png?size=512"
+  },
+  "channel": {
+    "id": "1531480550009733121",
+    "type": "GuildTextChat",
+    "categoryId": "1531480550009733120",
+    "category": "Information",
+    "name": "공지-요구사항",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2026-09-07T09:36:21.162273+09:00",
+  "messages": [
+    {
+      "id": "1531930346524901518",
+      "type": "Default",
+      "timestamp": "2026-07-29T16:44:16.501+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone 공지드려요 — 이제 더 이상 새로운 아이디어는 받지 않을게요. 지금부터는 각자 제출한 기획안을 고도화하는 데 집중해주세요!",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532205945831293151",
+      "type": "Default",
+      "timestamp": "2026-07-30T10:59:24.496+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone 공지드려요 — 기존 11시 투표가 각 기획서 피드백 반영 및 확인 시간을 포함해서 **11시 30분**으로 연기됐습니다. 참고 부탁드려요!",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532212479013290025",
+      "type": "Default",
+      "timestamp": "2026-07-30T11:25:22.128+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone 투표 5분 전입니다! 확인 부탁드려요.\n\n투표는 **카카오톡**에서 진행되니 그쪽만 준비해주세요 — 기획서 피드백 건은 이거랑 별개로 계속 진행하시면 됩니다.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532213459792560218",
+      "type": "Default",
+      "timestamp": "2026-07-30T11:29:15.964+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone 투표가 시작됐습니다! 오후 1시까지 투표 부탁드립니다.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532237247095504906",
+      "type": "Default",
+      "timestamp": "2026-07-30T13:03:47.299+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone **투표 결과 공지**\n\n**사람 투표**: 마음이음 1표 / 마피아 2표\n**AI 심사 투표**(봇 3개, 각 0.5 가중치): PT 1표 / 마피아 0.5표\n\n**합산 결과**: PT 1점 · 마음이음 1점 · **마피아 2.5점**\n\n\uD83C\uDFC6 최종 1등: **봇과 함께하는 마피아**\n\n축하드려요! 다들 고생 많으셨어요.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDE22",
+            "code": "cry",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f622.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "610425959442808842",
+              "name": ".scalmia",
+              "discriminator": "0000",
+              "nickname": "김정현",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83C\uDFC6",
+          "code": "trophy",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3c6.svg"
+        }
+      ]
+    },
+    {
+      "id": "1532267350714486894",
+      "type": "Default",
+      "timestamp": "2026-07-30T15:03:24.561+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83C\uDF89 팀 이름이 확정됐습니다!\n\n# TeamB → Zeteo(제테오)\n\n\"찾다·탐구하다\"라는 뜻의 그리스어 ζητέω(zeteo)에서 따온 이름이에요. 사람과 AI가 뒤섞인 자리에서 진짜를 가려내는 우리 프로젝트와 정확히 맞닿아 있네요.\n\n오늘부터 우리는 **Zeteo**입니다. 다들 축하해요! \uD83E\uDD73",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDE0E",
+            "code": "sunglasses",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f60e.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "610425959442808842",
+              "name": ".scalmia",
+              "discriminator": "0000",
+              "nickname": "김정현",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83C\uDF89",
+          "code": "tada",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f389.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83E\uDD73",
+          "code": "partying_face",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f973.svg"
+        }
+      ]
+    },
+    {
+      "id": "1532292733085941943",
+      "type": "Default",
+      "timestamp": "2026-07-30T16:44:16.19+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@FE_12_박진 @하리1224 @이현우 아래 저장소 클론 부탁드려요!\n\nhttps://github.com/Scalmia/Zeteo.git",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "GitHub - Scalmia/Zeteo: Zeteo",
+          "url": "https://github.com/Scalmia/Zeteo.git",
+          "timestamp": null,
+          "description": "Zeteo. Contribute to Scalmia/Zeteo development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/weeUtSFwC_fK35p4vlXGHDDJacIogY-PENb33odQFXM/https/opengraph.githubassets.com/29d32c6d500eeabb53479107ee7860c5b351e66e6ed272a06e443d6da57c76a4/Scalmia/Zeteo",
+            "canonicalUrl": "https://opengraph.githubassets.com/29d32c6d500eeabb53479107ee7860c5b351e66e6ed272a06e443d6da57c76a4/Scalmia/Zeteo",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": [],
+          "inlineEmojis": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1531483488815943793",
+          "name": "ihyeonu_56073",
+          "discriminator": "0000",
+          "nickname": "이현우",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        },
+        {
+          "id": "389975441601200138",
+          "name": "hari1224",
+          "discriminator": "0000",
+          "nickname": "하리1224",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+        },
+        {
+          "id": "1347110218206679051",
+          "name": "mr.park0",
+          "discriminator": "0000",
+          "nickname": "FE_12_박진",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+        }
+      ],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1533061995048337549",
+      "type": "Default",
+      "timestamp": "2026-08-01T19:41:02.534+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone 공지드려요 \uD83D\uDCE2\n\n**work-logs** 카테고리 안에 멤버별 채널을 만들었어요 — #박진-logs · #이현우-logs · #유민성-logs · #김정현-logs\n\n각자의 진행과정을 기록하고 공유할 채널이니, **8월 3일부턴 이곳을 이용해주세요**!\n\n@FE_12_박진 @이현우 @하리1224 확인 부탁드려요!",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 3,
+          "users": [
+            {
+              "id": "389975441601200138",
+              "name": "hari1224",
+              "discriminator": "0000",
+              "nickname": "하리1224",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+            },
+            {
+              "id": "1347110218206679051",
+              "name": "mr.park0",
+              "discriminator": "0000",
+              "nickname": "FE_12_박진",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+            },
+            {
+              "id": "1531483488815943793",
+              "name": "ihyeonu_56073",
+              "discriminator": "0000",
+              "nickname": "이현우",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+            }
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "id": "1531483488815943793",
+          "name": "ihyeonu_56073",
+          "discriminator": "0000",
+          "nickname": "이현우",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        },
+        {
+          "id": "389975441601200138",
+          "name": "hari1224",
+          "discriminator": "0000",
+          "nickname": "하리1224",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+        },
+        {
+          "id": "1347110218206679051",
+          "name": "mr.park0",
+          "discriminator": "0000",
+          "nickname": "FE_12_박진",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+        }
+      ],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCE2",
+          "code": "loudspeaker",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4e2.svg"
+        }
+      ]
+    },
+    {
+      "id": "1533492545286308132",
+      "type": "Default",
+      "timestamp": "2026-08-03T00:11:53.71+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone **파트 C(이현우) 스캐폴드 완료 — 전원 확인 필요**\n\n이현우님이 파트 C 1주차 범위(S0~S5)를 완성했습니다. 13개 화면 상태 렌더 확인, `tsc --noEmit` strict 통과, `vite build` 성공.\n\n━━━━━━━━━━━━━━━━━━━━\n**\uD83D\uDCCC 이미 정해진 것 — 다른 파트가 따라야 할 규격**\n\n**1. `shared/types.ts` Day 0 제안본이 나왔습니다**\n기획서 4절 계약에, 파트 C가 화면을 그리며 발견한 부족분 **6개를 ★ 표시로 추가**했습니다. 각 항목에 \"이게 없으면 어느 화면을 못 그리는지\" 근거가 달려 있습니다. → 오늘 오전 승인 안건\n\n**2. 파트 C의 단일 진입점은 `GameScreen.tsx`**\n파트 D는 게임 페이즈일 때 `<GameScreen state={state} onEvent={onEvent} />` **하나만 마운트**하면 됩니다. C의 화면 6개를 알 필요 없습니다.\n\n**3. 스타일 토큰 규격 확정**\n`game.css`는 `var(--토큰, fallback)` 형태로만 참조합니다. **D의 `tokens.css`가 늦어도 화면은 정상 렌더되고**, 나중에 fallback 값만 지우면 됩니다. 되돌릴 코드가 없습니다.\n필요한 토큰 10개 → `--color-bg` `--color-surface` `--color-line` `--color-text` `--color-muted` `--color-accent` `--color-danger` `--space-2` `--space-4` `--radius` `--font-body`\n\n**4. `mock/states.ts`는 C·D 공동 소유** — 키 규칙은 `<phase>-<변형>`\n\n**5. `components/Button.tsx`는 D 소유** — C가 만들지 않았습니다. 나오면 각 화면의 `<button>`을 치환합니다.\n\n**6. 과반은 인원수에서 계산** — 하드코딩 금지\n`투표자 = 참가자 − 1`, `과반 = ⌊투표자/2⌋ + 1`\n\n**7. 타이머는 서버가 절대 시각만 전달**\n클라이언트가 `deadlineAt - Date.now()`를 매 틱 재계산합니다.\n\n**8. 5인 = 사람 4 + 봇 1**\n룰북의 \"4인 게임이면 3표\"는 MVP 기준과 맞지 않아 사용하지 않습니다.\n\n━━━━━━━━━━━━━━━━━━━━\n**\uD83D\uDCCB 각자에게 요구된 것**\n\n> **유민성님(A)** — `types.ts` ★ 6개 승인 (서버에서 만들 수 있는지 확인)\n> **박진님(D)** — 토큰 10개 정의 + S6·S7 필드 뽑기\n> **김정현(B)** — 봇 이름 규칙 정의\n\n━━━━━━━━━━━━━━━━━━━━\n**⚠️ 아직 아무도 안 본 구멍**\n\n이현우님은 **자기 범위(S0~S5)만** 봤습니다.\n**S6(봇 지목)·S7(최종 결과) 필드는 여전히 비어 있습니다.**\n\n박진님이 오늘 결과 화면을 시작하면 이현우님이 겪은 것과 **똑같은 벽**에 부딪힙니다. 지금 잡으면 회의 한 번으로 끝납니다. → 오늘 오전 핵심 안건",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "389975441601200138",
+              "name": "hari1224",
+              "discriminator": "0000",
+              "nickname": "하리1224",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCCC",
+          "code": "pushpin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cc.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDCCB",
+          "code": "clipboard",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cb.svg"
+        },
+        {
+          "id": "",
+          "name": "⚠️",
+          "code": "warning",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg"
+        }
+      ]
+    },
+    {
+      "id": "1533652048388554922",
+      "type": "Default",
+      "timestamp": "2026-08-03T10:45:42.213+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone **각자 `-logs` 채널에 진척 확인 요청 남겼습니다. 확인 후 답장 부탁드려요!**\n\n제가 늦게 합류해서 다들 진도가 나가 있는 상태라, **지금 어디까지 됐는지 맞춰놓고 가는 게 좋을 것 같습니다.**\n\n**\uD83D\uDCCD 각자 채널에서 확인해주세요**\n> #유민성-logs — 유민성님 (★6개 반영 / 페이즈 진행 범위 / view.ts / **Postman이 HTTP인지 WS인지** / 봇 스텁 시그니처)\n> #이현우-logs — 이현우님 (`reveal-liar` mock 누락 / `round: 2` 화면 확인)\n> #박진-logs — 박진님 (**토큰 10개** / S6·S7 필드 뽑기)\n\n━━━━━━━━━━━━━━━━━━━━\n**⚠️ 전원이 알아야 할 것 2가지**\n\n**1. 서로를 기다리지 마세요 — 그러라고 파트를 나눈 겁니다**\n\n유민성님이 제 봇 함수를 기다리고 계셨는데, **기다리실 필요가 없습니다.** 타입만 정해져 있으면 가짜 함수로 대체하고 진행할 수 있어요. 유민성님 채널에 바로 쓰실 수 있는 스텁 코드 올려뒀습니다.\n\n**다른 파트도 마찬가지예요.** 남의 결과물이 없어서 막혔다면 그건 대부분 mock으로 뚫립니다. 막히셨으면 기다리지 말고 말씀해주세요.\n\n**2. 이현우님 방식을 참고해주세요 — 화면을 그려봐야 빠진 게 나옵니다**\n\n이현우님이 **실제로 화면을 그리다가** `types.ts`에 없는 필드 6개를 발견하셨어요. 그중 `myId`는 **제 기획서 초안의 실수**였고, 이게 없으면 \"지금 내 차례인가\"조차 판단할 수 없어서 화면 두 개가 통째로 막히는 상황이었습니다.\n\n**책상에서 생각만 해선 안 나오고, 만들어봐야 나옵니다.** 각자 범위에서 \"이 정보가 없으면 못 만든다\" 싶은 게 있으면 바로 올려주세요.\n\n━━━━━━━━━━━━━━━━━━━━\n저(파트 B)도 지금부터 봇 발화 작업 시작합니다. **오늘 목표는 묘사 한 줄 생성 → 저녁에 블라인드 테스트**입니다.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCCD",
+          "code": "round_pushpin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cd.svg"
+        },
+        {
+          "id": "",
+          "name": "⚠️",
+          "code": "warning",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg"
+        }
+      ]
+    },
+    {
+      "id": "1533672059794751539",
+      "type": "Default",
+      "timestamp": "2026-08-03T12:05:13.304+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\uD83D\uDCE2 **저장소 재구성 완료 — 확인 및 할 일**\n\n유민성님이 미리 만들어두신 모노레포 구조(`apps/frontend`, `apps/backend`, `packages/shared-types`)를 기반으로 전체 저장소를 다시 세팅했습니다. 이현우님 화면 13개, 제 봇 코드까지 합쳐서 `main`에 올렸어요.\n\n⚠️ **중요: `main`을 강제로 다시 썼습니다(force-push).** 이미 클론하신 분은 반드시\n```\ngit fetch origin\ngit reset --hard origin/main\n```\n하시거나 그냥 새로 클론하세요. 기존 클론 위에서 `git pull`만 하면 충돌 납니다.\n\n**시작 명령어**\n```\ngit clone https://github.com/Scalmia/Zeteo.git\ncd Zeteo\nnpm install\n```\n\n| 파트 | 담당 | 명령어 |\n|---|---|---|\n| A·서버 | 유민성 | `npm run dev -w backend` |\n| B·봇 | 김정현 | `npm run bot -w backend` |\n| C·화면 | 이현우 | `npm run dev -w frontend` → `/?mock=` |\n| D·공통 | 박진 | `npm run dev -w frontend` |\n\n구조/소유권/설계원칙은 저장소 README.md에 다 정리해뒀습니다. 각자 파일 소유권 표 한 번씩 봐주세요 — **남의 파일 구역은 직접 고치지 말고 요청하기.**\n\n**각자 할 일**\n- @하리1224 (유민성): 개별 채널에 코드 한 줄 수정한 것 + 리뷰 피드백 남겼어요, 확인 부탁드려요.\n- @이현우 (이현우): 개별 채널에 화면 파일 위치/import 경로 바뀐 것 안내해뒀어요.\n- @FE_12_박진 (박진): 개별 채널에 이제 작업 시작하시면 되는 상태라고 남겨뒀어요.\n- 전원: `packages/shared-types/src/index.ts`는 4명 공동 계약입니다. 여기 건드릴 일 있으면 미리 공지 + PR 제목에 `[types]`.\n\n질문 있으면 편하게 여기 남겨주세요.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1531483488815943793",
+          "name": "ihyeonu_56073",
+          "discriminator": "0000",
+          "nickname": "이현우",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        },
+        {
+          "id": "389975441601200138",
+          "name": "hari1224",
+          "discriminator": "0000",
+          "nickname": "하리1224",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+        },
+        {
+          "id": "1347110218206679051",
+          "name": "mr.park0",
+          "discriminator": "0000",
+          "nickname": "FE_12_박진",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+        }
+      ],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCE2",
+          "code": "loudspeaker",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4e2.svg"
+        },
+        {
+          "id": "",
+          "name": "⚠️",
+          "code": "warning",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg"
+        }
+      ]
+    },
+    {
+      "id": "1533736485281464330",
+      "type": "Default",
+      "timestamp": "2026-08-03T16:21:13.537+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83D\uDCE2 **각자 브랜치에 작업 올려주세요 — 올라오는 대로 병합합니다**\n\n저도 이제 제 파트(B·봇) 작업 들어갑니다. 세 분 브랜치가 올라오면 한 번에 모아서 `main`에 병합할게요.\n\n━━━━━━━━━━━━━━━━━━━━\n**\uD83D\uDCCC 브랜치에 올리는 법 (git 익숙하지 않아도 순서대로 하면 됩니다)**\n\n**1. 저장소가 이미 있는 경우 — 최신 상태로 맞추기**\n```bash\ngit fetch origin\n```\n**절대 `git reset --hard`를 먼저 치지 마세요.** 커밋 안 된 작업이 있으면 그 명령 한 번에 전부 사라집니다. 아래 3번에서 커밋부터 하고 나면 안전해집니다.\n\n**2. 내 브랜치로 이동**\n```bash\ngit checkout feat/server    # 유민성님\ngit checkout feat/game-ui   # 이현우님\ngit checkout feat/layout    # 박진님\n```\n(저장소를 새로 클론하신 거면 `git checkout -b feat/xxx origin/feat/xxx`로 받으시면 됩니다.)\n\n**3. 작업물 커밋** — 지금 갖고 계신 파일이 이 브랜치 위에 없다면 그 자리에 옮겨 넣고 진행하세요.\n```bash\nnpm run format               # 포맷 통일. 이거 안 하면 나중에 병합할 때 세미콜론 단위로 전부 충돌 납니다\ngit add -A\ngit commit -m \"feat(xxx): 작업 내용\"\n```\n\n**4. 올리기**\n```bash\ngit push origin feat/xxx     # 본인 브랜치 이름으로\n```\n\n**5. 빌드 한 번 확인 (선택이지만 추천)**\n```bash\nnpm run build -w frontend    # 화면 쪽\nnpm run build -w backend     # 서버 쪽\n```\n\n━━━━━━━━━━━━━━━━━━━━\n**막히면 커밋 전 상태로 캡처든 파일 첨부든 편하게 개별 채널에 올려주세요.** 무리해서 혼자 풀려다 작업물 날리는 것보단 그게 훨씬 빠릅니다.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCE2",
+          "code": "loudspeaker",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4e2.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDCCC",
+          "code": "pushpin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cc.svg"
+        }
+      ]
+    },
+    {
+      "id": "1533993335558246520",
+      "type": "Default",
+      "timestamp": "2026-08-04T09:21:51.415+09:00",
+      "timestampEdited": "2026-08-04T09:27:41.415+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Deleted",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1533994741484748880",
+      "type": "Default",
+      "timestamp": "2026-08-04T09:27:26.614+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "제가 이해해볼게요",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1533998700479778836",
+      "type": "Default",
+      "timestamp": "2026-08-04T09:43:10.512+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83D\uDCCC 짧은 공지 — `.gitattributes` 추가했습니다 (`main`에 반영됨)\n\n전에 브랜치 push 안내드릴 때 `npm run format` 하면 줄바꿈 때문에 관련 없는 파일 40개가 수정된 것처럼 잡힐 수 있다고 했었는데, 그 원인(LF/CRLF 불일치)을 고쳤어요. **이제 `git add -A` + `npm run format` 편하게 쓰셔도 됩니다.**",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCCC",
+          "code": "pushpin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cc.svg"
+        }
+      ]
+    },
+    {
+      "id": "1534008916038385785",
+      "type": "Default",
+      "timestamp": "2026-08-04T10:23:46.091+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\uD83D\uDCCC 짧은 공지 — `.gitattributes`가 `main`에만 있어서 각자 작업 브랜치엔 안 닿아있던 걸 현우님이 짚어주셨어요. `dev`·`feat/server`·`feat/game-ui`·`feat/layout`·`feat/bot` 전부에 추가했습니다. 이제 어느 브랜치에서 작업하시든 줄바꿈 문제 없이 `npm run format` + `git add -A` 쓰시면 됩니다.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCCC",
+          "code": "pushpin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cc.svg"
+        }
+      ]
+    },
+    {
+      "id": "1534044402585042976",
+      "type": "Default",
+      "timestamp": "2026-08-04T12:44:46.743+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83D\uDCCC 짧은 공지 — 당분간 `dev`·`main`엔 아무도 직접 병합하지 말아주세요. 지금 봇 코드가 실시간으로 개발 중이라, 병합은 제가(김정현) 직접 챙길게요. PR은 올려두셔도 되는데, 병합/승인은 제가 말씀드릴 때까지만 잠시 보류 부탁드려요.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCCC",
+          "code": "pushpin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cc.svg"
+        }
+      ]
+    },
+    {
+      "id": "1534046330543013948",
+      "type": "Default",
+      "timestamp": "2026-08-04T12:52:26.404+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone 점심 복귀하시면 확인해주세요 — 지금 상태 정리했습니다.\n\n**✅ 이현우님** — 최신 커밋(시스템 메시지 가독성)까지 문제없어요. 병합 대기 상태입니다.\n**\uD83D\uDFE1 유민성님** — `v2 기획안 적용` 잘 받았고, 추가로 push 예정이라고 하셨던 것 기다리고 있어요. 오시면 진행 상황 알려주세요.\n**\uD83D\uDD34 박진님** — `게임참여인원 수정` 커밋에서 `index.html`을 Vite 진입점으로 바꾸신 것, `types.ts` 올려주신 것 다 좋았어요. 근데 정작 부탁드렸던 **토큰 이름 4개(`--color-line`·`--color-muted`·`--color-danger`·`--radius`)는 이번에도 `tokens.css`에 안 들어갔어요.** 색값은 나중에 다크로 바꾸면 되니, **이름 4개만 먼저 채워서 올려주실 수 있을까요?**\n\n전체 병합은 계속 제가 진행할게요. 각자 브랜치엔 계속 커밋하셔도 됩니다.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "✅",
+          "code": "white_check_mark",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDFE1",
+          "code": "yellow_circle",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f7e1.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDD34",
+          "code": "red_circle",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f534.svg"
+        }
+      ]
+    },
+    {
+      "id": "1534091899999223899",
+      "type": "Default",
+      "timestamp": "2026-08-04T15:53:31.009+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83D\uDCE2 **`shared-types` 계약 변경 예고 — 지금부터 이 파일은 잠급니다**\n\n지금 **세 사람이 각자 `shared-types`를 고치고 있어요.** 유민성님은 `feat/server`에, 박진님은 로컬에, 저는 곧 봇 쪽을. 셋 다 병합이 안 된 상태라 이대로 각자 올리면 **서로를 깨뜨려요.** 그래서 한 번에 묶어서 정리하고, 이후로는 잠급니다.\n\n━━━━━━━━━━━━━━━━━━━━\n**\uD83D\uDD12 먼저 — `packages/shared-types`는 지금부터 제 확인 없이 수정 금지**\n\n필요한 게 생기면 **고치지 마시고 저한테 말씀해주세요.** 이 파일 하나가 4명 전부를 깨뜨릴 수 있어서, 변경은 제가 모아서 한 번에 반영할게요.\n\n━━━━━━━━━━━━━━━━━━━━\n**1️⃣ `BotAction` — 봇에게 \"채팅\"이라는 수단을 줍니다** (파트 A·B만 해당)\n\n처음 보시는 내용이라 배경부터 설명할게요.\n\n**지금 사람은 말하는 방법이 두 가지예요:**\n```ts\n{ t: 'describe', text }   // 묘사 단계 — 턴제, 한 번씩\n{ t: 'chat', text }       // 토론·최후변론 — 자유 채팅\n```\n서버는 이 둘을 다르게 처리해요. `describe`는 \"몇 명이 말했나\" 카운터를 올리고, `chat`은 그냥 메시지만 추가해요.\n\n**그런데 봇은 말하는 방법이 하나뿐이에요:**\n```ts\n{ t: 'speak', text, delayMs }   // 이거 하나\n```\n\n봇에겐 \"이건 묘사야 / 이건 채팅이야\"를 구분할 수단이 없어요. 그래서 **서버가 봇의 모든 발언을 묘사로 간주**하고 카운터를 올립니다. 그 결과:\n\n- 토론 중에 봇이 말하면 → 카운터가 올라가고 → \"다 말했네\"로 판정 → **토론이 즉시 종료**\n- `silent`도 같은 문제 (말 안 했는데 카운터가 올라감)\n- `finalDefense`는 아예 트리거에서 빠져 있어 봇이 최후변론에 참여 못 함\n\n**이건 유민성님 코드의 실수가 아니라 제가 만든 계약의 구멍이에요.** 사람 쪽은 나눠놓고 봇 쪽은 안 나눈 비대칭이 원인입니다.\n\n**변경안 — 사람과 똑같이 맞춥니다:**\n```ts\nexport type BotAction =\n  | { t: 'describe'; text: string; delayMs: number }   // 묘사 턴\n  | { t: 'chat';     text: string; delayMs: number }   // 자유 채팅\n  | { t: 'vote';     targetId: string | null }\n  | { t: 'lifeVote'; kill: boolean }\n  | { t: 'guessWord'; word: string }\n  | { t: 'silent';   delayMs: number };                // delayMs 뒤 재판단\n```\n```ts\nexport interface BotContext {\n  // ... 기존 그대로 ...\n  accusedId: string | null;   // 현재 피고인 (지금은 봇이 대화 기록에서 역산 중)\n  myVote: string | null;      // 내가 이미 투표했는지\n}\n```\n\n**유민성님께 — 서버에서 바뀌어야 하는 것** (`apps/backend/src/index.ts`)\n- `action.t === \"speak\"` 처리를 `describe` / `chat` 두 갈래로 분리. `chat`은 `recordSpeak`·`isDescribeComplete` 안 타야 해요\n- `silent`도 카운터를 올리지 않도록\n- `debate` 루프 종료 조건을 **\"봇이 투표할 때까지\"에서 \"토론 시간이 끝날 때까지\"로** — 그래야 사람처럼 투표하고도 계속 대화할 수 있어요\n- 각 발언 후 `delayMs`만큼 대기 (지금은 즉시 재호출이라, 이 값이 없으면 봇이 60초 내내 도배해요)\n- `finalDefense`도 봇 트리거 대상에 추가\n\n━━━━━━━━━",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCE2",
+          "code": "loudspeaker",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4e2.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDD12",
+          "code": "lock",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f512.svg"
+        },
+        {
+          "id": "",
+          "name": "1️⃣",
+          "code": "one",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/31-20e3.svg"
+        }
+      ]
+    },
+    {
+      "id": "1534091902033334303",
+      "type": "Default",
+      "timestamp": "2026-08-04T15:53:31.494+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "━━━━━━━━━━━\n**2️⃣ `GameState` — S6·S7 필드 추가** (박진님 요청 반영)\n\n봇 지목·결과 화면에 필요한데 계약에 없던 값들이에요. 기획서 v2.0 §3-5에 \"설계 미완\"으로 이미 적혀 있던 부분이고요. 박진님이 제안해주신 걸 기존 이름 규칙에 맞춰 조정했습니다.\n\n```ts\nbotVoteCounts: { voted: number; total: number };  // S6 익명 투표 진행도\nbotVoteCorrectCount: number;                      // S7 봇을 맞힌 인원 수\nrevealedBotId:  string | null;                    // S7 봇이었던 사람\nrevealedLiarId: string | null;                    // S7 라이어였던 사람\nreasons: SurveyReason[];                          // S7 설문 선택지\n```\n\n**조정한 부분과 이유:**\n- `votedCount`/`totalCount` → `botVoteCounts` — 이미 `lifeVoteCounts: { kill, spare }`가 있어서 같은 형태로 맞췄어요. 안 그러면 이름만 보고 어느 투표인지 몰라요\n- `reveals: PlayerReveal[]` → `revealedBotId` + `revealedLiarId` — 유민성님이 이미 `revealedBotId`를 만들어두셔서 중복이었어요. 이 둘 + `players[]`면 화면이 전원 정체 목록을 만들 수 있어요\n- `botDetectSummary: string` → `botVoteCorrectCount: number` — 서버가 한국어 문장을 소유하면 문구 고칠 때마다 서버를 건드려야 해서요. 숫자만 주고 문장은 화면이 만드는 쪽으로\n- `reasons`는 그대로 유지 — 설문 결과를 나중에 저장할 때 선택지 번호가 서버 정본과 어긋나면 데이터가 오염돼요. 서버가 갖는 게 맞아요\n\n**\uD83D\uDD34 유민성님께 — `view.ts` 대응 필요**\n이 필드들이 필수라서, `buildGameStateFor`가 값을 안 채우면 백엔드 빌드가 깨져요. `botVote`/`result` 단계가 아니면 기본값(`{voted:0,total:0}`, `0`, `null`, `null`, `[]`)만 넣어주시면 됩니다.\n\n**\uD83D\uDD34 그리고 가장 중요한 것 — `revealedBotId`·`revealedLiarId`는 `result` 단계에서만 채워야 해요.**\n한 단계라도 일찍 나가면 개발자도구 한 번에 게임이 끝납니다. 설계원칙 5번(봇 정보 유출 금지)이 걸린 유일한 지점이라, 병합할 때 제가 이 부분만 따로 확인할게요.\n\n**이현우님께** — 필드가 늘어나면서 mock 16개가 `TS2741`로 깨질 거예요. 계약이 `dev`에 들어간 뒤 같은 머지에서 처리하기로 하신 대로 진행하시면 됩니다.\n\n━━━━━━━━━━━━━━━━━━━━\n**3️⃣ `Phase`의 `'survey'` — 유지 확정**\n\n제가 전에 \"실제로 도달하지 않는 값이라 빼는 게 어떠냐\"고 의견 드렸는데, **유지하는 쪽으로 확정합니다.** 유민성님 구현 그대로 가시면 돼요.\n\n━━━━━━━━━━━━━━━━━━━━\n**\uD83D\uDCCC 순서**\n```\n1. (지금) 이 공지 — 이견 있으면 말씀해주세요\n2. 유민성님: 지금 작업분 push 후 서버 편집 잠깐 멈춤\n3. 제가 계약 변경을 main에 반영 ([types])\n4. 각자 자기 브랜치에 main을 merge\n   → shared-types에서 충돌 나면 npm run format 한 번 돌려주세요 (주석 정렬 차이라 대부분 자동 정리됩니다)\n```\n\n이견이나 빠진 것 있으면 편하게 말씀해주세요. 없으면 조금 뒤에 반영할게요.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "2️⃣",
+          "code": "two",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/32-20e3.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDD34",
+          "code": "red_circle",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f534.svg"
+        },
+        {
+          "id": "",
+          "name": "3️⃣",
+          "code": "three",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/33-20e3.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDCCC",
+          "code": "pushpin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cc.svg"
+        }
+      ]
+    },
+    {
+      "id": "1534106487742533723",
+      "type": "Default",
+      "timestamp": "2026-08-04T16:51:28.998+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83D\uDCE2 **계약 확정 — `dev`에 반영했습니다 (`20f8e5b`)**\n\n`packages/shared-types/src/index.ts` 하나만 바뀌었어요. **각자 `dev`를 merge해서 자기 파트를 맞춰주세요.**\n\n```bash\ngit fetch origin\ngit merge origin/dev\n```\n\n⚠️ **`dev`는 지금 일시적으로 컴파일이 안 됩니다.** 계약만 먼저 넣었고 각 파트 코드는 아직 안 맞춰져 있어서요. 여러분이 고쳐서 올려주시면 복구돼요. **그동안 `dev`에서 새 브랜치를 따지는 말아주세요** (merge받는 건 괜찮아요).\n\n━━━━━━━━━━━━━━━━━━━━\n**\uD83D\uDD34 전원 해당 — `PublicPlayer.name` → `label`**\n\n```ts\n// 이전\n{ id, name, isAlive }\n// 지금\n{ id, label, isAlive }   // 예: \"참가자 7\"\n```\n\n**실명은 이제 클라이언트로 안 나갑니다.** 서버가 방마다 무작위로 `참가자 N`을 배정해요.\n\n**왜냐면** — 우리는 서로 아는 4명 + 봇 1명으로 테스트하잖아요. 화면에 실명이 뜨면 **모르는 이름 하나가 곧 봇**이라 게임이 3초 만에 끝나요. 봇에게 그럴듯한 이름을 붙여도 소용없고요. 라벨이 매 판 무작위라 \"지난 판에 참가자 3이 봇이었으니까\" 같은 학습도 안 통합니다.\n\n> **이현우님** — `Chat.tsx`, `PlayerList.tsx`, `VotePanel.tsx`, `Describe.tsx`, `FinalDefense.tsx`, `LifeVote.tsx`, `Reveal.tsx`에서 `p.name` → `p.label`\n> **박진님** — `App.tsx`, `LobbyScreen.tsx`, `ResultScreen.tsx`, `VoteScreen.tsx` + 복사해가신 컴포넌트들. 대기실 닉네임 입력은 그대로 두셔도 돼요 (서버에 저장되고 최종 결과에서 공개됩니다)\n\n━━━━━━━━━━━━━━━━━━━━\n**2️⃣ `GameState` +6 필드** (S6·S7)\n\n```ts\nbotVoteCounts: { voted: number; total: number };\nbotVoteCorrectCount: number;\nrevealedBotId: string | null;\nrevealedLiarId: string | null;\nrevealedNames: Record<string, string> | null;   // playerId → 실명\nreasons: SurveyReason[];\n```\n\n`revealedNames`는 새로 추가한 거예요. 라벨만 있으면 게임이 끝나도 *\"참가자 3이 누구였는데?\"*를 알 수 없어서요. 이 게임의 클라이맥스가 그 순간이라 실명 공개 경로가 필요했습니다.\n\n> **유민성님** — `view.ts`에서 `revealed*` 계열은 **`result` 진입 직전에만** 채워주세요. 한 단계라도 일찍 새면 개발자도구 한 번에 게임이 끝납니다. 병합할 때 이 부분만 따로 확인할게요.\n> **이현우님** — mock 16개에 이 필드들 추가 필요 (`TS2741`)\n\n━━━━━━━━━━━━━━━━━━━━\n**3️⃣ `BotAction` — 봇에게 채팅 수단 추가** (파트 A·B만)\n\n```ts\n| { t: 'describe'; text; delayMs }   // speak 대체\n| { t: 'chat';     text; delayMs }   // 신규\n| { t: 'silent';   delayMs }         // delayMs 추가\n```\n`BotContext`에 `accusedId`, `myVote` 추가.\n\n> **유민성님** — 서버 `maybeTriggerBot`에서 ①`speak` 처리를 `describe`/`chat` 두 갈래로 (chat은 턴 카운터 안 건드림) ②`silent`도 카운터 안 올리게 ③`debate` 루프 종료를 \"봇이 투표할 때까지\"에서 **\"제한시간까지\"**로 ④발언 후 `",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCE2",
+          "code": "loudspeaker",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4e2.svg"
+        },
+        {
+          "id": "",
+          "name": "⚠️",
+          "code": "warning",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDD34",
+          "code": "red_circle",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f534.svg"
+        },
+        {
+          "id": "",
+          "name": "2️⃣",
+          "code": "two",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/32-20e3.svg"
+        },
+        {
+          "id": "",
+          "name": "3️⃣",
+          "code": "three",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/33-20e3.svg"
+        }
+      ]
+    },
+    {
+      "id": "1534106489093099531",
+      "type": "Default",
+      "timestamp": "2026-08-04T16:51:29.32+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "delayMs` 대기 ⑤`finalDefense`도 봇 트리거 대상에 추가\n\n━━━━━━━━━━━━━━━━━━━━\n**\uD83D\uDCCC 진행 순서**\n```\n1. (완료) 계약 → dev\n2. (지금) 각자 dev merge → 자기 파트 수정 → push\n3. 제가 순서대로 통합 (프론트 → 백엔드 → 봇)\n4. 빌드 검증 → dev → main\n```\n\n**`shared-types`는 계속 잠금입니다.** 추가로 필요한 게 생기면 직접 고치지 마시고 말씀해주세요. 오늘 세 명이 각자 고쳐서 꼬였던 게 이것 때문이었어요.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1534107513870483476",
+      "type": "Default",
+      "timestamp": "2026-08-04T16:55:33.646+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\uD83D\uDCD6 **`dev` merge 받는 법 — 처음이신 분들용**\n\n**merge가 뭐냐면**: `dev`에 생긴 변경(= 새 계약)을 내 브랜치로 가져오는 거예요. 내 작업은 그대로 남고, 바뀐 부분만 합쳐집니다.\n\n━━━━━━━━━━━━━━━━━━━━\n**1단계. 내 작업 먼저 커밋** (이거 안 하면 merge가 거부돼요)\n```bash\ngit status              # 뭐가 바뀌었나 확인\ngit add -A\ngit commit -m \"작업 내용\"\n```\n\n**2단계. dev 가져와서 합치기**\n```bash\ngit fetch origin\ngit merge origin/dev\n```\n\n**3단계. 결과 보기**\n```\n성공 → \"Merge made by the 'ort' strategy\" 같은 메시지\n충돌 → \"CONFLICT ... Automatic merge failed\" 메시지\n```\n\n━━━━━━━━━━━━━━━━━━━━\n**✅ 성공했으면 — 내 파트 고치기**\n\n이제 계약이 바뀌었으니 컴파일 에러가 날 거예요. 그게 정상이에요.\n```bash\nnpm install                    # 타입 패키지 갱신\nnpm run build -w frontend      # 프론트 (현우님·박진님)\nnpm run build -w backend       # 백엔드 (민성님)\n```\n에러 메시지에 **파일명과 줄 번호**가 나와요. 거기 가서 `p.name` → `p.label` 같은 식으로 고치시면 됩니다. 전부 고쳐서 빌드가 통과하면:\n```bash\nnpm run format\ngit add -A\ngit commit -m \"fix: 계약 변경 반영\"\ngit push origin 내브랜치이름\n```\n\n━━━━━━━━━━━━━━━━━━━━\n**⚠️ 충돌(CONFLICT)이 났으면**\n\n충돌은 **\"같은 줄을 양쪽이 다르게 고쳤다\"**는 뜻이에요. 파일을 열면 이렇게 생겼어요.\n```\n<<<<<<< HEAD\n내 브랜치 내용\n=======\ndev 쪽 내용\n>>>>>>> origin/dev\n```\n\n**`<<<<<<<`, `=======`, `>>>>>>>` 세 줄을 지우고, 남길 내용만 남기면 됩니다.** 그다음:\n```bash\ngit add -A\ngit commit              # 메시지는 자동으로 채워져 있음. 그냥 저장하고 닫기\n```\n\n> **유민성님** — `shared-types`에서 충돌이 날 거예요. 그건 **무조건 `dev` 쪽을 채택**해주세요. 민성님이 쓰신 내용을 제가 그대로 베이스로 삼고 거기에 얹은 거라, dev 쪽이 이미 민성님 것을 포함하고 있어요.\n> ```bash\n> git checkout --theirs packages/shared-types/src/index.ts\n> git add packages/shared-types/src/index.ts\n> ```\n\n━━━━━━━━━━━━━━━━━━━━\n**\uD83C\uDD98 하다가 꼬였으면 — 되돌리기**\n\nmerge 도중에 뭔가 잘못됐다 싶으면 **merge 시작 전으로 완전히 되돌릴 수 있어요.**\n```bash\ngit merge --abort\n```\n이건 안전해요. 커밋해둔 내 작업은 하나도 안 날아갑니다.\n\n━━━━━━━━━━━━━━━━━━━━\n**\uD83D\uDEAB 절대 하지 말 것**\n\n```bash\ngit reset --hard    # ← 커밋 안 한 작업이 전부 사라집니다\n```\n막혔을 때 검색하면 이게 자주 나오는데, **저한테 먼저 물어봐주세요.** 되돌릴 수 없어요.\n\n━━━━━━━━━━━━━━━━━━━━\n막히면 **에러 메시지를 그대로 복사해서** 각자 채널에 올려주세요. 캡처도 괜찮아요. 혼자 오래 붙잡고 계시는 것보다 훨씬 빠릅니다.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCD6",
+          "code": "book",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4d6.svg"
+        },
+        {
+          "id": "",
+          "name": "✅",
+          "code": "white_check_mark",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+        },
+        {
+          "id": "",
+          "name": "⚠️",
+          "code": "warning",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83C\uDD98",
+          "code": "sos",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f198.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDEAB",
+          "code": "no_entry_sign",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6ab.svg"
+        }
+      ]
+    },
+    {
+      "id": "1534359069681516666",
+      "type": "Default",
+      "timestamp": "2026-08-05T09:35:09.225+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83D\uDCE2 **오늘 목표 — 5인 한 판 돌려보기**\n\n계약 반영 확인했어요. **세 분 다 완료**하셨습니다 \uD83D\uDC4F (제 봇만 남았고 곧 올릴게요)\n\n```\nfeat/server   ✅   feat/game-ui  ✅   feat/layout  ✅   feat/bot  ⏳\n```\n\n━━━━━━━━━━━━━━━━━━━━\n**\uD83D\uDD34 하나가 비어 있어요 — 소켓 클라이언트**\n\n`apps/frontend/src/net/socket.ts` · `hooks/useGameState.ts`\n\n**화면이 서버에 접속하는 코드가 아직 어디에도 없어요.** 지금은 화면이 목업 데이터로만 돌고, 서버는 Postman으로만 테스트된 상태예요. 이게 없으면 목업 확인까지는 되는데 **실제 한 판은 불가능**해요.\n\n**@하리1224 민성님 — 이거 부탁드려요.** 소켓 프로토콜을 아시는 분이 짜는 게 맞아서 원래 파트 A 담당으로 잡혀 있었어요.\n\n> **먼저 말씀드릴 게 있어요 — 이건 민성님이 놓치신 게 아니라 제 문서 결함이에요.**\n> 기획서에 이 파일이 §2 소유권 표에 **한 줄**로만 있고, 정작 §5 \"파트 A 남은 일\"엔 *\"투표 집계 · 루프 상태 전이 · 봇 호출 지점\"* 세 개만 적어뒀어요. 민성님은 제가 준 목록을 어제 100% 끝내신 거고요. 소유권 표랑 할 일 목록이 따로 논 제 실수입니다.\n\n필요한 건 대략 이 정도예요:\n```ts\n// 서버 연결 + ServerEvent 수신 → GameState 저장\n// ClientEvent 전송 함수 제공\nsocket.on('event', (e: ServerEvent) => { if (e.t === 'state') setState(e.state) })\nsocket.emit('action', clientEvent)\n```\n화면 쪽은 `state`와 `onEvent` 두 개만 받으면 되게 이미 만들어져 있어요.\n\n━━━━━━━━━━━━━━━━━━━━\n**\uD83D\uDFE1 지금 5분만 써서 확인해주실 것 — 같은 Wi-Fi로 접속되나?**\n\n오늘은 **배포 없이 로컬로** 할 거예요. 한 명이 서버를 켜고 나머지가 그 컴퓨터로 접속하는 방식이요. Railway는 발표 준비 때 하면 됩니다.\n\n**그런데 학원 Wi-Fi가 기기 간 통신을 막아두는 경우가 있어요.** 그러면 이 방식 자체가 안 돼서 계획을 바꿔야 해요. **이것부터 확인하는 게 좋아요** — 몇 시간 작업하고 나서 알면 늦으니까요.\n\n*아무나 두 분이서 지금 해보세요:*\n```bash\n# A: 서버 켜기\nnpm run build -w frontend      # ← 반드시 build. dev 로 띄우면 남이 못 들어와요\nnpm run dev -w backend\nipconfig                       # 자기 IP 확인 (예: 192.168.0.15)\n\n# B: 브라우저에서\nhttp://192.168.0.15:3000\n```\n- 처음 켜면 **Windows 방화벽 팝업**이 떠요 → 반드시 **허용**\n- 접속되면 \uD83D\uDC4D, 안 되면 알려주세요 (배포로 전환해야 해요)\n\n━━━━━━━━━━━━━━━━━━━━\n**\uD83D\uDCCC 오늘 순서**\n```\n1. (지금) LAN 접속 확인  +  민성님 소켓 클라이언트 작업\n2. 제가 프론트 병합 (feat/game-ui → feat/layout → dev) → 목업 확인\n3. 서버·봇 병합 → 백엔드 빌드\n4. 소켓 클라이언트 도착하면 연결\n5. 한 명이 서버 켜고 IP 공유 → 4명 접속 → 한 판\n```\n\n**2번부터는 제가 할게요.** 병합 중엔 각자 브랜치에 계속 커밋하셔도 되는데, **커밋하시면 저한테 알려주세요** — 병합 중에 올라오면 놓칠 수 있어서요.\n\n오늘 5번까지 못 가더라도 2번(두 분 화면이 처음으로 합쳐지는 것)만 돼도 큰 진전이에요.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "389975441601200138",
+          "name": "hari1224",
+          "discriminator": "0000",
+          "nickname": "하리1224",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+        }
+      ],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCE2",
+          "code": "loudspeaker",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4e2.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDC4F",
+          "code": "clap",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44f.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDD34",
+          "code": "red_circle",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f534.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDFE1",
+          "code": "yellow_circle",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f7e1.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDCCC",
+          "code": "pushpin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cc.svg"
+        }
+      ]
+    },
+    {
+      "id": "1534381775982297198",
+      "type": "Default",
+      "timestamp": "2026-08-05T11:05:22.829+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83D\uDCCC **계약 변경 예고 — `PublicPlayer`에 `isReady` 추가**\n\n```ts\nexport interface PublicPlayer {\n  id: string;\n  label: string;\n  isAlive: boolean;\n  isReady: boolean;   // ← 추가\n}\n```\n\n**왜**: 박진님이 대기실 화면을 실제 서버 데이터에 연결하려다 \"누가 준비 완료했는지\"를 표시할 방법이 없어서요. 서버엔 `room.readyIds`가 원래 있어서 사실상 한 줄짜리 변경입니다.\n\n**영향**: `PublicPlayer`를 객체 리터럴로 만드는 곳이 깨집니다 (`TS2741`).\n> **이현우님** — `mock/states.ts`의 플레이어 5개\n> **박진님** — 대기실·봇지목·결과 화면의 mock\n> **유민성님** — 이미 반영해두셨어요 \uD83D\uDC4D\n\n정리해서 `dev`에 올리면 다시 공지할게요. 그때 각자 merge받아서 맞춰주시면 됩니다.\n\n━━━━━━━━━━━━━━━━━━━━\n**진행 상황**\n\n✅ 소켓 클라이언트 나왔습니다 (민성님) — `net/socket.ts`, `hooks/useGameState.ts`\n\uD83D\uDD04 서버 동작 변경 요청 7건 전달 (민성님 채널)\n\uD83D\uDD04 대기실 필요 필드 전수 확인 요청 (박진님 채널)\n\n**계약이 이틀 새 네 번 바뀌어서 번거로우실 텐데**, 화면을 실제 데이터에 붙일 때마다 빠진 게 드러나는 거라 지금 나오는 게 훨씬 낫습니다. 통합 직전에 터지는 것보다요. 곧 잦아들 거예요.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCCC",
+          "code": "pushpin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cc.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDC4D",
+          "code": "thumbsup",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+        },
+        {
+          "id": "",
+          "name": "✅",
+          "code": "white_check_mark",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDD04",
+          "code": "arrows_counterclockwise",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f504.svg"
+        }
+      ]
+    },
+    {
+      "id": "1534446150428528771",
+      "type": "Default",
+      "timestamp": "2026-08-05T15:21:10.893+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83C\uDF89 **네 파트 전부 `dev`에 통합됐습니다 — 이제 한 판 돌려봅니다**\n\n```\n✅ 파트 C 게임화면    ✅ 파트 D 랜딩·대기실·결과\n✅ 파트 A 서버        ✅ 파트 B 봇\n백엔드 tsc 통과 · 프론트 빌드 통과\n```\n제 컴퓨터에서 단독 테스트로 게임이 끝까지 도는 것까지 확인했어요.\n\n━━━━━━━━━━━━━━━━━━━━\n## 1️⃣ 지금 — 테스트 참여 (설치 필요 없음)\n\n**제가 서버를 돌립니다. 세 분은 브라우저만 열면 돼요.**\n\n곧 주소를 여기 올릴게요. `http://192.168.x.x:3000` 형태일 거예요.\n\n```\n1. 그 주소로 접속\n2. 닉네임 입력 (본인 이름)\n3. 방번호 — 제가 알려드리는 번호로 통일\n4. 입장 → 준비 누르기\n5. 4명 다 준비하면 자동 시작 (봇은 이미 들어와 있어요)\n```\n\n⚠️ **접속이 안 되면 바로 말씀해주세요.** 학원 Wi-Fi가 기기 간 통신을 막는 경우가 있어서, 그러면 방식을 바꿔야 해요.\n\n━━━━━━━━━━━━━━━━━━━━\n## 2️⃣ 테스트하면서 봐주실 것\n\n**게임이 끝까지 도는지**가 1순위고, 그다음이 이거예요.\n\n> \uD83D\uDD34 **토론 단계에서 봇이 말을 하나요?**\n> 안 하면 정상입니다 — 서버에 `chat` 액션 처리가 아직 없어서 봇 발언이 버려지거든요 (민성님께 B-1로 요청드린 것). **이번 테스트로 그게 실제 증상으로 확인되는 셈**이에요.\n\n그 외에 눈에 띄는 것 아무거나 편하게 말씀해주세요 — 화면이 이상하다, 버튼이 안 먹는다, 타이머가 이상하다 등등. **지금은 버그를 많이 찾을수록 좋습니다.**\n\n━━━━━━━━━━━━━━━━━━━━\n## 3️⃣ 테스트 후 — 각자 브랜치에 `dev` 받아주세요\n\n지금 `dev`가 네 파트를 다 합친 최신 기준선이에요. 이걸 안 받으면 앞으로 각자 옛날 기준에서 작업하게 됩니다.\n\n```bash\ngit fetch origin\ngit merge origin/dev\n```\n\n> **유민성님** — 이 병합으로 `apps/frontend/` 27개 파일과 `bot/` 코드가 다시 들어옵니다. `feat/server`에서 지워져 있던 것들인데, `dev`에서 전부 복구해뒀어요. 병합하시면 로컬에도 돌아옵니다.\n\n━━━━━━━━━━━━━━━━━━━━\n**참고 — 통합하면서 정리한 것**\n- `PublicPlayer.isReady` 정식 반영 (박진님 요청 → `dev`에 확정)\n- 소켓 클라이언트는 민성님 원본과 박진님이 화면에 붙여 검증한 버전이 둘 다 있었는데, 검증된 쪽으로 통일했어요\n- mock 플레이어들에 `isReady` 채움 (파트 C·B 양쪽)\n\n주소 나오면 바로 올릴게요. 준비되시면 알려주세요!",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83C\uDF89",
+          "code": "tada",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f389.svg"
+        },
+        {
+          "id": "",
+          "name": "1️⃣",
+          "code": "one",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/31-20e3.svg"
+        },
+        {
+          "id": "",
+          "name": "⚠️",
+          "code": "warning",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg"
+        },
+        {
+          "id": "",
+          "name": "2️⃣",
+          "code": "two",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/32-20e3.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDD34",
+          "code": "red_circle",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f534.svg"
+        },
+        {
+          "id": "",
+          "name": "3️⃣",
+          "code": "three",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/33-20e3.svg"
+        }
+      ]
+    },
+    {
+      "id": "1534447068569931847",
+      "type": "Default",
+      "timestamp": "2026-08-05T15:24:49.795+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83C\uDFAE **서버 열었습니다 — 지금 접속해주세요**\n\n## 접속 주소\n```\nhttp://192.168.0.29:3000\n```\n안 되면 이쪽으로 시도해주세요 (제 컴퓨터에 랜카드가 두 개라 둘 중 하나입니다)\n```\nhttp://192.168.10.103:3000\n```\n\n## 방번호\n```\n1234\n```\n\n━━━━━━━━━━━━━━━━━━━━\n**순서**\n```\n1. 위 주소 접속\n2. 닉네임 — 본인 이름\n3. 방번호 — 1234\n4. 입장하기\n5. 4명 다 들어오면 → 준비 누르기\n   (봇은 이미 들어와 있어요. 사람 4명만 모이면 시작됩니다)\n```\n\n**설치할 것 없습니다. 브라우저만 열면 돼요.**\n\n━━━━━━━━━━━━━━━━━━━━\n⚠️ **둘 다 안 되면 바로 말씀해주세요.** 학원 Wi-Fi가 기기 간 통신을 막는 경우가 있어서, 그러면 방식을 바꿔야 합니다.\n\n\uD83D\uDD34 **토론에서 봇이 조용하면 정상이에요** — 서버에 `chat` 처리가 아직 없어서 봇 발언이 버려지거든요 (민성님 B-1 건). 이번 테스트로 실제 증상이 확인되는 셈입니다.\n\n그 외에 이상한 거 아무거나 편하게 말씀해주세요. **지금은 버그를 많이 찾을수록 좋습니다.**",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83C\uDFAE",
+          "code": "video_game",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3ae.svg"
+        },
+        {
+          "id": "",
+          "name": "⚠️",
+          "code": "warning",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDD34",
+          "code": "red_circle",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f534.svg"
+        }
+      ]
+    },
+    {
+      "id": "1534470587366244374",
+      "type": "Default",
+      "timestamp": "2026-08-05T16:58:17.113+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83C\uDFAE **2판 테스트 결과 — 문제 13건 정리**\n\n게임이 처음부터 끝까지 돌았습니다. 다들 고생하셨어요 \uD83D\uDC4F\n나온 항목을 **지금 고쳐야 게임이 성립하는 것**과 **그 다음 다듬을 것**으로 나눴습니다.\n\n━━━━━━━━━━━━━━━━━━━━\n# \uD83D\uDD34 지금 고쳐야 하는 것 (5건)\n\n## A-1. 봇이 항상 플레이어 목록 맨 위에 있음 — **가장 심각**\n> 담당: **유민성님** · `apps/backend/src/index.ts`\n\n봇이 방 생성 시 가장 먼저 입장해서 `players` 배열 0번에 고정됩니다. `view.ts`도 프론트도 순서를 안 바꿔요.\n\n**라벨을 무작위(`참가자 N`)로 만든 의미가 순서 때문에 통째로 사라집니다.** 목록 첫 줄이 곧 봇이라 게임이 시작도 전에 끝나요. 원래 \"대기실 순서 무작위\" 요청이었는데, 확인해보니 UI 문제가 아니라 **봇 은폐의 핵심 구멍**이었습니다.\n\n→ 서버에서 `players`를 내보낼 때 섞거나, 봇을 무작위 위치에 넣어주세요.\n\n## A-2. 봇이 토론에서 말하지 않음\n> 담당: **유민성님** · 앞서 드린 **B-1**과 동일\n\n`chat` 액션 분기가 없어 봇 발언이 버려집니다. 예상대로 실제 증상으로 확인됐어요.\n\n## A-3. 봇이 두 번 말하고 멈춤\n> 담당: **유민성님 + 김정현**\n\n**어느 단계에서 그랬는지 알려주시면** 원인 좁히기 쉽습니다 (묘사? 토론?). 재현 상황 기억나시는 분 계시면 공유 부탁드려요.\n\n## A-4. 최종 결과에 제시어·봇 정체가 안 나옴\n> 담당: **유민성님**(서버) + **박진님**(화면)\n\n`view.ts`가 이렇게 돼 있어요.\n```ts\nword: me.role === 'liar' ? null : room.word,   // ← phase 조건 없음\n```\n라이어는 게임이 끝나도 제시어를 못 봅니다. **`result` 단계에선 전원에게 공개**돼야 해요.\n```ts\nword: me.role === 'liar' && room.phase !== 'result' ? null : room.word,\n```\n봇 정체는 `revealedBotId`로 이미 내려가고 있으니 **화면에서 라벨로 표시**만 하면 됩니다.\n\n## A-5. 최후 변론 5초 → 너무 짧음\n> 담당: **유민성님** · `PHASE_DURATIONS.finalDefense`\n\n━━━━━━━━━━━━━━━━━━━━\n# \uD83D\uDFE1 그 다음 다듬을 것 (8건)\n\n**화면 (파트 C·D)**\n- **B-1** 채팅창과 투표창이 멀어 투표를 못 보고 지나침 *(현우님)*\n- **B-2** 채팅창이 개별 스크롤이 아니라 화면 전체가 스크롤됨 *(현우님)*\n- **B-3** 봇 지목 화면에 지금까지의 대화 로그를 같이 표시 *(박진님)* — 뭘 근거로 찍는지가 이 게임의 전부라 우선순위 높음\n- **B-4** 설문을 결과 화면 안이 아니라 **별도 화면**으로 *(박진님)* — `Phase`에 `survey`가 이미 있어서 서버 전환만 붙이면 됩니다\n\n**진행·타이밍 (파트 A)**\n- **B-5** 역할 배정에서 \"준비 완료\" 버튼 없애고 10초 카운트로\n- **B-6** 생사 투표에서 과반이 넘으면 남은 시간 단축\n- **B-7** 생사 투표가 동점이면 토론 복귀가 아니라 **생사 투표 재실시** ← 룰 변경이라 확정되면 룰북·기획서도 갱신합니다\n\n**확인 필요**\n- **B-8** *\"최다 득표 지목 후 굳이 바꿀 필요 없이 타이머만 늘리는 방식\"* — 최후 변론을 별도 단계로 두지 말고 토론에서 시간만 연장하자는 뜻일까요? 의도를 조금만 더 설명해주시면 정리하겠습니다.\n\n━━━━━━━━━━━━━━━━━━━━\n**\uD83D\uDD34 5건이 파트 A에 몰려 있습니다.** 민성님, 앞서 드린 B-1~B-7과 겹치는 게 많으니 **A-1(봇 순서) → A-2(chat 분기) → A-4(제시어 공개)** 순으로 봐주시면 좋겠어요.\n\n현우님·박진님은 \uD83D\uDFE1 쪽이라 급하진 않지만, **B-1·B-2·B-3은 다음 테스트 체감에 크게 영향**을 줍",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83C\uDFAE",
+          "code": "video_game",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3ae.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDC4F",
+          "code": "clap",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44f.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDD34",
+          "code": "red_circle",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f534.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDFE1",
+          "code": "yellow_circle",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f7e1.svg"
+        }
+      ]
+    },
+    {
+      "id": "1534470589249486970",
+      "type": "Default",
+      "timestamp": "2026-08-05T16:58:17.562+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "니다.\n\n수정하신 분은 자기 브랜치에 push하고 알려주세요. 모이면 다시 `dev`에 통합하고 3차 테스트 돌리겠습니다.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1534757201619456061",
+      "type": "Default",
+      "timestamp": "2026-08-06T11:57:11.276+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "[types] GameState에 botVoteResults 필드 추가합니다\n\n 박진님이 요청하신내용:\n->봇지목 개별 투표 내역 노출 필요\n결과 화면에 \"누가 누구를 지목했는지\"도 보여주기로 했습니다. vote.ts의 tallyBotVoteResults가 내부적으로 room.botVotes(투표자→지목대상)를 이미 쓰고 있어서, revealedBotId/revealedLiarId랑 같은 패턴으로 result phase에서만 채우는 botVoteResults: Record<voterId, targetId> 필드를 GameState에 추가해주시면 됩니다.\n\n\n무엇을 packages/shared-types/src/index.ts의 GameState에 필드 하나 추가합니다.\n\nts\nbotVoteResults: Record<string, string> | null; // S7 voterId → targetId (result 이전엔 null)\n\n왜 결과 화면에서 \"누가 누구를 봇으로 지목했는지\" 개별 투표 내역을 보여주기로 확정돼서요. 지금은 집계값(botVoteCounts, botVoteCorrectCount)만 있고 voterId → targetId 원본 매핑이 없어서 새로 추가합니다.\n\n동작\n\nresult·survey phase 전에는 항상 null (다른 S7 필드들과 동일한 스포일러 방지 패턴)\nresult phase 진입 이후로는 { voterId: targetId, ... } 형태로 채워짐\n\n영향 범위\n\n백엔드(view.ts)만 값 채우는 쪽 수정, 로직 변경 없음\n프론트(C·D)는 원하면 이 필드로 결과 화면에 투표 내역 렌더링 가능 — 안 써도 무방(옵셔널 아니지만 null 처리만 하면 기존 코드엔 영향 없음)\n\n일단 feat/server 에는 shard-types/src/ index.ts는 수정된 상태로 올려놓겠습니다.",
+      "author": {
+        "id": "389975441601200138",
+        "name": "hari1224",
+        "discriminator": "0000",
+        "nickname": "하리1224",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1534771299551805510",
+      "type": "Default",
+      "timestamp": "2026-08-06T12:53:12.485+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83D\uDCCC **계약 변경 — `botVoteResults` 추가 (`dev` `ef9e3c6`)**\n\n```ts\nbotVoteResults: Record<string, string> | null;   // 투표자 → 지목 대상 (result 이전엔 null)\n```\n\n박진님·민성님이 같은 요청을 하셔서 확정했습니다. **결과 화면에서 \"누가 누구를 봇으로 지목했는지\"** 보여주기 위한 필드예요.\n\n`room.botVotes`가 이미 같은 형태라 `view.ts`에서 그대로 내보냅니다. **서버 쪽 작업은 제가 이미 했어요.**\n\n> \uD83D\uDD34 **익명성 때문에 `result`에서만 채웁니다.** 그 전에 새면 투표 도중에 \"누가 나를 찍었나\"를 알게 돼서 봇 지목이 익명인 이유가 사라져요. `revealed*` 계열과 같은 규칙입니다.\n\n**각자 `dev` merge 받아주세요.** `GameState`를 객체 리터럴로 만드는 곳만 한 줄 추가하면 됩니다 (`botVoteResults: null`).\n\n━━━━━━━━━━━━━━━━━━━━\n## \uD83D\uDCCB 확인된 사항 몇 가지\n\n**1. 민성님 #9(결과에 각자 정체+지목 표시)는 이 필드 하나로 끝납니다**\n나머지는 이미 다 계약에 있어요.\n| 필요한 것 | 어디서 |\n|---|---|\n| 라벨 (D) | `players[].label` |\n| 실명 (유민성) | `revealedNames` |\n| 역할 (시민/라이어) | `revealedLiarId`로 도출 |\n| 봇 여부 | `revealedBotId` |\n| 지목 대상 (→X) | **`botVoteResults`** ← 이번에 추가 |\n\n**2. @FE_12_박진 박진님 — `leaveRoom` 이벤트는 필요 없어졌어요**\n민성님이 이미 처리해두셨습니다. `disconnect` 핸들러에 `survey` 분기가 있고, 마지막 사람이 나가면 방까지 정리돼요.\n```ts\nif (room.phase === 'survey') removePlayerFromLobby(...);   // 이미 있음\nif (room.players.length === 0) rooms.delete(roomId);        // 빈 방 자동 삭제\n```\n`result → survey` 전이도 `stateMachine.ts`에 이미 있어요. 말씀하신 *\"phase가 result에 머문다\"*는 그 전 버전 기준이었습니다.\n\n**다만 프론트 작업은 남아요** — 설문 제출 후 소켓 끊고 로컬 state를 `null`로 되돌려야 랜딩이 나옵니다. **새 이벤트 없이 가능해요.**\n\n**3. @이현우 현우님이 지적하신 것 둘 다 수정됐습니다**\n`boolen` 오타 → `boolean`, `SurveyReason` 중복 선언 → 하나로. 민성님 최신 커밋에서 확인했어요.\n\n**4. 타이머도 민성님이 다 손보셨어요**\n```\nroleReveal    5초 → 10초        finalDefense  5초 → 60초\nlifeVote     60초 → 30초        describe      턴당 20초 (B-7 (나)안)\n```\n2판 테스트에서 나온 A-5(최후변론 5초)가 해결됐습니다.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1531483488815943793",
+          "name": "ihyeonu_56073",
+          "discriminator": "0000",
+          "nickname": "이현우",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        },
+        {
+          "id": "1347110218206679051",
+          "name": "mr.park0",
+          "discriminator": "0000",
+          "nickname": "FE_12_박진",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+        }
+      ],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCCC",
+          "code": "pushpin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cc.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDD34",
+          "code": "red_circle",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f534.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDCCB",
+          "code": "clipboard",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cb.svg"
+        }
+      ]
+    },
+    {
+      "id": "1534789094432051310",
+      "type": "Default",
+      "timestamp": "2026-08-06T14:03:55.115+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83C\uDFAE **3차 테스트 준비 완료 — 지금 말고, 기획 토론 끝나고 진행합니다**\n\n세 분 작업 전부 합쳐서 빌드까지 확인해뒀어요. **시작하자고 하면 바로 접속만 하시면 됩니다.**\n\n```\n✅ 유민성님 서버   ✅ 이현우님 게임화면   ✅ 김정현 봇\n백엔드 tsc 통과 · 프론트 빌드 통과 · 충돌 전부 해결\n```\n\n━━━━━━━━━━━━━━━━━━━━\n## 이번에 고쳐진 것\n\n> **@하리1224 유민성님**\n> `vote` 후 봇 재호출 · `finalDefense` 피고인 한정 가드 제거 · `isStaleBotAction`(턴 인덱스까지 검사) · 제시어 공개 · 타이머 전반 조정\n> **`isPostGame` 도입하신 건 제 코드보다 정확했습니다** — 저는 `result`만 봤는데 그러면 `survey`로 넘어가는 순간 봇 정체·제시어·승패가 다시 숨겨지는 회귀가 있었어요. 그대로 채택했습니다 \uD83D\uDC4D\n\n> **@이현우 이현우님**\n> B-1·B-2 해결 — 채팅 로그가 페이지를 스크롤시키던 게 원인 하나라, **타이머·투표 패널이 화면 밖으로 나가던 문제가 함께 잡혔어요.** 2판 때 \"투표창이 안 보인다\"던 게 이걸로 해결됩니다.\n> mock도 16 → 13개로 정리해주셔서 앞으로 계약 바뀔 때 손댈 곳이 줄었어요.\n\n> **@FE_12_박진 박진님**\n> 어제 이후 새 커밋이 없어서 이번 병합엔 파트 D 변경이 안 들어갔어요. 요청하셨던 **`botVoteResults`는 계약에 들어갔고 서버도 채우고 있으니**, 결과 화면에서 바로 쓰실 수 있습니다.\n> `leaveRoom` 이벤트는 필요 없어졌어요 — 민성님이 `disconnect`에 `survey` 분기를 이미 넣어두셨습니다.\n\n**봇 쪽**은 \"2번 말하고 멈춤\" 원인이 둘이었는데 (봇의 누적 카운트 + 서버의 투표 시 루프 종료) 양쪽 다 해결됐고, 매번 먼저 공격하던 패턴도 발언 유형을 무작위로 고르게 바꿨어요.\n\n━━━━━━━━━━━━━━━━━━━━\n## 테스트 때 봐주실 것\n\n```\n□ 봇이 토론에서 여러 번 말하는가        (2번 제한 풀렸는지)\n□ 봇이 매번 먼저 공격하지 않는가        (발언 다양화 효과)\n□ 봇이 최후 변론에 참여하는가           (피고인이 아닐 때도)\n□ 채팅 스크롤해도 타이머·투표창이 보이는가\n```\n\n준비되면 주소랑 방번호 올릴게요. **기획 토론 끝나고 시작합시다.**",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1531483488815943793",
+          "name": "ihyeonu_56073",
+          "discriminator": "0000",
+          "nickname": "이현우",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        },
+        {
+          "id": "389975441601200138",
+          "name": "hari1224",
+          "discriminator": "0000",
+          "nickname": "하리1224",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+        },
+        {
+          "id": "1347110218206679051",
+          "name": "mr.park0",
+          "discriminator": "0000",
+          "nickname": "FE_12_박진",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+        }
+      ],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83C\uDFAE",
+          "code": "video_game",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3ae.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDC4D",
+          "code": "thumbsup",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+        }
+      ]
+    },
+    {
+      "id": "1534802931579359254",
+      "type": "Default",
+      "timestamp": "2026-08-06T14:58:54.148+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@이현우 2주차 스터디 시스템 문서 정리 끝났어요! `TeamB/2주차/시스템` 폴더에 있어요.\n\n- 기획서 (`개념학습_기록_시스템_기획.md`)\n- 시스템 설계도 (`시스템 설계도.md`)\n- 유저 시나리오 (`유저 시나리오.md`)\n\n이거 구글 드라이브로 옮겨주실 수 있을까요? (깃허브 링크는 README.md에 있어요)",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "1531483488815943793",
+              "name": "ihyeonu_56073",
+              "discriminator": "0000",
+              "nickname": "이현우",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+            }
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "id": "1531483488815943793",
+          "name": "ihyeonu_56073",
+          "discriminator": "0000",
+          "nickname": "이현우",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        }
+      ],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1534803458664955994",
+      "type": "Default",
+      "timestamp": "2026-08-06T15:00:59.815+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83C\uDFAE **3차 테스트 시작합니다 — 지금 접속해주세요**\n\n## 접속 주소\n```\nhttp://192.168.10.103:3000\n```\n\n## 방번호\n```\n3333\n```\n\n```\n1. 위 주소 접속\n2. 닉네임 — 본인 이름\n3. 방번호 — 3333\n4. 입장하기 → 4명 다 모이면 준비 누르기\n   (봇은 이미 들어와 있어요. 사람 4명만 모이면 시작)\n```\n\n━━━━━━━━━━━━━━━━━━━━\n## \uD83C\uDD95 이번 판부터 제시어가 매번 바뀝니다\n\n민성님이 방금 넣어주셨어요. 지난 두 판은 계속 \"동물 / 코끼리\"였는데, 이제 **3개 카테고리 × 5단어 중 무작위**로 뽑힙니다.\n```\n동물 · 음식 · 가전제품\n```\n같은 제시어가 반복되지 않으니 **봇도 사람도 매번 새 맥락**에서 판단하게 돼요. 지난 테스트보다 훨씬 실전에 가깝습니다.\n\n━━━━━━━━━━━━━━━━━━━━\n## 봐주실 것 4가지\n\n```\n□ 봇이 토론에서 여러 번 말하는가        (지난 판 \"2번 말하고 멈춤\" 해결됐는지)\n□ 봇이 매번 먼저 공격하지 않는가        (발언 유형을 무작위로 고르게 바꿨어요)\n□ 봇이 최후 변론에 참여하는가           (피고인이 아닐 때도 질의 가능해야 함)\n□ 채팅 스크롤해도 타이머·투표창이 보이는가  (2판 때 \"투표창이 안 보인다\" 건)\n```\n\n그 외에 이상한 거 아무거나 편하게 말씀해주세요. **버그를 많이 찾을수록 좋습니다.**\n\n접속 안 되면 바로 알려주세요!",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83C\uDFAE",
+          "code": "video_game",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3ae.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83C\uDD95",
+          "code": "new",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f195.svg"
+        }
+      ]
+    },
+    {
+      "id": "1534818578199744675",
+      "type": "Default",
+      "timestamp": "2026-08-06T16:01:04.593+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone 3차 테스트 고생하셨어요. 남은 문제들은 각자 고치기로 한 대로 진행해주세요.\n\n**다 고치신 뒤에 자기 `-logs` 채널에 남겨주세요.**\n\n```\n1. 어떤 문제였는지\n2. 원인이 뭐였는지\n3. 어떻게 고쳤는지 (파일·함수 정도만)\n```\n\n**왜 이렇게 요청드리냐면** — 지금까지 한 사람이 고친 게 다른 파트에 영향을 준 경우가 여러 번 있었어요. 봇이 두 번 말하고 멈춘 건 원인이 봇 쪽과 서버 쪽 **둘 다**였고, 채팅 스크롤 문제는 하나 고치니 투표창 문제까지 같이 풀렸잖아요.\n\n**어떻게 고쳤는지를 알아야 제가 병합할 때 충돌을 제대로 풀 수 있고**, 다른 분이 같은 증상을 다시 겪을 때 바로 연결됩니다.\n\n━━━━━━━━━━━━━━━━━━━━\n**푸시까지 마치면 알려주세요.** 모이면 제가 통합하고 4차 돌리겠습니다.\n\n`shared-types`를 건드려야 하는 게 나오면 **직접 고치지 마시고 말씀해주세요** — 계약은 계속 잠금입니다.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1534823082181656606",
+      "type": "Default",
+      "timestamp": "2026-08-06T16:18:58.426+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83D\uDCD6 **`dev` 최신 반영받는 법 — clone 대신 이렇게 하세요**\n\n각자 지금 작업 중인 폴더를 그대로 쓰면서 dev 최신을 받아올 수 있어요. 새로 clone 받으실 필요 없습니다.\n\n```bash\n# 1. 지금 고치던 게 있으면 먼저 커밋 (안 하면 다음 단계가 막혀요)\ngit add -A\ngit commit -m \"작업 내용\"\n\n# 2. dev 받기\ngit fetch origin\ngit merge origin/dev\n```\n\n**\"내 브랜치는 dev랑 많이 다른데 괜찮나요?\"** — 네, 상관없어요. `dev`는 지금까지 여러분이 push한 커밋들을 **그대로 합쳐서** 만든 거예요. 즉 **본인이 마지막으로 push한 지점은 이미 dev 안에 들어있어요.** 그래서 이후로 새 커밋만 없다면 merge는 그냥 \"따라잡기\"(fast-forward)로 끝나요 — 파일이 몇 개가 다르든 상관없이 한 번에, 충돌 없이 맞춰집니다.\n\n━━━━━━━━━━━━━━━━━━━━\n**⚠️ 유민성님만 해당 — 순서 꼭 지켜주세요**\n\n지금 로컬 디스크에 `apps/frontend/` 폴더 자체가 없으실 거예요 (예전에 지우신 게 커밋됐어요, dev엔 이미 복구해뒀습니다). 이 상태에서 **뭔가 고치고 `git add -A`를 먼저 누르면 \"프론트 삭제\"가 새 커밋으로 또 쌓여서 fast-forward가 깨지고 충돌이 나요.**\n\n**꼭 이 순서로 해주세요:**\n```\n1. git merge origin/dev   ← 먼저! (프론트 자동 복구됨)\n2. 그다음부터 작업 계속\n```\n\n━━━━━━━━━━━━━━━━━━━━\n막히면 바로 각자 채널에 물어봐 주세요.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCD6",
+          "code": "book",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4d6.svg"
+        },
+        {
+          "id": "",
+          "name": "⚠️",
+          "code": "warning",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg"
+        }
+      ]
+    },
+    {
+      "id": "1534824118845706370",
+      "type": "Default",
+      "timestamp": "2026-08-06T16:23:05.586+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\uD83D\uDCCC **정정 — 유민성님 순서 경고 취소합니다**\n\n아까 \"merge 먼저 하고 작업하라\"고 했는데, 실제로 시뮬레이션해보니 **순서 상관없었어요.** 제가 잘못짚었습니다.\n\n민성님이 지금처럼 프론트 파일이 없는 상태에서 백엔드 작업을 더 하고 커밋한 뒤에 `git merge origin/dev`를 해도, 프론트는 충돌 없이 그대로 복구돼요. git이 \"민성님 쪽은 그 파일들을 아예 안 건드렸다(=변경 없음)\"로 보고, dev가 되살린 버전을 그냥 채택하기 때문이에요.\n\n**그러니 순서 신경 안 쓰셔도 됩니다.** 지금처럼 작업하시다가 편할 때 `git fetch && git merge origin/dev` 하시면 돼요.\n\n전원 공통 절차는 그대로예요:\n```bash\ngit add -A && git commit -m \"작업 내용\"   # (아무 때나)\ngit fetch origin\ngit merge origin/dev                       # (아무 때나)\n```",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCCC",
+          "code": "pushpin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cc.svg"
+        }
+      ]
+    },
+    {
+      "id": "1535091749712564254",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:06:33.757+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83D\uDCE2 **각자 수정분 `dev`에 통합 시작합니다**\n\n네 파트 모두 push 확인했어요. 지금부터 병합하고 빌드 검증한 뒤 4차 테스트 준비하겠습니다.\n\n```\nfeat/server    2차 테스트 대응 (생사투표 재투표 방지 · 과반 확정 시 3초 자동 진행 · 토론 120초)\nfeat/game-ui   RoleReveal 준비완료 버튼 제거 (타이머로만 전환)\nfeat/layout    결과화면 제시어·개별 봇지목 노출 · 설문 별도 화면 분리 · 랜딩 복귀\nfeat/bot       발언 폭주 차단 · 제시어 유출 코드 레벨 방어 · 묘사 품질 개선\n```\n\n**병합 중에는 push 잠시 멈춰주세요.** 끝나면 바로 알려드릴게요.\n\n━━━━━━━━━━━━━━━━━━━━\n\uD83D\uDD34 **@하리1224 민성님 — 병합 전에 하나 확인 부탁드려요**\n\n`c6ccbcc`에서 *\"라이어가 제시어 맞췄는데 승리 문구가 안 뜬다\"*를 고치셨는데, 방식이 **어제 확정한 스포일러 방지 원칙과 충돌해요.**\n\n```ts\n// index.ts — guessWord 제출 처리\nroom.liarGameResult = room.pendingLiarGameResult; // 제출 즉시 공개  ← 추가됨\n\n// view.ts\nliarGameResult: room.liarGameResult,   ← isPostGame 조건이 빠짐\n```\n\n이러면 **라이어가 제시어를 제출하는 순간, 봇 지목 단계가 시작되기도 전에 전원이 승패를 봐요.**\n\n어제 현우님과 확정한 게 정확히 이거였어요 — *\"결과가 뜨는지 여부 자체가 스포일러가 되니, 어떤 경로로 끝나든 무조건 `result`까지 미룬다.\"* `guessWord` 경로만 예외가 생긴 셈이에요.\n\n**`stateMachine.ts`의 `botVote` 전이가 이미 정확한 타이밍(result 진입 직전)에 값을 채우고 있어요.** 그러니 아래 두 줄만 되돌리면 원래 버그도 재발 안 하고 스포일러도 막힙니다.\n\n```ts\n// index.ts — 이 줄 삭제\nroom.liarGameResult = room.pendingLiarGameResult;\n\n// view.ts — 원래대로\nliarGameResult: isPostGame ? room.liarGameResult : null,\n```\n\n나머지(생사투표 재투표 방지, 과반 확정 3초 종료, 토론 120초)는 전부 좋습니다 \uD83D\uDC4D\n\n━━━━━━━━━━━━━━━━━━━━\n\uD83D\uDFE1 **@이현우 현우님 — 확인 하나**\n\n이현우-logs에 설명 없이 이미지 하나 올려주셨던데(시스템 메시지 팝업 UI 시안으로 보여요), **지금 반영 요청인지 아이디어 공유인지** 알려주시면 좋겠어요.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1531483488815943793",
+          "name": "ihyeonu_56073",
+          "discriminator": "0000",
+          "nickname": "이현우",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        },
+        {
+          "id": "389975441601200138",
+          "name": "hari1224",
+          "discriminator": "0000",
+          "nickname": "하리1224",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+        }
+      ],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCE2",
+          "code": "loudspeaker",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4e2.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDD34",
+          "code": "red_circle",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f534.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDC4D",
+          "code": "thumbsup",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDFE1",
+          "code": "yellow_circle",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f7e1.svg"
+        }
+      ]
+    },
+    {
+      "id": "1535092439667310623",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:09:18.255+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\uD83D\uDCCC **정정 — @하리1224 민성님, 방금 드린 요청 취소합니다. 제가 잘못 봤어요.**\n\n`liarGameResult`를 되돌려달라고 했는데, **되돌릴 필요 없습니다. 지금 코드가 맞아요.**\n\n코드를 다시 추적해보니 `liarGameResult`가 실제로 채워지는 곳은 세 군데인데, **`reveal` 단계에서는 어느 경로로도 안 채워져요.** 시민 오처형 경로는 `pendingLiarGameResult`만 세팅하고 `liarGameResult`는 건드리지 않더라고요.\n\n즉 어제 확정한 **\"`reveal`에선 항상 `null`\"** 규칙은 여전히 지켜지고 있었습니다.\n\n제가 규칙의 **글자만 보고 이유를 안 따졌어요.** 그 규칙의 근거가 *\"reveal에서 결과가 뜨는지 여부 자체가 라이어를 잡았는지의 스포일러가 된다\"*였는데, `guessWord` 시점엔 **이미 전원이 라이어가 잡힌 걸 알고 있어요** (reveal에서 정체를 봤으니까요). 숨길 게 남아있지 않은 단계라 유출이 성립하지 않습니다.\n\n그리고 봇 지목 중에 라이어게임 승패가 보여도 **봇이 누구인지에 대한 힌트는 안 돼요** — 라이어와 봇은 독립 배정이니까요.\n\n**민성님 수정 그대로 병합하겠습니다.** 혼선 드려서 죄송해요.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "389975441601200138",
+          "name": "hari1224",
+          "discriminator": "0000",
+          "nickname": "하리1224",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+        }
+      ],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCCC",
+          "code": "pushpin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cc.svg"
+        }
+      ]
+    },
+    {
+      "id": "1535093811959566408",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:14:45.435+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83C\uDFAE **4차 테스트 — 통합 완료됐습니다, 접속해주세요**\n\n네 파트 전부 병합했고 **충돌 0건**이었어요. 계약이 안정되니 깨끗하게 붙네요 \uD83D\uDC4F\n`dev`에 push 완료 (`cbe8cbd`) · 백엔드·프론트 빌드 모두 통과\n\n## 접속 주소\n```\nhttp://192.168.10.103:3000\n```\n\n## 방번호\n```\n4444\n```\n\n```\n1. 위 주소 접속 → 닉네임(본인 이름) → 방번호 4444\n2. 4명 다 들어오면 준비 누르기\n   (봇은 이미 들어와 있어요)\n```\n\n━━━━━━━━━━━━━━━━━━━━\n## 이번에 바뀐 것\n\n```\n유민성  생사투표 재투표 방지 · 과반 확정되면 3초 뒤 자동 진행 · 토론 120초\n이현우  RoleReveal 준비완료 버튼 제거 (타이머로만 전환)\n박진    결과화면에 제시어·전원 정체·개별 봇지목 노출 · 설문 별도 화면 · 랜딩 복귀\n김정현  봇 발언 폭주 차단 · 제시어 유출 코드 방어 · 사고 과정 유출 차단\n```\n\n━━━━━━━━━━━━━━━━━━━━\n## \uD83D\uDD34 이번 판 최대 관심사 — 봇이 얼마나 말하는가\n\n1판에서 **봇 17회 : 사람 넷 합쳐 9회**였어요. \"폭주하네\", \"토큰 녹네\" 반응까지 나왔고요.\n\n원인은 봇이 **아무 제동 없이 계속 말할 수 있었던 것**이라, 이번에 *\"남이 말한 뒤에만 발언한다\"* 규칙을 넣었습니다.\n\n> **그래서 이번엔 반대로 너무 조용할 수도 있어요.** 봇이 거의 말을 안 하면 그것도 문제니, **체감을 꼭 알려주세요.**\n> - 적당한가 / 너무 말이 많은가 / 너무 조용한가\n\n## 그 외 봐주실 것\n```\n□ 결과 화면에 제시어·전원 정체·누가 누구 찍었는지 다 나오는가\n□ 설문 화면이 따로 뜨고, 제출하면 랜딩으로 돌아가는가\n□ 생사투표에서 과반 나면 빨리 넘어가는가\n□ 봇이 최후 변론에서 엉뚱한 사람 심문하지 않는가\n```\n\n접속 안 되면 바로 알려주세요!",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83C\uDFAE",
+          "code": "video_game",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3ae.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDC4F",
+          "code": "clap",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44f.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDD34",
+          "code": "red_circle",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f534.svg"
+        }
+      ]
+    },
+    {
+      "id": "1535109615589523617",
+      "type": "Default",
+      "timestamp": "2026-08-07T11:17:33.314+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone 오늘 팀장 면담 내용 공유드려요 \uD83D\uDCE2\n\n1. API 요청 관련 결과는 **다음 주**에 나올 예정\n2. 오늘 **시스템 발표 순서** 확정됨\n3. 발표 때 **질문을 많이 해주면** 좋겠음\n4. **월/주 단위 마일스톤 계획표**를 구체적·단계별로 설정해둘 것\n\n확인 부탁드려요!",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCE2",
+          "code": "loudspeaker",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4e2.svg"
+        }
+      ]
+    },
+    {
+      "id": "1535159867327905792",
+      "type": "Default",
+      "timestamp": "2026-08-07T14:37:14.262+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83D\uDCE2 **5차 테스트 예고 — 봇 코드 정리되면 바로 돌립니다**\n\n4차 테스트에서 나온 것들 중 **봇 쪽 고도화 말고는 다 정리된 상태**예요. 지금 봇 코드를 분석하면서 다듬는 중이고, 끝나는 대로 5차 진행하겠습니다.\n\n**따로 하실 건 없고 준비만 해주세요** — 시작하자고 하면 바로 접속하실 수 있게요.\n\n━━━━━━━━━━━━━━━━━━━━\n## ❓ 확인 부탁 — 강사님이 참여하시나요?\n\n5차 때 **강사님이 함께 플레이하실 수도 있다**고 들었는데, **확정인지 알려주세요.**\n\n지금 서버가 **사람 4 + 봇 1 = 5명**으로 고정돼 있어서요. 강사님이 들어오시면 인원을 늘려야 하고, 이건 코드 수정이 필요합니다.\n\n```\nMIN_PLAYERS_TO_START = 5   ← 이 값과 관련 로직\n```\n\n과반 계산(`투표자 = 참가자 − 1`)은 인원수에서 자동으로 나오게 돼 있어서 괜찮은데, **시작 인원 조건은 바꿔야** 해요.\n\n**확정이면 미리 알려주세요.** 테스트 직전에 알면 급하게 고치다 다른 게 깨질 수 있어서, 여유 있을 때 고쳐두는 게 안전합니다.\n\n━━━━━━━━━━━━━━━━━━━━\n그리고 5차 끝나고 나면 **리팩토링을 한 번 크게 할 예정**이에요. 지금 화면이 16개인데 토론 중심의 5개 정도로 줄이는 방향입니다. 자세한 건 그때 따로 공유할게요.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCE2",
+          "code": "loudspeaker",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4e2.svg"
+        },
+        {
+          "id": "",
+          "name": "❓",
+          "code": "question",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2753.svg"
+        }
+      ]
+    },
+    {
+      "id": "1535192846276235325",
+      "type": "Default",
+      "timestamp": "2026-08-07T16:48:17.056+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83C\uDFAE **5차 테스트 시작합니다 — 접속해주세요**\n\n봇 코드 정리 끝났고 병합 완료했어요 (`dev` `1a75028`, 빌드 통과).\n\n## 접속 주소\n```\nhttp://192.168.10.103:3000\n```\n\n## 방번호\n```\n1111\n```\n\n**강사님은 우리끼리 한 판 돌려본 뒤에 모시겠습니다.** 이번 판은 4명으로 진행해요.\n\n━━━━━━━━━━━━━━━━━━━━\n## \uD83D\uDD34 중요 — 다 모인 거 확인하고 준비 누르세요\n\n인원수 제한을 풀어서(강사님 참여 대비) 이제 **\"전원 준비\"만 시작 조건**이에요.\n\n> **한 명이라도 먼저 들어와서 준비를 누르면 봇과 둘이서 게임이 시작돼버립니다.**\n\n4명 다 입장한 걸 확인하고 나서 준비 눌러주세요.\n\n━━━━━━━━━━━━━━━━━━━━\n## 이번에 바뀐 것 (봇)\n\n지난 두 판 복기에서 나온 것들이에요.\n\n```\n· 표적 갈아타기 — 공격해놓고 상대가 답하기도 전에 다른 사람으로 옮겨가던 것\n  (4444에서 22초, 6666에서 27초 만에 표적 교체 → 이름 부른 상대가 답할 때까지 대기)\n· \"죽여\" 반복 — 최후변론에서 같은 말만 세 번\n· 단답 부재 — 봇만 전부 완결 문장이었음. 이제 절반은 두세 글자로\n· 제시어 유출 — \"그거 와사비 말하는 거면\"처럼 남의 묘사를 풀어서 정답을 넘기던 것\n· 공격당하면 받아치기 추가\n```\n\n## 봐주실 것\n\n```\n□ 봇 발언량이 적당한가          ← 이번 최대 관심사\n□ 표적을 성급하게 바꾸지 않는가\n□ 같은 말을 반복하지 않는가\n□ 짧게 던지는 말이 섞이는가\n□ 힌트를 과하게 흘리지 않는가\n```\n\n> ⚠️ **이번엔 봇이 너무 조용해질 가능성**이 있어요. 발언 브레이크를 여러 개 걸었거든요. **말이 너무 없다 싶으면 꼭 말씀해주세요** — 많은 것만큼이나 적은 것도 문제입니다.\n\n접속 안 되면 바로 알려주세요!",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83C\uDFAE",
+          "code": "video_game",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3ae.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDD34",
+          "code": "red_circle",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f534.svg"
+        },
+        {
+          "id": "",
+          "name": "⚠️",
+          "code": "warning",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg"
+        }
+      ]
+    },
+    {
+      "id": "1536200743868964935",
+      "type": "Default",
+      "timestamp": "2026-08-10T11:33:18.568+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83C\uDFA8 **V3 디자인 시안 — 조건 맞춰서 만들어주세요**\n\n@이현우 @FE_12_박진 @하리1224\n\n회의에서 **\"SPA에 맞춘 새 디자인\"**으로 정해졌고, **모바일까지 고려**하기로 했으니 시안부터 맞춰보려 합니다.\n\n━━━━━━━━━━━━━━━━━━━━\n## \uD83D\uDCD0 공통 조건 (이걸 안 맞추면 비교가 안 됩니다)\n\n```\n화면    채팅 (토론 진행 중)  ← 이거 하나만\n상황    2라운드 · 5명 중 1명 탈락 · 나는 이미 투표한 상태\n폭      390px 필수  /  1280px 선택\n포함    제시어 · 채팅 · 투표 패널 · 플레이어 목록\n형식    HTML 권장\n```\n\n**왜 조건을 못 박냐면** — 한 분은 500px, 한 분은 360px로 그려오면 배치가 다른 게 디자인 차이 때문인지 폭 차이 때문인지 알 수가 없습니다. 같은 상황을 그려야 \"이게 낫다\"가 나옵니다.\n\n> `390px` = 폰 세로, `1280px` = 노트북 정도입니다.\n\n━━━━━━━━━━━━━━━━━━━━\n## \uD83D\uDCF1 모바일부터 그려주세요\n\n**좁은 화면이 어려운 결정을 강제하기 때문입니다.**\n\nPC부터 그리면 공간이 넉넉해서 다 넣을 수 있고, 그러면 *\"뭘 숨길지\"*를 안 정하게 됩니다. 그 상태로 폰으로 옮기려 하면 처음부터 다시 설계하게 되고요. **넓히는 건 쉽고 욱여넣는 건 어렵습니다.** (민성님 시안이 탈락한 것도 이 순서 문제였습니다)\n\n━━━━━━━━━━━━━━━━━━━━\n## \uD83D\uDD11 이 4개에 답이 있는 시안이 좋은 시안입니다\n\n쉬운 부분만 예쁘게 그리면 비교가 안 됩니다. **아직 안 정해진 것**을 보여주세요.\n\n```\n□ 폰에서 투표 패널이 어디로 가는가        ← 회의 미해결\n□ 제시어를 어디에 상시 표시하는가          ← \"???\" 는 정했는데 위치 미정\n□ 팝업이 떠 있을 때 어떻게 보이는가        ← 현우님이 이미 구현한 방식\n□ 플레이어 목록이 폰에서 어디 있는가\n```\n\n━━━━━━━━━━━━━━━━━━━━\n## \uD83D\uDCA1 HTML을 권하는 이유\n\n지금 논점이 **\"폰과 PC에서 어떻게 달라지나\"**인데, 그림으로는 이걸 못 보여줍니다. HTML로 만들면 **브라우저 창을 실제로 줄였다 늘렸다** 하면서 볼 수 있어요.\n\n잘 나오면 그대로 구현 출발점이 됩니다. 다만 **시안 단계에서 코드를 너무 다듬지는 마세요** — 어차피 고를 때 한 벌은 버립니다.\n\n━━━━━━━━━━━━━━━━━━━━\n## ⏰ 일정\n\n```\n오늘(8/10)  시안 만들어서 공유 → 고르기\n내일(8/11)  박진님이 토큰·공용 컴포넌트 확정\n8/12~14     각자 화면 구현\n```\n\n**8/11이 병목입니다.** 토큰이 안 나오면 두 분 다 못 움직여요. 오늘 시안만 고르면 나머지는 여유 있습니다.\n\n만드실 분 계시면 알려주세요. 여러 개일수록 좋습니다 \uD83D\uDE4F",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1531483488815943793",
+          "name": "ihyeonu_56073",
+          "discriminator": "0000",
+          "nickname": "이현우",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        },
+        {
+          "id": "389975441601200138",
+          "name": "hari1224",
+          "discriminator": "0000",
+          "nickname": "하리1224",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+        },
+        {
+          "id": "1347110218206679051",
+          "name": "mr.park0",
+          "discriminator": "0000",
+          "nickname": "FE_12_박진",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+        }
+      ],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83C\uDFA8",
+          "code": "art",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3a8.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDCD0",
+          "code": "triangular_ruler",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4d0.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDCF1",
+          "code": "mobile_phone",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4f1.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDD11",
+          "code": "key",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f511.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDCA1",
+          "code": "bulb",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4a1.svg"
+        },
+        {
+          "id": "",
+          "name": "⏰",
+          "code": "alarm_clock",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/23f0.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDE4F",
+          "code": "pray",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f64f.svg"
+        }
+      ]
+    },
+    {
+      "id": "1536203721544048672",
+      "type": "Default",
+      "timestamp": "2026-08-10T11:45:08.501+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83D\uDCD8 **기획서 v3.0 나왔습니다**\n\nhttps://claude.ai/code/artifact/298ae910-7d50-44f0-8fa0-c9d419504a0b\n\n오늘 회의 결정사항 전부 반영했고, 다섯 판 테스트에서 나온 실측 데이터를 정리했습니다. **v2.0 안 읽어도 이거 하나로 완결됩니다.**\n\n━━━━━━━━━━━━━━━━━━━━\n## 각자 꼭 보실 곳\n\n**@이현우 이현우님** → **§2 화면 재설계**\n- 채팅 화면 = 여덟 페이즈 + 전체 작업량의 절반\n- \uD83D\uDD34 **`botVote`(봇 지목)가 박진님 화면에서 현우님 쪽으로 넘어옵니다.** 다섯 화면 체계에선 채팅 안에 들어오거든요. 2차 테스트 때 나온 *\"봇 지목할 때 대화도 보여달라\"*가 이걸로 해결됩니다\n\n**@FE_12_박진 박진님** → **§2-3 모바일 · §8 일정**\n- \uD83D\uDD34 **8/11(내일)이 전체 일정의 병목입니다.** 토큰이 안 나오면 두 분 다 못 움직여요\n- 토큰에 **브레이크포인트(화면 바뀌는 폭 기준선)**를 꼭 넣어주세요. 한 분이 768px, 한 분이 640px 쓰면 그 사이 폭에서 대기실과 채팅 배치가 어긋납니다\n- 문서로 미리 정하지 마시고 **랜딩 화면을 실제로 만들면서 뽑아내는 게** 정확합니다. v2.0 때 종이 위에서 정했다가 이름이 두 번 어긋났어요\n\n**@하리1224 민성님** → **§3-2 소유 경계 · §4 데이터 계층 · D7**\n- 경계는 **②와 ③ 사이**입니다. DB에 넣는 데까지 민성님, 꺼내오는 것부터 제가 맡습니다\n- \uD83D\uDFE1 **D7** — 테이블엔 12주제 96단어가 들어갔는데 **서버는 아직 코드에 박힌 3주제 15단어를 쓰고 있어요.** DB에서 읽어오는 작업이 남았습니다\n\n━━━━━━━━━━━━━━━━━━━━\n## 미결정 7건 중 두 개가 다른 걸 막고 있습니다\n\n```\nD1 학습 신호      → 조회 쿼리를 뭘 열지가 여기서 정해짐 (오늘 PASS된 항목)\nD2 디자인 방향    → 내일 토큰 확정이 여기 달림\n```\n\n**D2는 오늘 중 시안 보고 정합니다.** 고르는 기준은 하나예요 — **가시성 문제가 색·대비 문제인가, 레이아웃 구조 문제인가.** 앞이면 다듬어서 해결되고, 뒤면 다듬어선 안 풀립니다.\n\n━━━━━━━━━━━━━━━━━━━━\n## §5는 다 같이 보셔도 좋습니다\n\n봇 쪽 내용이지만 **다섯 판에서 실제로 뭐가 나왔는지**가 수치로 정리돼 있어요. 발언 비율이 `17:9`였던 것, 지연 장치가 사실 한 번도 작동 안 하고 있었던 것 같은 것들요.\n\n결론이 하나로 모입니다 — **프롬프트는 경향을 만들 뿐 보장하지 않는다.** 반드시 지켜져야 하는 건 코드로 검사해야 하더라고요.\n\n━━━━━━━━━━━━━━━━━━━━\n읽어보시고 빠진 것·틀린 것 있으면 말씀해주세요. 시안 정해지면 D2~D4 채워서 업데이트하겠습니다 \uD83D\uDE4F",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Zeteo 기술 구현 기획서 v3.0",
+          "url": "https://claude.ai/code/artifact/298ae910-7d50-44f0-8fa0-c9d419504a0b",
+          "timestamp": null,
+          "description": "Zeteo 기술 구현 기획서 3판 — 화면 13→5 통합, 학습 순환 구조, 다섯 판의 실측 데이터, 8/19 중간 발표까지의 일정",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/gQWjr0ueLdIevRBcl6lk7O_NySdFIWFJdK3KeActxuI/https/claude.ai/images/claude_ogimage.png",
+            "canonicalUrl": "https://claude.ai/images/claude_ogimage.png",
+            "width": 1138,
+            "height": 640
+          },
+          "images": [],
+          "fields": [],
+          "inlineEmojis": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1531483488815943793",
+          "name": "ihyeonu_56073",
+          "discriminator": "0000",
+          "nickname": "이현우",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        },
+        {
+          "id": "389975441601200138",
+          "name": "hari1224",
+          "discriminator": "0000",
+          "nickname": "하리1224",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+        },
+        {
+          "id": "1347110218206679051",
+          "name": "mr.park0",
+          "discriminator": "0000",
+          "nickname": "FE_12_박진",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+        }
+      ],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCD8",
+          "code": "blue_book",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4d8.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDE4F",
+          "code": "pray",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f64f.svg"
+        }
+      ]
+    },
+    {
+      "id": "1536950334965161984",
+      "type": "Default",
+      "timestamp": "2026-08-12T13:11:55.012+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83C\uDFAE **6차 테스트 — 화면 전면 재작성 통합 완료, 접속해주세요**\n\n리뉴얼(화면 5개 · 모바일 반응형 · Blood Moon 테마 · DB 연동)이 전부 `dev`에 합쳐졌습니다. 빌드 통과 확인했습니다.\n\n## 접속 주소\n```\nhttp://192.168.10.103:3000\n```\n\n## 방번호\n```\n2222\n```\n\n━━━━━━━━━━━━━━━━━━━━\n## 이번에 완전히 바뀐 것\n\n```\n화면       13개 → 5개 (랜딩·대기실·채팅·최종결과·설문)\n디자인     Blood Moon 테마, 모바일 반응형\n데이터     이번 판부터 DB에 실제로 쌓입니다\n봇         GPT-5.6 Sol 프로바이더 추가, 문장 끊어 보내기·라벨 처리 개선\n```\n\n━━━━━━━━━━━━━━━━━━━━\n## 절차는 이전과 동일합니다\n\n```\n1. 위 주소 접속 → 닉네임 → 방번호 2222\n2. 전원 입장 확인 후 준비 (인원 제한 없음 — 먼저 누르면 그대로 시작되니 주의)\n```\n\n━━━━━━━━━━━━━━━━━━━━\n## 봐주실 것 — 이번엔 화면이 통째로 바뀌었으니 꼼꼼히 부탁드려요\n\n```\n□ 폰으로 접속 시 배치가 정상인가 (투표 패널 하단 시트 등)\n□ 제시어가 상단에 계속 보이는가\n□ 봇 지목이 채팅 화면 안에서 자연스러운가\n□ 팝업(역할배정·생사투표·결과)이 뜰 때 이상 없는가\n□ 봇 발언 — 폭주하지 않는가, 단답이 자연스러운가\n```\n\n━━━━━━━━━━━━━━━━━━━━\n\uD83D\uDD34 **민성님만 — 병합 전 확인 부탁드려요**\n\n`feat/server`에 있는 `0b453ea \"DB <-> BOT\"` (knowledge.ts·history.ts, 과거 설문 사유를 봇 프롬프트에 자동 주입) 이거, **이번 dev 병합에서 뺐습니다.**\n\n정현님이 같은 기능을 이미 검토하셨는데 **\"사람 승인 없이 프롬프트에 바로 들어가는 방식이라 기획서 원칙과 다르다\"**고 판단해서 이번 PR에서 의도적으로 제외한 부분이라, 겹치는 것 같아요. `bot/index.ts`·`prompts.ts`(파트 B 소유 파일)도 같이 손대신 상태라, 병합 전에 두 분이 먼저 얘기 나눠보시는 게 좋을 것 같습니다.\n\n접속 안 되면 바로 알려주세요!",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83C\uDFAE",
+          "code": "video_game",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3ae.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDD34",
+          "code": "red_circle",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f534.svg"
+        }
+      ]
+    },
+    {
+      "id": "1537258514429517884",
+      "type": "Default",
+      "timestamp": "2026-08-13T09:36:30.722+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83D\uDCCC **오늘 버그 수정 진행 방식**\n\n수정하실 때 이렇게만 해주세요.\n\n```\n1. 고치고 push\n2. 각자 -logs 에 짧게 한 줄\n   \"뭘 고쳤는지\" 정도면 충분합니다\n3. 오늘 수정할 것 다 끝나면 → PR\n```\n\n**중간중간 PR을 여러 번 만들지 마시고, 본인 몫이 다 끝났을 때 한 번만** 올려주세요. 오늘은 병합을 자주 하기보다 각자 마무리한 뒤 한 번에 합치는 게 깔끔합니다.\n\n━━━━━━━━━━━━━━━━━━━━\n**버그 목록**은 #참고자료 참고자료 채널에 있습니다 (2222 · 3333 각각 정리돼 있어요).\n\n애매하거나 \"이거 내 담당 맞나?\" 싶은 게 있으면 물어봐주세요.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCCC",
+          "code": "pushpin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cc.svg"
+        }
+      ]
+    },
+    {
+      "id": "1537283157617934377",
+      "type": "Default",
+      "timestamp": "2026-08-13T11:14:26.116+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83D\uDCD6 **새 스킬 — 코드 리뷰 시스템 (`/codebook`)**\n\n@이현우 @FE_12_박진 @하리1224\n\n3주차 과제(\"코드를 이해할 수 있는가?\") 산출물로, 코드를 **분기형 게임북**으로 만들어드립니다. 읽는 사람 수준에 따라 경로가 갈리지만 도착점은 같아요 — 아는 분은 4~5단계, 처음이면 12단계쯤 거칩니다.\n\n## 사용법 — 딱 하나만 하시면 됩니다\n\n**#code-book 채널에 배우고 싶은 코드 경로를 텍스트로 남겨주세요.**\n\n```\n예: apps/backend/src/view.ts\n    view.ts (파일명만 적어도 됩니다)\n```\n\n**\"뭘 모르는지\"는 안 적으셔도 됩니다.** 분기가 알아서 수준을 가르니까요. 여러 개 남기셔도 되고, 채널 핀에 있는 파일 메뉴판 참고하시면 됩니다.\n\n다 읽으신 뒤 **\"이제 ___를 설명할 수 있습니다\"** 한 줄만 남겨주세요. 막힌 부분이 있으면 노드 번호를 적으시면 그 부분을 쪼개서 다시 만들어드립니다.\n\n결과물은 `TeamB/3주차/코드북/`에 쌓입니다. 편하게 남겨주세요!",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1531483488815943793",
+          "name": "ihyeonu_56073",
+          "discriminator": "0000",
+          "nickname": "이현우",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        },
+        {
+          "id": "389975441601200138",
+          "name": "hari1224",
+          "discriminator": "0000",
+          "nickname": "하리1224",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+        },
+        {
+          "id": "1347110218206679051",
+          "name": "mr.park0",
+          "discriminator": "0000",
+          "nickname": "FE_12_박진",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+        }
+      ],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCD6",
+          "code": "book",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4d6.svg"
+        }
+      ]
+    },
+    {
+      "id": "1537376235368353802",
+      "type": "Default",
+      "timestamp": "2026-08-13T17:24:17.581+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "https://zeteo-zeteo.up.railway.app/",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537617591030513765",
+      "type": "Default",
+      "timestamp": "2026-08-14T09:23:21.255+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83D\uDE80 **배포 완료 — 이제 주소로 접속됩니다**\n\n```\nhttps://zeteo-zeteo.up.railway.app\n```\n\n어제 배포까지 마쳤고 가볍게 테스트도 돌려봤습니다. **LAN 연결 없이 각자 폰·PC에서 바로 접속 가능**합니다.\n\n━━━━━━━━━━━━━━━━━━━━\n## 남은 버그는 하나뿐입니다\n\n```\n모바일에서 채팅 입력창만 반응이 느림 (다른 컴포넌트는 정상)\n```\n\n이것만 정리되면 기능 쪽은 마무리입니다. 여기까지 오느라 다들 고생 많으셨어요.\n\n━━━━━━━━━━━━━━━━━━━━\n## 오늘 할 일\n\n**1. 모바일 입력 버그 수정**\n\n**2. \uD83D\uDD34 다 같이 몇 판 돌리기 — DB에 데이터 쌓기용**\n\n지금 **DB가 비어 있습니다.** 게임 기록·설문이 쌓여야 그걸로 분석하고 봇을 개선할 수 있는데, 아직 한 판도 없어요. 버그 수정되는 대로 시간 맞춰서 몇 판 돌리겠습니다.\n\n**3. 3주차 발표 준비**\n```\n시연 영상        김정현이 촬영\n유저 시나리오     촬영본 보고 작성\n와이어프레임      〃\n```\n\n━━━━━━━━━━━━━━━━━━━━\n\uD83D\uDCCC **DB 조회·학습 순환은 이번 중간발표 범위에서 뺍니다.** 데이터가 쌓여야 설계가 나오는 부분이라, 지금 만들면 추측으로 짓게 됩니다. 발표 이후 과제로 넘기겠습니다.\n\n접속 안 되거나 이상한 점 있으면 바로 알려주세요!",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDE80",
+          "code": "rocket",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f680.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDD34",
+          "code": "red_circle",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f534.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDCCC",
+          "code": "pushpin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cc.svg"
+        }
+      ]
+    },
+    {
+      "id": "1538139228372729886",
+      "type": "Default",
+      "timestamp": "2026-08-15T19:56:09.289+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\uD83D\uDCE2 **중간발표 PPT — 구성안 공유 + 자료 요청**\n\n수요일 중간발표 PPT를 제가 맡기로 했습니다. 구성안 먼저 공유드리고, 각자 자료를 요청드립니다.\n\n**1. PPT 구성안 (이견 환영)**\n\n처음엔 \"ZETEO 소개 → 프론트/백 진행 → 결론\"을 생각했는데, 그러면 파트별 보고 4개가 따로 노는 모양이 돼서 축을 바꿨습니다.\n\n```\n1. ZETEO란 무엇인가          (시연 영상 + 정의)\n2. 우리가 답해야 했던 질문 3개   ← 발표의 몸통\n   Q1. 봇이 사람 사이에 섞일 수 있는가\n   Q2. 비밀이 새지 않게 만들 수 있는가\n   Q3. 4명이 하나의 시스템을 어떻게 함께 만드나\n3. 지금 어디까지 왔나         (배포 · 플레이 테스트)\n4. 남은 것과 왜 아직 안 했는가  (DB 학습 루프)\n```\n\n각 질문은 `문제 → 시도 → 막혔던 것 → 지금 코드` 순서로 풀 생각입니다.\n1·3·4번은 제가 만들 수 있고, **2번이 여러분 자료로 채워지는 부분**입니다.\n\n구성 자체에 이견 있으면 편하게 말씀해주세요. 지금이 바꾸기 제일 쉬운 시점입니다.\n\n**2. 제출 양식**\n\n4명 답변이 제각각 오면 다시 다 뜯어고쳐야 해서, 형식을 맞춰주시면 좋겠습니다.\n\n```\n■ 1. 요약\n   내 파트가 하는 일\n\n■ 2. 내가 만들어야 했던 것\n   무엇을 구현해야 했나 · 왜 필요했나\n\n■ 3. 막혔던 것 1~2개\n   - 무엇을 시도했나\n   - 왜 안 됐나\n   - 그래서 어떻게 바꿨나\n   ※ 지금도 기억난다면 그만큼 중요했던 것입니다\n\n■ 4. 핵심 파일 2개\n   `파일 경로` — 이 파일이 하는 일\n\n■ 5. 이음새 — 파트가 바뀌는 지점만\n   - 내 코드를 부르는 곳: `파일 · 함수명` — 언제\n   - 내 코드가 부르는 곳: `파일 · 함수명` — 왜\n   ※ 내 파트 안에서만 오가는 호출은 제외\n```\n\n\uD83D\uDCCC **분량은 항목당 최소 3~4줄, 상한은 없습니다.** 축약은 제가 하니 여기선 충분히 써주세요. 지금 단계 목적은 PPT 원고가 아니라 서로 이해하는 것입니다.\n\n\uD83D\uDCCC **5번 보충** — 서버 안에서 `index.ts`가 `room.ts`를 부르는 것처럼 자기 파트 안에서만 오가는 호출은 빼주세요. 파트가 바뀌는 지점(서버→봇, 서버→프론트 등)만 적으면 2~3개 정도 나옵니다.\n\n**3. 마감**\n\n**월요일 밤까지** 부탁드립니다. 화요일이 다 같이 모이는 유일한 날이라, 그날은 통합과 리허설에 쓰려고 합니다.\n\n**4. 다음 공지**\n\n받은 자료를 서로 확인하는 2단계가 있는데, 그건 내일 다시 공지하겠습니다. 지금은 위 양식만 채워주시면 됩니다.\n\n작성 예시는 아래에 이어서 올립니다 \uD83D\uDC47",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCE2",
+          "code": "loudspeaker",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4e2.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDCCC",
+          "code": "pushpin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cc.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDC47",
+          "code": "point_down",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f447.svg"
+        }
+      ]
+    },
+    {
+      "id": "1538139294093287464",
+      "type": "Default",
+      "timestamp": "2026-08-15T19:56:24.958+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**작성 예시** — 제 파트(봇)로 먼저 채워봤습니다. 이 정도 깊이로 써주시면 됩니다.\n\n```\n■ 1. 요약\n게임에 몰래 섞여 사람인 척 대화하는 LLM 봇을 만들고,\n정체가 드러나지 않게 지킨다.\n\n■ 2. 내가 만들어야 했던 것\n봇이 5명 중 1명으로 들어가 묘사·토론·최후변론을 사람처럼 해야 한다.\n너무 잘해도 부자연스럽고 너무 못해도 바로 들킨다.\n특히 봇은 제시어를 알고 있어서, 대화 중에 흘리면 게임 자체가 끝난다.\n그래서 \"자연스럽게 말하기\"와 \"절대 흘리지 않기\"를 동시에 만족해야 했다.\n\n■ 3. 막혔던 것\n- 시도: 제시어 유출을 프롬프트로 막으려 했다.\n  \"제시어를 직접 말하지 마세요\"를 두 번에 걸쳐 강화했다.\n- 실패: 두 번 다 뚫렸다. 프롬프트는 경향을 만들 뿐 보장하지 않는다.\n- 전환: 발화를 내보내기 직전에 코드로 검사하는 필터 4종으로 바꿨다.\n  프롬프트로 \"안 하게 만드는\" 대신, 코드로 \"못 나가게\" 막는 방향.\n\n■ 4. 핵심 파일 2개\n`apps/backend/src/bot/index.ts`\n  봇의 두뇌. 언제 말할지 결정하고, 발언 폭주를 막고,\n  내보내기 전에 제시어 유출을 검사한다.\n`apps/backend/src/bot/prompts.ts`\n  봇에게 주는 지시문. 말투 규칙과 페이즈별 행동 목록.\n\n■ 5. 이음새\n- 내 코드를 부르는 곳: `apps/backend/src/index.ts`\n  페이즈가 바뀌거나 사람이 발언할 때마다, 봇이 반응할지 판단하러 부른다.\n- 내 코드가 부르는 곳: `apps/backend/src/bot/llm.ts`\n  실제 LLM 호출. 두 회사 모델을 한 창구로 감싸둔 곳이다.\n```\n\n5번을 보시면, 제 파트 안에서 오가는 호출(`bot/index.ts` → `bot/prompts.ts` 등)은 뺐습니다. 파트 경계를 넘는 것만 적으면 됩니다.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1538512760856379522",
+      "type": "Default",
+      "timestamp": "2026-08-16T20:40:26.373+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\uD83D\uDCCC **2단계 공지는 내일 올리겠습니다**\n\n지금은 어제 올린 **1단계 제출 양식만** 채워주시면 됩니다.\n\n**작성하신 내용은 각자 `-logs` 채널에 올려주세요.** (어제 공지에 올릴 곳을 안 적었네요)\n\n마감은 안내드린 대로 **월요일 밤**입니다.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCCC",
+          "code": "pushpin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cc.svg"
+        }
+      ]
+    },
+    {
+      "id": "1539064093275848784",
+      "type": "Default",
+      "timestamp": "2026-08-18T09:11:14.265+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\uD83D\uDCCC **2단계 — 서로에게 물을 것을 준비합니다**\n\n**■ 무엇을 하는가**\n누가 무언가를 만들어 오는 단계가 아닙니다. **남의 파트를 읽고, 물어볼 것을 정리해오는** 단계입니다.\n그래야 모였을 때 설명부터 다시 하지 않고 질문만 다루면 됩니다.\n\n**■ 언제 시작하나**\n```\n이현우 · 박진      1단계를 끝내셨으니 지금 바로 시작\n김정현 · 유민성    1단계부터 (30분 예상) → 끝나는 대로 2단계\n\n마감: 1시간 30분 뒤. 그 후 모여서 질문만 다룹니다.\n```\n\n**■ 어떻게 하나**\n```\n1. 남들이 올린 글을 읽는다\n2. 그중 '5. 이음새'를 기준으로 실제 코드를 열어본다   ← 글만 읽지 마시고 꼭 코드를 봐주세요\n3. 이해 안 되는 것 · 물어볼 것을 적는다 (사람당 2~3개)\n4. 그 질문을 상대방의 -logs 채널에 올린다\n```\n\uD83D\uDCEE **질문은 물어볼 상대의 채널에 올려주세요.** #박진-logs #이현우-logs #유민성-logs #김정현-logs\n받는 사람이 미리 보고 답을 준비해올 수 있어야, 모였을 때 그 자리에서 생각하지 않습니다.\n\n⚠️ 유민성님 글이 아직 안 올라와서 서버 파트는 뒤로 밀립니다. 올라오는 대로 읽고 추가해주세요.\n\n**■ 왜 이음새를 기준으로 하나**\n이음새는 **양쪽이 모두 써낸 유일한 지점**입니다.\n실제로 박진님과 이현우님은 같은 이음새를 서로 반대편에서 적으셨습니다 (`tokens.css` / `game.css` 이름 참조).\n같은 지점을 두 사람이 다르게 설명하고 있다면 지금 맞춰야 하고, 그게 발표에서 가장 먼저 티가 나는 부분입니다.\n이음새 바깥은 남의 파트 내부라, 궁금해도 발표에는 쓰이지 않습니다.\n\n**■ 질문은 이렇게 적어주세요**\n- 누구에게 묻는지 함께 적기 — 이음새는 항상 상대가 정해져 있습니다\n- \"이게 뭐예요?\" 보다 **\"이건 이렇게 이해했는데 맞나요?\"** 가 좋습니다\n  틀린 이해를 들고 가야 어디가 어긋났는지 그 자리에서 잡힙니다\n\n**■ 이음새 지도** (코드로 확인한 것)\n```\n봇 ↔ 서버         김정현 ↔ 유민성\n                  서버 index.ts 의 maybeTriggerBot 이 decideBotAction 을 부른다\n\n서버 ↔ 프론트      유민성 ↔ 이현우 · 박진\n                  view.ts 가 만든 GameState → net/socket.ts → hooks/useGameState.ts\n                  실제 소켓은 net/socket.ts 가 잡고, 화면 둘 다 이 통로만 씁니다\n\n파트 C ↔ 파트 D    이현우 ↔ 박진\n                  App.tsx 가 게임 페이즈일 때 GameScreen 하나만 마운트\n                  game.css 가 tokens.css 토큰을 이름으로 참조 (호출이 아니라 이름 결합)\n\n계약              전원 (관리: 김정현)\n                  @zeteo/shared-types — GameState · ClientEvent · BotContext\n```\n\n**■ \uD83D\uDCE2 박진님 질문이 우선입니다**\n이번 발표는 박진님 한 분이 4개 파트를 전부 설명합니다.\n**박진님이 막히는 지점이 곧 심사위원이 막히는 지점입니다.**\n모였을 때 박진님 질문부터 소진하고, 남는 시간에 나머지를 다룹니다.\n\n기준 하나만 두겠습니다 — **박진님이 설명하지 못하는 내용은 슬라이드에서 뺍니다.**",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCCC",
+          "code": "pushpin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cc.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDCEE",
+          "code": "postbox",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4ee.svg"
+        },
+        {
+          "id": "",
+          "name": "⚠️",
+          "code": "warning",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDCE2",
+          "code": "loudspeaker",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4e2.svg"
+        }
+      ]
+    },
+    {
+      "id": "1539082206633529405",
+      "type": "Default",
+      "timestamp": "2026-08-18T10:23:12.826+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\uD83D\uDCCC **2단계 진행 방법 — 기한 11시 50분**\n\n진도가 잘 안 나가신다고 해서 방법을 구체적으로 적습니다.\n막연히 \"남의 코드를 읽는\" 게 아니라 아래 순서대로만 하시면 됩니다.\n\n**■ 1. 남의 요약본 훑기**\n내용을 다 이해하려 하지 마세요. 훑고 넘어가면 됩니다.\n이해 안 되는 문장은 LLM에 그대로 붙여넣어 물어보셔도 됩니다.\n\n**■ 2. 이음새를 코드와 같이 보기**\n상대가 쓴 '5. 이음새'를 읽고, 그 파일을 실제로 열어봅니다.\n\n> \uD83D\uDCCC **틀린 곳을 찾는 게 아닙니다. 버그를 찾는 자리가 아닙니다.**\n> 코드를 눈으로 따라가다가 \"여기서 왜 이렇게 되지?\" 싶은 곳, 흐름이 안 이어지는 곳, 왜 이렇게 짰는지 모르겠는 곳을 그냥 적으세요.\n> **이해가 안 된다는 것 자체가 질문 자격입니다.**\n\n**■ 3. 사건 하나를 끝까지 따라가기**\n이음새만 보면 나와 안 붙어 있는 파트는 영영 모릅니다.\n(예: 봇과 프론트는 직접 만나는 지점이 아예 없습니다)\n\n그래서 게임 진행 순서를 넷으로 나눠 하나씩 맡았습니다.\n맡은 구간에서 무슨 일이 일어나는지를 화면부터 서버까지 훑어주세요.\n```\n① 입장 ~ 역할 배정            유민성\n   랜딩·대기실 화면 · 방 생성 · 준비완료 · 라벨 배정\n\n② 묘사 ~ 토론                 박진\n   발언이 오가는 구간. 봇이 말하는 유일한 구간입니다.\n\n③ 최후변론 ~ 정체 공개         이현우\n   지목 · 생사 투표 · 판정. 서버가 결과를 정하는 구간\n\n④ 제시어 추측 ~ 결과 ~ 설문     김정현\n   게임 종료 · 정체 공개 · DB 적재\n```\n※ 박진님께 ②를 드린 이유 — 발표자이신데 봇과는 이음새가 없어서, 이 경로가 봇을 이해할 수 있는 유일한 통로입니다.\n\n구간을 따라가다 막히는 지점이 곧 질문입니다.\n\n**■ 4. 질문 정리해서 올리기**\n사람당 2~3개. 물어볼 상대의 `-logs` 채널에 올려주세요.\n\"이게 뭐예요?\" 보다 **\"이건 이렇게 이해했는데 맞나요?\"** 가 좋습니다.\n틀린 이해를 들고 가야 어디가 어긋났는지 그 자리에서 잡힙니다.\n\n**■ 기한**\n**오전 11시 50분.** 점심 먹고 와서 바로 모여 질문만 다룹니다.\n다 못 채우셔도 됩니다. **하나라도 들고 오시면 그걸로 시작합니다.**",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCCC",
+          "code": "pushpin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cc.svg"
+        }
+      ]
+    },
+    {
+      "id": "1539787755066892298",
+      "type": "Default",
+      "timestamp": "2026-08-20T09:06:48.681+09:00",
+      "timestampEdited": "2026-08-20T10:14:16.023+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83D\uDCE2 **중간발표 끝 — 다시 개발입니다**\n\n고생하셨습니다. 이제 본 개발로 돌아갑니다. **다음 마감은 8/30(일)** 입니다.\n\n**1. 버그 수정부터 (전원)**\n큰 기능 들어가기 전에 지금까지 나온 것들을 먼저 정리합니다.\n```\n1. 발견한 버그 고치기 — 내 파트 아니어도 발견했으면 알려주세요\n2. 고친 내용은 각자 -logs 채널에 한 줄\n   예: \"botVote 팝업에서 이미 지목한 사람이 다시 클릭되던 것 수정\"\n```\n자잘한 버그 위에 큰 구조를 얹으면 나중에 뭐가 원인인지 구분이 안 됩니다. 이번 주 초는 여기부터 정리합니다.\n\n**2. 다음 목표 — 세 개입니다**\n\n■ DB에서 조회한 데이터로 봇이 스스로 나아지는 구조\n지금은 게임이 끝나면 DB에 쌓이고 거기서 멈춥니다. 다음 칸 — 무엇을 학습 기준으로 볼지, 그걸 봇에 어떻게 반영할지 — 를 만드는 게 목표입니다.\n\n■ 번호를 치지 않고 목록에서 골라 들어가는 구조\n지금은 미리 정해둔 번호를 입력해서 들어갑니다. **열려 있는 방이 대시보드에 보이고, 눌러서 들어가게** 바꿉니다. 제목으로 찾을 수 있고, 나갔다 다시 들어올 수 있게요.\n\n■ 리플레이 — 게임 끝난 뒤 대화를 다시 볼 수 있게\n중간발표 피드백에서 나온 의견입니다. **설문 화면 안에** 둡니다. 답을 쓰다가 대화를 다시 보고, 보다가 답으로 돌아오는 식으로요. 화면 순서는 그대로입니다.\n\n셋 다 설계 전입니다. 각자 생각 정리되면 편하게 의견 주세요.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCE2",
+          "code": "loudspeaker",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4e2.svg"
+        }
+      ]
+    },
+    {
+      "id": "1539788691700977774",
+      "type": "Default",
+      "timestamp": "2026-08-20T09:10:31.992+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\uD83D\uDCCC 위 공지에 **목표 3(리플레이)** 추가했습니다 — 중간발표 피드백에서 나온 의견이에요. 설문 앞뒤 순서는 아직 안 정했으니 의견 주세요.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCCC",
+          "code": "pushpin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cc.svg"
+        }
+      ]
+    },
+    {
+      "id": "1539804822725992562",
+      "type": "Default",
+      "timestamp": "2026-08-20T10:14:37.928+09:00",
+      "timestampEdited": "2026-08-20T10:39:47.383+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83D\uDCD8 **기획서 v4.0 나왔습니다**\nhttps://claude.ai/code/artifact/5a7f186c-150e-43e9-9e09-93b77410829f\n\n**짧습니다. 5분이면 다 읽습니다.**\n\nv3.0은 읽고 나면 바로 구현에 들어갈 수 있는 문서였는데, 이번은 성격이 다릅니다. **세 방향에 합의하는 것까지가 이 문서의 역할이고, 어떻게 만들지는 각자 정합니다.**\n\n세부 설계를 지금 문서로 못 박으면 실제로 짜면서 알게 될 것을 추측으로 미리 굳히게 됩니다. 계약(`@zeteo/shared-types`)은 이미 안정돼 있고 각자 자기 파트를 아니까, 이 시점엔 그게 손해입니다.\n\n━━━━━━━━━━━━━━━━━━━━\n\n**■ 각 목표마다 \"열린 질문\"을 하나씩 달아뒀습니다**\n\n그 목표에서 **가장 먼저 답해야 할 것**입니다. 여기부터 생각해보시면 됩니다.\n```\n학습     무엇을 학습 기준으로 볼 것인가\n방       진행 중인 방을 목록에서 어떻게 다룰 것인가 — 잠글지, 재입장만 열지\n리플레이  오갈 때 쓰던 답이 남아 있어야 하는가\n```\n\n**■ §3 바닥 다지기 — 목표 셋보다 먼저입니다**\n\n버그·주석·최적화. 원칙만 두 개 적었습니다.\n```\n주석    무엇을 하는지가 아니라 왜 그렇게 했는지\n       코드를 읽으면 알 수 있는 것은 안 적습니다\n최적화  측정한 것만 손댑니다\n       느리다고 느낀 것과 실제로 느린 것은 다릅니다\n```\n\n**■ §5는 \"이 문서가 정하지 않는 것\"입니다**\n\n빠뜨린 게 아니라 일부러 비운 자리입니다. 각자 파고들다가 **다른 파트가 맞춰야 하는 값**이 나오면 그때 `@zeteo/shared-types`에 올려주세요. 직접 고치지 마시고요 — 하루에 세 사람이 같은 필드를 각자 추가한 일이 실제로 있었습니다.\n\n━━━━━━━━━━━━━━━━━━━━\n\n**■ 일정 (§4)**\n```\n8/20 ~ 8/22   바닥 다지기\n8/22          목표별 방향 합의 — 문서 말고 대화로\n8/23 ~ 8/28   목표 셋 구현\n8/29          통합 · 테스트 (이때 쌓이는 데이터가 목표 1의 입력이기도 합니다)\n8/30          마감 — 이후로는 기능 추가 없이 안정화만\n```\n\n읽어보시고 빠진 것·틀린 것 있으면 말씀해주세요 \uD83D\uDE4F",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Zeteo 기술 구현 기획서 v4.0",
+          "url": "https://claude.ai/code/artifact/5a7f186c-150e-43e9-9e09-93b77410829f",
+          "timestamp": null,
+          "description": "중간발표 이후 개발 방향 — 목표 셋, 바닥 다지기, 8/30 마감까지의 일정을 결론만 정리한 문서.",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/WOECtUGRl0mr_B1E-JG2qR0qsaChKFbQCGF9vc6x3-Y/https/5a7f186c-150e-43e9-9e09-93b77410829f.frame.claudeusercontent.com/_f/1787187957-83b4/_thumb.img",
+            "canonicalUrl": "https://5a7f186c-150e-43e9-9e09-93b77410829f.frame.claudeusercontent.com/_f/1787187957-83b4/_thumb.img",
+            "width": 1200,
+            "height": 630
+          },
+          "images": [],
+          "fields": [],
+          "inlineEmojis": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCD8",
+          "code": "blue_book",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4d8.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDE4F",
+          "code": "pray",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f64f.svg"
+        }
+      ]
+    },
+    {
+      "id": "1541637587427528814",
+      "type": "Default",
+      "timestamp": "2026-08-25T11:37:23.084+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \uD83D\uDCE2 **봇 자가개선 루프 — 설계 확정, 스키마 요청 4건**\n\n기획서 v4.0 **목표 1(쌓인 데이터로 봇이 스스로 나아지게)** 설계를 마쳤습니다. 열린 질문이었던 *\"무엇을 학습 기준으로 볼 것인가\"* 에 답이 나왔고, 그 결과 **스키마 변경이 필요**합니다.\n\n**■ 어떻게 도는가**\n\n```\n게임 5판이 쌓인다\n   → 그 판들을 얼려서 다시 돌려본다 (replay)\n   → 정해둔 잣대로 실패를 센다\n   → 프롬프트 수정을 PR로 올린다\n   → 머지 여부는 사람이 정한다      ← 여기가 유일한 사람 개입 지점\n```\n\n자동으로 코드가 바뀌지 않습니다. **PR 리뷰가 승인 지점**입니다.\n\n**■ 왜 지금 스키마를 건드려야 하는가**\n\n실측을 돌려봤습니다. 지금까지 쌓인 데이터입니다.\n\n```\n종료된 판              34\n설문이 1건 이상인 판    19   ← 44%의 판이 설문 0건\n사람 전원이 낸 판       11   ← 32%\n자유서술이 있는 응답     14 / 49\n봇 적발률               39 / 59 = 66%\n```\n\n**판의 절반 가까이가 설문을 통째로 못 건집니다.** 설문에만 기대면 데이터의 절반을 버리고 시작합니다. 그래서 데이터를 세 층으로 나눴습니다.\n\n```\nA 무조건 남는 것   대화 전량 · 투표 · 적발률      유실 0%\nB 거의 남는 것     봇 지목                      20초 놓치면 유실\nC 자주 비는 것     설문 사유 · 자유서술          56% / 71% 유실\n```\n\n**A만으로도 학습은 굴러갑니다.** 적발률이 결과 라벨이고 봇 발언이 전부 남아 있으니까요. C는 있으면 훨씬 좋은 재료입니다.\n\n**■ 설문 체크박스가 5판마다 바뀝니다**\n\n지금 문구들이 너무 애매해서 도움이 안 된다는 판단입니다. 앞으로는 **그 5판 동안만 쓰는 \"함정\"** 으로 씁니다.\n\n> 라이어 유출 문제를 고쳤다 → 다음 5판 문항을 *\"묘사가 제시어를 너무 정확히 짚었다\"* 로 → 많이 선택되면 못 고친 것\n\n이전 세대와 비교하지 않습니다. 5판 뒤엔 버립니다.\n\n**■ 요청**\n\n@하리1224 민성님 — 스키마 4건, 각자 `-logs`에 자세히 적었습니다\n@FE_12_박진 박진님 — 설문 화면 2건\n@이현우 현우님 — **없습니다.** 채팅 화면은 확인해보니 이미 준비돼 있었습니다\n\n읽어보시고 안 되는 것·오래 걸리는 것 있으면 말씀해주세요 \uD83D\uDE4F",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1531483488815943793",
+          "name": "ihyeonu_56073",
+          "discriminator": "0000",
+          "nickname": "이현우",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        },
+        {
+          "id": "389975441601200138",
+          "name": "hari1224",
+          "discriminator": "0000",
+          "nickname": "하리1224",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+        },
+        {
+          "id": "1347110218206679051",
+          "name": "mr.park0",
+          "discriminator": "0000",
+          "nickname": "FE_12_박진",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+        }
+      ],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCE2",
+          "code": "loudspeaker",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4e2.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDE4F",
+          "code": "pray",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f64f.svg"
+        }
+      ]
+    },
+    {
+      "id": "1543183736680743022",
+      "type": "Default",
+      "timestamp": "2026-08-29T18:01:13.792+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@이현우 혹시 꼭 pptx로 작업해야하는게 아니면 전체 공유 slides로 줄 수 있나요? 변화된 내용을 보고 싶은데.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1531483488815943793",
+          "name": "ihyeonu_56073",
+          "discriminator": "0000",
+          "nickname": "이현우",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        }
+      ],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543785200696299601",
+      "type": "Default",
+      "timestamp": "2026-08-31T09:51:13.988+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@이현우 PPT에 사용된 컴포넌트와 폰트 크기, 도식화 자료 등을 마지막 슬라이드에서 사용할 수 있도록 추가해주세요. 아직 수정을 하진 않았으니 새롭게 배포하는게 좋을거예요. (claude code 사용 시)",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1531483488815943793",
+          "name": "ihyeonu_56073",
+          "discriminator": "0000",
+          "nickname": "이현우",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        }
+      ],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543793277231177788",
+      "type": "Default",
+      "timestamp": "2026-08-31T10:23:19.584+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@이현우 @하리1224 @FE_12_박진\n\n10시 지났으니 각자 슬라이드 보면서 수정 진행해주세요.\n\n수정한 내용이 있으면 **logs 채널에 사진 첨부와 같이 어떤 식으로 수정했는지** 작성해주세요.\n\n(제가 적어둔 지적사항 8개는 회의록 채널에 있습니다.)",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1531483488815943793",
+          "name": "ihyeonu_56073",
+          "discriminator": "0000",
+          "nickname": "이현우",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        },
+        {
+          "id": "389975441601200138",
+          "name": "hari1224",
+          "discriminator": "0000",
+          "nickname": "하리1224",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+        },
+        {
+          "id": "1347110218206679051",
+          "name": "mr.park0",
+          "discriminator": "0000",
+          "nickname": "FE_12_박진",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+        }
+      ],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544196349224816711",
+      "type": "Default",
+      "timestamp": "2026-09-01T13:04:59.436+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "https://claude.ai/code/artifact/d1ebbecf-8e63-48d3-a40a-957f7870a439\n\n애드센스 관련한 내용이에요. @FE_12_박진 @이현우 @하리1224",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "언제 흑자가 되나",
+          "url": "https://claude.ai/code/artifact/d1ebbecf-8e63-48d3-a40a-957f7870a439",
+          "timestamp": null,
+          "description": "애드센스로 돈이 어떻게 들어오는지, 그리고 라이어 게임이 하루 몇 판부터 남는지를 그림으로 설명한 페이지.",
+          "thumbnail": {
+            "url": "https://images-ext-1.discordapp.net/external/tUMoIwAX0GV3wLXCtpdeSXsOU9Z6Ev7Jr2BpqV0Roi0/https/d1ebbecf-8e63-48d3-a40a-957f7870a439.frame.claudeusercontent.com/_f/1788235431-0608/_thumb.img",
+            "canonicalUrl": "https://d1ebbecf-8e63-48d3-a40a-957f7870a439.frame.claudeusercontent.com/_f/1788235431-0608/_thumb.img",
+            "width": 1200,
+            "height": 630
+          },
+          "images": [],
+          "fields": [],
+          "inlineEmojis": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1531483488815943793",
+          "name": "ihyeonu_56073",
+          "discriminator": "0000",
+          "nickname": "이현우",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        },
+        {
+          "id": "389975441601200138",
+          "name": "hari1224",
+          "discriminator": "0000",
+          "nickname": "하리1224",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+        },
+        {
+          "id": "1347110218206679051",
+          "name": "mr.park0",
+          "discriminator": "0000",
+          "nickname": "FE_12_박진",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+        }
+      ],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544580360665432105",
+      "type": "Default",
+      "timestamp": "2026-09-02T14:30:54.898+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@FE_12_박진 @하리1224 프로젝트에서 자기 담당파트와 업무 관련 내용을 두줄 정도로 요약해서 정리바람. 발표때 [팀원 소개] 페이지에서 멘트로 사용 예정. \n@하리1224 [시스템 설계도] 페이지에서 Railway, Supabase 관련 멘트 요약해서 정리바람.\n봇 파트는 [핵심 코드 리뷰] 내용으로 넘길 예정.",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "389975441601200138",
+          "name": "hari1224",
+          "discriminator": "0000",
+          "nickname": "하리1224",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+        },
+        {
+          "id": "1347110218206679051",
+          "name": "mr.park0",
+          "discriminator": "0000",
+          "nickname": "FE_12_박진",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+        }
+      ],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 64
+}

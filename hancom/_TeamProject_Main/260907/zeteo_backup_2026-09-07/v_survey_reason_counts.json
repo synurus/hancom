@@ -1,0 +1,72 @@
+[
+  {
+    "reason_id": 7,
+    "reason_label": "매번 비슷한 말투나 문구를 썼다.",
+    "sort_order": 1,
+    "is_other": false,
+    "selected_count": 4
+  },
+  {
+    "reason_id": 1,
+    "reason_label": "말이 어색했다.",
+    "sort_order": 1,
+    "is_other": false,
+    "selected_count": 8
+  },
+  {
+    "reason_id": 8,
+    "reason_label": "아무도 콕 집지 않고 두루뭉술하게만 말했다.",
+    "sort_order": 2,
+    "is_other": false,
+    "selected_count": 0
+  },
+  {
+    "reason_id": 2,
+    "reason_label": "반응이 느렸다.",
+    "sort_order": 2,
+    "is_other": false,
+    "selected_count": 2
+  },
+  {
+    "reason_id": 3,
+    "reason_label": "다른 사람들과 다른 정보를 아는 것 같았다.",
+    "sort_order": 3,
+    "is_other": false,
+    "selected_count": 0
+  },
+  {
+    "reason_id": 9,
+    "reason_label": "상황에 안 맞는 말을 했다.",
+    "sort_order": 3,
+    "is_other": false,
+    "selected_count": 3
+  },
+  {
+    "reason_id": 4,
+    "reason_label": "그냥 감이었다.",
+    "sort_order": 4,
+    "is_other": false,
+    "selected_count": 7
+  },
+  {
+    "reason_id": 10,
+    "reason_label": "다른 사람들과 다른 정보를 아는 것 같았다.",
+    "sort_order": 4,
+    "is_other": false,
+    "selected_count": 0
+  },
+  {
+    "reason_id": 5,
+    "reason_label": "기타",
+    "sort_order": 5,
+    "is_other": true,
+    "selected_count": 0
+  },
+  {
+    "reason_id": 11,
+    "reason_label": "기타",
+    "sort_order": 5,
+    "is_other": true,
+    "selected_count": 0
+  }
+]

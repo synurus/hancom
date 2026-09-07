@@ -1,0 +1,324 @@
+[
+  {
+    "id": "d5012e3e-8989-4066-87a6-0a0fb6348c2a",
+    "game_id": 1,
+    "player_label": "H",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "16afc0c7-8fd8-442f-94e6-12f34efa2e46",
+    "game_id": 1,
+    "player_label": "T",
+    "is_bot": false,
+    "role": "liar"
+  },
+  {
+    "id": "38423699-e162-4a9c-b2d3-7254b76ba4c6",
+    "game_id": 1,
+    "player_label": "W",
+    "is_bot": true,
+    "role": "citizen"
+  },
+  {
+    "id": "7cd1d4ca-27e5-408b-a2ce-3a425fcd980f",
+    "game_id": 1,
+    "player_label": "G",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "36080031-c6dd-4c58-99ff-5a10527e582f",
+    "game_id": 1,
+    "player_label": "X",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "0daca581-8697-4042-ab36-69bea2f7c800",
+    "game_id": 2,
+    "player_label": "F",
+    "is_bot": false,
+    "role": "liar"
+  },
+  {
+    "id": "85cb6712-5267-43c0-aad7-38366afb1cdf",
+    "game_id": 2,
+    "player_label": "G",
+    "is_bot": true,
+    "role": "citizen"
+  },
+  {
+    "id": "cfb13391-4e8e-45d9-9c84-76c0f3f9b4ce",
+    "game_id": 2,
+    "player_label": "J",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "3f2daf0f-01ea-4cbc-86fd-f83d05cfbd50",
+    "game_id": 2,
+    "player_label": "M",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "42138c02-e692-4876-a0c6-8e6ad450abf5",
+    "game_id": 2,
+    "player_label": "Z",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "8b283892-d258-4622-8bfc-c4f7a67cdffe",
+    "game_id": 3,
+    "player_label": "Y",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "f1bb240e-d822-461a-b6a3-8594aae3bd26",
+    "game_id": 3,
+    "player_label": "T",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "ba331055-3ff3-4dcf-9950-aaecf6036532",
+    "game_id": 3,
+    "player_label": "P",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "cb1ff697-9060-4015-a32e-858cf4723819",
+    "game_id": 3,
+    "player_label": "L",
+    "is_bot": true,
+    "role": "liar"
+  },
+  {
+    "id": "87028c04-f8b9-4523-ac1d-61879bd005ce",
+    "game_id": 3,
+    "player_label": "H",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "9125b8cf-2434-47a6-a873-79c5e1be453f",
+    "game_id": 4,
+    "player_label": "V",
+    "is_bot": true,
+    "role": "liar"
+  },
+  {
+    "id": "b72713e5-9fae-4d9d-b20a-5ff82e1b7a62",
+    "game_id": 4,
+    "player_label": "W",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "6150b7c2-58f7-4267-8af4-2c80fb0e641a",
+    "game_id": 4,
+    "player_label": "O",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "0418c801-5e48-4c80-bbb8-fa86dc9a75dc",
+    "game_id": 4,
+    "player_label": "A",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "6c9a41b9-9dfa-4195-b296-37dbf2dec3ee",
+    "game_id": 4,
+    "player_label": "P",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "aa683858-9fa1-4ec5-8c16-38ef960c8a84",
+    "game_id": 5,
+    "player_label": "P",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "6c95e989-cc38-43ce-82c8-59afeecaf1b3",
+    "game_id": 5,
+    "player_label": "M",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "fabfc1d4-d3b1-420d-850e-ad5d1effb385",
+    "game_id": 5,
+    "player_label": "Y",
+    "is_bot": false,
+    "role": "liar"
+  },
+  {
+    "id": "5fd42bff-617c-4168-a9fd-006437d4ce14",
+    "game_id": 5,
+    "player_label": "B",
+    "is_bot": true,
+    "role": "citizen"
+  },
+  {
+    "id": "e4e85bf9-155a-42a3-95ed-3ccc6737d264",
+    "game_id": 5,
+    "player_label": "X",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "86d9f952-e3a7-45ca-9f39-cfc61b577291",
+    "game_id": 6,
+    "player_label": "F",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "bda6215c-d3c8-4a01-92e0-7c084dc20880",
+    "game_id": 6,
+    "player_label": "E",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "9f1661fa-e1af-4673-9d19-6d9ec1ab1632",
+    "game_id": 6,
+    "player_label": "V",
+    "is_bot": false,
+    "role": "liar"
+  },
+  {
+    "id": "39af4b66-c9b7-43b8-ae3e-3706a52bf42e",
+    "game_id": 6,
+    "player_label": "W",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "e4443b44-636d-4a05-a007-dc7c89f90ec3",
+    "game_id": 6,
+    "player_label": "O",
+    "is_bot": true,
+    "role": "citizen"
+  },
+  {
+    "id": "1a85dae0-830b-4524-9b1d-070d6294faab",
+    "game_id": 7,
+    "player_label": "F",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "3b023421-d3b1-4d7b-bc7b-e76a48f20635",
+    "game_id": 7,
+    "player_label": "K",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "4a08e378-383b-437b-9f07-832a5fe74175",
+    "game_id": 7,
+    "player_label": "H",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "70ca9926-ac01-4382-ba71-2a99a8305fdd",
+    "game_id": 7,
+    "player_label": "U",
+    "is_bot": true,
+    "role": "liar"
+  },
+  {
+    "id": "6bc6b4fa-c500-477f-a7e8-65a422ff7cc9",
+    "game_id": 8,
+    "player_label": "Y",
+    "is_bot": false,
+    "role": "liar"
+  },
+  {
+    "id": "45d744e1-002d-434a-9284-6c53c4354f47",
+    "game_id": 8,
+    "player_label": "L",
+    "is_bot": true,
+    "role": "citizen"
+  },
+  {
+    "id": "ed8198ac-e40a-490a-af4e-427fec44f2eb",
+    "game_id": 8,
+    "player_label": "X",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "04ec6f5c-fd6d-4466-93e4-11a578d53a7e",
+    "game_id": 8,
+    "player_label": "P",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "483e3622-5418-494b-9538-d9095dd9a224",
+    "game_id": 9,
+    "player_label": "P",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "30cdc3c9-5198-4353-9c81-542a2197ce34",
+    "game_id": 9,
+    "player_label": "M",
+    "is_bot": false,
+    "role": "liar"
+  },
+  {
+    "id": "61d0cd9d-86b6-4bb3-b4ba-27315c5fb500",
+    "game_id": 9,
+    "player_label": "H",
+    "is_bot": true,
+    "role": "citizen"
+  },
+  {
+    "id": "414b6680-d77e-4803-a9ec-064b7c89232e",
+    "game_id": 9,
+    "player_label": "N",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "2bfb5215-3fe9-4c2e-a51c-29563b172e4f",
+    "game_id": 10,
+    "player_label": "I",
+    "is_bot": true,
+    "role": "citizen"
+  },
+  {
+    "id": "e56ef5b4-b54f-41ae-b467-447775e2b637",
+    "game_id": 10,
+    "player_label": "M",
+    "is_bot": false,
+    "role": "citizen"
+  },
+  {
+    "id": "7b1002c3-a785-40cc-87c2-269fa35e7cf0",
+    "game_id": 10,
+    "player_label": "D",
+    "is_bot": false,
+    "role": "liar"
+  },
+  {
+    "id": "df9bc104-5b6e-437d-a7a4-7b0a534133ed",
+    "game_id": 10,
+    "player_label": "Q",
+    "is_bot": false,
+    "role": "citizen"
+  }
+]

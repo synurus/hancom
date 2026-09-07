@@ -1,0 +1,11 @@
+﻿reason_id,reason_label,sort_order,is_other,selected_count
+7,매번 비슷한 말투나 문구를 썼다.,1,false,4
+1,말이 어색했다.,1,false,8
+8,아무도 콕 집지 않고 두루뭉술하게만 말했다.,2,false,0
+2,반응이 느렸다.,2,false,2
+3,다른 사람들과 다른 정보를 아는 것 같았다.,3,false,0
+9,상황에 안 맞는 말을 했다.,3,false,3
+4,그냥 감이었다.,4,false,7
+10,다른 사람들과 다른 정보를 아는 것 같았다.,4,false,0
+5,기타,5,true,0
+11,기타,5,true,0

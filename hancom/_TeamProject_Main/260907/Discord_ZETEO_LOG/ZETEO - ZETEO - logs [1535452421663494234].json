@@ -1,0 +1,1634 @@
+{
+  "guild": {
+    "id": "1531480546134462484",
+    "name": "ZETEO",
+    "iconUrl": "https://cdn.discordapp.com/icons/1531480546134462484/b900b60579718444a13ba25447b7a1c6.png?size=512"
+  },
+  "channel": {
+    "id": "1535452421663494234",
+    "type": "GuildTextChat",
+    "categoryId": "1532291441706143744",
+    "category": "ZETEO",
+    "name": "logs",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2026-09-07T09:36:56.7893641+09:00",
+  "messages": [
+    {
+      "id": "1535455982971265054",
+      "type": "Default",
+      "timestamp": "2026-08-08T10:13:53.733+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "웹훅 연결 테스트입니다.\n\n실제로는 게임이 끝날 때마다 이렇게 올라갑니다:\n> **방 1111** · 5인 · 12분 32초\n> 봇: 참가자 7 · 라이어: 참가자 3 · 봇 적중 2/4\n\n대화 로그와 설문 응답은 `.md` 파일로 첨부됩니다.",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535456057839587418",
+      "type": "Default",
+      "timestamp": "2026-08-08T10:14:11.583+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**�� 1111** ���� �� �ù� �¸� �� �� ���� 2/4",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo α",
+        "discriminator": "0000",
+        "nickname": "Zeteo α",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1535456057529344000",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1535456057529344000/1111_2026-08-08.md?ex=6a9eb8a3&is=6a9d6723&hm=99672d3ed122b959f809e3c4d8485652272d743983d5dcd1dcfd60a66abe0fe1&",
+          "fileName": "1111_2026-08-08.md",
+          "fileSizeBytes": 702
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535460436533706767",
+      "type": "Default",
+      "timestamp": "2026-08-08T10:31:35.545+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[TEST]** 종료 · 4인 · 2라운드\n주제 음식 / 제시어 김치찌개\n봇 B · 결과 citizenWin · 봇 적중 2/3 · 설문 2건",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1535460436495962212",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1535460436495962212/TEST_2026-08-08T01-31-35.md?ex=6a9ebcb7&is=6a9d6b37&hm=f52d6d5d11186c5ca76a4bc5238a5fef2bb3719d55a78a44ec42d1904ce98146&",
+          "fileName": "TEST_2026-08-08T01-31-35.md",
+          "fileSizeBytes": 1036
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535460529542537317",
+      "type": "Default",
+      "timestamp": "2026-08-08T10:31:57.72+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[TEST]** 종료 · 4인 · 2라운드\n주제 음식 / 제시어 김치찌개\n봇 B · 결과 citizenWin · 봇 적중 2/3 · 설문 2건",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1535460528837763112",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1535460528837763112/TEST_2026-08-08T01-31-57.md?ex=6a9ebccd&is=6a9d6b4d&hm=58819f7eef5f3b957bf1a2c6b426fb166fa0a31cc132198af192605c0c6f352d&",
+          "fileName": "TEST_2026-08-08T01-31-57.md",
+          "fileSizeBytes": 992
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535460542930751581",
+      "type": "Default",
+      "timestamp": "2026-08-08T10:32:00.912+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[TEST]** 종료 · 4인 · 2라운드\n주제 음식 / 제시어 김치찌개\n봇 B · 결과 citizenWin · 봇 적중 2/3 · 설문 2건",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1535460543056314480",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1535460543056314480/TEST_2026-08-08T01-32-01.md?ex=6a9ebcd0&is=6a9d6b50&hm=2220d70fa2a2f729949abacc484b0e243e8b43c58879d1f76616d0d1a93e030b&",
+          "fileName": "TEST_2026-08-08T01-32-01.md",
+          "fileSizeBytes": 992
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535546987095789568",
+      "type": "Default",
+      "timestamp": "2026-08-08T16:15:30.807+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[8888]** 종료 · 3인 · 3라운드\n주제 동물 / 제시어 기린\n봇 B · 결과 liarWin · 봇 적중 2/2 · 설문 3건",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1535546986760241152",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1535546986760241152/8888_2026-08-08T07-15-30.md?ex=6a9f0d52&is=6a9dbbd2&hm=9261d557da79f73c4b119aea1d0bbcb4fb859a4ab8007f6fa68a556feb486afb&",
+          "fileName": "8888_2026-08-08T07-15-30.md",
+          "fileSizeBytes": 7479
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535550349711253545",
+      "type": "Default",
+      "timestamp": "2026-08-08T16:28:52.517+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[1234]** 종료 · 3인 · 2라운드\n주제 가전제품 / 제시어 세탁기\n봇 O · 결과 citizenWin · 봇 적중 3/2 · 설문 3건",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1535550349832749147",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1535550349832749147/1234_2026-08-08T07-28-52.md?ex=6a9f1074&is=6a9dbef4&hm=067aa8e92e4400ac3c9a37a52c81590d605570ffebb7f23570d8a14989708602&",
+          "fileName": "1234_2026-08-08T07-28-52.md",
+          "fileSizeBytes": 5633
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535553904501063701",
+      "type": "Default",
+      "timestamp": "2026-08-08T16:43:00.045+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[3456]** 종료 · 3인 · 1라운드\n주제 음식 / 제시어 초밥\n봇 E · 결과 citizenWin · 봇 적중 4/2 · 설문 3건",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1535553904115327076",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1535553904115327076/3456_2026-08-08T07-42-59.md?ex=6a9f13c3&is=6a9dc243&hm=87ad4c1eacd24d076380b0c6e26feb4ae4846894fbff81e93b4b901ed91dcee7&",
+          "fileName": "3456_2026-08-08T07-42-59.md",
+          "fileSizeBytes": 4304
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535555625445232671",
+      "type": "Default",
+      "timestamp": "2026-08-08T16:49:50.35+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[0000]** 종료 · 3인 · 1라운드\n주제 가전제품 / 제시어 냉장고\n봇 B · 결과 citizenWin · 봇 적중 3/2 · 설문 3건",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1535555625101033532",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1535555625101033532/0000_2026-08-08T07-49-49.md?ex=6a9f155e&is=6a9dc3de&hm=d999556e4958a84191e68e27fd4e5b7fef2be2ca70d70890bc97168badab71e7&",
+          "fileName": "0000_2026-08-08T07-49-49.md",
+          "fileSizeBytes": 3987
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537316892031717448",
+      "type": "Default",
+      "timestamp": "2026-08-13T13:28:29.027+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[123]** 종료 · 3인 · 1라운드\n주제 과일 / 제시어 포도\n봇 H · 결과 citizenWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1537316892149031022",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1537316892149031022/123_2026-08-13T04-28-29.md?ex=6a9ee62d&is=6a9d94ad&hm=dc41eae56d891176d6ddae47e8e746717226ca62b49f6362923bc15bd27c2df0&",
+          "fileName": "123_2026-08-13T04-28-29.md",
+          "fileSizeBytes": 1005
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537317153181663272",
+      "type": "Default",
+      "timestamp": "2026-08-13T13:29:31.29+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[11]** 종료 · 4인 · 1라운드\n주제 음식 / 제시어 삼겹살\n봇 V · 결과 citizenWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1537317152934330448",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1537317152934330448/11_2026-08-13T04-29-31.md?ex=6a9ee66b&is=6a9d94eb&hm=d98645eda32b5a6bf61af1d87887d46bc9cca5f8b99bc273029b23eb646ceba1&",
+          "fileName": "11_2026-08-13T04-29-31.md",
+          "fileSizeBytes": 1278
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537320207545016320",
+      "type": "Default",
+      "timestamp": "2026-08-13T13:41:39.507+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[111]** 종료 · 4인 · 1라운드\n주제 직업 / 제시어 선생님\n봇 L · 결과 citizenWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1537320207125848104",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1537320207125848104/111_2026-08-13T04-41-39.md?ex=6a9ee943&is=6a9d97c3&hm=64a64decda1059c1d7ba1592fbfe9c5e0883ff4e472da1dc79d0c54e8148107b&",
+          "fileName": "111_2026-08-13T04-41-39.md",
+          "fileSizeBytes": 946
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537335703334166529",
+      "type": "Default",
+      "timestamp": "2026-08-13T14:43:13.991+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[1]** 종료 · 1인 · 1라운드\n주제 채소 / 제시어 당근\n봇 L · 결과 citizenWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1537335703048949790",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1537335703048949790/1_2026-08-13T05-43-13.md?ex=6a9ef7b1&is=6a9da631&hm=ac85cd8625a3e01c2aa7ed50f69db504d2f565ffe77180b993b6120146fa0ae2&",
+          "fileName": "1_2026-08-13T05-43-13.md",
+          "fileSizeBytes": 1411
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537346013113880688",
+      "type": "Default",
+      "timestamp": "2026-08-13T15:24:12.034+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[123]** 종료 · 1인 · 1라운드\n주제 학용품 / 제시어 볼펜\n봇 S · 결과 citizenWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1537346012769943572",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1537346012769943572/123_2026-08-13T06-24-11.md?ex=6a9f014b&is=6a9dafcb&hm=6cbba7f4f921923d9a449e14c571cb7bf07770e2f02cb3594a9d76d9cf724221&",
+          "fileName": "123_2026-08-13T06-24-11.md",
+          "fileSizeBytes": 2154
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537378544559194178",
+      "type": "Default",
+      "timestamp": "2026-08-13T17:33:28.135+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[1234]** 종료 · 2인 · 1라운드\n주제 이동수단 / 제시어 비행기\n봇 J · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1537378544374775878",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1537378544374775878/1234_2026-08-13T08-33-27.md?ex=6a9f1f98&is=6a9dce18&hm=867122ded8683330d7d17e14b1109372142947c97a353e1f1f763ddd274a06ea&",
+          "fileName": "1234_2026-08-13T08-33-27.md",
+          "fileSizeBytes": 2399
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537649152748552263",
+      "type": "Default",
+      "timestamp": "2026-08-14T11:28:46.155+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[ㅂ]** 종료 · 1인 · 1라운드\n주제 스포츠 / 제시어 농구\n봇 D · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1537649152446431294",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1537649152446431294/2026-08-14T02-28-45.md?ex=6a9eca1e&is=6a9d789e&hm=18e3071e585339a8607b138d2b6f356544eb238ca2bc25778bb2770fa01a32f7&",
+          "fileName": "2026-08-14T02-28-45.md",
+          "fileSizeBytes": 1438
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537728943535165471",
+      "type": "Default",
+      "timestamp": "2026-08-14T16:45:49.761+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "===== [0123] 대화 로그 (총 36건) =====\n[7시 19분 44초] (describe) 이현우(Z): 날카로움\n[7시 19분 53초] (describe) 유민성(T): 어른이되어서도 자주 사용함\n[7시 20분 1초] (describe) 김정현(P): 시골에서 사용함\n[7시 20분 14초] (describe) 진(B · 라이어): 요즘도 사용중\n[7시 20분 27초] (describe) Zeteo(W · 봇): 선생님이 조심하라던거\n[7시 20분 27초] (describe) [시스템]: 묘사가 모두 끝났습니다. 토론을 시작합니다.\n[7시 20분 33초] (debate) 김정현(P): B 너무 묻어가는데\n[7시 20분 35초] (debate) Zeteo(W · 봇): 시골에서 사용한다는게 좀 걸리는데\n[7시 20분 47초] (debate) 유민성(T): 난 P,B 수상함\n[7시 20분 48초] (debate) 김정현(P): 난 설명할 수 있어\n[7시 20분 52초] (debate) 이현우(Z): 시골이랑 요즘은.좀.이상한데\n[7시 20분 59초] (debate) 진(B · 라이어): 시골이 더 수상함\n[7시 21분 6초] (debate) 이현우(Z): 시골 수상하지\n[7시 21분 7초] (debate) Zeteo(W · 봇): ㅇㅇ 맞음\n[7시 21분 18초] (debate) 진(B · 라이어): 시골 기준부터 애매함\n[7시 21분 28초] (debate) 김정현(P): 난 작은걸 기준으로 말하지 않음\n[7시 21분 29초] (debate) 유민성(T): PB 간단하게 한개씩만 더 해줄래?\n[7시 21분 36초] (debate) 김정현(P): 괜찮?\n[7시 21분 40초] (debate) Zeteo(W · 봇): 해명 자체가 뭔 소린지 모르겠는데\n[7시 21분 47초] (debate) 김정현(P): 흠.\n[7시 22분 2초] (debate) Zeteo(W · 봇): 솔직히 좀 헷갈리긴 함\n[7시 22분 4초] (debate) 김정현(P): 다 이해 안돼?\n[7시 22분 9초] (debate) 이현우(Z): 전혀\n[7시 22분 19초] (debate) 진(B · 라이어): 잘모르겠어\n[7시 22분 26초] (debate) Zeteo(W · 봇): 그냥 수업시간에\n[7시 22분 27초] (debate) [시스템]: P님이 최다 득표로 지목되었습니다.\n[7시 22분 35초] (finalDefense) 김정현(P): 난 한손으로 못쓰는걸 말하는거야\n[7시 22분 53초] (finalDefense) 김정현(P): 이정도 말했으면 아닌거 알지 않나\n[7시 22분 54초] (finalDefense) Zeteo(W · 봇): 한손으로 못쓰는게 시골이랑 뭔 상관임?\n[7시 22분 58초] (finalDefense) 김정현(P): B는 너무 묻어가잖아\n[7시 23분 1초] (finalDefense) 이현우(Z): 해명도 의미를 모르겠는데\n[7시 23분 8초] (finalDefense) 김정현(P): 도시에서 이거 쓰는걸 본적이 없으니까\n[7시 23분 17초] (finalDefense) 김정현(P): 작은거 말고 큰거\n[7시 23분 19초] (finalDefense) Zeteo(W · 봇): 아니 오히려 더 이상해진거 같은데\n[7시 23분 20초] (finalDefense) 진(B · 라이어): 지금 해명 먼저 해줘야지\n[7시 23분 26초] (finalDefense) 유민성(T): 그냥 가세요..\n===== [0123] 로그 끝 =====",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537729042575528018",
+      "type": "Default",
+      "timestamp": "2026-08-14T16:46:13.374+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "===== [0124] 대화 로그 (총 41건) =====\n[7시 34분 14초] (describe) 진(U): 아이들은 싫어해\n[7시 34분 54초] (describe) Zeteo(I · 봇): 카레에 꼭 들어감\n[7시 35분 1초] (describe) 이현우(S): 베타카로틴\n[7시 35분 16초] (describe) 김정현(L): 초록색\n[7시 35분 16초] (describe) [시스템]: 묘사가 모두 끝났습니다. 토론을 시작합니다.\n[7시 35분 22초] (debate) hari(M · 라이어): 눈에좋어\n[7시 35분 22초] (debate) 김정현(L): M 말 안함\n[7시 35분 24초] (debate) Zeteo(I · 봇): 초록색은 좀 아닌거 같은데\n[7시 35분 30초] (debate) 이현우(S): 초록색 의심스럽다\n[7시 35분 34초] (debate) 김정현(L): 초록색은 꼬은거\n[7시 35분 47초] (debate) Zeteo(I · 봇): 초록이면\n[7시 36분 8초] (debate) 김정현(L): 이정도 말했으면 된거아님?\n[7시 36분 23초] (debate) 김정현(L): 내 생각엔  M이 늦게 이해한다음 말한거같음\n[7시 36분 27초] (debate) Zeteo(I · 봇): 이정도 말한게 아니라 아무말 한거지\n[7시 36분 34초] (debate) 김정현(L): 몰아가지마셈\n[7시 36분 42초] (debate) 이현우(S): 몰아가는 게임 아닌가효\n[7시 36분 54초] (debate) Zeteo(I · 봇): 아직도 변명하네\n[7시 36분 54초] (debate) 김정현(L): 나 무슨 색인지 안다니까\n[7시 36분 56초] (debate) 이현우(S): 아이들이 싫어해도 의심해보자\n[7시 37분 3초] (debate) 김정현(L): 그렇네\n[7시 37분 5초] (debate) 이현우(S): 채소 좋아하는 아이가 없어\n[7시 37분 8초] (debate) hari(M · 라이어): 아이들은 채소 언좋아하는게 많긴해\n[7시 37분 9초] (debate) 김정현(L): 맞다\n[7시 37분 16초] (debate) [시스템]: L님이 최다 득표로 지목되었습니다.\n[7시 37분 25초] (finalDefense) Zeteo(I · 봇): 솔직히 좀 헷갈리긴 함\n[7시 37분 25초] (finalDefense) 김정현(L): 여기서 더 말하면 힌트 주는거\n[7시 37분 26초] (finalDefense) 이현우(S): 일단 보류 한번 좋을듯\n[7시 37분 28초] (finalDefense) 김정현(L): 말 안함\n[7시 37분 44초] (finalDefense) 김정현(L): 사실 라이어 이미 알고 있는거 같긴한데...\n[7시 37분 45초] (finalDefense) hari(M · 라이어): 더말해주면 라이어도 눈치챨거겉은데\n[7시 37분 50초] (finalDefense) Zeteo(I · 봇): 알면 color 말해봐\n[7시 37분 56초] (finalDefense) 진(U): 변론해야지\n[7시 37분 59초] (finalDefense) 김정현(L): 라이어임?\n[7시 38분 10초] (finalDefense) 김정현(L): S야  나 아니지?\n[7시 38분 14초] (finalDefense) 이현우(S): 근데 변론 안하면 선택은 하나지\n===== [0124] 로그 끝 =====",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537733543013261352",
+      "type": "Default",
+      "timestamp": "2026-08-14T17:04:06.362+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[1111]** 종료 · 1인 · 3라운드\n주제 악기 / 제시어 드럼\n봇 O · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1537733542627381268",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1537733542627381268/1111_2026-08-14T08-04-06.md?ex=6a9f18b6&is=6a9dc736&hm=89119c8841975d66c897f684bef3f7c436265ce5e931d2bf749fb229ffeeb3c2&",
+          "fileName": "1111_2026-08-14T08-04-06.md",
+          "fileSizeBytes": 7087
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537734002499391508",
+      "type": "Default",
+      "timestamp": "2026-08-14T17:05:55.912+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1537734002167906376",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1537734002167906376/message.txt?ex=6a9f1923&is=6a9dc7a3&hm=c37307caf19e95276e5203f0072807af12c9c562512db2e2eeb3b95439c43ebc&",
+          "fileName": "message.txt",
+          "fileSizeBytes": 6741
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537769273597104188",
+      "type": "Default",
+      "timestamp": "2026-08-14T19:26:05.197+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[1234]** 종료 · 3인 · 2라운드\n주제 과일 / 제시어 사과\n봇 W · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1537769273227878470",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1537769273227878470/1234_2026-08-14T10-26-04.md?ex=6a9f39fd&is=6a9de87d&hm=03c9afde4c7bc8db6f22e7fe5b94b06c41c1000d4969f7dd41c1bbc9dcb4ef16&",
+          "fileName": "1234_2026-08-14T10-26-04.md",
+          "fileSizeBytes": 8621
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537772443337232444",
+      "type": "Default",
+      "timestamp": "2026-08-14T19:38:40.922+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[1212]** 종료 · 1인 · 1라운드\n주제 취미 / 제시어 캠핑\n봇 Q · 결과 citizenWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1537772443073126430",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1537772443073126430/1212_2026-08-14T10-38-40.md?ex=6a9f3cf0&is=6a9deb70&hm=f23476020ea0f6b39c95538a57d85705a6011bc4e46737d2abf79bbbe0394cc6&",
+          "fileName": "1212_2026-08-14T10-38-40.md",
+          "fileSizeBytes": 3732
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537775437172965476",
+      "type": "Default",
+      "timestamp": "2026-08-14T19:50:34.708+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[0404]** 종료 · 2인 · 1라운드\n주제 채소 / 제시어 양파\n봇 G · 결과 citizenWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1537775436862464050",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1537775436862464050/0404_2026-08-14T10-50-34.md?ex=6a9f3fba&is=6a9dee3a&hm=5d619404a9e36ddeea47bb5907cae2435292f6daf3c0d6fb8c466b5b58e0b5ff&",
+          "fileName": "0404_2026-08-14T10-50-34.md",
+          "fileSizeBytes": 4326
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539794404439490590",
+      "type": "Default",
+      "timestamp": "2026-08-20T09:33:14.015+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[1111]** 종료 · 1인 · 2라운드\n주제 직업 / 제시어 개발자\n봇 D · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1539794404053745664",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1539794404053745664/1111_2026-08-20T00-33-13.md?ex=6a9f57c9&is=6a9e0649&hm=2bdad37ba5ed534ccdcecb69e33983e3783723d15bcd489a782e03d2694f67f6&",
+          "fileName": "1111_2026-08-20T00-33-13.md",
+          "fileSizeBytes": 3422
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539827751970668637",
+      "type": "Default",
+      "timestamp": "2026-08-20T11:45:44.686+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[090]** 종료 · 4인 · 1라운드\n주제 여행지 / 제시어 런던\n봇 I · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1539827751698174053",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1539827751698174053/090_2026-08-20T02-45-44.md?ex=6a9ece18&is=6a9d7c98&hm=a5a32a5626279f739114ca36aa6f8c2eb2dcccbd39342a44502a96cfcba993a6&",
+          "fileName": "090_2026-08-20T02-45-44.md",
+          "fileSizeBytes": 2196
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539881554640248903",
+      "type": "Default",
+      "timestamp": "2026-08-20T15:19:32.242+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[0820]** 종료 · 4인 · 3라운드\n주제 스포츠 / 제시어 볼링\n봇 N · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1539881554317279242",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1539881554317279242/0820_2026-08-20T06-19-32.md?ex=6a9f0034&is=6a9daeb4&hm=55eb970875d47d47a5ff5f7ebf12439b4857fb22cc1afcab6d274ad6582d0604&",
+          "fileName": "0820_2026-08-20T06-19-32.md",
+          "fileSizeBytes": 6378
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539883848240861204",
+      "type": "Default",
+      "timestamp": "2026-08-20T15:28:39.079+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[2008]** 종료 · 4인 · 1라운드\n주제 가전제품 / 제시어 에어컨\n봇 F · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1539883847909507223",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1539883847909507223/2008_2026-08-20T06-28-38.md?ex=6a9f0257&is=6a9db0d7&hm=3e3f1853f3ca6840810f2d38c232b41f3053daa7f0a12d409bd5e3caa2c41022&",
+          "fileName": "2008_2026-08-20T06-28-38.md",
+          "fileSizeBytes": 3276
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539886940025913385",
+      "type": "Default",
+      "timestamp": "2026-08-20T15:40:56.218+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[0280]** 종료 · 4인 · 1라운드\n주제 취미 / 제시어 낚시\n봇 K · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1539886940185436200",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1539886940185436200/0280_2026-08-20T06-40-56.md?ex=6a9f0538&is=6a9db3b8&hm=94596549d80f322a649580f95573f21a84d3d5a152a389803effa7761ca99a60&",
+          "fileName": "0280_2026-08-20T06-40-56.md",
+          "fileSizeBytes": 3243
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539889248428101632",
+      "type": "Default",
+      "timestamp": "2026-08-20T15:50:06.584+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[0028]** 종료 · 4인 · 1라운드\n주제 악기 / 제시어 기타\n봇 B · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1539889248109465693",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1539889248109465693/0028_2026-08-20T06-50-06.md?ex=6a9f075e&is=6a9db5de&hm=859f2a28bf6657d442d537eba40983209bc092931b7d7b956f3c72a1ee75de5b&",
+          "fileName": "0028_2026-08-20T06-50-06.md",
+          "fileSizeBytes": 3158
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539897549450645574",
+      "type": "Default",
+      "timestamp": "2026-08-20T16:23:05.702+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[1240]** 종료 · 4인 · 1라운드\n주제 여행지 / 제시어 제주도\n봇 E · 결과 citizenWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1539897549098451024",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1539897549098451024/1240_2026-08-20T07-23-05.md?ex=6a9f0f19&is=6a9dbd99&hm=da0fd28a593e129811c6d3d6a0e2f0ee87ae6914bf9f00525bb55d0c214c8418&",
+          "fileName": "1240_2026-08-20T07-23-05.md",
+          "fileSizeBytes": 3018
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539900795997397032",
+      "type": "Default",
+      "timestamp": "2026-08-20T16:35:59.739+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[0003]** 종료 · 4인 · 1라운드\n주제 과일 / 제시어 파인애플\n봇 H · 결과 citizenWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1539900795724763147",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1539900795724763147/0003_2026-08-20T07-35-59.md?ex=6a9f121f&is=6a9dc09f&hm=b71bfd5045532b603d81fb47256a0ef229d5e324498271dcad1585e04e382448&",
+          "fileName": "0003_2026-08-20T07-35-59.md",
+          "fileSizeBytes": 3155
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1539905235261063178",
+      "type": "Default",
+      "timestamp": "2026-08-20T16:53:38.142+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[2]** 종료 · 3인 · 2라운드\n주제 여행지 / 제시어 제주도\n봇 Y · 결과 citizenWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1539905234959208471",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1539905234959208471/2_2026-08-20T07-53-37.md?ex=6a9f1642&is=6a9dc4c2&hm=9bb0bf385625589b379a6f7a5efddb938fb5d322fbeb58637d555dbbf835d332&",
+          "fileName": "2_2026-08-20T07-53-37.md",
+          "fileSizeBytes": 4192
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1540277780091248690",
+      "type": "Default",
+      "timestamp": "2026-08-21T17:33:59.751+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[2852]** 종료 · 3인 · 4라운드\n주제 스포츠 / 제시어 수영\n봇 U · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1540277779759632494",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1540277779759632494/2852_2026-08-21T08-33-59.md?ex=6a9f1fb7&is=6a9dce37&hm=520508f74f47666a686a390d84dd546daee813dc764cf22eb99c6cbc325381eb&",
+          "fileName": "2852_2026-08-21T08-33-59.md",
+          "fileSizeBytes": 12180
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541239214014865468",
+      "type": "Default",
+      "timestamp": "2026-08-24T09:14:23.461+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[8315]** 종료 · 2인 · 1라운드\n주제 여행지 / 제시어 방콕\n봇 S · 결과 citizenWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1541239213696094238",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1541239213696094238/8315_2026-08-24T00-14-23.md?ex=6a9f535f&is=6a9e01df&hm=312c4974606dad00ebf21078beee45b96f9fcf60707aef3aa6c92c29b22707c0&",
+          "fileName": "8315_2026-08-24T00-14-23.md",
+          "fileSizeBytes": 1716
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541255508953137262",
+      "type": "Default",
+      "timestamp": "2026-08-24T10:19:08.477+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[8033]** 종료 · 4인 · 1라운드\n주제 취미 / 제시어 독서\n봇 Z · 결과 citizenWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1541255508508278805",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1541255508508278805/8033_2026-08-24T01-19-08.md?ex=6a9eb9cc&is=6a9d684c&hm=82ad4abfbe14d3e97c2a3dae023e7f1e5e625bdfc35ea9b40abe24955ffbadf0&",
+          "fileName": "8033_2026-08-24T01-19-08.md",
+          "fileSizeBytes": 1540
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541260030496604193",
+      "type": "Default",
+      "timestamp": "2026-08-24T10:37:06.497+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[9896]** 종료 · 4인 · 1라운드\n주제 스포츠 / 제시어 테니스\n봇 Z · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1541260029066477609",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1541260029066477609/9896_2026-08-24T01-37-05.md?ex=6a9ebe02&is=6a9d6c82&hm=e8f4e9003ace11eebf56768ea1d419bcd9bb7b995f7e2102e2026884c419c540&",
+          "fileName": "9896_2026-08-24T01-37-05.md",
+          "fileSizeBytes": 1558
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541265788131090503",
+      "type": "Default",
+      "timestamp": "2026-08-24T10:59:59.224+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[9252]** 종료 · 4인 · 1라운드\n주제 과일 / 제시어 수박\n봇 L · 결과 citizenWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1541265788273426533",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1541265788273426533/9252_2026-08-24T01-59-58.md?ex=6a9ec35f&is=6a9d71df&hm=088e0731fd08867797452db6d6b0c303337a6524c1833de30122ced78ca63cc5&",
+          "fileName": "9252_2026-08-24T01-59-58.md",
+          "fileSizeBytes": 1545
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541273951496445962",
+      "type": "Default",
+      "timestamp": "2026-08-24T11:32:25.522+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[B763]** 종료 · 4인 · 1라운드\n주제 음식 / 제시어 초밥\n봇 P · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1541273951169417297",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1541273951169417297/B763_2026-08-24T02-32-25.md?ex=6a9ecaf9&is=6a9d7979&hm=4b906a54365b2344d599a742e06356c189327a5ef2c9200fbdedfdf1003672cc&",
+          "fileName": "B763_2026-08-24T02-32-25.md",
+          "fileSizeBytes": 1170
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541279707746668625",
+      "type": "Default",
+      "timestamp": "2026-08-24T11:55:17.919+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[9635]** 종료 · 4인 · 1라운드\n주제 동물 / 제시어 캥거루\n봇 F · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1541279707444674610",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1541279707444674610/9635_2026-08-24T02-55-17.md?ex=6a9ed055&is=6a9d7ed5&hm=7d0a506523962aa2e570b008e3b270596d080457c4379822e3787b560c905a46&",
+          "fileName": "9635_2026-08-24T02-55-17.md",
+          "fileSizeBytes": 1531
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541402078469955625",
+      "type": "Default",
+      "timestamp": "2026-08-24T20:01:33.373+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[9847]** 종료 · 5인 · 1라운드\n주제 동물 / 제시어 사자\n봇 A · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1541402078163902497",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1541402078163902497/9847_2026-08-24T11-01-33.md?ex=6a9f424d&is=6a9df0cd&hm=9cd9e40b27002c554830ce6447b8ae1d93e4336f8c4e2a054b97921977c3efb8&",
+          "fileName": "9847_2026-08-24T11-01-33.md",
+          "fileSizeBytes": 3776
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1541716839602585600",
+      "type": "Default",
+      "timestamp": "2026-08-25T16:52:18.275+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[7473]** 종료 · 4인 · 1라운드\n주제 스포츠 / 제시어 배구\n봇 E · 결과 citizenWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1541716839292211240",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1541716839292211240/7473_2026-08-25T07-52-17.md?ex=6a9f15f2&is=6a9dc472&hm=160929c8f5f13bc2110bc09a8649746de573a104f3a536dd97644dd825297db5&",
+          "fileName": "7473_2026-08-25T07-52-17.md",
+          "fileSizeBytes": 1061
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1542442747515109426",
+      "type": "Default",
+      "timestamp": "2026-08-27T16:56:48.208+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[7324]** 종료 · 5인 · 1라운드\n주제 가전제품 / 제시어 정수기\n봇 W · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1542442747112325141",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1542442747112325141/7324_2026-08-27T07-56-47.md?ex=6a9f1700&is=6a9dc580&hm=2bf9e8a4e01f881db6e7d0aee8907f015bf16781fbd5c19d5d50810b6d53227c&",
+          "fileName": "7324_2026-08-27T07-56-47.md",
+          "fileSizeBytes": 4148
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1542797612619403335",
+      "type": "Default",
+      "timestamp": "2026-08-28T16:26:54.642+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[2121]** 종료 · 5인 · 1라운드\n주제 악기 / 제시어 드럼\n봇 G · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1542797612317675601",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1542797612317675601/2121_2026-08-28T07-26-54.md?ex=6a9f0ffe&is=6a9dbe7e&hm=85da61482f8dbb9cddabb32cac91035de73a4456ef82dae2e4cc1413f4cf77ee&",
+          "fileName": "2121_2026-08-28T07-26-54.md",
+          "fileSizeBytes": 3888
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1542799932279496724",
+      "type": "Default",
+      "timestamp": "2026-08-28T16:36:07.692+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[8044]** 종료 · 5인 · 1라운드\n주제 학용품 / 제시어 풀\n봇 L · 결과 citizenWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1542799931696222238",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1542799931696222238/8044_2026-08-28T07-36-07.md?ex=6a9f1227&is=6a9dc0a7&hm=3e14e35c6d42e7be52b31734f256afe998f5ee9ab2d6aa3b90ec45885c105ec1&",
+          "fileName": "8044_2026-08-28T07-36-07.md",
+          "fileSizeBytes": 4246
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1542802050059079752",
+      "type": "Default",
+      "timestamp": "2026-08-28T16:44:32.61+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[5821]** 종료 · 5인 · 1라운드\n주제 여행지 / 제시어 도쿄\n봇 V · 결과 citizenWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1542802049752633374",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1542802049752633374/5821_2026-08-28T07-44-32.md?ex=6a9f1420&is=6a9dc2a0&hm=e663ea0e22d88e56a422c71ed44124687a902101353a5a6cf6c97b446631f48d&",
+          "fileName": "5821_2026-08-28T07-44-32.md",
+          "fileSizeBytes": 4033
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1542805681327837264",
+      "type": "Default",
+      "timestamp": "2026-08-28T16:58:58.372+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[2369]** 종료 · 5인 · 3라운드\n주제 악기 / 제시어 피아노\n봇 B · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1542805681034494052",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1542805681034494052/2369_2026-08-28T07-58-58.md?ex=6a9f1782&is=6a9dc602&hm=598b02f0ee2f06c756489be69ffa669da063ac6b9d5e7740bc8ec5f0fe1db37b&",
+          "fileName": "2369_2026-08-28T07-58-58.md",
+          "fileSizeBytes": 9133
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1542813634080804904",
+      "type": "Default",
+      "timestamp": "2026-08-28T17:30:34.456+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[3804]** 종료 · 5인 · 1라운드\n주제 학용품 / 제시어 볼펜\n봇 O · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1542813633741062144",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1542813633741062144/3804_2026-08-28T08-30-34.md?ex=6a9f1eea&is=6a9dcd6a&hm=5d348df93402203675236c5a30e04dac3030723db1707582e25be42988e6699f&",
+          "fileName": "3804_2026-08-28T08-30-34.md",
+          "fileSizeBytes": 3812
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543811229980688524",
+      "type": "Default",
+      "timestamp": "2026-08-31T11:34:39.853+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[2696]** 종료 · 4인 · 2라운드\n주제 이동수단 / 제시어 헬리콥터\n봇 U · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1543811229678567434",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1543811229678567434/2696_2026-08-31T02-34-39.md?ex=6a9ecb7f&is=6a9d79ff&hm=e3edad493c595b2c599c668f887bcae6126513cee4823edcbce469715cd40fc8&",
+          "fileName": "2696_2026-08-31T02-34-39.md",
+          "fileSizeBytes": 5065
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543813565494988850",
+      "type": "Default",
+      "timestamp": "2026-08-31T11:43:56.683+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[1124]** 종료 · 4인 · 1라운드\n주제 학용품 / 제시어 볼펜\n봇 L · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1543813565226680370",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1543813565226680370/1124_2026-08-31T02-43-56.md?ex=6a9ecdac&is=6a9d7c2c&hm=7e8dcbe5ef8c9c6a64b183ecb24ff21f93c29b19ce2e350c0842686b729124ef&",
+          "fileName": "1124_2026-08-31T02-43-56.md",
+          "fileSizeBytes": 2996
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543849124770750507",
+      "type": "Default",
+      "timestamp": "2026-08-31T14:05:14.675+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[8141]** 종료 · 4인 · 1라운드\n주제 이동수단 / 제시어 기차\n봇 H · 결과 liarWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1543849124544381029",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1543849124544381029/8141_2026-08-31T05-05-14.md?ex=6a9eeeca&is=6a9d9d4a&hm=c44f4fd9f2f151009790e2590200f65264b8421286486dec335d60dde290564d&",
+          "fileName": "8141_2026-08-31T05-05-14.md",
+          "fileSizeBytes": 1796
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543856494393561138",
+      "type": "Default",
+      "timestamp": "2026-08-31T14:34:31.73+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**[9262]** 종료 · 4인 · 1라운드\n주제 음식 / 제시어 피자\n봇 I · 결과 citizenWin",
+      "author": {
+        "id": "1535451406834733118",
+        "name": "Zeteo 로그",
+        "discriminator": "0000",
+        "nickname": "Zeteo 로그",
+        "color": null,
+        "isBot": true,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1535451406834733118/3f434fce445ed8ba8c9832ed052341d3.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1543856494162739290",
+          "url": "https://cdn.discordapp.com/attachments/1535452421663494234/1543856494162739290/9262_2026-08-31T05-34-31.md?ex=6a9ef5a7&is=6a9da427&hm=aa752f36b04b19155c8e0abd26596e3b01f04d326de1c31dedd2662afd0216d7&",
+          "fileName": "9262_2026-08-31T05-34-31.md",
+          "fileSizeBytes": 1922
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 51
+}

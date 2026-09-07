@@ -1,0 +1,3468 @@
+{
+  "guild": {
+    "id": "1531480546134462484",
+    "name": "ZETEO",
+    "iconUrl": "https://cdn.discordapp.com/icons/1531480546134462484/b900b60579718444a13ba25447b7a1c6.png?size=512"
+  },
+  "channel": {
+    "id": "1532291490682900562",
+    "type": "GuildTextChat",
+    "categoryId": "1532291441706143744",
+    "category": "ZETEO",
+    "name": "회의록",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2026-09-07T09:44:10.5547577+09:00",
+  "messages": [
+    {
+      "id": "1532292569457889533",
+      "type": "Default",
+      "timestamp": "2026-07-30T16:43:37.178+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\uD83D\uDCCD **이곳은 회의 장소입니다.**\n\n건설적인 회의를 진행해봐요! 서로 다른 의견도 결국 더 좋은 기획을 만들기 위한 과정이니, 편하게 이야기 나눠주세요. 화이팅 Zeteo! \uD83D\uDD0D",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDCCD",
+          "code": "round_pushpin",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4cd.svg"
+        },
+        {
+          "id": "",
+          "name": "\uD83D\uDD0D",
+          "code": "mag",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f50d.svg"
+        }
+      ]
+    },
+    {
+      "id": "1532543775291871342",
+      "type": "Default",
+      "timestamp": "2026-07-31T09:21:49.316+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**\uD83D\uDEE0️ 기술 구현 기획서 작성 전 — 팀이 정해야 할 항목 (1/2)**\n\n실제 구현용 기술 기획서(파트 분담·통합 방식·브랜치 전략·MVP 정의 포함)를 쓰기 전에, 팀에서 결정해야 할 것들을 정리했어요. 회의 때 하나씩 짚어주세요.\n\n**A. 기술 스택** (여기가 정해져야 나머지가 결정됨)\n1. 프론트엔드 — Next.js vs 순수 React+Vite?\n2. 백엔드 — Express + ws/Socket.IO vs Next.js API Routes vs 기타? (WebSocket 필요)\n3. DB — Postgres / SQLite / MongoDB / Firebase 중?\n4. 배포 — Vercel? 아니면 일단 로컬만?\n5. 언어 — TypeScript vs JavaScript (팀원 전원 TS 가능한지?)\n\n**B. LLM / API**\n6. 테스트용 저가·무료 모델 구체적으로 뭘 쓸지? (Gemini Flash 무료티어 / GPT-4o-mini / Groq 등)\n7. MVP 단계에서도 봇마다 다른 프로바이더를 쓸지, 1개로 시작할지?\n8. Honcho를 1차 MVP에 포함할지, 나중에 붙일지? (self-hosted vs 클라우드)\n\n**C. 팀 역할 분담**\n9. 팀원 4명의 기술 수준·선호 (파트를 나눠도 사람에 안 맞으면 의미 없음)\n10. 각자 맡고 싶은 파트\n11. 4개 파트로 나눌지, 2인 1조 x 2팀 구조로 갈지?",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDEE0️",
+          "code": "tools",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6e0.svg"
+        }
+      ]
+    },
+    {
+      "id": "1532543833684967666",
+      "type": "Default",
+      "timestamp": "2026-07-31T09:22:03.238+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "**\uD83D\uDEE0️ 기술 구현 기획서 작성 전 — 팀이 정해야 할 항목 (2/2)**\n\n**D. 게임 스펙** (기획서엔 \"풀룰 구현 확정\"만 있고 세부가 없음)\n12. 한 게임 인원 구성 — 총 몇 명? (예: 8명 = 사람 4 + 봇 4)\n13. 직업 구성 — 마피아/시민/경찰만? 의사 등 추가 직업도?\n14. 낮 토론 시간 제한 있는지? (예: 3분) 아니면 전원 발언까지?\n15. 밤 페이즈 — 채팅으로? UI 선택(대상 드롭다운)으로?\n16. 사망자 처리 — 채팅 못 보게? 관전만 허용?\n\n**E. MVP 범위와 일정**\n17. 전체 개발 기간 — 시작일 기준 언제까지?\n18. 1차 MVP를 \"무엇이 되면 성공\"으로 볼지?\n> 참고 제안: \"사람 1명 + 봇 3개가 낮 토론만 하고, 사람이 봇을 지목할 수 있다\" (밤페이즈·역할·판별자 전부 제외)\n19. 중간 발표/마감 같은 고정 일정이 있는지?\n\n**F. 협업 규칙**\n20. GitHub 브랜치 전략 — 선호가 있는지?\n> 참고 제안: `main` + `dev` + `feat/<파트명>` (4인 규모엔 git-flow는 과함)\n21. PR 리뷰 필수로 할지, dev 직접 push 허용할지?\n22. 코드 컨벤션/린터 강제할지? (ESLint/Prettier)\n23. 이슈 트래킹 — Notion? GitHub Issues?\n\n---\n**A·C·D·E가 특히 중요해요.** 이것만 정해져도 나머지(B·F)는 합리적인 기본값으로 채운 뒤 \"이렇게 정했으니 아니면 말해달라\" 형태로 기획서에 표기할 수 있어요.",
+      "author": {
+        "id": "1531506866897555476",
+        "name": "Hermes2",
+        "discriminator": "7478",
+        "nickname": "Hermes2",
+        "color": null,
+        "isBot": true,
+        "roles": [
+          {
+            "id": "1531517140371374156",
+            "name": "Hermes2",
+            "color": null,
+            "position": 1
+          }
+        ],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/1531506866897555476/8e1c8449f75327912b5d7cc9b46b5550.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": [
+        {
+          "id": "",
+          "name": "\uD83D\uDEE0️",
+          "code": "tools",
+          "isAnimated": false,
+          "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6e0.svg"
+        }
+      ]
+    },
+    {
+      "id": "1532544998678069318",
+      "type": "ThreadCreated",
+      "timestamp": "2026-07-31T09:26:40.994+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Started a thread.",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "type": "Default",
+        "messageId": null,
+        "channelId": "1532544998678069318",
+        "guildId": "1531480546134462484"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532547460378005774",
+      "type": "Default",
+      "timestamp": "2026-07-31T09:36:27.909+09:00",
+      "timestampEdited": "2026-07-31T11:17:21.882+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "# A :\n\n1. 무슨 차이인지 물어본 후 결정\n2. 무조건  websocket 방식\n3. DB 필요?\n4. 마지막에 결정. 배포 확정.\n5. TS/REST 차이부터 파악한 후.\n\n# B :\n\n6. 월별 API 계획서를 작성할 수 있음, 이에 대해 OpenAI 구독 신청 or API 토큰을 받아서 사용할 계획 (이 경우 사용량은 정해줘야함)\n7. 한 개\n8. DB 를 사용한다면 굳이 쓸 이유가 없을듯 함. 토의 필요.\n\n# C :\n\n9/10.\n이현우 : 웹설계/게임 로직 부분 (웹에선 디자인 부분 집중)\n박 진 : 웹설계 부분 (레이아웃 부분 집중)\n유민성 : 풀스택(웹소켓 지식 유)\n김정현 : AI 사용 관련\n11. 4개 파트 무조건. 개인으로서 할 수 있는 일을 극대화 시키는 것을 목적.\n\n# D :\n\n12. 라이어 게임 기준 최소 인원 5명.\n13. 마피아는 나중에 생각. 우선 라이어 게임 우선 구현.\n14. 토론 시간 제한은 있어야함. 우선 미정.\n15. 나중에 이야기. 라이어 게임으로 보자면, 최종 투표 시간에 UI 선택 활성화.\n16. 관전자.\n\n# E :\n\n17. MVP는 1주, 개발 목표 시간은 3주. (다음 주인 8월 3일 부터 시작)\n18. 게임 화면과 랜딩페이지 화면 분리, 플레이 로그와 플레이어의 현재 상태가 모두에게 명시적으로 보여야 할 것, 팀원 4명과 봇 1개가 라이어 게임을 플레이 하고 끝내는 흐름을 구현.\n19. 아마도 3주차 쯤, 중간 발표가 존재한다고 들었어. 우선은 이를 중간발표 시점으로 생각. 구현 속도 보면서 팀만의 중간 발표 시점을 정해볼게.\n\n# F :\n\n20. 제안한 main/dev/feat 으로 확정. 다만 어떤 식의 흐름인지는 물어볼 계획.\n21. 찬성. 다만 물어봄.\n22. 이미 설치되어 있긴해. 사용하는 편이 좋을지 다시 물어볼게.\n23. 현재 discord에서 하고 있는 것과 무엇이 다르지?",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532607802147864747",
+      "type": "ThreadCreated",
+      "timestamp": "2026-07-31T13:36:14.508+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Started a thread.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "type": "Default",
+        "messageId": null,
+        "channelId": "1532607802147864747",
+        "guildId": "1531480546134462484"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532609611335598190",
+      "type": "ThreadCreated",
+      "timestamp": "2026-07-31T13:43:25.852+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Started a thread.",
+      "author": {
+        "id": "389975441601200138",
+        "name": "hari1224",
+        "discriminator": "0000",
+        "nickname": "하리1224",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "type": "Default",
+        "messageId": null,
+        "channelId": "1532609611335598190",
+        "guildId": "1531480546134462484"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1532610568547209348",
+      "type": "Default",
+      "timestamp": "2026-07-31T13:47:14.069+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "2시에 나갈까요?",
+      "author": {
+        "id": "389975441601200138",
+        "name": "hari1224",
+        "discriminator": "0000",
+        "nickname": "하리1224",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1534787091563679894",
+      "type": "ThreadCreated",
+      "timestamp": "2026-08-06T13:55:57.594+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Started a thread.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "type": "Default",
+        "messageId": null,
+        "channelId": "1534787091563679894",
+        "guildId": "1531480546134462484"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535100642408800276",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:41:53.941+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "여기에서요.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535100704820039691",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:42:08.821+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "현재 나온 버그가 무엇이죠?",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535100747648212992",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:42:19.032+09:00",
+      "timestampEdited": "2026-08-07T10:46:59.489+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "## 버그 :\n\n~~1. 마지막 라이어가 누구인지 알려주지 않는다.~~\n2. debate, finalDefence에 제시어가 뜨지 않는다.\n3.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535100848038879303",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:42:42.967+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "2. 최후변론에서 제시어 없어지는 부분",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535101016628797480",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:43:23.162+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "일단 이정도 보였고 나머지는 수정 부분은 적용됨",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535101079250018425",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:43:38.092+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "이정도라면 저는 나가서 봇 티 사유좀 확인하고 싶어요",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535101110732329041",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:43:45.598+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "더 버그 있으면 제보해주세요",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535101319432503398",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:44:35.356+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "버그라기 보다 봇이 공격성이 처음부터 보이고 최후변론에서 2줄씩 채팅을 띄워서 티가 많이 나기남",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535101324243501127",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:44:36.503+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "함",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535101371773223043",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:44:47.835+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "그럼 나갈게요",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535101477586993224",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:45:13.063+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "1번 마지막 라이어가 누구인지 알려주지않는다가 언제 말하는거죠?",
+      "author": {
+        "id": "389975441601200138",
+        "name": "hari1224",
+        "discriminator": "0000",
+        "nickname": "하리1224",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535101557648134195",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:45:32.151+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "봇투표 이후 결과창에서는 누가 라이어인지 보이는데",
+      "author": {
+        "id": "389975441601200138",
+        "name": "hari1224",
+        "discriminator": "0000",
+        "nickname": "하리1224",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535101657380159590",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:45:55.929+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "와이어프레임에 제시어 부분만 추가하고 나가자",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535101762887745659",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:46:21.084+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "로그파일 세개중 md파일만 남기고 다 삭제해써요",
+      "author": {
+        "id": "389975441601200138",
+        "name": "hari1224",
+        "discriminator": "0000",
+        "nickname": "하리1224",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535101884228964372",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:46:50.014+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "정체공개에서 라이어 나오네",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535101902771986553",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:46:54.435+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "아 그렇네요 뜨는거 못봤네요",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535101991867392070",
+      "type": "Reply",
+      "timestamp": "2026-08-07T10:47:15.677+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "와이어 프레임이 어디인가요?",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1531483488815943793",
+          "name": "ihyeonu_56073",
+          "discriminator": "0000",
+          "nickname": "이현우",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1535101657380159590",
+        "channelId": "1532291490682900562",
+        "guildId": "1531480546134462484"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535102196356485140",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:48:04.431+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "고치고 나가서 말하기 보다 말하고 한번에 고치는 편이 좋다고 생각해서요",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535102197371637880",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:48:04.673+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "그림",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535102365584203797",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:48:44.778+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "ㄱ?",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535102397829877890",
+      "type": "Reply",
+      "timestamp": "2026-08-07T10:48:52.466+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "죄송해요, 뭘 말하는지 모르겠어요. 와이어 프레임을 확인할 수 있는 곳이 어디인가요?",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1531483488815943793",
+          "name": "ihyeonu_56073",
+          "discriminator": "0000",
+          "nickname": "이현우",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1535102197371637880",
+        "channelId": "1532291490682900562",
+        "guildId": "1531480546134462484"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535102629955248312",
+      "type": "Default",
+      "timestamp": "2026-08-07T10:49:47.809+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "ㄱㄱ",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535113261886873731",
+      "type": "Default",
+      "timestamp": "2026-08-07T11:32:02.659+09:00",
+      "timestampEdited": "2026-08-07T14:54:56.663+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "초밥 - 인간 같은 방법 :\n1. 공격 당했을 때 변론하는게 아닌 무지성으로 받아치기 패턴 (예 : 어쩌라고)\n\n2. 한 사람을 공격하다가 다른 사람을 갑자기 공격한다. 모두 까기 공격함. (이는 보류)\n\n3. 누군가를 공격하고 있는 상황에서 그 사람이 변명을 하지도 않았지만 다른 사람 이야기를 했음.\n\n4. 속사포 기술 사용하기. (짧은 단답을 연속으로 보냄)\n\n5. 단답 사용이 없었음. 항상 문장으로 완결 시키려고 함.\n\n6. 문장의 마지막 어미를 일부러 빼먹어서 오타 난 것 처럼 유도함.\n\n===\n\n가장 의심스러웠던 순간:\n\n1. 모두 까기를 하였고, 이 논리의 간격이 너무 짧았다.\n\n2. 재투표 진행 후 1초 간격으로 장문을 연달아서 씀.\n\n3. 다른 사람을 공격하는 속도가 너무 빠름.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1535119157560090635",
+      "type": "Default",
+      "timestamp": "2026-08-07T11:55:28.297+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "고양이 :\n\n가장 의심되는 순간 :\n1. 모두 까기를 진행했다.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536996132331200532",
+      "type": "Default",
+      "timestamp": "2026-08-12T16:13:53.955+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "코드리뷰 시스템 어떻게 만들까여ㅛ",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536996148395511929",
+      "type": "Default",
+      "timestamp": "2026-08-12T16:13:57.785+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "저는 봇 이용하고 싶긴한데",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536996240330588230",
+      "type": "Default",
+      "timestamp": "2026-08-12T16:14:19.704+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "근데 저희 다 쓸 수 있게 하기엔 좀 애매할것 같기도 하고",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536996262958731374",
+      "type": "Default",
+      "timestamp": "2026-08-12T16:14:25.099+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "좋은 아이디어 있으신분 있나요",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536996294772400210",
+      "type": "Default",
+      "timestamp": "2026-08-12T16:14:32.684+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "- 3주차 : 코드 리뷰 시스템 => \"코드를 이해할 수 있는가?\" => \"필수 내용 : 코드 리뷰를 어떻게 진행했는지에 대한 실제 내용 및 사용 공유\"",
+      "author": {
+        "id": "389975441601200138",
+        "name": "hari1224",
+        "discriminator": "0000",
+        "nickname": "하리1224",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536996318721998909",
+      "type": "Default",
+      "timestamp": "2026-08-12T16:14:38.394+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "제가 한번 탐색해보겠습니다",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1536996539627479050",
+      "type": "Default",
+      "timestamp": "2026-08-12T16:15:31.062+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "정현이가 봇을 이용하면, 깃허브에 코드리뷰 md파일로 올라오고, 다른인원이 확인한다는 시나리오로 진행하는게 좋을듯",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537725404478054451",
+      "type": "Default",
+      "timestamp": "2026-08-14T16:31:45.984+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "1. debate단계 끝났을때 최종 투표목록만 DB 저장",
+      "author": {
+        "id": "389975441601200138",
+        "name": "hari1224",
+        "discriminator": "0000",
+        "nickname": "하리1224",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537729023751356466",
+      "type": "Default",
+      "timestamp": "2026-08-14T16:46:08.886+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "2. 모바일 전체화면 없음",
+      "author": {
+        "id": "389975441601200138",
+        "name": "hari1224",
+        "discriminator": "0000",
+        "nickname": "하리1224",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537729185110560791",
+      "type": "Default",
+      "timestamp": "2026-08-14T16:46:47.357+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "3. 모바일에서 전체화면 버튼 문제 : 화면 해상도 문제인듯 => 모바일에서 중간에 페이즈알림란 제거\n4. 결과창 화면스크롤바 생김\n5. 준비취소버튼 작동안함",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1537735275390697592",
+      "type": "Default",
+      "timestamp": "2026-08-14T17:10:59.393+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "라이어가 나가면 result에서 사라지고 ID가 p1(n)으로 바뀜",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1542384448673157150",
+      "type": "Default",
+      "timestamp": "2026-08-27T13:05:08.681+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "팀미팅 :\n\n1. 최소 4명이 모여야 하는 것에서 문제가 생기리라고 생각 한다.\n2. 시각적 요소 추가 : 있으면 좋긴 함. 취향의 차이라고 생각함.\n3. adsense 광고 랜딩페이지에 추가하는 방식.\n4. 코드에 대한 책임감이 있어야 함. (개발자 관점에서)",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1542719209040121947",
+      "type": "Default",
+      "timestamp": "2026-08-28T11:15:21.772+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "26.08.28\n팀장회의\n\n1. 금일 발표 순서 - 마지막\n2. 최종발표 시연에 문제가 생길 경우 대비해 시연 영상도 준비할 것\n3. 8월31일(월) 발표 장소 및 형식 공지 예정\n  A Class 예상\n  개인 노트북 사용 불가\n4. 다음 주\n  코드리뷰 / 주 단위 프로젝트(발표) 진행함\n  월 단위 프로젝트 9월4일(금) 까지 마무리(Q/A까지 포함)\n5. 9월7일(월) 발표 리허설 예정(시간 및 진행상황 체크)",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "610425959442808842",
+              "name": ".scalmia",
+              "discriminator": "0000",
+              "nickname": "김정현",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+            },
+            {
+              "id": "1347110218206679051",
+              "name": "mr.park0",
+              "discriminator": "0000",
+              "nickname": "FE_12_박진",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1542763552828293151",
+      "type": "Default",
+      "timestamp": "2026-08-28T14:11:34.155+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "5주차 발표\n\n민성님이 하는 방식\n-> 진님은 맥락을 알지 못함",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543183940255350865",
+      "type": "Default",
+      "timestamp": "2026-08-29T18:02:02.328+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "아뇨 현재 바뀐 내용이 딱히 없다면, 이 내용을 slides로 공유해서 링크만 주면 다 같이 참여할 수 있어요",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543183976603197471",
+      "type": "Default",
+      "timestamp": "2026-08-29T18:02:10.994+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@이현우 혹시 꼭 pptx로 작업해야하는게 아니면 전체 공유 slides로 줄 수 있나요? 변화된 내용을 보고 싶은데.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1531483488815943793",
+          "name": "ihyeonu_56073",
+          "discriminator": "0000",
+          "nickname": "이현우",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        }
+      ],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543188207691108362",
+      "type": "Default",
+      "timestamp": "2026-08-29T18:18:59.764+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "# 슬라이드 훑으며 본 이상한점 :",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543188249252724818",
+      "type": "Default",
+      "timestamp": "2026-08-29T18:19:09.673+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1543188248875114596",
+          "url": "https://cdn.discordapp.com/attachments/1532291490682900562/1543188248875114596/image.png?ex=6a9f2a4d&is=6a9dd8cd&hm=f65e68ef01c9455ad5b68febefa0b491db14f3d37599dbbbf6e4bdc7b075984e&",
+          "fileName": "image.png",
+          "fileSizeBytes": 8313
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543188296778383372",
+      "type": "Default",
+      "timestamp": "2026-08-29T18:19:21.004+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "1. 오른쪽 내용은 필요 없는 말 같음.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543188405184233494",
+      "type": "Default",
+      "timestamp": "2026-08-29T18:19:46.85+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1543188404722864198",
+          "url": "https://cdn.discordapp.com/attachments/1532291490682900562/1543188404722864198/image.png?ex=6a9f2a72&is=6a9dd8f2&hm=8c7aa49023956dcfec221a31f8d1967b90a1846ce62a1d3b98bfa8ce8b438246&",
+          "fileName": "image.png",
+          "fileSizeBytes": 38543
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543188532229840947",
+      "type": "Default",
+      "timestamp": "2026-08-29T18:20:17.14+09:00",
+      "timestampEdited": "2026-08-29T18:20:25.901+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "2. \n  - 마지막 병합 충돌 0건 이라는 말은 필요 없는 말.\n  - 김정현 파트에 루프 관련 내용이 빠져있음.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543188733531258931",
+      "type": "Default",
+      "timestamp": "2026-08-29T18:21:05.134+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1543188733220749462",
+          "url": "https://cdn.discordapp.com/attachments/1532291490682900562/1543188733220749462/image.png?ex=6a9f2ac1&is=6a9dd941&hm=90678035d4204c18e4ce4afb6f9b54697b670d54a6ac96638d72b8fbdb4881f9&",
+          "fileName": "image.png",
+          "fileSizeBytes": 164026
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543189067951382590",
+      "type": "Default",
+      "timestamp": "2026-08-29T18:22:24.866+09:00",
+      "timestampEdited": "2026-08-29T18:23:31.937+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "3. 알기론 라이어게임을 프로그램으로 구현하자 – 보다는 라이어 게임 속 사람과 같이 행동하는 봇을 넣고, 이것이 자가 개선하는 방식을 구현하는 과정이 흥미로울 것 같다는 의견이었음.\n\n이 기획 배경은 마피아 42에 더 어울리는 의견일듯.\n\n+ 페르소나/페인 포인트/차별화를 반드시 이 슬라이드에 넣어야 하는가?",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543190904544825374",
+      "type": "Default",
+      "timestamp": "2026-08-29T18:29:42.744+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1543190904209285182",
+          "url": "https://cdn.discordapp.com/attachments/1532291490682900562/1543190904209285182/image.png?ex=6a9f2cc6&is=6a9ddb46&hm=1ff38a48e5e4d952b41637ef923e6739bac101c08710f5197bd10ae1be34c431&",
+          "fileName": "image.png",
+          "fileSizeBytes": 59555
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543190995527663646",
+      "type": "Default",
+      "timestamp": "2026-08-29T18:30:04.436+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "4. 사소한건데, 1번이 예전 방식임.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543191321177620501",
+      "type": "Default",
+      "timestamp": "2026-08-29T18:31:22.077+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1543191320862920815",
+          "url": "https://cdn.discordapp.com/attachments/1532291490682900562/1543191320862920815/image.png?ex=6a9f2d2a&is=6a9ddbaa&hm=69415aaa69a4a39cbb91d8100090ef7d6e5f00f8ae717649b68db631ca53066b&",
+          "fileName": "image.png",
+          "fileSizeBytes": 51646
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543191662652686438",
+      "type": "Default",
+      "timestamp": "2026-08-29T18:32:43.491+09:00",
+      "timestampEdited": "2026-08-30T13:14:53.065+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "5. 2,3 내용을 약간 섞어서 다양한 모델을 테스트할 수 있는 소셜 디덕션 벤치마크로 활용 가능하다는 쪽으로 가는 편이 좋을 것 같음.\n\n현재의 4가지 요소는 현실성이 없거나, 모자라거나, 무슨 말을 하는지 모르겠는 내용들로 이루어져 있음.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543777924627308699",
+      "type": "Default",
+      "timestamp": "2026-08-31T09:22:19.238+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1543777924367392788",
+          "url": "https://cdn.discordapp.com/attachments/1532291490682900562/1543777924367392788/image.png?ex=6a9f553b&is=6a9e03bb&hm=1a4ba62386a52d2bc1dc72483a9bdaa6a3c11228197bc579c200fcd4989c635d&",
+          "fileName": "image.png",
+          "fileSizeBytes": 69449
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543778001723072512",
+      "type": "Default",
+      "timestamp": "2026-08-31T09:22:37.619+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "6. 다음 단계 부분이 좀 허무맹랑한 소리지 않나 싶음.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543778470860034099",
+      "type": "Default",
+      "timestamp": "2026-08-31T09:24:29.47+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1543778470562369546",
+          "url": "https://cdn.discordapp.com/attachments/1532291490682900562/1543778470562369546/image.png?ex=6a9f55bd&is=6a9e043d&hm=923c5c1f40ddc2c880d5c85802849edd547ae5ba34416cd4db5c30e8d9842124&",
+          "fileName": "image.png",
+          "fileSizeBytes": 54974
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543778758966780126",
+      "type": "Default",
+      "timestamp": "2026-08-31T09:25:38.16+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "7. 사용자/서비스는 이전 언급된 결과로 변경하는 것이 좋아보이며, 나머지 둘은 무엇을 말하려는건지 모르겠음. 기대 효과 페이지에 무엇을 적으려고 한건지?",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543779745156702279",
+      "type": "Default",
+      "timestamp": "2026-08-31T09:29:33.286+09:00",
+      "timestampEdited": "2026-08-31T09:29:38.24+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1543779745068748880",
+          "url": "https://cdn.discordapp.com/attachments/1532291490682900562/1543779745068748880/image.png?ex=6a9f56ed&is=6a9e056d&hm=25d2de79899a4d82f96bcc865de41e5db56b583b33038df245e71d6302b7a385&",
+          "fileName": "image.png",
+          "fileSizeBytes": 72917
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543779770867654707",
+      "type": "Default",
+      "timestamp": "2026-08-31T09:29:39.416+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "8. v1.0부터 라이어 게임을 개발하려고 했음. 전체적으로 비약된/과거의 내용들이 많음. (또한 4주가 아님.)",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543780900716675094",
+      "type": "Default",
+      "timestamp": "2026-08-31T09:34:08.793+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@이현우 @하리1224 @FE_12_박진 \n\n각 슬라이드 보면서 이상한점 적어놨어요. 똑같이 확인한게 있거나 (특히 자기 파트 관련해서) 답할 수 있는 질문이 있다면 써주세요.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "1531483488815943793",
+          "name": "ihyeonu_56073",
+          "discriminator": "0000",
+          "nickname": "이현우",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+        },
+        {
+          "id": "389975441601200138",
+          "name": "hari1224",
+          "discriminator": "0000",
+          "nickname": "하리1224",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+        },
+        {
+          "id": "1347110218206679051",
+          "name": "mr.park0",
+          "discriminator": "0000",
+          "nickname": "FE_12_박진",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+        }
+      ],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543781368461402183",
+      "type": "Default",
+      "timestamp": "2026-08-31T09:36:00.312+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "10시까지 받을게요",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543782342106284052",
+      "type": "Reply",
+      "timestamp": "2026-08-31T09:39:52.447+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "각자 역할은 자기가 적어보는게 나을거같아요 Railway배포도 정현이쪽으로 넘어가야해ㅓ",
+      "author": {
+        "id": "389975441601200138",
+        "name": "hari1224",
+        "discriminator": "0000",
+        "nickname": "하리1224",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "610425959442808842",
+              "name": ".scalmia",
+              "discriminator": "0000",
+              "nickname": "김정현",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "id": "610425959442808842",
+          "name": ".scalmia",
+          "discriminator": "0000",
+          "nickname": "김정현",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1543188532229840947",
+        "channelId": "1532291490682900562",
+        "guildId": "1531480546134462484"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543782583043756094",
+      "type": "Reply",
+      "timestamp": "2026-08-31T09:40:49.891+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "v1.0은 내가 처음 만든 기획서라 저때는 마피아 게임이 맞음",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDE0E",
+            "code": "sunglasses",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f60e.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "610425959442808842",
+              "name": ".scalmia",
+              "discriminator": "0000",
+              "nickname": "김정현",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+            }
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "id": "610425959442808842",
+          "name": ".scalmia",
+          "discriminator": "0000",
+          "nickname": "김정현",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1543779770867654707",
+        "channelId": "1532291490682900562",
+        "guildId": "1531480546134462484"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543783365826838600",
+      "type": "Reply",
+      "timestamp": "2026-08-31T09:43:56.521+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "페르소나/페인 포인트/차별 내용은\n참고자료에 업로드한 최종발표 가이드 라인에 평가영역 - 기획성 부분 확인 바람",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "610425959442808842",
+          "name": ".scalmia",
+          "discriminator": "0000",
+          "nickname": "김정현",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1543189067951382590",
+        "channelId": "1532291490682900562",
+        "guildId": "1531480546134462484"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543830943733645402",
+      "type": "Default",
+      "timestamp": "2026-08-31T12:52:59.978+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1543830943440306256",
+          "url": "https://cdn.discordapp.com/attachments/1532291490682900562/1543830943440306256/image.png?ex=6a9edddb&is=6a9d8c5b&hm=e8281e18f1d702f7ac2b8fc7d23708997c698b4941727f9485ade9af811c4e03&",
+          "fileName": "image.png",
+          "fileSizeBytes": 16183
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543830958157996044",
+      "type": "Default",
+      "timestamp": "2026-08-31T12:53:03.417+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "저 이 폰트 좋던데, 별론가요.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543831004173828216",
+      "type": "Default",
+      "timestamp": "2026-08-31T12:53:14.388+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1543831003880235188",
+          "url": "https://cdn.discordapp.com/attachments/1532291490682900562/1543831003880235188/image.png?ex=6a9eddea&is=6a9d8c6a&hm=1f3f3a6003d98fc7984df9dee572bdafca426844b6b037f475edfdfb90a073ab&",
+          "fileName": "image.png",
+          "fileSizeBytes": 1512
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543831052575965205",
+      "type": "Default",
+      "timestamp": "2026-08-31T12:53:25.928+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "조아",
+      "author": {
+        "id": "389975441601200138",
+        "name": "hari1224",
+        "discriminator": "0000",
+        "nickname": "하리1224",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/389975441601200138/2d9bbc35116d20880ac1ba8bdcdece38.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543831065901269072",
+      "type": "Default",
+      "timestamp": "2026-08-31T12:53:29.105+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "내용말고 제목용 폰트로는 괜찮은듯",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543831098050740426",
+      "type": "Default",
+      "timestamp": "2026-08-31T12:53:36.77+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "내용으로는 쓰면 안됨",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543831179831025775",
+      "type": "Default",
+      "timestamp": "2026-08-31T12:53:56.268+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "약간 굵게 할게요",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543831456462413844",
+      "type": "Default",
+      "timestamp": "2026-08-31T12:55:02.222+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "하나하나 노가다 하기 귀찮네요.. 폰트 정하기만 할게요.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543831530349138050",
+      "type": "Default",
+      "timestamp": "2026-08-31T12:55:19.838+09:00",
+      "timestampEdited": "2026-08-31T13:07:19.742+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "표지 대제목, 슬라이드 제목 - Hahmlet (아주 굵게)",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543832000375554140",
+      "type": "Default",
+      "timestamp": "2026-08-31T12:57:11.901+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1543832000040013914",
+          "url": "https://cdn.discordapp.com/attachments/1532291490682900562/1543832000040013914/image.png?ex=6a9eded7&is=6a9d8d57&hm=23a372ce239034b38ef380938b9b13cbd017af199813ce233c5b12182496bd04&",
+          "fileName": "image.png",
+          "fileSizeBytes": 39153
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543832029177843742",
+      "type": "Default",
+      "timestamp": "2026-08-31T12:57:18.768+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "이거 왜 형꺼만 빨갛게 강조되어 있나요?",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543832539175719022",
+      "type": "Default",
+      "timestamp": "2026-08-31T12:59:20.361+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1543832538882252820",
+          "url": "https://cdn.discordapp.com/attachments/1532291490682900562/1543832538882252820/image.png?ex=6a9edf58&is=6a9d8dd8&hm=67f5477368ee6f980f97e25e6e3c6a57827fdfcef456919c0b1ae42af6fbe3f6&",
+          "fileName": "image.png",
+          "fileSizeBytes": 35195
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543832569236168814",
+      "type": "Default",
+      "timestamp": "2026-08-31T12:59:27.528+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "IBM Plex Sans KR은 별로인가요?",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543833708581228585",
+      "type": "Reply",
+      "timestamp": "2026-08-31T13:03:59.169+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "발표자가 나라고 강조되있는듯 강조 빼도됨",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "610425959442808842",
+          "name": ".scalmia",
+          "discriminator": "0000",
+          "nickname": "김정현",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1543832029177843742",
+        "channelId": "1532291490682900562",
+        "guildId": "1531480546134462484"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543833809055649802",
+      "type": "Reply",
+      "timestamp": "2026-08-31T13:04:23.124+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "가독성이 낮아지는듯",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "610425959442808842",
+          "name": ".scalmia",
+          "discriminator": "0000",
+          "nickname": "김정현",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1543832569236168814",
+        "channelId": "1532291490682900562",
+        "guildId": "1531480546134462484"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543834044574334996",
+      "type": "Default",
+      "timestamp": "2026-08-31T13:05:19.276+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "보이는 건 13px 기준이에요",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1543834350360203354",
+      "type": "Default",
+      "timestamp": "2026-08-31T13:06:32.181+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "맑은 고딕 대비 가로가 짧아지네요",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544154204917203145",
+      "type": "Default",
+      "timestamp": "2026-09-01T10:17:31.45+09:00",
+      "timestampEdited": "2026-09-01T10:17:56.619+09:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "시스템 설계도 쪽 제목만 크기가 작은 느낌이에요\n\n지금 보니 걍 다 다르네요. 나중에 한번에 통합하는게 좋겠어요",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544154498388201573",
+      "type": "Reply",
+      "timestamp": "2026-09-01T10:18:41.419+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "내용 텍스트 크기 늘리려고 그쪽만 조절하긴 했는데 내용을 더 줄일 방안을 고려해 봐야할듯",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "610425959442808842",
+          "name": ".scalmia",
+          "discriminator": "0000",
+          "nickname": "김정현",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1544154204917203145",
+        "channelId": "1532291490682900562",
+        "guildId": "1531480546134462484"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544177682617606274",
+      "type": "Default",
+      "timestamp": "2026-09-01T11:50:48.97+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1544177682328191096",
+          "url": "https://cdn.discordapp.com/attachments/1532291490682900562/1544177682328191096/image.png?ex=6a9ecf48&is=6a9d7dc8&hm=1264405965effeb1431866e8acf81eba3d8779ff3fb6fdfbe1c052c158ae9e2c&",
+          "fileName": "image.png",
+          "fileSizeBytes": 65920
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544177786745393182",
+      "type": "Default",
+      "timestamp": "2026-09-01T11:51:13.796+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "오른쪽 위 내용은 수정할 필요가 있어보이네요. 아직 확정이 아니라면 끝내기 전 인지만 해주면 좋을 것 같아요.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544177835051192461",
+      "type": "Default",
+      "timestamp": "2026-09-01T11:51:25.313+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1544177834824695848",
+          "url": "https://cdn.discordapp.com/attachments/1532291490682900562/1544177834824695848/image.png?ex=6a9ecf6d&is=6a9d7ded&hm=614cdf03e1e931896061e48c8008488ecad363a128ff826b0dbb076dacf34b38&",
+          "fileName": "image.png",
+          "fileSizeBytes": 83475
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544177921307181066",
+      "type": "Default",
+      "timestamp": "2026-09-01T11:51:45.878+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "시스템 설계도는 여기서 마무리인건가요? 루프를 조금이라도 언급해줬으면 좋을 것 같은데 말이죠.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544220171416379392",
+      "type": "Default",
+      "timestamp": "2026-09-01T14:39:39.089+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1544220171042816060",
+          "url": "https://cdn.discordapp.com/attachments/1532291490682900562/1544220171042816060/image.png?ex=6a9ef6db&is=6a9da55b&hm=a8eea64b64646685e169e38711d19b63c59b90685cf372e058267fc56fc0a167&",
+          "fileName": "image.png",
+          "fileSizeBytes": 20142
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544220246242754640",
+      "type": "Default",
+      "timestamp": "2026-09-01T14:39:56.929+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "4개 넣어놨어요. 오타나 비문 있으면 말해주시고, 디자인 크기 색상 오류는 수정해주세요.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544251198440476683",
+      "type": "Default",
+      "timestamp": "2026-09-01T16:42:56.508+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1544251198167851058",
+          "url": "https://cdn.discordapp.com/attachments/1532291490682900562/1544251198167851058/image.png?ex=6a9f13c0&is=6a9dc240&hm=7d2ffd326816e8cf068395f1c2d31c71d1794e18a42f87b648085918e5136108&",
+          "fileName": "image.png",
+          "fileSizeBytes": 8628
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544251236780351498",
+      "type": "Default",
+      "timestamp": "2026-09-01T16:43:05.649+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "형식이 왔다 갔다 해요",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544251437977051156",
+      "type": "Reply",
+      "timestamp": "2026-09-01T16:43:53.618+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "형식은 나중에 내가 수정하면됨",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "610425959442808842",
+          "name": ".scalmia",
+          "discriminator": "0000",
+          "nickname": "김정현",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+        }
+      ],
+      "reference": {
+        "type": "Default",
+        "messageId": "1544251236780351498",
+        "channelId": "1532291490682900562",
+        "guildId": "1531480546134462484"
+      },
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544670714043437096",
+      "type": "Default",
+      "timestamp": "2026-09-02T20:29:56.822+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [
+        {
+          "id": "1544670713653231626",
+          "url": "https://cdn.discordapp.com/attachments/1532291490682900562/1544670713653231626/image.png?ex=6a9f48f4&is=6a9df774&hm=852f058647a039f79b177b53c823c09d73cb7e0a84a63ce72bb0327e8208f3b2&",
+          "fileName": "image.png",
+          "fileSizeBytes": 39591
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544670739645464676",
+      "type": "Default",
+      "timestamp": "2026-09-02T20:30:02.926+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "이게 뭘 말하려는건지 이해가 안되네요.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544673760525684877",
+      "type": "Default",
+      "timestamp": "2026-09-02T20:42:03.16+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "부록 보면 정보 조금 나와있는데 수익구조 확장한거임",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544673837269127248",
+      "type": "Default",
+      "timestamp": "2026-09-02T20:42:21.457+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "흠.. 내일 말해볼게요",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544674432654774312",
+      "type": "Default",
+      "timestamp": "2026-09-02T20:44:43.408+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "기능추가 해서 유료로 가는거야 보이스챗 기능하고, 교육기관은 한국어 배우는 기관에 교육용으로 유료판매한다는거고  어학당이나 해외한국어학과 같은곳에",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544676252437315675",
+      "type": "Default",
+      "timestamp": "2026-09-02T20:51:57.278+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "보이스 챗 기능은 채팅으로만 있던 ZETEO Bot의 기능을 너무나 많이 바꿔야 해요. (단순 텍스트에 TTS를 붙이는 것만이 아니라, 자연스러운 목소리, 톤, 발화 순서 등) 이것에 적합한 새로운 기술들을 찾아본 적도 없고, 사용하는 과정에서 지금보다 더 많은 API 비용이 나오거나 아예 새롭게 갈아엎어야 하는 구조가 나올것으로 예상돼요.\n\n그렇다고 전에 형이 말한대로 봇을 빼고 라이어 게임 단일구조로 가면 앞서 말했던 ZETEO의 모든 슬라이드 내용을 부정하는 셈이 돼요.\n\n# ---\n\n교육기관에 대해선 무슨 생각을 하고 있는건지 아예 모르겠어요. 라이어 게임을 어떻게 교사용 도구로 쓸 수 있게 하는건가요? 아이들에게 웹게임을 할 수 있도록 체험시켜주는 건가요?\n\n그럼 어학당과 해외한국어학과는 어떤 의미인건가요? 저는 라이어게임이 한국어 능력을 향상시켜 주는지 의문이에요. 그것도 메인 목적이 소셜 디덕션 게임에 봇을 투입하여 적응가능한지를 알아보는 프로젝트에서요.\n\n전체적으로 앞서 말했던 발표 슬라이드 내용들과 너무 맞지 않아서 이걸 왜 넣은건지 의문이 들었어요. 개발 가능하고 합리적인가? 와는 별개로 이 내용을 삽입하는 것이 맞는지 의문이에요. 특히 한번도 생각해본적 없는 내용을요.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544676523527901274",
+      "type": "Default",
+      "timestamp": "2026-09-02T20:53:01.911+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "아 밥먹는데 ㅋㅋ 기다려바 먹고 답해줄게",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544676648492994571",
+      "type": "Default",
+      "timestamp": "2026-09-02T20:53:31.705+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "네 천천히 와요",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544685332887506964",
+      "type": "Default",
+      "timestamp": "2026-09-02T21:28:02.226+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "제테오 게임에서 봇이 기능 했던 건 채팅이고 수익구조를 만들려면 더 발전된 서비스가 있어야 한다고 생각했는데 내 생각에는 그게 보이스챗이었어. 채팅으로 진행하는 게임은 무료고 진행가능하고 유료에서는 보이스기능이 들어가는거야. 그리고 보이스 기능이 들어갔다고 해서 유료버전에서 봇을 꼭 넣을 필요는 없어. 기술적인 장벽이 있다면, 봇이 자연스럽게 대화에 참여할 수 있을 때까지는 보이스에서는 제외시켜도 돼. 보이스챗 비용은 처음엔 빌려오는 방식으로 하다가 이용자 수가 어느 정도 넘어서면 자체 개발해야 돼. 그게 비용을 줄이는 방법이야. 디스코드도 자체적으로 만들었다고 하더라고. 교육기관에서 사용하는건 정기적인 수익구조가 필요했고, 그게 한국어를 공부하는 학생들에게는 라이어게임 방식이 적합하다고 생각했어. 제시어에 대해서 우회적으로 설명하면서 자연스럽게 공부가 될 수 있다고 생각한거고, 교육목적으로 가려면 한국어를 공부하는 사람들에게 맞다고 생각해서 국내에 있는 한국어 학당이나 외국소재의 한국어학과 등을 생각한거야. 사업성에서 지금의 제테오만으로는 어필할 수 있는게 없어. 이번에 심사위원으로 오는 뤼튼이나 마피아42같은 경우 유저풀을 유치하고 그들에게서 유료서비스를 제공해서 수익을 만들고 있는거고 마피아42의 경우 250억원이 한해 매출이야. 뤼튼은 학교에서 ai교육을 하면서 대표적인 교재로 사용되면서 큰 회사고. 이 사람들에게 사업성에 대해서 꾸준하게 유지가능한 구익구조를 설득하려면 위에 방법이 좋다고 생각한거고, 더 좋은 방법이 있으면 나는 무조건 찬성임.",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544685993100181566",
+      "type": "Default",
+      "timestamp": "2026-09-02T21:30:39.633+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "라이어 게임은 아니지만 국내의 세종어학당은 이미 온라인 한국어 학습 서비스를 이미 만들었고, 학습에 좀 더 치우진 버전인거 같긴하지만, 아 그리고 학교에 판매하는건 공부하는 사람들 단원에 맞게 선생님이 제시어를 직접 설정할 수도 있게 생각한거임",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544694439812010064",
+      "type": "Default",
+      "timestamp": "2026-09-02T22:04:13.486+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "음.. 내일 더 말해볼게요",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1544694709044379788",
+      "type": "Default",
+      "timestamp": "2026-09-02T22:05:17.676+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "오케이~",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1545318966010843198",
+      "type": "Default",
+      "timestamp": "2026-09-04T15:25:52.135+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone 오늘 발표 QA에서 강사님이 했던질문 기억나면 올려줄것\n1. 왜 5판이 쌓이고 개선을 하는가?\n2. ?\n3. ?",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1545319464268996608",
+      "type": "Default",
+      "timestamp": "2026-09-04T15:27:50.929+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "QWEN과 GPT 차이",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "1531483488815943793",
+              "name": "ihyeonu_56073",
+              "discriminator": "0000",
+              "nickname": "이현우",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1545320169889603648",
+      "type": "Default",
+      "timestamp": "2026-09-04T15:30:39.162+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "아까 팀원 소개에서 정보 격리만 빨갛게 되어있는게 좀 부자연스러웠는데, 똑같이 하는게 좋아보여요.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "✅",
+            "code": "white_check_mark",
+            "isAnimated": false,
+            "imageUrl": "https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2705.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "1531483488815943793",
+              "name": "ihyeonu_56073",
+              "discriminator": "0000",
+              "nickname": "이현우",
+              "color": null,
+              "isBot": false,
+              "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+            }
+          ]
+        }
+      ],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1545322513947562004",
+      "type": "Default",
+      "timestamp": "2026-09-04T15:39:58.029+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@김정현 왜 5판이 쌓이고 개선을 하는가?\n정확한 이유 설명바람",
+      "author": {
+        "id": "1531483488815943793",
+        "name": "ihyeonu_56073",
+        "discriminator": "0000",
+        "nickname": "이현우",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/1.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "610425959442808842",
+          "name": ".scalmia",
+          "discriminator": "0000",
+          "nickname": "김정현",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+        }
+      ],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1545323078785962044",
+      "type": "Default",
+      "timestamp": "2026-09-04T15:42:12.697+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "트래픽 수가 없는 현재 기준에선 몇십판 몇백판을 돌리기 보단 적은 횟수로도 개선이 되는 방향성을 봐야했고, 이를 위해 5판을 선택했어요.\n\n5판이하가 아닌 이유는 설문내용을 바꿔서 그 다음 세대에 채점지로 사용할 수 있게하려는 것과 일관된 설문 데이터를 수집해 프롬프트를 개선하기 위해서 최소 5판이라고 생각했습니다.",
+      "author": {
+        "id": "610425959442808842",
+        "name": ".scalmia",
+        "discriminator": "0000",
+        "nickname": "김정현",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/avatars/610425959442808842/f1f025ad6bac2239f7c074e6ce2ecbd6.png?size=512"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    },
+    {
+      "id": "1545342052630536272",
+      "type": "Default",
+      "timestamp": "2026-09-04T16:57:36.414+09:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "오늘 리허설 발표 교정필요한 사항 \n\n1. 봇과 같은지 라는 표현을 사용했는데 이 부분 청자로 하여금 오해의 요지가 있음\n  (대안 / ai 봇의 or ai 봇을 이렇게 문장 개선이 좋다고 판단)\n\n2. 사업성 부분에서 '어떻게 돈을 벌것인가?' 보다는 (사업성을 설명드리자면, 수익구조 방안을 모색하였는데 등 문장 교정이 필요하다 판단)\n\n3. 사업성의 미국 국가의 단가가 높은게 아니라 영어권 국가의 단가가 높은게 진실. \n   통계나온 숫자는 넘어갔는데 발언에서 명확한 숫자가 포함되면 발언의 설득력이 더 올라감.",
+      "author": {
+        "id": "1347110218206679051",
+        "name": "mr.park0",
+        "discriminator": "0000",
+        "nickname": "FE_12_박진",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/2.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "inlineEmojis": []
+    }
+  ],
+  "messageCount": 117
+}
